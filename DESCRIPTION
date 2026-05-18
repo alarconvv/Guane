@@ -1,15 +1,38 @@
-Package: Guane
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Package: guane
+Title: Multilingual Shiny Platform for Phylogenetic Comparative Analyses
+Version: 25.05.18
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person(
+      given = "Viviana",
+      family = "Romero-Alarcon",
+      email = "vivianaromeroalarcon@umb.edu",
+      role = c("aut", "cre")
+    )
+Description: Guane is a modular Shiny-based platform for phylogenetic comparative analyses. 
+    It provides data validation, analytical workflows, multilingual guidance, and reproducible 
+    code export for researchers using phylogenetic comparative methods.
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
-Suggests: 
+RoxygenNote: 7.3.2
+Imports:
+    ape,
+    bslib,
+    checkmate,
+    cli,
+    dplyr,
+    geiger,
+    jsonlite,
+    nlme,
+    phytools,
+    readr,
+    readxl,
+    rlang,
+    shiny,
+    shiny.i18n,
+    shinyAce
+Suggests:
+    devtools,
+    roxygen2,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
