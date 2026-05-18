@@ -57,6 +57,7 @@ usethis::use_package("roxygen2", type = "Suggests")
 usethis::use_gpl_license(version = 3, include_future = TRUE)
 
 
+
 # I will keep two branches for this repo
 #-----------------------------------------
 
@@ -70,6 +71,18 @@ usethis::use_r("module_registry")
 usethis::use_r("mod_signal")
 usethis::use_r("run_app.R")
 
-# Do documentation
+usethis::use_r("ui_mod_template")
+usethis::use_r("server_mod_template")
+usethis::use_r("core_template")
+
+usethis::use_r("ui_mod_signal.R")
+usethis::use_r("server_mod_signal.R")
+
+# Load packages to the environment
+
 devtools::document()
 devtools::load_all()
+
+guane::run_app()
+
+run_app(module = "signal")

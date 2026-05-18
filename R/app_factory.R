@@ -6,18 +6,15 @@ guane_app <- function(module = "full") {
   }
 
   if (!module %in% names(registry)) {
-    cli::cli_abort(
-      "Unknown Guane module: {.val {module}}. Available modules: {.val {names(registry)}}."
-    )
+    cli::cli_abort("Unknown Guane module: {.val {module}}.")
   }
 
-  build_single_module_app(module = module, registry = registry)
+  build_single_module_app(module, registry)
 }
 
 build_full_app <- function(registry) {
   ui <- bslib::page_navbar(
     title = "Guane",
-
     bslib::nav_panel(
       title = registry$signal$label,
       registry$signal$ui("signal")
@@ -28,7 +25,7 @@ build_full_app <- function(registry) {
     registry$signal$server("signal")
   }
 
-  shiny::shinyApp(ui = ui, server = server)
+  shiny::shinyApp(ui, server)
 }
 
 build_single_module_app <- function(module, registry) {
@@ -36,7 +33,6 @@ build_single_module_app <- function(module, registry) {
 
   ui <- bslib::page_navbar(
     title = paste("Guane:", module_spec$label),
-
     bslib::nav_panel(
       title = module_spec$label,
       module_spec$ui(module)
@@ -47,5 +43,5 @@ build_single_module_app <- function(module, registry) {
     module_spec$server(module)
   }
 
-  shiny::shinyApp(ui = ui, server = server)
+  shiny::shinyApp(ui, server)
 }
