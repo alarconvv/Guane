@@ -62,3 +62,14 @@ usethis::use_gpl_license(version = 3, include_future = TRUE)
 
 # main = develop
 # master = stable version
+
+# Create modules
+# Create R executables files
+usethis::use_r("app_factory")
+usethis::use_r("module_registry")
+usethis::use_r("mod_signal")
+usethis::use_r("run_app.R")
+
+# Do documentation
+devtools::document()
+devtools::load_all()
