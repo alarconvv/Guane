@@ -30,3 +30,10 @@ usethis::use_package_doc()
 usethis::use_readme_md()
 
 
+
+# Github organization
+#____________________
+# main   = active development
+# master = stable release version
+
+
