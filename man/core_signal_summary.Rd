@@ -2,16 +2,17 @@
 % Please edit documentation in R/core_signal.R
 \name{core_signal_summary}
 \alias{core_signal_summary}
-\title{Run a minimal phylogenetic signal summary}
+\title{Summarize a numeric trait for phylogenetic signal analysis}
 \usage{
-core_signal_summary(x)
+core_signal_summary(trait)
 }
 \arguments{
-\item{x}{Numeric trait vector.}
+\item{trait}{Numeric vector.}
 }
 \value{
-A list with basic trait summary.
+A list with trait summary values.
 }
 \description{
-This placeholder checks that the core layer runs independently from Shiny.
+This minimal core function verifies that a trait is numeric and returns
+basic information needed before running phylogenetic signal methods.
 }
