@@ -121,3 +121,4 @@ core_signal_summary(traits$body_size)
 # # all package checking
 
 devtools::check()
+
