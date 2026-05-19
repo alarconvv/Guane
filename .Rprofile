@@ -1,9 +1,13 @@
+
+# keep the environment active
+source("renv/activate.R")
+
+
 local({
   options(
     repos = c(CRAN = "https://cloud.r-project.org"),
     shiny.autoreload = TRUE,
-    usethis.protocol = "https",
-    devtools.install.args = "--no-multiarch"
+    usethis.protocol = "https"
   )
 
   if (interactive()) {

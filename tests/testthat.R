@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(Guane)
+library(guane)
 
-test_check("Guane")
+test_check("guane")

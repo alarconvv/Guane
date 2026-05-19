@@ -33,6 +33,12 @@ Imports:
     shinyAce
 Suggests:
     devtools,
+    testthat,
     roxygen2,
-    testthat (>= 3.0.0)
+    spelling,
+    knitr,
+    rmarkdown
 Config/testthat/edition: 3
+
+Depends:
+    R (>= 4.6.0)
