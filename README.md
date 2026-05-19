@@ -97,12 +97,6 @@ This project was developed using R 4.6.0. If possible, use the same or a recent 
 
 Open a terminal and run:
 
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd <REPOSITORY_NAME>
-```
-
-For example:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/guane.git
@@ -235,3 +229,5 @@ renv/activate.R
 .Rprofile
 DESCRIPTION
 ```
+
+Disclaimer: This documentation was done using GPT 5.0. However, developer tested every steps before realeasing it for users.
