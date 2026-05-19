@@ -14,7 +14,6 @@ Description: Guane is a modular Shiny-based platform for phylogenetic comparativ
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
 Imports:
     ape,
     bslib,
@@ -39,6 +38,6 @@ Suggests:
     knitr,
     rmarkdown
 Config/testthat/edition: 3
-
 Depends:
     R (>= 4.6.0)
+Config/roxygen2/version: 8.0.0
