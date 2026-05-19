@@ -122,3 +122,123 @@ core_signal_summary(traits$body_size)
 
 devtools::check()
 
+
+### restore envoronment
+## Restore the project environment
+
+After cloning the repository, open R from the project root and run:
+
+  ```r
+source("renv/activate.R")
+renv::restore()
+```
+
+This installs all packages recorded in `renv.lock`.
+
+To check whether the local library matches the lockfile, run:
+
+  ```r
+renv::status()
+```
+
+A clean reproducible setup should report that the project is synchronized.
+
+## Run package checks
+
+After restoring the environment, run:
+
+  ```r
+devtools::check()
+```
+
+The package should pass without undeclared dependency errors.
+
+## Development workflow
+
+When adding or updating R packages, install them through `renv`:
+
+  ```r
+renv::install("packageName")
+```
+
+Then update the lockfile:
+
+  ```r
+renv::snapshot()
+```
+
+Before committing changes, run:
+
+  ```r
+devtools::document()
+devtools::check()
+renv::status()
+```
+
+Commit the updated files:
+
+  ```bash
+git add DESCRIPTION renv.lock .Rprofile renv/activate.R README.md .gitignore
+git add NAMESPACE man/
+  git commit -m "Update dependencies and documentation"
+git push
+```
+
+## Dependency declaration
+
+All packages used by the project must be declared in `DESCRIPTION`.
+
+Packages required for the package or app to run should go under:
+
+  ```text
+Imports:
+  ```
+
+Packages used only for development, testing, checking, or documentation should go under:
+
+  ```text
+Suggests:
+  ```
+
+For example:
+
+  ```text
+Suggests:
+  devtools,
+testthat,
+usethis
+```
+
+## Files that should be committed
+
+The following reproducibility files should be version controlled:
+
+  ```text
+renv.lock
+renv/activate.R
+.Rprofile
+DESCRIPTION
+README.md
+.gitignore
+```
+
+If documentation is regenerated, also commit:
+
+  ```text
+NAMESPACE
+man/
+  ```
+
+## Files that should not be committed
+
+The local project library and temporary files should not be committed:
+
+  ```text
+renv/library/
+  renv/staging/
+  .Rproj.user/
+  .DS_Store
+guane-renv-test/
+  ```
+
+These should be listed in `.gitignore`.
