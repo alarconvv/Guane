@@ -5,3 +5,7 @@
 .DS_Store
 .quarto
 .positai
+renv/library/
+renv/staging/
+.Rproj.user/
+guane-renv-test/
