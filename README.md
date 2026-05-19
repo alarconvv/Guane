@@ -72,3 +72,166 @@ The platform is intended not only as an analytical tool, but also as a teaching 
 ## License
 
 Guane is released under the GPL-3.0 license.
+
+## Reproducing the Guane R Environment
+
+Guane uses `renv` to make the R package environment reproducible. All required R package versions are recorded in `renv.lock`.
+
+These instructions are for users who want to clone the project, restore the same R environment, and run Guane.
+
+---
+
+## 1. Requirements
+
+Before starting, install:
+
+- R
+- Git
+- RStudio, optional but recommended
+
+This project was developed using R 4.6.0. If possible, use the same or a recent R version.
+
+---
+
+## 2. Clone the repository
+
+Open a terminal and run:
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd <REPOSITORY_NAME>
+```
+
+For example:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/guane.git
+cd guane
+```
+
+---
+
+## 3. Restore the R environment
+
+Open R from the project root folder.
+
+Then run:
+
+```r
+source("renv/activate.R")
+renv::restore()
+```
+
+This will install the package versions recorded in `renv.lock`.
+
+To check that the environment was restored correctly, run:
+
+```r
+renv::status()
+```
+
+A successful setup should report that the project is synchronized.
+
+---
+
+## 4. Load and run Guane
+
+After restoring the environment, run:
+
+```r
+devtools::load_all()
+guane::run_app()
+```
+
+This should launch the Guane Shiny application.
+
+---
+
+## 5. Optional: check the package
+
+Users who want to verify that the package builds correctly can run:
+
+```r
+devtools::check()
+```
+
+The package should run without undeclared dependency errors.
+
+---
+
+## 6. Troubleshooting
+
+### Error: `cannot open file 'renv/activate.R'`
+
+This usually means you are not in the project root folder.
+
+Check your current folder with:
+
+```r
+getwd()
+list.files()
+```
+
+You should see files such as:
+
+```text
+DESCRIPTION
+renv.lock
+renv/
+README.md
+```
+
+If not, move to the correct project folder and try again.
+
+---
+
+### Error: package is not installed
+
+Run:
+
+```r
+renv::restore()
+```
+
+Then check again:
+
+```r
+renv::status()
+```
+
+---
+
+### Error during package check
+
+First update the documentation:
+
+```r
+devtools::document()
+```
+
+Then rerun:
+
+```r
+devtools::check()
+```
+
+---
+
+## 7. Important notes
+
+Users should not manually edit `renv.lock`.
+
+Users should not commit or copy the local `renv/library/` folder. The environment should always be restored from `renv.lock` using:
+
+```r
+renv::restore()
+```
+
+The following files are needed for reproducibility:
+
+```text
+renv.lock
+renv/activate.R
+.Rprofile
+DESCRIPTION
+```
