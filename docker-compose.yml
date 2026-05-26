@@ -1,0 +1,13 @@
+services:
+  guane:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        R_VERSION: "4.6.0"
+    image: guane:local
+    container_name: guane
+    ports:
+      - "3839:3838"
+    restart: unless-stopped

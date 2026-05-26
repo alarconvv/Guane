@@ -14,4 +14,7 @@ A \code{phylo} or \code{multiPhylo} object.
 }
 \description{
 Reads a phylogenetic tree from common tree formats supported by Guane.
+Newick and Nexus files may contain either one tree (\code{phylo}) or multiple
+trees (\code{multiPhylo}), for example posterior tree distributions from Bayesian
+phylogenetic inference.
 }

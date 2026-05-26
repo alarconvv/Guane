@@ -84,13 +84,15 @@ usethis::use_r("server_mod_signal.R")
 
 usethis::use_r("core_read_data")
 usethis::use_r("core_diagnose_data")
+usethis::use_r("core_diagnostic_report")
 
-
+usethis::use_r("core_validate_data")
 # Test
 
 usethis::use_test("core_read_data")
 usethis::use_test("core_diagnose_data")
 usethis::use_test("core_signal")
+usethis::use_test("test-core_diagnostic_report")
 
 # Load packages to the environment
 
