@@ -1,11 +1,62 @@
-.Rproj.user
+# R / RStudio
+.Rproj.user/
 .Rhistory
+.RData
 .Rdata
-.httr-oauth
-.DS_Store
-.quarto
+.Ruserdata
+*.Rproj
 .positai
+
+# R package build/check artifacts
+.Rcheck/
+*.tar.gz
+*.Rcheck
+docs/
+Meta/
+doc/
+
+# renv
 renv/library/
 renv/staging/
-.Rproj.user/
+renv/python/
+renv/sandbox/
+renv/local/
+!renv/activate.R
+!renv/settings.json
+renv.lock
+
+# Cache
+.cache/
+.Rcache/
+__pycache__/
+*.log
+
+# Quarto / R Markdown
+.quarto/
+*_cache/
+*_files/
+*.html
+*.pdf
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets and local environment
+.Renviron
+.env
+.env.*
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+.httr-oauth
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Local test folders
 guane-renv-test/
