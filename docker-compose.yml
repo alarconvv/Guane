@@ -1,5 +1,6 @@
 services:
   guane:
+    platform: linux/amd64
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,7 +9,5 @@ services:
     image: guane:local
     container_name: guane
     ports:
-      - "3838:3838"
-    environment:
-      APPLICATION_LOGS_TO_STDOUT: "true"
+      - "3839:3838"
     restart: unless-stopped

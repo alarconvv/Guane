@@ -250,28 +250,24 @@ DESCRIPTION
 
 ## Docker usage
 
-Guane can also be run with Docker. This is useful for reproducible local installation and future deployment on a Linux server.
+Guane can be run with Docker for reproducible local installation and future deployment on a Linux server. The Docker image restores the R package environment from `renv.lock`, so package versions are controlled by the lockfile.
 
-The Docker image uses:
+### Requirements
 
-- `rocker/shiny`
-- R 4.6.0
-- `renv.lock` to restore R package versions
-- Shiny Server on port `3838`
+Install:
+
+- Docker Desktop
+- Git
+
+On Apple Silicon Macs, such as M1, M2, M3, or M4, the Docker image is built using the `linux/amd64` platform because this is closer to the expected Linux server environment.
 
 ### Build the Docker image
 
 From the root of the repository:
 
 ```bash
-
-open -a Docker
-
-docker build -t guane:local .
-
+docker buildx build --platform linux/amd64 --no-cache -t guane:local --load .
 
 ```
+Disclaimer: This documentation was done using GPT 5.0. However, developer tested every steps before releasing it for the developer.
 
-
-
-Disclaimer: This documentation was done using GPT 5.0. However, developer tested every steps before realeasing it for users.
