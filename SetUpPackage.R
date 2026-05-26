@@ -28,17 +28,13 @@ usethis::use_git()
 usethis::use_git_remote(name = "origin", url = "https://github.com/alarconvv/Guane.git")
 
 
-# Setting up the package
+# Setting up the package first time
 usethis::use_roxygen_md()
 usethis::use_testthat()
 usethis::use_package_doc()
 usethis::use_readme_md()
-
-
 usethis::use_testthat(edition = 3)
 
-
-2
 ## Add packages
 usethis::use_package("shiny")
 usethis::use_package("bslib")
@@ -123,122 +119,98 @@ core_signal_summary(traits$body_size)
 devtools::check()
 
 
-### restore envoronment
-## Restore the project environment
+#'#######################   ENVIRONMENT     ############################
+#'To restore the R project from R environment:
+#' 1 ----- If it is necessary, cloning the repository (Remember i am working on main and master is the public branch
+#' Update master before cloning or pulling)
+#'
+#' 2 ------open the project in Rstudio, the run":
 
-After cloning the repository, open R from the project root and run:
-
-  ```r
 source("renv/activate.R")
 renv::restore()
-```
 
-This installs all packages recorded in `renv.lock`.
 
-To check whether the local library matches the lockfile, run:
+#' it ask for update say yes, if you are sure there is no problem with new packages version
+#'
+#' 3 ----- Check if libraries matches the lockfile by running
 
-  ```r
 renv::status()
-```
 
-A clean reproducible setup should report that the project is synchronized.
+#' Then, project is syncronized
+#' 4 ---- run and check packages after restoring envi
+#' all packages should pass test without error
 
-## Run package checks
-
-After restoring the environment, run:
-
-  ```r
 devtools::check()
-```
 
-The package should pass without undeclared dependency errors.
+#' If I need new packages or update them I should instal trhough renv
 
-## Development workflow
-
-When adding or updating R packages, install them through `renv`:
-
-  ```r
 renv::install("packageName")
-```
 
-Then update the lockfile:
+#' and update the lockfile througth
 
-  ```r
 renv::snapshot()
-```
 
-Before committing changes, run:
 
-  ```r
+#' 6 ---- at the end of the day, before committing changes:
+#' run docummentation
+
 devtools::document()
 devtools::check()
 renv::status()
-```
 
-Commit the updated files:
+#' then commit in github
+#'
+#'
 
-  ```bash
-git add DESCRIPTION renv.lock .Rprofile renv/activate.R README.md .gitignore
-git add NAMESPACE man/
-  git commit -m "Update dependencies and documentation"
-git push
-```
+#git add DESCRIPTION renv.lock .Rprofile renv/activate.R README.md .gitignore
+#git add NAMESPACE man/
+#git commit -m "Vyear.month.day.hour"
+#git push origin main
 
-## Dependency declaration
 
-All packages used by the project must be declared in `DESCRIPTION`.
+########### DESCRIPTION document's structure #######
 
-Packages required for the package or app to run should go under:
+#Imports -> has all packages required to work properly
+#Suggests: -> packages for development, testing, checking or documentation
 
-  ```text
-Imports:
-  ```
 
-Packages used only for development, testing, checking, or documentation should go under:
+########### Files that are required in the package for reproducibility #######
 
-  ```text
-Suggests:
-  ```
+#' i must commit them every time
 
-For example:
+#renv.lock -> version lock for package
+#renv/activate.R -> how to activate the environment
+#.Rprofile -> instruction for R project
+#DESCRIPTION -> decription of mandatory versions
+#README.md -> package or project description
+#.gitignore -> doc must not submitted to github
 
-  ```text
-Suggests:
-  devtools,
-testthat,
-usethis
-```
 
-## Files that should be committed
 
-The following reproducibility files should be version controlled:
+#' every time i run devtools::document() devtools::check() renv::status(), i must to
+#' commit NAMESPACE
+# git add NAMESPACE man/
 
-  ```text
-renv.lock
-renv/activate.R
-.Rprofile
-DESCRIPTION
-README.md
-.gitignore
-```
 
-If documentation is regenerated, also commit:
+########### I MUST omit those documents in github #######
 
-  ```text
-NAMESPACE
-man/
-  ```
+#' 7 ----- These should be listed in .gitignore
 
-## Files that should not be committed
+#renv/library/
+#  renv/staging/
+#  .Rproj.user/
+#  .DS_Store
+#guane-renv-test/
 
-The local project library and temporary files should not be committed:
+############# Nota para Cata #############
 
-  ```text
-renv/library/
-  renv/staging/
-  .Rproj.user/
-  .DS_Store
-guane-renv-test/
-  ```
+#' Pull requests
 
-These should be listed in `.gitignore`.
+#' Before opening a pull request, make sure:
+
+#' devtools::check() passes locally.
+#' New user-facing functions are documented.
+#' New analytical functions have tests where possible.
+#' The README is updated when installation or usage changes.
+#' No secret files or local cache files are committed.
+
