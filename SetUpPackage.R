@@ -202,5 +202,15 @@ renv::status()
 #  .DS_Store
 #guane-renv-test/
 
+############# Nota para Cata #############
 
+#' Pull requests
+
+#' Before opening a pull request, make sure:
+
+#' devtools::check() passes locally.
+#' New user-facing functions are documented.
+#' New analytical functions have tests where possible.
+#' The README is updated when installation or usage changes.
+#' No secret files or local cache files are committed.
 

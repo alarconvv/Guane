@@ -2,7 +2,12 @@
 
 Thank you for your interest in contributing to Guane.
 
-Guane is a multilingual Shiny platform for phylogenetic comparative analyses. The project is designed to improve accessibility, reproducibility, and transparency in evolutionary biology.
+Guane is a multilingual Shiny platform for phylogenetic comparative analyses. 
+The project is designed to improve accessibility, reproducibility, and transparency 
+in evolutionary biology.
+
+Analytical code should be separated from Shiny server logic when possible. 
+Functions should be testable outside the app
 
 ## Development workflow
 
@@ -17,3 +22,4 @@ git checkout -b feature/name-of-change
 ```
 
 #nota -> ciclo para Catalina Gonzalez
+
