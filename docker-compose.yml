@@ -1,0 +1,14 @@
+services:
+  guane:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        R_VERSION: "4.6.0"
+    image: guane:local
+    container_name: guane
+    ports:
+      - "3838:3838"
+    environment:
+      APPLICATION_LOGS_TO_STDOUT: "true"
+    restart: unless-stopped

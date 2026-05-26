@@ -11,7 +11,7 @@ Authors@R:
 Description: Guane is a modular Shiny-based platform for phylogenetic comparative analyses. 
     It provides data validation, analytical workflows, multilingual guidance, and reproducible 
     code export for researchers using phylogenetic comparative methods.
-License: GPL-3
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Imports:
@@ -29,7 +29,8 @@ Imports:
     rlang,
     shiny,
     shiny.i18n,
-    shinyAce
+    shinyAce,
+    xml2
 Suggests:
     devtools,
     testthat,

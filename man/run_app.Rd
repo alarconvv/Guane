@@ -4,16 +4,15 @@
 \alias{run_app}
 \title{Run the Guane Shiny application}
 \usage{
-run_app(module = "full", ...)
+run_app(module = "data_upload", ...)
 }
 \arguments{
-\item{module}{Character. Which Guane module to run. Use \code{"full"} for the
-complete app or a module name such as \code{"signal"}.}
+\item{module}{Module to open. Use "data_upload", "signal", or "template".}
 
-\item{...}{Additional arguments passed to \code{\link[shiny:runApp]{shiny::runApp()}}.}
+\item{...}{Additional arguments passed to \code{shiny::runApp()}.}
 }
 \value{
-Opens the Guane Shiny application.
+Runs the Shiny app.
 }
 \description{
 Run the Guane Shiny application
