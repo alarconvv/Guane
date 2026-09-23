@@ -1,0 +1,76 @@
+{
+  "languages": ["en", "es", "pt"],
+  "translation": {
+    "app_title":        {"en": "Guane", "es": "Guane", "pt": "Guane"},
+    "app_subtitle":     {"en": "Multilingual platform for phylogenetic comparative methods", "es": "Plataforma multilingue para metodos comparativos filogeneticos", "pt": "Plataforma multilingue para metodos comparativos filogeneticos"},
+    "language":         {"en": "Language", "es": "Idioma", "pt": "Idioma"},
+
+    "nav_signal":       {"en": "Phylogenetic signal", "es": "Senal filogenetica", "pt": "Sinal filogenetico"},
+    "nav_asr":          {"en": "Ancestral states", "es": "Estados ancestrales", "pt": "Estados ancestrais"},
+    "nav_div":          {"en": "Diversification", "es": "Diversificacion", "pt": "Diversificacao"},
+    "nav_sse":          {"en": "SSE", "es": "SSE", "pt": "SSE"},
+
+    "nav_asrDiscrete":  {"en": "Discrete characters", "es": "Caracteres discretos", "pt": "Caracteres discretos"},
+    "nav_asrContinuous":{"en": "Continuous characters", "es": "Caracteres Continuous", "pt": "Caracteres Continuous"},
+    "nav_asrPoly":      {"en": "Polymorphic character", "es": "Polymorphic character", "pt": "Polymorphic character"},
+
+    "desc_signal":      {"en": "Quantify how much trait variation is explained by shared ancestry (Pagel's lambda, Blomberg's K).", "es": "Cuantifica cuanta variacion del caracter explica la ascendencia compartida (lambda de Pagel, K de Blomberg).", "pt": "Quantifica quanta variacao do caractere e explicada pela ancestralidade compartilhada (lambda de Pagel, K de Blomberg)."},
+    "desc_pgls":        {"en": "Fit linear models that account for phylogenetic non-independence (PGLS).", "es": "Ajusta modelos lineales que consideran la no independencia filogenetica (PGLS).", "pt": "Ajusta modelos lineares que consideram a nao independencia filogenetica (PGLS)."},
+    "desc_asr":         {"en": "Reconstruct ancestral character states at internal nodes.", "es": "Reconstruye estados ancestrales del caracter en nodos internos.", "pt": "Reconstroi estados ancestrais do caractere em nos internos."},
+    "desc_div":         {"en": "Estimate speciation and extinction rates and compare diversification models.", "es": "Estima tasas de especiacion y extincion y compara modelos de diversificacion.", "pt": "Estima taxas de especiacao e extincao e compara modelos de diversificacao."},
+
+    "step_upload":      {"en": "1. Data upload", "es": "1. Carga de datos", "pt": "1. Carregar dados"},
+    "step_diagnose":    {"en": "2. Data diagnosis", "es": "2. Diagnostico de datos", "pt": "2. Diagnostico de dados"},
+    "step_params":      {"en": "3. Analysis parameters", "es": "3. Parametros del analisis", "pt": "3. Parametros da analise"},
+    "step_results":     {"en": "4. Results", "es": "4. Resultados", "pt": "4. Resultados"},
+    "step_code":        {"en": "5. Live Code Mirror", "es": "5. Espejo de codigo en vivo", "pt": "5. Espelho de codigo ao vivo"},
+
+    "lbl_tree_file":    {"en": "Phylogenetic tree (Newick / Nexus)", "es": "Arbol filogenetico (Newick / Nexus)", "pt": "Arvore filogenetica (Newick / Nexus)"},
+    "lbl_traits_file":  {"en": "Trait table (CSV / Excel)", "es": "Tabla de caracteres (CSV / Excel)", "pt": "Tabela de caracteres (CSV / Excel)"},
+    "lbl_taxon_col":    {"en": "Taxon column", "es": "Columna de taxon", "pt": "Coluna de taxon"},
+    "lbl_load":         {"en": "Load & diagnose", "es": "Cargar y diagnosticar", "pt": "Carregar e diagnosticar"},
+    "lbl_example":      {"en": "Use example data", "es": "Usar datos de ejemplo", "pt": "Usar dados de exemplo"},
+    "lbl_run":          {"en": "Run analysis", "es": "Ejecutar analisis", "pt": "Executar analise"},
+
+    "lbl_trait":        {"en": "Trait", "es": "Caracter", "pt": "Caractere"},
+    "lbl_method":       {"en": "Method", "es": "Metodo", "pt": "Metodo"},
+    "lbl_model":        {"en": "Evolutionary model", "es": "Modelo evolutivo", "pt": "Modelo evolutivo"},
+    "lbl_nsim":         {"en": "Randomizations", "es": "Aleatorizaciones", "pt": "Aleatorizacoes"},
+    "lbl_response":     {"en": "Response variable", "es": "Variable respuesta", "pt": "Variavel resposta"},
+    "lbl_predictors":   {"en": "Predictor variables", "es": "Variables predictoras", "pt": "Variaveis preditoras"},
+    "lbl_trait_type":   {"en": "Trait type", "es": "Tipo de caracter", "pt": "Tipo de caractere"},
+    "lbl_asr_model":    {"en": "Transition model", "es": "Modelo de transicion", "pt": "Modelo de transicao"},
+    "lbl_test":         {"en": "Test against no signal", "es": "Probar contra ausencia de senal", "pt": "Testar contra ausencia de sinal"},
+
+    "opt_continuous":   {"en": "Continuous", "es": "Continuo", "pt": "Continuo"},
+    "opt_discrete":     {"en": "Discrete", "es": "Discreto", "pt": "Discreto"},
+
+    "diag_title":       {"en": "Diagnosis report", "es": "Reporte de diagnostico", "pt": "Relatorio de diagnostico"},
+    "diag_tips":        {"en": "Tips in tree", "es": "Terminales en el arbol", "pt": "Terminais na arvore"},
+    "diag_taxa":        {"en": "Taxa in table", "es": "Taxones en la tabla", "pt": "Taxons na tabela"},
+    "diag_traits":      {"en": "Traits available", "es": "Caracteres disponibles", "pt": "Caracteres disponiveis"},
+    "diag_matched":     {"en": "Matched taxa", "es": "Taxones coincidentes", "pt": "Taxons correspondentes"},
+    "diag_only_tree":   {"en": "Only in tree", "es": "Solo en el arbol", "pt": "Apenas na arvore"},
+    "diag_only_data":   {"en": "Only in table", "es": "Solo en la tabla", "pt": "Apenas na tabela"},
+    "diag_ultrametric": {"en": "Ultrametric", "es": "Ultrametrico", "pt": "Ultrametrico"},
+    "diag_binary":      {"en": "Fully resolved", "es": "Totalmente resuelto", "pt": "Totalmente resolvido"},
+    "diag_status":      {"en": "Status", "es": "Estado", "pt": "Estado"},
+    "status_ok":        {"en": "Ready to analyse", "es": "Listo para analizar", "pt": "Pronto para analisar"},
+    "status_warning":   {"en": "Usable with warnings", "es": "Utilizable con advertencias", "pt": "Utilizavel com avisos"},
+    "status_error":     {"en": "Cannot proceed", "es": "No se puede continuar", "pt": "Nao e possivel continuar"},
+
+    "res_title":        {"en": "Analysis results", "es": "Resultados del analisis", "pt": "Resultados da analise"},
+    "tbl_parameter":    {"en": "Parameter", "es": "Parametro", "pt": "Parametro"},
+    "tbl_value":        {"en": "Value", "es": "Valor", "pt": "Valor"},
+
+    "code_intro":       {"en": "The exact, reproducible R code behind this analysis:", "es": "El codigo R exacto y reproducible detras de este analisis:", "pt": "O codigo R exato e reproduzivel por tras desta analise:"},
+    "dl_code":          {"en": "Download .R script", "es": "Descargar script .R", "pt": "Baixar script .R"},
+    "dl_results":       {"en": "Download results (.csv)", "es": "Descargar resultados (.csv)", "pt": "Baixar resultados (.csv)"},
+
+    "msg_no_data":      {"en": "Upload a tree and a trait table (or use example data), then click Load & diagnose.", "es": "Carga un arbol y una tabla de caracteres (o usa los datos de ejemplo) y pulsa Cargar y diagnosticar.", "pt": "Carregue uma arvore e uma tabela de caracteres (ou use os dados de exemplo) e clique em Carregar e diagnosticar."},
+    "msg_run_first":    {"en": "Set the parameters and click Run analysis.", "es": "Ajusta los parametros y pulsa Ejecutar analisis.", "pt": "Ajuste os parametros e clique em Executar analise."},
+    "msg_need_continuous": {"en": "This module needs at least one continuous trait.", "es": "Este modulo necesita al menos un caracter continuo.", "pt": "Este modulo precisa de pelo menos um caractere continuo."},
+
+    "footer":           {"en": "Guane - GPL-3 - clean data, valid analysis, transparent code, reproducible science.", "es": "Guane - GPL-3 - datos limpios, analisis valido, codigo transparente, ciencia reproducible.", "pt": "Guane - GPL-3 - dados limpos, analise valida, codigo transparente, ciencia reproduzivel."}
+  }
+}

@@ -1,0 +1,52 @@
+:root {
+  --guane-green: #2f7d4f;
+  --guane-deep:  #1f5135;
+  --guane-bark:  #6b4f2a;
+}
+
+.guane-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, var(--guane-deep), var(--guane-green));
+  color: #fff;
+  border-radius: 0.0rem;
+}
+.guane-topbar h3 { margin: 0; font-weight: 700; letter-spacing: 0.5px; }
+.guane-topbar .guane-sub { font-size: 0.85rem; opacity: 0.9; }
+.guane-topbar .form-group { margin-bottom: 0; }
+.guane-topbar .selectize-control { min-width: 150px; }
+
+.guane-code {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem 1.1rem;
+  border-radius: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  border: 1px solid #1e293b;
+}
+.guane-code code { color: inherit; background: none; white-space: pre-wrap; }
+.guane-code-controls { display: flex; gap: 0.5rem; margin-top: 0.6rem; }
+
+.guane-diag th { width: 45%; color: #475569; font-weight: 600; }
+.guane-results th { background: #f1f5f9; }
+.guane-results td, .guane-diag td { font-variant-numeric: tabular-nums; }
+
+.guane-hero {
+  padding: 1rem 0 0.5rem 0;
+}
+.guane-hero .lead { color: #475569; }
+.guane-footer {
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  text-align: center;
+}

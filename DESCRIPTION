@@ -1,0 +1,40 @@
+Package: guane
+Title: Multilingual Shiny Platform for Phylogenetic Comparative Analyses
+Version: 0.0.0.9000
+Authors@R:
+    person(
+      given = "Leidy Viviana",
+      family = "Romero-Alarcon",
+      role = c("aut", "cre"),
+      email = "vivianaromeroalarcon@umb.edu"
+    )
+Description: Guane is a modular Shiny-based platform for phylogenetic comparative analyses. 
+    It provides data validation, analytical workflows, multilingual guidance, and reproducible 
+    code export for researchers using phylogenetic comparative methods.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports: 
+    ape,
+    nlme,
+    phylolm,
+    gee,
+    bslib,
+    phytools,
+    diversitree,
+    deSolve,
+    coda,
+    cli,
+    jsonlite,
+    shiny
+Suggests: 
+    hisse,
+    nloptr,
+    data.table,
+    DDD,
+    devtools,
+    roxygen2,
+    testthat (>= 3.0.0),
+    usethis
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
