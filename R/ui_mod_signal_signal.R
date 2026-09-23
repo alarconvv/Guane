@@ -1,0 +1,30 @@
+ui_mod_signal_signal <- function(id) {
+ ns<-shiny::NS(id)
+ ui_mod_analysis_base(id,'signal','Phylogenetic signal',
+  controls=shiny::tagList(shiny::h4("Blomberg's K & Pagel's λ"),
+   shiny::selectInput(ns('signal_trait'),'Trait for signal',NULL),
+   shiny::p('Choose an original or transformed numeric column from Data. PICs are node contrasts and are not used as species traits.'),
+   shiny::numericInput(ns('nsim'),'K test draws (including observed)',999,min=99,max=9999),
+   shiny::p('The K test uses one observed draw and the remaining randomized draws.'),
+   shiny::actionButton(ns('run'),'Run signal analysis')),
+  results=shiny::tagList(shiny::fluidRow(
+   shiny::column(9,shiny::plotOutput(ns('signal_plot'),height='auto')),
+   shiny::column(3,shiny::h4('Graph controls'),
+    shiny::selectInput(ns('signal_graph'),'Graph',c('Observed tip values'='tree','Randomized K values'='null')),
+    shiny::selectInput(ns('signal_palette'),'Palette',c('Guane','Grayscale')),
+    shiny::sliderInput(ns('signal_font'),'Label size',.4,1.2,.8,step=.1),
+    shiny::numericInput(ns('signal_height'),'Figure height (inches)',7,min=4,max=20),
+    shiny::downloadButton(ns('signal_pdf'),'Download graph PDF'),
+    shiny::downloadButton(ns('script'),'Download graph R code'))),
+   shiny::uiOutput(ns('signal_metadata')),shiny::tableOutput(ns('results')),
+   shiny::p('Tip colors represent observed trait values, not reconstructed ancestral states.'),
+   shiny::p('K compares trait similarity with Brownian-motion expectations: K = 1 is the reference; larger values indicate greater similarity among relatives. Its randomization test evaluates random assignment of values to tips.'),
+   shiny::p('Lambda measures phylogenetic covariance scaling. The likelihood-ratio test compares the fitted lambda with lambda = 0. A small p-value supports phylogenetic signal under this model.'),
+   shiny::downloadButton(ns('signal_csv'),'Download results CSV')),
+  diagnostics=shiny::tagList(shiny::plotOutput(ns('signal_null'),height='400px'),
+   shiny::p('The histogram excludes the observed draw. The dashed line marks observed K. P-values retain the package test convention, which includes the observed draw.'),
+   shiny::p('No measurement-error model is fitted. Inspect trait quality and tree assumptions before interpreting the tests.'),
+   shiny::p('Inputs come from the Data card. Changing data or analytical settings clears previous results.')),
+  mirror=shiny::tagList(shiny::p('The R script embeds prepared inputs, repeats the tests and reproduces the selected graph. Edit the plotting settings in RStudio.'),
+   shiny::downloadButton(ns('tree_download'),'Export tree'),shiny::verbatimTextOutput(ns('code'))))
+}

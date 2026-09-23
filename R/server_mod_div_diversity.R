@@ -1,0 +1,37 @@
+server_mod_div_diversity <- function(input,output,session,data) {
+ result<-shiny::reactiveVal(NULL);status<-shiny::reactiveVal('Choose settings and run diversification models.')
+ value<-function(n,d)if(is.null(input[[paste0('dd_',n)]]))d else input[[paste0('dd_',n)]]
+ options<-shiny::reactive(list(models=as.numeric(value('models','1')),missing=value('missing',0),res=if(nzchar(value('res','')))guane_dd_numbers(value('res',''),1) else NULL,cond=as.numeric(value('cond',1)),btorph=as.numeric(value('btorph',1)),starts=guane_dd_numbers(value('starts','3,.2,40,1'),4),free=value('free',c('lambda','mu','K')),tol=guane_dd_numbers(value('tol','.001,.0001,.000001'),3),tolint=guane_dd_numbers(value('tolint','1e-10,1e-8'),2),maxiter=value('maxiter',1000),cycles=value('cycles',1),optimizer=value('optimizer','simplex'),method=value('method','analytical'),threshold=value('threshold',0),change=isTRUE(value('change',FALSE)),verbose=isTRUE(value('verbose',FALSE))))
+ shiny::observeEvent(list(data$state$tree,input$dd_models,input$dd_missing,input$dd_res,input$dd_cond,input$dd_btorph,input$dd_starts,input$dd_free,input$dd_tol,input$dd_tolint,input$dd_maxiter,input$dd_cycles,input$dd_optimizer,input$dd_method,input$dd_threshold,input$dd_change,input$dd_verbose),{result(NULL);status('Inputs changed. Run diversification models to update results.')},ignoreNULL=FALSE)
+ shiny::observeEvent(input$dd_run,{
+  result(NULL)
+  tryCatch({r<-shiny::withProgress(message=guane_text('Run diversity-dependent models',data$lang()),value=.1,do.call(guane_dd_fit,c(list(tree=data$state$tree),options())));result(r);shiny::updateSelectInput(session,'dd_model',choices=names(r$fits));status(if(all(r$comparison$Converged))'Analysis completed.' else 'Inspect convergence and backend messages.');data$record('Diversity-dependent diversification analysis completed.')},error=function(e)status(conditionMessage(e)))
+ })
+ shiny::observeEvent(input$dd_factor,{r<-result();if(!is.null(r)){r$diagnostics<-NULL;result(r)}},ignoreInit=TRUE)
+ shiny::observeEvent(input$dd_diagnose,{shiny::req(result());tryCatch({result(guane_dd_diagnose(result(),value('factor',2)))},error=function(e)status(conditionMessage(e)))})
+ uncertainty_options<-shiny::reactive(list(model=value('unc_model','1'),parameter=value('unc_parameter','lambda'),lower=value('lower',.1),upper=value('upper',10),points=value('points',21),level=value('level',.95),profiles=isTRUE(value('profiles',TRUE)),robustness=isTRUE(value('robustness',TRUE)),start_factors=guane_dd_numbers(value('start_factors','.5,2')),resolution_factor=value('factor',2),bootstrap=isTRUE(value('bootstrap',FALSE)),nsim=value('nsim',20),seed=value('bootseed',999),seconds=value('seconds',30)))
+ shiny::observeEvent(list(input$dd_unc_model,input$dd_unc_parameter,input$dd_lower,input$dd_upper,input$dd_points,input$dd_level,input$dd_profiles,input$dd_robustness,input$dd_start_factors,input$dd_factor,input$dd_bootstrap,input$dd_nsim,input$dd_bootseed,input$dd_seconds),{r<-result();if(!is.null(r)){r$uncertainty<-NULL;result(r)}},ignoreInit=TRUE)
+ shiny::observeEvent(input$dd_unc_run,{shiny::req(result());tryCatch({r<-shiny::withProgress(message=guane_text('Run uncertainty and robustness',data$lang()),value=.1,do.call(guane_dd_uncertainty,c(list(result=result()),uncertainty_options())));result(r);status('Analysis completed.')},error=function(e)status(conditionMessage(e)))})
+ output$dd_unc_messages<-shiny::renderText({shiny::req(result()$uncertainty);paste(vapply(result()$uncertainty$messages,guane_text,character(1),lang=data$lang()),collapse='\n')})
+ for(field in c('interval','robustness','bootstrap','bootstrap_intervals'))local({key<-field;out<-if(key%in%c('robustness','bootstrap'))paste0('dd_',key,'_table') else paste0('dd_',key);output[[out]]<-shiny::renderTable({shiny::req(result()$uncertainty);{d<-result()$uncertainty[[key]];if(!is.null(d))for(n in intersect(c('Lower_status','Upper_status'),names(d)))d[[n]]<-vapply(d[[n]],guane_text,character(1),lang=data$lang());translate(d)}},digits=6)})
+ for(field in c('profile','interval','robustness','bootstrap','bootstrap_intervals'))local({key<-field;output[[paste0('dd_',key,'_csv')]]<-shiny::downloadHandler(paste0('guane-dd-',key,'.csv'),function(file){shiny::req(result()$uncertainty[[key]]);utils::write.csv(result()$uncertainty[[key]],file,row.names=FALSE)})})
+ settings<-shiny::reactive(list(type=value('graph','rates'),model=value('model','1'),palette=value('palette','Guane'),maxdiv=value('maxdiv',100),lang=data$lang(),parameter=value('parameter','lambda')))
+ draw<-function(){shiny::req(result());tryCatch(do.call(guane_dd_plot,c(list(result=result()),settings())),error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
+ output$dd_plot<-shiny::renderPlot(draw(),width=960,height=672,res=96)
+ output$dd_status<-shiny::renderText(guane_text(status(),data$lang()))
+ estimates<-shiny::reactive({shiny::req(result());do.call(rbind,lapply(names(result()$fits),function(k){f<-result()$fits[[k]];if(is.null(f))return(NULL);for(n in setdiff(c('lambda','mu','K','r','loglik','df','conv'),names(f)))f[[n]]<-NA_real_;cbind(Model=k,f)}))})
+ translate<-function(x){if(is.null(x))return(NULL);names(x)<-vapply(ifelse(names(x)=='Level','Reference level',names(x)),guane_text,character(1),lang=data$lang());x}
+ output$dd_comparison<-shiny::renderTable({shiny::req(result());translate(result()$comparison)},digits=6)
+ output$dd_estimates<-shiny::renderTable(translate(estimates()),digits=6)
+ output$dd_diagnostics<-shiny::renderTable({shiny::req(result());translate(result()$diagnostics)},digits=6)
+ output$dd_log<-shiny::renderText({shiny::req(result());paste(unlist(result()$logs),collapse='\n')})
+ code<-shiny::reactive({if(is.null(result()))return(c('# Proposed DDD settings',tryCatch(guane_r_assignment('settings',options()),error=function(e)paste('#',conditionMessage(e)))));c(tryCatch(guane_r_assignment('proposed_uncertainty_settings',uncertainty_options()),error=function(e)paste('#',conditionMessage(e))),guane_dd_script(result(),settings()))})
+ output$dd_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$dd_script<-shiny::downloadHandler('guane-diversity.R',function(file){shiny::req(result());writeLines(code(),file)})
+ output$dd_pdf<-shiny::downloadHandler('guane-diversity.pdf',function(file){grDevices::pdf(file,width=10,height=7);on.exit(grDevices::dev.off());draw()})
+ output$dd_png<-shiny::downloadHandler('guane-diversity.png',function(file){grDevices::png(file,width=1500,height=1050,res=150);on.exit(grDevices::dev.off());draw()})
+ output$dd_rds<-shiny::downloadHandler('guane-diversity.rds',function(file){shiny::req(result());saveRDS(list(result=result(),settings=settings()),file)})
+ output$dd_csv<-shiny::downloadHandler('guane-diversity-estimates.csv',function(file)utils::write.csv(estimates(),file,row.names=FALSE))
+ for(field in c('comparison','diagnostics'))local({key<-field;output[[paste0('dd_',key,'_csv')]]<-shiny::downloadHandler(paste0('guane-diversity-',key,'.csv'),function(file){shiny::req(result()[[key]]);utils::write.csv(result()[[key]],file,row.names=FALSE)})})
+ list(result=result,code=code)
+}
