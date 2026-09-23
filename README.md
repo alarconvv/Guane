@@ -12,7 +12,7 @@ From this project directory in R/RStudio:
 ```r
 library(devtools)
 
-devtools:load_all()
+devtools::load_all()
 
 guane::run_app()
 ```
