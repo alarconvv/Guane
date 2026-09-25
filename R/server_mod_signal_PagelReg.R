@@ -9,15 +9,16 @@ server_mod_signal_PagelReg <- function(input, output, session, data) {
   shiny::updateSelectInput(session,'pagel_y',choices=cols,selected=selected_y)
  },ignoreNULL=FALSE)
  shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),input$pagel_x,input$pagel_y,input$pagel_starts,input$pagel_max),{
-  result(NULL);status('Inputs changed. Run the correlation test to update results.')
+  pagel_task$discard();result(NULL);status('Inputs changed. Run the correlation test to update results.')
  },ignoreInit=TRUE)
+ pagel_fail<-function(msg){status(msg);data$record(paste('Pagel:',msg))}
+ pagel_task<-guane_task(function(fit){
+  result(fit);status('Correlation test completed. Review convergence and state counts.');data$record("Pagel's correlation completed.")
+  for(w in fit$warnings) data$record(paste('Pagel:',w))
+ },pagel_fail,status)
  shiny::observeEvent(input$pagel_run,{
   result(NULL)
-  tryCatch({
-   fit<-shiny::withProgress(message="Fitting Pagel's correlation",value=.2,guane_pagel(data$state$tree,data$state$traits,data$taxon(),input$pagel_x,input$pagel_y,input$pagel_starts,input$pagel_max))
-   result(fit);status('Correlation test completed. Review convergence and state counts.');data$record("Pagel's correlation completed.")
-   for(w in fit$warnings) data$record(paste('Pagel:',w))
-  },error=function(e) {status(conditionMessage(e));data$record(paste('Pagel:',conditionMessage(e)))})
+  tryCatch(pagel_task$run(guane_pagel,list(data$state$tree,data$state$traits,data$taxon(),input$pagel_x,input$pagel_y,input$pagel_starts,input$pagel_max)),error=function(e)pagel_fail(conditionMessage(e)))
  })
  output$pagel_readiness<-shiny::renderText({
   t<-data$state$traits
@@ -42,7 +43,7 @@ server_mod_signal_PagelReg <- function(input, output, session, data) {
  output$pagel_code<-shiny::renderText({if(is.null(result())) return('Run the correlation test on matched data to display results.');paste(code(),collapse='\n')})
  output$pagel_script<-shiny::downloadHandler('guane-pagel-correlation.R',function(file) writeLines(code(),file))
  output$pagel_pdf<-shiny::downloadHandler('guane-pagel.pdf',function(file){shiny::req(result());grDevices::pdf(file,width=8,height=7);on.exit(grDevices::dev.off());draw()})
- output$pagel_csv<-shiny::downloadHandler('guane-pagel-rates.csv',function(file){shiny::req(result());utils::write.csv(result()$rates,file,row.names=FALSE)})
- output$pagel_summary_csv<-shiny::downloadHandler('guane-pagel-models.csv',function(file){shiny::req(result());utils::write.csv(cbind(result()$comparison,result()$test[rep(1,2),,drop=FALSE]),file,row.names=FALSE)})
+ output$pagel_csv<-shiny::downloadHandler('guane-pagel-rates.csv',function(file){shiny::req(result());guane_write_csv(result()$rates,file,row.names=FALSE)})
+ output$pagel_summary_csv<-shiny::downloadHandler('guane-pagel-models.csv',function(file){shiny::req(result());guane_write_csv(cbind(result()$comparison,result()$test[rep(1,2),,drop=FALSE]),file,row.names=FALSE)})
  list(result=result,code=code)
 }

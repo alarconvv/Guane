@@ -1,5 +1,4 @@
 # BiSSE adapter to diversitree; no backend likelihood code is copied.
-core_mod_sse_bisse <- function() list(implemented=TRUE)
 guane_bisse_backend <- function() guane_sse_backend()
 guane_bisse_names <- function() c('lambda0','lambda1','mu0','mu1','q01','q10')
 guane_bisse_models <- function() c('Full','Equal speciation','Equal extinction','Equal transitions','Trait-independent diversification','No extinction','Custom')

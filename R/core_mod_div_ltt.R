@@ -38,8 +38,10 @@ guane_ltt_read <- function(paths,names) {
  trees<-list()
  for(i in seq_along(paths)) {
   x<-ape::read.tree(paths[i]);if(inherits(x,'phylo'))x<-list(x)
+  for(t in x)guane_check_tree_size(t)
   if(!is.list(x)||!length(x))stop('No trees found in the uploaded Newick file.')
   for(j in seq_along(x))trees[[paste0(names[i],' [',j,']')]]<-x[[j]]
+  if(length(trees)>25)stop('Choose one to 25 trees for LTT.')
  }
  if(length(trees)>25)stop('Choose one to 25 trees for LTT.')
  trees

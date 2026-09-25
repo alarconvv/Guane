@@ -1,0 +1,120 @@
+# Functional: diversification, phylogenetic signal and SSE (BiSSE) cards end to
+# end with background workers (GUANE_ASYNC=true), including invalid-input paths
+# and CSV / R-script downloads.
+source(testthat::test_path('functional-driver.R'), local = TRUE)
+
+app <- guane_ft_app(async = TRUE, name = 'analyses-async')
+withr::defer(guane_ft_stop(app))
+
+test_that('Diversification: invalid sampling fraction yields the validation message', {
+ prep <- guane_ft_prepare(app, 'div')
+ expect_match(prep$activity, '^User requested matching; 1 unmatched entries removed')
+ guane_ft_select(app, 'div', 'rates')
+ guane_ft_set(app, `div-rates_sampling` = 1.5)
+ app$click('div-rates_run')
+ status <- guane_ft_wait_status(app, 'div-rates_status', timeout = 60,
+  ignore = c('Inputs changed. Run diversification models to update results.', 'Choose settings and run diversification models.'))
+ expect_identical(status, 'Sampling fraction must be greater than zero and at most one.')
+ expect_identical(guane_ft_plot_src(app, 'div-rates_plot'), '')
+ guane_ft_set(app, `div-rates_sampling` = 1)
+ expect_identical(guane_ft_wait_text(app, 'div-rates_status', 'Inputs changed. Run diversification models to update results.'),
+  'Inputs changed. Run diversification models to update results.')
+})
+
+test_that('Diversification: constant-rate Yule and birth-death models complete', {
+ guane_ft_select(app, 'div', 'rates')
+ guane_ft_set(app, `div-rates_models` = c('Yule', 'BD'))
+ app$click('div-rates_run')
+ status <- guane_ft_wait_status(app, 'div-rates_status', timeout = 180,
+  ignore = c('Inputs changed. Run diversification models to update results.', 'Choose settings and run diversification models.'))
+ expect_identical(status, 'Rate analysis completed. Inspect convergence, bounds and uncertainty.')
+ expect_match(guane_ft_plot_src(app, 'div-rates_plot'), '^data:image/png;base64,')
+ comparison <- guane_ft_text(app, 'div-rates_comparison')
+ expect_match(comparison, 'Yule')
+ expect_match(comparison, 'BD')
+ expect_match(guane_ft_text(app, 'div-rates_metadata'), '| n = 19 |', fixed = TRUE)
+ csv <- app$get_download('div-rates_comparison_csv')
+ expect_identical(basename(csv), 'guane-rate-comparison.csv')
+ d <- utils::read.csv(csv)
+ expect_setequal(d$Model, c('Yule', 'BD'))
+ expect_true(all(d$Converged))
+ expect_equal(sum(d$Weight), 1, tolerance = 1e-6)
+ est <- utils::read.csv(app$get_download('div-rates_csv'))
+ expect_gt(nrow(est), 0)
+ # Exported R script (Live Code Mirror) for the diversification card.
+ guane_ft_set(app, `div-rates_view` = 'code')
+ mirror <- app$get_value(output = 'div-rates_code')
+ script <- readLines(app$get_download('div-rates_script'), warn = FALSE, encoding = 'UTF-8')
+ expect_match(mirror, 'analysis_settings', fixed = TRUE)
+ expect_true(any(grepl('diversitree', script, fixed = TRUE)))
+ expect_error(parse(text = script, encoding = 'UTF-8'), NA)
+ guane_ft_set(app, `div-rates_view` = 'results')
+})
+
+test_that('Signal: invalid randomization count yields the validation message', {
+ guane_ft_prepare(app, 'signal')
+ guane_ft_select(app, 'signal', 'signal')
+ guane_ft_set(app, `signal-nsim` = 50)
+ app$click('signal-run')
+ msg <- 'Choose 99–9999 integer randomizations.'
+ app$wait_for_js("document.querySelectorAll('.shiny-notification').length > 0", timeout = 20000)
+ expect_match(guane_ft_text_js(app, '.shiny-notification'), msg, fixed = TRUE)
+ expect_match(guane_ft_text(app, 'signal-results'), 'Run an analysis on validated data to see results.', fixed = TRUE)
+ guane_ft_select(app, 'signal', 'data')
+ expect_identical(guane_ft_text(app, 'signal-activity'), msg)
+})
+
+test_that('Signal: Blomberg K and Pagel lambda complete with results and downloads', {
+ guane_ft_select(app, 'signal', 'signal')
+ guane_ft_set(app, `signal-nsim` = 999)
+ expect_identical(app$get_value(input = 'signal-signal_trait'), 'body_mass')
+ app$click('signal-run')
+ app$wait_for_js("/Blomberg/.test((document.getElementById('signal-results')||{}).textContent||'')", timeout = 180000)
+ app$wait_for_idle(duration = 300)
+ results <- guane_ft_text(app, 'signal-results')
+ expect_match(results, "Blomberg's K", fixed = TRUE)
+ expect_match(results, "Pagel's lambda", fixed = TRUE)
+ expect_match(guane_ft_plot_src(app, 'signal-signal_plot'), '^data:image/png;base64,')
+ # Completion status is reported in the Data card's message panel.
+ guane_ft_select(app, 'signal', 'data')
+ expect_identical(guane_ft_wait_text(app, 'signal-activity', 'Signal analysis completed. Results correspond to the current inputs.'),
+  'Signal analysis completed. Results correspond to the current inputs.')
+ guane_ft_select(app, 'signal', 'signal')
+ d <- utils::read.csv(app$get_download('signal-signal_csv'), check.names = FALSE)
+ expect_setequal(d$Metric, c("Blomberg's K", "Pagel's lambda"))
+ expect_true(all(d$P_value > 0 & d$P_value <= 1))
+ expect_true(all(is.finite(d$Estimate)))
+ script <- readLines(app$get_download('signal-script'), warn = FALSE, encoding = 'UTF-8')
+ expect_error(parse(text = script, encoding = 'UTF-8'), NA)
+ expect_true(any(grepl('phylosig', script, fixed = TRUE)))
+})
+
+test_that('SSE: BiSSE before matching is rejected, then one-model BiSSE completes', {
+ guane_ft_select(app, 'sse', 'data')
+ app$click('sse-example')
+ app$wait_for_idle(duration = 300)
+ guane_ft_select(app, 'sse', 'bisse')
+ expect_identical(app$get_value(input = 'sse-bisse_trait'), 'habitat_binary')
+ guane_ft_set(app, `sse-bisse_models` = 'Full')
+ app$click('sse-bisse_run')
+ status <- guane_ft_wait_status(app, 'sse-bisse_status', timeout = 60, ignore = 'BiSSE inputs changed. Run again to update results.')
+ expect_identical(status, 'Match tree and trait taxa explicitly in Data before BiSSE.')
+
+ guane_ft_select(app, 'sse', 'data')
+ app$click('sse-match')
+ app$wait_for_idle(duration = 300)
+ guane_ft_select(app, 'sse', 'bisse')
+ guane_ft_set(app, `sse-bisse_models` = 'Full')
+ app$click('sse-bisse_run')
+ status <- guane_ft_wait_status(app, 'sse-bisse_status', timeout = 300, ignore = 'BiSSE inputs changed. Run again to update results.')
+ expect_identical(status, 'BiSSE completed. Review convergence, bounds and model assumptions.')
+ expect_match(guane_ft_plot_src(app, 'sse-bisse_plot'), '^data:image/png;base64,')
+ est <- guane_ft_text(app, 'sse-bisse_estimates')
+ for (p in c('lambda0', 'lambda1', 'mu0', 'mu1', 'q01', 'q10')) expect_match(est, p, fixed = TRUE)
+ d <- utils::read.csv(app$get_download('sse-bisse_csv'))
+ expect_setequal(unique(d$Model), 'Full')
+ expect_true(all(c('lambda0', 'lambda1', 'mu0', 'mu1', 'q01', 'q10') %in% d$Parameter))
+
+ errors <- guane_ft_browser_errors(app)
+ expect_equal(nrow(errors), 0, info = paste(errors$message, collapse = '\n'))
+})

@@ -29,7 +29,7 @@ shiny::runApp(".")
 
 If Guane has been installed as an R package, use `guane::run_app()` instead. The development app uses the project's local `.guane-library` when it exists; analyses need their respective R backends installed. If a package is missing, follow the error message and ask the project maintainer for the project's dependency setup. The Shiny URL printed by R is local to your computer. The language menu at the top switches **English, Español, Português**.
 
-The four main pills are **Phylo traits**, **Ancestral state reconstruction**, **Diversification**, and **SSE models**. Each has its **own Data card** and analysis cards. Loading the example in one main pill does not load it into the other three. Analysis cards have controls on the left and **Results**, **Diagnostics**, **Live Code Mirror**, and **Chatbot** tabs. The Chatbot tab is a placeholder; it does not send messages. Results and selections stay in place when you switch language or adjust graph appearance. Changing data or model settings can clear an affected result; click its **Run** button again.
+The four main pills are **Phylo traits**, **Ancestral state reconstruction**, **Diversification**, and **SSE models**. Each has its **own Data card** and analysis cards. Loading the example in one main pill does not load it into the other three. Analysis cards have controls on the left and **Results**, **Diagnostics**, and **Live Code Mirror** tabs. Results and selections stay in place when you switch language or adjust graph appearance. Changing data or model settings can clear an affected result; click its **Run** button again.
 
 ## Start with the bundled example
 

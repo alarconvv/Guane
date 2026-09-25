@@ -1,11 +1,3 @@
-server_mod_asr <- function(id, lang=function() 'en') {
- shiny::moduleServer(id,function(input,output,session) {
-  data<-server_mod_asr_data(input,output,session,lang)
-  analyses<-list(discrete=server_mod_asr_discrete(input,output,session,data),continuous=server_mod_asr_continuous(input,output,session,data),poly=server_mod_asr_poly(input,output,session,data))
-  list(data=data,analyses=analyses)
- })
-}
-
 # Shared reactive input adapter; validation and computation remain pure core functions.
 server_asr_mk_advanced <- function(input,output,session,prefix,context,lang=function()'en') {
  value<-function(key,default=NULL){x<-input[[paste0(prefix,'_',key)]];if(is.null(x))default else x}
@@ -31,9 +23,12 @@ server_asr_mk_advanced <- function(input,output,session,prefix,context,lang=func
    matrices<-setNames(lapply(candidates,function(m)if(m==model)z$index else if(prefix=='poly')guane_poly_matrix(z$data$states,m) else guane_mk_matrix(z$data$states,m)),candidates)
    keys<-vapply(matrices,function(m)paste(match(as.vector(m),unique(as.vector(m))),collapse=','),character(1));matrices<-matrices[!duplicated(keys)]
   }
-  code<-unlist(lapply(names(matrices),function(m)c(paste0('# Candidate: ',m),guane_mk_call_preview(z$data,matrices[[m]],maximum(),a),paste0('fits[[',deparse(m),']] <- fit'))))
+  code<-unlist(lapply(names(matrices),function(m)c(paste0('# Candidate: ',deparse(m)),guane_mk_call_preview(z$data,matrices[[m]],maximum(),a),paste0('fits[[',deparse(m),']] <- fit'))))
   c('fits <- list()',code,paste0('fit <- fits[[',deparse(model),']]'),
-   if(identical(value('framework'),'simmap'))c(paste0('set.seed(',value('seed',999),', kind="Mersenne-Twister", normal.kind="Inversion", sample.kind="Rejection")'),paste0('maps <- phytools::make.simmap(tree, x, model=fit$index.matrix, Q=phytools::as.Qmatrix(fit), pi=fit$pi, nsim=',value('nsim',100),', tol=0, message=FALSE)')))
+   if(identical(value('framework'),'simmap')){
+    # Only validated integers reach generated code; raw client strings never do.
+    whole<-function(x,lo,hi){x<-suppressWarnings(as.numeric(x));if(length(x)!=1||!is.finite(x)||x!=floor(x)||x<lo||x>hi)stop('Choose integer mapping settings within the allowed range.');format(x,scientific=FALSE)}
+    c(paste0('set.seed(',whole(value('seed',999),0,2147483647),', kind="Mersenne-Twister", normal.kind="Inversion", sample.kind="Rejection")'),paste0('maps <- phytools::make.simmap(tree, x, model=fit$index.matrix, Q=phytools::as.Qmatrix(fit), pi=fit$pi, nsim=',whole(value('nsim',100),2,500),', tol=0, message=FALSE)'))})
  },error=function(e)guane_text(conditionMessage(e),lang())))
  output[[paste0(prefix,'_advanced_preview')]]<-shiny::renderText(paste(preview(),collapse='\n'))
  shiny::observeEvent(input[[paste0(prefix,'_root_fill')]],{
@@ -100,7 +95,7 @@ server_asr_graphics <- function(input,output,session,prefix,result,lang) {
   if(prefix!='bm')shiny::updateSliderInput(session,paste0(prefix,'_pie_size'),value=.6)
  })
  output[[paste0(prefix,'_node_detail')]]<-shiny::renderTable({shiny::req(result(),nzchar(settings()$focus_node));t<-guane_asr_node_table(result(),settings()$focus_node);names(t)<-vapply(names(t),guane_text,character(1),lang=lang());t},digits=5)
- output[[paste0(prefix,'_node_csv')]]<-shiny::downloadHandler('guane-selected-node.csv',function(file){shiny::req(result());utils::write.csv(guane_asr_node_table(result(),settings()$focus_node),file,row.names=FALSE)})
+ output[[paste0(prefix,'_node_csv')]]<-shiny::downloadHandler('guane-selected-node.csv',function(file){shiny::req(result());guane_write_csv(guane_asr_node_table(result(),settings()$focus_node),file,row.names=FALSE)})
  settings
 }
 
@@ -130,10 +125,10 @@ server_asr_bayes_outputs <- function(input,output,session,prefix,result,settings
  })
  output[[id('bayes_diagnostics')]]<-shiny::renderTable({shiny::req(result()$bayes);translate_headers(result()$bayes$diagnostics)},digits=5)
  output[[id('bayes_node_diagnostics')]]<-shiny::renderTable({shiny::req(result()$bayes);translate_headers(result()$bayes$node_diagnostics)},digits=5)
- output[[id('bayes_draws_csv')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-posterior.csv'),function(file){shiny::req(result()$bayes);utils::write.csv(result()$bayes$draws,file,row.names=FALSE)})
- output[[id('bayes_settings_csv')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-priors.csv'),function(file){shiny::req(result()$bayes);utils::write.csv(result()$bayes$parameters,file,row.names=FALSE)})
- output[[id('bayes_diagnostics_csv')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-chain-diagnostics.csv'),function(file){shiny::req(result()$bayes);utils::write.csv(result()$bayes$diagnostics,file,row.names=FALSE)})
- output[[id('bayes_node_csv')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-node-diagnostics.csv'),function(file){shiny::req(result()$bayes);utils::write.csv(result()$bayes$node_diagnostics,file,row.names=FALSE)})
+ output[[id('bayes_draws_csv')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-posterior.csv'),function(file){shiny::req(result()$bayes);guane_write_csv(result()$bayes$draws,file,row.names=FALSE)})
+ output[[id('bayes_settings_csv')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-priors.csv'),function(file){shiny::req(result()$bayes);guane_write_csv(result()$bayes$parameters,file,row.names=FALSE)})
+ output[[id('bayes_diagnostics_csv')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-chain-diagnostics.csv'),function(file){shiny::req(result()$bayes);guane_write_csv(result()$bayes$diagnostics,file,row.names=FALSE)})
+ output[[id('bayes_node_csv')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-node-diagnostics.csv'),function(file){shiny::req(result()$bayes);guane_write_csv(result()$bayes$node_diagnostics,file,row.names=FALSE)})
  output[[id('bayes_trace')]]<-shiny::renderPlot({server_asr_plot(function(){shiny::req(result()$bayes);s<-settings();s$type<-'trace';do.call(plot,c(list(result=result()),s))},data$lang())},width=function()appearance()$width*96,height=function()appearance()$height*96,res=96)
  output[[id('bayes_trace_pdf')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-trace.pdf'),function(file){shiny::req(result()$bayes);grDevices::pdf(file,width=appearance()$width,height=appearance()$height);on.exit(grDevices::dev.off());s<-settings();s$type<-'trace';do.call(plot,c(list(result=result()),s))})
  output[[id('bayes_trace_script')]]<-shiny::downloadHandler(paste0('guane-',prefix,'-trace.R'),function(file){shiny::req(result()$bayes);s<-settings();s$type<-'trace';writeLines(do.call(script,c(list(result=result()),s)),file)})

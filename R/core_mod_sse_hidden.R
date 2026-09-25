@@ -29,7 +29,6 @@ guane_hidden_native <- function(..., verify=TRUE, maxeval=100000) {
 }
 
 # Binary observed traits with latent diversification categories, using the public HiSSE API.
-core_mod_sse_hidden <- function() list(implemented=TRUE)
 guane_hidden_require <- function() {
  if(!requireNamespace('hisse',quietly=TRUE))stop('Install the hisse R package to run hidden-state models.')
 }

@@ -1,5 +1,3 @@
-core_mod_asr_discrete <- function() list(implemented=TRUE,framework='Maximum likelihood',models=c('ER','SYM','ARD','Custom'),stochastic_mapping=TRUE,bayesian=TRUE)
-
 # Rows are source states, columns destination states. Zero forbids a transition.
 guane_mk_matrix <- function(states,model='ER',custom=NULL) {
  k<-length(states);m<-matrix(0,k,k,dimnames=list(states,states))

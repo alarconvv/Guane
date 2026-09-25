@@ -1,12 +1,3 @@
-ui_mod_asr <- function(id) {
- shiny::tagList(shiny::tags$style('.guane-asr-figure img { width: 100% !important; height: auto !important; }'),
- bslib::navset_card_pill(id=shiny::NS(id)("analysis"),
-  ui_mod_asr_data(id),
-  ui_mod_asr_continuous(id),
-  ui_mod_asr_discrete(id),
-  ui_mod_asr_poly(id)))
-}
-
 # Shared controls only; each card retains its own UI and namespaced input IDs.
 ui_asr_mk_advanced <- function(ns,prefix) {
  id<-function(x)ns(paste0(prefix,'_',x))

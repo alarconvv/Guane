@@ -1,6 +1,3 @@
-# Shared metadata for the asr primary module.
-core_mod_asr <- function() list(cards=c('continuous','discrete','poly'))
-
 # Shared Mk optimizer and saved-state displays for discrete and polymorphic cards.
 # Deterministic starts; retain optimizer failures instead of silently treating them as fits.
 # Validate analytical options independently of Shiny. Text inputs are data, never R expressions.

@@ -1,3 +1,9 @@
+# One primary module: the shared Data card plus its analysis cards (see guane_cards).
+ui_mod_family <- function(id) {
+ cards<-lapply(guane_cards[[id]],function(card) get(paste0('ui_mod_',id,'_',card),mode='function')(id))
+ do.call(bslib::navset_card_pill,c(list(id=shiny::NS(id)('analysis'),ui_mod_data_base(id)),cards))
+}
+
 # Shared presentation shell; card implementations remain in separate files.
 ui_mod_analysis_base <- function(id, key, title, controls, results, diagnostics, mirror) {
  ns<-shiny::NS(id)
@@ -7,6 +13,5 @@ ui_mod_analysis_base <- function(id, key, title, controls, results, diagnostics,
    bslib::card(bslib::navset_tab(id=ns(paste0(key,'_view')),
     bslib::nav_panel('Results',value='results',results),
     bslib::nav_panel('Diagnostics',value='diagnostics',diagnostics),
-    bslib::nav_panel('Live Code Mirror',value='code',mirror),
-    bslib::nav_panel('Chatbot',value='chatbot',shiny::p('Chatbot is planned. No messages are sent and no AI service is connected.'))))))
+    bslib::nav_panel('Live Code Mirror',value='code',mirror)))))
 }

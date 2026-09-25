@@ -1,5 +1,3 @@
-core_mod_div_joint <- function() list(implemented=TRUE)
-
 guane_rates_joint_data <- function(tree,nodes,sampling=NULL,split_t=Inf) {
  catalog<-guane_rates_clade_catalog(tree);tree<-catalog$tree;n<-length(tree$tip.label)
  if(!is.numeric(nodes)||!length(nodes)||length(nodes)>4||any(!is.finite(nodes))||anyDuplicated(nodes)||any(nodes!=floor(nodes))||any(!nodes%in%setdiff(catalog$table$Node,n+1)))stop('Choose one to four non-root shift nodes with at least four descendant tips.')

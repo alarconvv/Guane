@@ -4,7 +4,10 @@ guane_signal <- function(tree, traits, taxon, trait, seed = 999, nsim = 999) {
   issues <- guane_validate(tree, traits, taxon, trait)
   if (any(issues$level %in% c('Error', 'Required'))) stop('Resolve data issues before running.')
   x <- setNames(traits[[trait]], as.character(traits[[taxon]]))[tree$tip.label]
-  set.seed(seed)
+  had <- exists('.Random.seed', envir = .GlobalEnv, inherits = FALSE); oldkind <- RNGkind()
+  if (had) oldseed <- get('.Random.seed', envir = .GlobalEnv)
+  on.exit({do.call(RNGkind, as.list(oldkind)); if (had) assign('.Random.seed', oldseed, envir = .GlobalEnv) else if (exists('.Random.seed', envir = .GlobalEnv, inherits = FALSE)) rm('.Random.seed', envir = .GlobalEnv)}, add = TRUE)
+  set.seed(seed, kind = 'Mersenne-Twister', normal.kind = 'Inversion', sample.kind = 'Rejection')
   k <- phytools::phylosig(tree, x, method = 'K', test = TRUE, nsim = nsim)
   lambda <- phytools::phylosig(tree, x, method = 'lambda', test = TRUE)
   if(any(!is.finite(c(k$K,k$P,lambda$lambda,lambda$P,lambda$logL,lambda$logL0)))) stop('Signal analysis returned nonfinite estimates. Inspect the inputs.')
@@ -48,7 +51,7 @@ guane_signal_plot <- function(result, type='tree', palette='Guane', font=.8, lan
 
 guane_signal_script <- function(result, type='tree', palette='Guane', font=.8, lang='en', height=7) {
  s<-attr(result,'snapshot')
- helpers<-c('guane_validate','guane_signal','guane_text','guane_signal_plot')
+ helpers<-c('guane_task_setting','guane_limits','guane_validate','guane_signal','guane_text','guane_signal_plot')
  c('# Guane phylogenetic signal: open in RStudio and Source.',
    '# Prepared inputs and plotting functions are embedded. Edit plot_settings below.',
    '# Install once if needed: install.packages(c("ape", "phytools"))',

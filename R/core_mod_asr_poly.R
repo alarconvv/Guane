@@ -1,5 +1,3 @@
-core_mod_asr_poly <- function() list(implemented=TRUE,framework='Maximum likelihood',models=c('ER','SYM','ARD','transient'),stochastic_mapping=TRUE,bayesian=TRUE)
-
 # Intraspecific coexistence is one observed state, never an ambiguous tip likelihood.
 guane_poly_data <- function(tree,traits,taxon,trait,ordered=FALSE,state_order=NULL,max_poly=NULL) {
  if(!inherits(tree,'phylo') || !ape::is.rooted(tree) || !ape::is.binary(tree)) stop('Mk reconstruction requires a rooted, bifurcating tree.')

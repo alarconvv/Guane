@@ -1,5 +1,3 @@
-core_mod_signal_PGLM <- function() list(implemented=TRUE,family=c('Bernoulli','Poisson GEE','Grouped binomial GEE'),link=c('logit','log','logit'))
-
 # Binary or count outcomes; numeric or categorical species-level predictors, never node-level PICs.
 guane_pglm <- function(tree,traits,taxon,response,predictors,event=NULL,method='logistic_MPLE',trials=NULL,categorical=character(),references=list()) {
  method<-match.arg(method,c('logistic_MPLE','logistic_IG10','poisson_GEE','binomial_GEE'))

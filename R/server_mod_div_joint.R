@@ -10,7 +10,7 @@ server_mod_div_joint <- function(input,output,session,data) {
  },ignoreNULL=FALSE)
  joint_options<-shiny::reactive({o<-options();c(list(tree=data$state$tree,nodes=suppressWarnings(as.numeric(value('joint_nodes',character()))),sampling=guane_rates_joint_csv(value('joint_sampling','')),models=value('joint_models',character()),custom=if('Custom'%in%value('joint_models',character()))guane_rates_joint_csv(value('joint_custom','')) else NULL,controls=guane_rates_joint_csv(value('joint_controls',''))),o[c('survival','optimizer','maxit','upper','intervals')])})
  joint_signature<-NULL
- shiny::observe({current<-list(data$state$tree,input$joint_nodes,input$joint_sampling,input$joint_models,if('Custom'%in%value('joint_models',character()))input$joint_custom else NULL,input$joint_controls,options()[c('survival','optimizer','maxit','upper','intervals')]);if(!identical(current,joint_signature)){joint_signature<<-current;joint_result(NULL);joint_status('Joint inputs changed. Run joint models to update results.')}})
+ shiny::observe({current<-list(data$state$tree,input$joint_nodes,input$joint_sampling,input$joint_models,if('Custom'%in%value('joint_models',character()))input$joint_custom else NULL,input$joint_controls,options()[c('survival','optimizer','maxit','upper','intervals')]);if(!identical(current,joint_signature)){joint_signature<<-current;joint_task$discard();joint_result(NULL);joint_status('Joint inputs changed. Run joint models to update results.')}})
  shiny::observeEvent(input$joint_fill,{
   tryCatch({r<-guane_rates_joint_data(data$state$tree,suppressWarnings(as.numeric(value('joint_nodes',character()))));ids<-r$regions$Region
    shiny::updateTextAreaInput(session,'joint_sampling',value=paste(c('Region,Sampling',paste(ids,1,sep=',')),collapse='\n'))
@@ -19,8 +19,9 @@ server_mod_div_joint <- function(input,output,session,data) {
  })
  joint_view<-shiny::reactive({if(!is.null(joint_result()))return(joint_result());o<-joint_options();guane_rates_joint_data(o$tree,o$nodes,o$sampling)})
  shiny::observeEvent(input$joint_preview,{tryCatch({joint_view();shiny::updateSelectInput(session,'joint_graph',selected='joint_tree');bslib::nav_select('joint_view','results',session=session);joint_status('Joint preview only. Run models to fit rates.')},error=function(e)joint_status(conditionMessage(e)))})
+ joint_task<-guane_task(function(r){joint_result(r);shiny::updateSelectInput(session,'joint_plot_model',choices=r$comparison$Model,selected=r$comparison$Model[if(any(r$comparison$Converged))which(r$comparison$Converged)[1] else 1]);shiny::updateSelectInput(session,'joint_graph',selected=if(nrow(r$comparison)>1&&all(is.finite(r$comparison$DeltaAIC)))'joint_comparison' else 'joint_rates');joint_status('Joint fitting completed. Inspect convergence, boundaries and comparisons.');data$record(paste('Joint diversification shifts:',paste(r$nodes,collapse=', ')))},joint_status,joint_status)
  shiny::observeEvent(input$joint_run,{
-  joint_result(NULL);tryCatch({r<-shiny::withProgress(message=guane_text('Fitting joint diversification models',data$lang()),value=.1,do.call(guane_rates_joint_fit,joint_options()));joint_result(r);shiny::updateSelectInput(session,'joint_plot_model',choices=r$comparison$Model,selected=r$comparison$Model[if(any(r$comparison$Converged))which(r$comparison$Converged)[1] else 1]);shiny::updateSelectInput(session,'joint_graph',selected=if(nrow(r$comparison)>1&&all(is.finite(r$comparison$DeltaAIC)))'joint_comparison' else 'joint_rates');joint_status('Joint fitting completed. Inspect convergence, boundaries and comparisons.');data$record(paste('Joint diversification shifts:',paste(r$nodes,collapse=', ')))},error=function(e)joint_status(conditionMessage(e)))
+  joint_result(NULL);tryCatch(joint_task$run(guane_rates_joint_fit,joint_options()),error=function(e)joint_status(conditionMessage(e)))
  })
  output$joint_status<-shiny::renderText(guane_text(joint_status(),data$lang()))
  output$joint_warnings<-shiny::renderText({shiny::req(joint_result());w<-joint_result()$warnings;if(!length(w))w<-'No fitting warnings reported. Inspect diagnostics before interpretation.';paste(vapply(w,guane_text,character(1),lang=data$lang()),collapse='\n')})
@@ -28,7 +29,7 @@ server_mod_div_joint <- function(input,output,session,data) {
  for(field in c('comparison','estimates','attempts','constraints','controls','regions','membership','edges'))local({
   key<-field;out<-if(key=='controls')'joint_controls_table' else paste0('joint_',key)
   output[[out]]<-shiny::renderTable({shiny::req(joint_result());translate(joint_result()[[key]])},digits=6)
-  output[[paste0('joint_',key,'_csv')]]<-shiny::downloadHandler(paste0('guane-joint-',key,'.csv'),function(file){shiny::req(joint_result(),joint_result()[[key]]);utils::write.csv(joint_result()[[key]],file,row.names=FALSE)})
+  output[[paste0('joint_',key,'_csv')]]<-shiny::downloadHandler(paste0('guane-joint-',key,'.csv'),function(file){shiny::req(joint_result(),joint_result()[[key]]);guane_write_csv(joint_result()[[key]],file,row.names=FALSE)})
  })
  settings<-shiny::reactive(list(type=value('joint_graph','joint_rates'),model=value('joint_plot_model','SharedBD'),parameter=value('joint_parameter','lambda'),palette=value('joint_palette','Guane'),lang=data$lang()))
  plot_settings<-shiny::reactive(c(settings(),list(labels=isTRUE(value('joint_labels',TRUE)),node_labels=isTRUE(value('joint_node_labels',TRUE)),cex=value('joint_cex',.7))))

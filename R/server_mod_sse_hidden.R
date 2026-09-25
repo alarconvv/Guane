@@ -13,10 +13,12 @@ server_mod_sse_hidden <- function(input,output,session,data) {
  shiny::observeEvent(input$hidden_fill,{
   tryCatch({o<-options();s<-guane_hidden_spec('Custom',o$eps_mode,o$custom_classes);m<-s$trans;m[is.na(m)]<-0;shiny::updateTextInput(session,'hidden_turnover_text',value=paste(s$turnover,collapse=','));shiny::updateTextInput(session,'hidden_eps_text',value=paste(s$eps,collapse=','));shiny::updateTextAreaInput(session,'hidden_transition_text',value=paste(apply(m,1,paste,collapse=','),collapse='\n'))},error=function(e)status(conditionMessage(e)))
  })
- shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),options()),{result(NULL);status('Hidden-state inputs changed. Run again to update results.')},ignoreInit=TRUE)
+ shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),options()),{hidden_task$discard();result(NULL);status('Hidden-state inputs changed. Run again to update results.')},ignoreInit=TRUE)
+ hidden_fail<-function(msg){status(msg);data$record(paste('Hidden-state:',msg))}
+ hidden_task<-guane_task(function(r){result(r);status(if(any(r$comparison$Finite))'Hidden-state fitting finished. Review finite fits, starts and backend limitations.' else 'No finite hidden-state fit. Inspect diagnostics.');data$record('Hidden-state analysis completed.');for(w in r$warnings)data$record(paste('Hidden-state:',w))},hidden_fail,status)
  shiny::observeEvent(input$hidden_run,{
   result(NULL)
-  tryCatch({r<-shiny::withProgress(message=guane_text('Fitting Hidden-state models',data$lang()),value=.1,do.call(guane_hidden_fit,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon()),options())));result(r);status(if(any(r$comparison$Finite))'Hidden-state fitting finished. Review finite fits, starts and backend limitations.' else 'No finite hidden-state fit. Inspect diagnostics.');data$record('Hidden-state analysis completed.');for(w in r$warnings)data$record(paste('Hidden-state:',w))},error=function(e){status(conditionMessage(e));data$record(paste('Hidden-state:',conditionMessage(e)))})
+  tryCatch(hidden_task$run(guane_hidden_fit,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon()),options())),error=function(e)hidden_fail(conditionMessage(e)))
  })
  shiny::observeEvent(result(),{r<-result();if(is.null(r))return();shiny::updateSelectInput(session,'hidden_plot_model',choices=names(r$fits),selected=if(value('plot_model','HiSSE')%in%names(r$fits))value('plot_model','HiSSE') else names(r$fits)[1])})
  translate<-function(x){if(is.null(x))return(NULL);if('Model'%in%names(x))x$Model<-vapply(x$Model,guane_text,character(1),lang=data$lang());names(x)<-vapply(names(x),guane_text,character(1),lang=data$lang());x}
@@ -34,7 +36,7 @@ server_mod_sse_hidden <- function(input,output,session,data) {
  output$hidden_script<-shiny::downloadHandler('guane-hidden.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$hidden_pdf<-shiny::downloadHandler('guane-hidden.pdf',function(file){shiny::req(result());s<-settings();grDevices::pdf(file,width=s$width,height=s$height);on.exit(grDevices::dev.off());draw()})
  output$hidden_png<-shiny::downloadHandler('guane-hidden.png',function(file){shiny::req(result());s<-settings();grDevices::png(file,width=s$width*150,height=s$height*150,res=150);on.exit(grDevices::dev.off());draw()})
- for(n in c('estimates','comparison','attempts','transitions'))local({key<-n;id<-if(key=='estimates')'hidden_csv' else paste0('hidden_',key,'_csv');output[[id]]<-shiny::downloadHandler(paste0('guane-hidden-',key,'.csv'),function(file){shiny::req(result());utils::write.csv(result()[[key]],file,row.names=FALSE)})})
+ for(n in c('estimates','comparison','attempts','transitions'))local({key<-n;id<-if(key=='estimates')'hidden_csv' else paste0('hidden_',key,'_csv');output[[id]]<-shiny::downloadHandler(paste0('guane-hidden-',key,'.csv'),function(file){shiny::req(result());guane_write_csv(result()[[key]],file,row.names=FALSE)})})
  output$hidden_rds<-shiny::downloadHandler('guane-hidden.rds',function(file){shiny::req(result());saveRDS(list(result=result(),settings=settings()),file)})
  list(result=result,code=code)
 }

@@ -1,5 +1,4 @@
 # Continuous-state SSE adapter. All computations are independent of Shiny.
-core_mod_sse_quasse <- function() list(implemented=TRUE)
 guane_quasse_function <- function(type) {
  switch(type,Constant=function(x,c)rep(c,length(x)),Exponential=function(x,base,slope)base*exp(slope*x),Sigmoid=function(x,y0,y1,xmid,r)y0+(y1-y0)*stats::plogis(r*(x-xmid)),stop('Select supported QuaSSE rate functions.'))
 }

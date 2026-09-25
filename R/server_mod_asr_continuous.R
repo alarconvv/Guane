@@ -26,15 +26,16 @@ server_mod_asr_continuous <- function(input,output,session,data) {
   shiny::updateSelectInput(session,'bm_se',choices=c('None (zero error)'='',stats::setNames(cols,cols)),selected=if(!is.null(input$bm_se) && input$bm_se%in%cols)input$bm_se else '')
  },ignoreNULL=FALSE)
  shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),input$bm_trait,input$bm_framework,options()),{
-  result(NULL);status('Inputs changed. Run continuous reconstruction to update results.')
+  bm_task$discard();result(NULL);status('Inputs changed. Run continuous reconstruction to update results.')
  },ignoreInit=TRUE)
+ bm_fail<-function(msg){status(msg);data$record(paste('Continuous:',msg))}
+ bm_task<-guane_task(function(r){result(r);status('Continuous reconstruction completed. Review uncertainty and diagnostics.');data$record(paste('Continuous reconstruction:',r$model,r$engine))},bm_fail,status)
  shiny::observeEvent(input$bm_run,{
   result(NULL)
   tryCatch({
    if(!input$bm_framework%in%c('ML','Bayes')) stop('This framework is planned. Choose maximum likelihood.')
-   r<-shiny::withProgress(message=guane_text('Running ancestral reconstruction',data$lang()),value=.1,do.call(if(identical(input$bm_framework,'Bayes'))guane_asr_bayes else guane_asr_continuous,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon(),trait=input$bm_trait),options())))
-   result(r);status('Continuous reconstruction completed. Review uncertainty and diagnostics.');data$record(paste('Continuous reconstruction:',r$model,r$engine))
-  },error=function(e){status(conditionMessage(e));data$record(paste('Continuous:',conditionMessage(e)))})
+   bm_task$run(if(identical(input$bm_framework,'Bayes'))guane_asr_bayes else guane_asr_continuous,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon(),trait=input$bm_trait),options()))
+  },error=function(e)bm_fail(conditionMessage(e)))
  })
  shiny::observeEvent(input$bm_fill_parameters,{
   tryCatch({t<-guane_bayes_parameters(data$state$tree,data$state$traits,data$taxon(),input$bm_trait);shiny::updateTextAreaInput(session,'bm_parameters',value=paste(capture.output(utils::write.csv(t,row.names=FALSE)),collapse='\n'))},error=function(e)status(conditionMessage(e)))
@@ -48,9 +49,9 @@ server_mod_asr_continuous <- function(input,output,session,data) {
  },ignoreNULL=FALSE)
  output$bm_bayes_preview<-shiny::renderText({shiny::req(identical(input$bm_framework,'Bayes'));if(!is.null(result()$bayes))return(paste(capture.output(str(result()$bayes[c('controls','seeds','ngen','sample','burnin','chains')])),collapse='\n'));tryCatch(paste(capture.output(str(guane_bayes_controls(data$state$tree,data$state$traits,data$taxon(),input$bm_trait,options()$parameters,options()$sample))),collapse='\n'),error=function(e)guane_text(conditionMessage(e),data$lang()))})
  output$bm_chain_diagnostics<-shiny::renderTable({shiny::req(result()$bayes);d<-result()$bayes$diagnostics;names(d)<-vapply(names(d),guane_text,character(1),lang=data$lang());d},digits=5)
- output$bm_draws_csv<-shiny::downloadHandler('guane-bm-posterior.csv',function(file){shiny::req(result()$bayes);utils::write.csv(result()$bayes$draws,file,row.names=FALSE)})
+ output$bm_draws_csv<-shiny::downloadHandler('guane-bm-posterior.csv',function(file){shiny::req(result()$bayes);guane_write_csv(result()$bayes$draws,file,row.names=FALSE)})
  output$bm_chains_rds<-shiny::downloadHandler('guane-bm-chains.rds',function(file){shiny::req(result()$bayes);saveRDS(result(),file)})
- output$bm_chain_csv<-shiny::downloadHandler('guane-bm-chain-diagnostics.csv',function(file){shiny::req(result()$bayes);utils::write.csv(result()$bayes$diagnostics,file,row.names=FALSE)})
+ output$bm_chain_csv<-shiny::downloadHandler('guane-bm-chain-diagnostics.csv',function(file){shiny::req(result()$bayes);guane_write_csv(result()$bayes$diagnostics,file,row.names=FALSE)})
  output$bm_status<-shiny::renderText(guane_text(status(),data$lang()))
  appearance<-server_asr_graphics(input,output,session,'bm',result,data$lang)
  settings<-shiny::reactive(list(type=if(is.null(input$bm_graph)) 'map' else input$bm_graph,palette=if(is.null(input$bm_palette)) 'Guane' else input$bm_palette,labels=isTRUE(input$bm_labels),node_labels=isTRUE(input$bm_nodes),lang=data$lang(),label_size=if(is.null(input$bm_label_size)).7 else input$bm_label_size,appearance=appearance(),parameter=if(is.null(input$bm_parameter))'sig2' else input$bm_parameter))
@@ -61,7 +62,7 @@ server_mod_asr_continuous <- function(input,output,session,data) {
  output$bm_summary<-shiny::renderTable({shiny::req(result());r<-result();if(!is.null(r$bayes)){t<-data.frame(Metric=vapply(c('Taxa','Chains','Retained draws per chain','Burn-in generations'),guane_text,character(1),lang=data$lang()),Value=c(length(r$x),r$bayes$chains,nrow(r$bayes$retained[[1]]),r$bayes$burnin));names(t)<-vapply(names(t),guane_text,character(1),lang=data$lang());return(t)};t<-data.frame(Metric=vapply(c('Taxa','Internal nodes','Root estimate','Diffusion parameter (sig2)','Log likelihood (engine basis)','alpha (OU)','r (EB)','Optimizer convergence'),guane_text,character(1),lang=data$lang()),Value=c(length(r$x),nrow(r$nodes),r$root,r$rate,r$logLik,if(is.null(r$alpha))NA else r$alpha,if(is.null(r$r))NA else r$r,if(is.null(r$fit))NA else r$fit$convergence));names(t)<-vapply(names(t),guane_text,character(1),lang=data$lang());t},digits=5)
  output$bm_metadata<-shiny::renderText({shiny::req(result());paste(result()$trait,'|',result()$model,if(is.null(result()$bayes))'| ML | n =' else '| Bayesian | n =',length(result()$x),'|',if(result()$engine=='Gaussian ML')'Guane' else 'phytools::',result()$engine,'|',result()$backend_version)})
  output$bm_comparison<-shiny::renderTable({shiny::req(result()$comparison);d<-result()$comparison;d$Status<-vapply(d$Status,guane_text,character(1),lang=data$lang());names(d)<-vapply(names(d),guane_text,character(1),lang=data$lang());d},digits=5)
- output$bm_comparison_csv<-shiny::downloadHandler('guane-continuous-comparison.csv',function(file){shiny::req(result()$comparison);utils::write.csv(result()$comparison,file,row.names=FALSE)})
+ output$bm_comparison_csv<-shiny::downloadHandler('guane-continuous-comparison.csv',function(file){shiny::req(result()$comparison);guane_write_csv(result()$comparison,file,row.names=FALSE)})
  output$bm_uncertainty<-shiny::renderText({shiny::req(result());guane_text(result()$uncertainty,data$lang())})
  output$bm_likelihood<-shiny::renderText({shiny::req(result());guane_text(result()$likelihood_basis,data$lang())})
  output$bm_warnings<-shiny::renderText({shiny::req(result());if(length(result()$warnings)) paste(vapply(result()$warnings,guane_text,character(1),lang=data$lang()),collapse='\n') else guane_text('No fitting warnings reported. Inspect diagnostics before interpretation.',data$lang())})
@@ -79,6 +80,6 @@ server_mod_asr_continuous <- function(input,output,session,data) {
  output$bm_pdf<-shiny::downloadHandler('guane-continuous.pdf',function(file){shiny::req(result());grDevices::pdf(file,width=appearance()$width,height=appearance()$height);on.exit(grDevices::dev.off());draw()})
  output$bm_diagnostic_pdf<-shiny::downloadHandler('guane-continuous-diagnostics.pdf',function(file){shiny::req(result());grDevices::pdf(file,width=appearance()$width,height=appearance()$height);on.exit(grDevices::dev.off());draw(TRUE)})
  output$bm_diagnostic_script<-shiny::downloadHandler('guane-continuous-diagnostics.R',function(file){shiny::req(result());s<-settings();s$type<-'diagnostics';writeLines(do.call(guane_asr_bm_script,c(list(result=result()),s)),file)})
- output$bm_csv<-shiny::downloadHandler('guane-continuous-nodes.csv',function(file){shiny::req(result());utils::write.csv(result()$nodes,file,row.names=FALSE)})
+ output$bm_csv<-shiny::downloadHandler('guane-continuous-nodes.csv',function(file){shiny::req(result());guane_write_csv(result()$nodes,file,row.names=FALSE)})
  list(result=result,code=code)
 }

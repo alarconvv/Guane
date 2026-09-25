@@ -1,5 +1,3 @@
-core_mod_asr_continuous <- function() list(implemented=TRUE,framework=c('Maximum likelihood','Bayesian BM'),model=c('BM','OU','EB'))
-
 # Named tip matching; fastAnc computes BM maximum-likelihood node estimates.
 guane_asr_continuous_data <- function(tree,traits,taxon,trait) {
  if(!inherits(tree,'phylo') || !ape::is.rooted(tree) || !ape::is.binary(tree)) stop('Continuous reconstruction requires a rooted, bifurcating tree.')

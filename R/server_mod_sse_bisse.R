@@ -15,24 +15,30 @@ server_mod_sse_bisse <- function(input,output,session,data) {
  shiny::observeEvent(input$bisse_fill,{
   tryCatch({guane_ltt(data$state$tree);tab<-guane_bisse_parameters(data$state$tree);text<-paste(capture.output(utils::write.csv(tab,row.names=FALSE,na='')),collapse='\n');shiny::updateTextAreaInput(session,'bisse_parameters',value=text)},error=function(e)status(conditionMessage(e)))
  })
- shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),options()),{result(NULL);status('BiSSE inputs changed. Run again to update results.')},ignoreInit=TRUE)
+ shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),options()),{bisse_task$discard();result(NULL);status('BiSSE inputs changed. Run again to update results.')},ignoreInit=TRUE)
+ bisse_fail<-function(msg){status(msg);data$record(paste('BiSSE:',msg))}
+ bisse_task<-guane_task(function(r){result(r);status(if(any(r$comparison$Converged))'BiSSE completed. Review convergence, bounds and model assumptions.' else 'No valid BiSSE fit. Inspect diagnostics.');data$record('BiSSE analysis completed.');for(w in r$warnings)data$record(paste('BiSSE:',w))},bisse_fail,status)
  shiny::observeEvent(input$bisse_run,{
   result(NULL)
-  tryCatch({r<-shiny::withProgress(message=guane_text('Fitting BiSSE models',data$lang()),value=.1,do.call(guane_bisse_fit,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon()),options())));result(r);status(if(any(r$comparison$Converged))'BiSSE completed. Review convergence, bounds and model assumptions.' else 'No valid BiSSE fit. Inspect diagnostics.');data$record('BiSSE analysis completed.');for(w in r$warnings)data$record(paste('BiSSE:',w))},error=function(e){status(conditionMessage(e));data$record(paste('BiSSE:',conditionMessage(e)))})
+  tryCatch(bisse_task$run(guane_bisse_fit,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon()),options())),error=function(e)bisse_fail(conditionMessage(e)))
  })
  shiny::observeEvent(result(),{r<-result();if(is.null(r))return();choices<-r$comparison$Model;valid<-choices[r$comparison$Converged];shiny::updateSelectInput(session,'bisse_plot_model',choices=choices,selected=if(length(input$bisse_plot_model)==1&&input$bisse_plot_model%in%choices)input$bisse_plot_model else if(length(valid))valid[1] else choices[1])})
  shiny::observeEvent(list(result(),input$bisse_plot_model),{r<-result();if(is.null(r))return();f<-r$fits[[value('bisse_plot_model','Full')]];choices<-if(isTRUE(f$valid))f$constraint$free else guane_bisse_names();shiny::updateSelectInput(session,'bisse_plot_parameter',choices=choices,selected=if(length(input$bisse_plot_parameter)==1&&input$bisse_plot_parameter%in%choices)input$bisse_plot_parameter else head(choices,1))})
- shiny::observeEvent(input$bisse_profile_run,{
-  tryCatch({shiny::req(result());r<-result();p<-shiny::withProgress(message=guane_text('Profile likelihood',data$lang()),value=.1,guane_bisse_profile(r,input$bisse_plot_model,input$bisse_plot_parameter,input$bisse_profile_lower,input$bisse_profile_upper,input$bisse_profile_points,input$bisse_profile_level,r$inputs$maxit));p$model<-input$bisse_plot_model;r$profile<-p
+ bisse_profile_model<-NULL
+ bisse_profile_task<-guane_task(function(p){r<-result();if(is.null(r))return();p$model<-bisse_profile_model;r$profile<-p
    if(p$better){r$fits[[p$model]]$better_failed<-TRUE;r$comparison$Weight<-NA_real_;r$warnings<-unique(c(r$warnings,'A profile found a better likelihood. Refit before interpretation.'))}
    result(r);status(p$warning);data$record(paste('SSE profile:',p$model,p$settings$parameter));shiny::updateSelectInput(session,'bisse_graph',selected='profile')
+ },status,status)
+ shiny::observeEvent(input$bisse_profile_run,{
+  tryCatch({shiny::req(result());r<-result();bisse_profile_model<<-input$bisse_plot_model
+   bisse_profile_task$run(guane_bisse_profile,list(r,input$bisse_plot_model,input$bisse_plot_parameter,input$bisse_profile_lower,input$bisse_profile_upper,input$bisse_profile_points,input$bisse_profile_level,r$inputs$maxit))
   },error=function(e)status(conditionMessage(e)))
  })
- shiny::observeEvent(list(input$bisse_profile_lower,input$bisse_profile_upper,input$bisse_profile_points,input$bisse_profile_level),{r<-result();if(!is.null(r)&&!is.null(r$profile)){r$profile<-NULL;result(r)}},ignoreInit=TRUE)
+ shiny::observeEvent(list(input$bisse_profile_lower,input$bisse_profile_upper,input$bisse_profile_points,input$bisse_profile_level),{bisse_profile_task$discard();r<-result();if(!is.null(r)&&!is.null(r$profile)){r$profile<-NULL;result(r)}},ignoreInit=TRUE)
  output$bisse_profile_interval<-shiny::renderTable({shiny::req(result()$profile);translate(result()$profile$interval)},digits=6)
  output$bisse_profile_curve<-shiny::renderTable({shiny::req(result()$profile);translate(result()$profile$curve)},digits=6)
- output$bisse_profile_csv<-shiny::downloadHandler('guane-bisse-profile.csv',function(file){shiny::req(result()$profile);utils::write.csv(result()$profile$curve,file,row.names=FALSE)})
- output$bisse_interval_csv<-shiny::downloadHandler('guane-bisse-interval.csv',function(file){shiny::req(result()$profile);utils::write.csv(result()$profile$interval,file,row.names=FALSE)})
+ output$bisse_profile_csv<-shiny::downloadHandler('guane-bisse-profile.csv',function(file){shiny::req(result()$profile);guane_write_csv(result()$profile$curve,file,row.names=FALSE)})
+ output$bisse_interval_csv<-shiny::downloadHandler('guane-bisse-interval.csv',function(file){shiny::req(result()$profile);guane_write_csv(result()$profile$interval,file,row.names=FALSE)})
  translate<-function(x){if(is.null(x))return(NULL);for(n in intersect(c('LowerStatus','UpperStatus'),names(x)))x[[n]]<-vapply(x[[n]],guane_text,character(1),lang=data$lang());if('Model'%in%names(x))x$Model<-vapply(x$Model,guane_text,character(1),lang=data$lang());names(x)<-vapply(names(x),guane_text,character(1),lang=data$lang());x}
  output$bisse_status<-shiny::renderText(guane_text(status(),data$lang()))
  for(n in c('mapping','estimates','comparison','diagnostics','attempts'))local({key<-n;output[[paste0('bisse_',key)]]<-shiny::renderTable({shiny::req(result());translate(result()[[key]])},digits=6)})
@@ -48,7 +54,7 @@ server_mod_sse_bisse <- function(input,output,session,data) {
  output$bisse_script<-shiny::downloadHandler('guane-bisse.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$bisse_pdf<-shiny::downloadHandler('guane-bisse.pdf',function(file){shiny::req(result());s<-settings();grDevices::pdf(file,width=s$width,height=s$height);on.exit(grDevices::dev.off());draw()})
  output$bisse_png<-shiny::downloadHandler('guane-bisse.png',function(file){shiny::req(result());s<-settings();grDevices::png(file,width=s$width*150,height=s$height*150,res=150);on.exit(grDevices::dev.off());draw()})
- for(n in c('estimates','comparison','attempts','slices'))local({key<-n;id<-if(key=='estimates')'bisse_csv' else paste0('bisse_',key,'_csv');output[[id]]<-shiny::downloadHandler(paste0('guane-bisse-',key,'.csv'),function(file){shiny::req(result());utils::write.csv(result()[[key]],file,row.names=FALSE)})})
+ for(n in c('estimates','comparison','attempts','slices'))local({key<-n;id<-if(key=='estimates')'bisse_csv' else paste0('bisse_',key,'_csv');output[[id]]<-shiny::downloadHandler(paste0('guane-bisse-',key,'.csv'),function(file){shiny::req(result());guane_write_csv(result()[[key]],file,row.names=FALSE)})})
  output$bisse_rds<-shiny::downloadHandler('guane-bisse.rds',function(file){shiny::req(result());saveRDS(list(result=result(),settings=settings()),file)})
  list(result=result,code=code)
 }

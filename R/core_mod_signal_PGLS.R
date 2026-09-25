@@ -1,5 +1,3 @@
-core_mod_signal_PGLS <- function() list(implemented=TRUE)
-
 # Use internal column names to preserve arbitrary research identifiers safely.
 guane_pgls <- function(tree, traits, taxon, response, predictors, model='BM', value=.5, fixed=FALSE, method='REML') {
  if(!inherits(tree,'phylo') || !ape::is.rooted(tree) || !ape::is.binary(tree)) stop('PGLS requires a rooted, bifurcating tree.')

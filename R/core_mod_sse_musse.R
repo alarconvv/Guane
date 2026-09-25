@@ -1,5 +1,4 @@
 # MuSSE likelihood adapter; strict observed states with explicit named sampling.
-core_mod_sse_musse <- function() list(implemented=TRUE)
 guane_musse_names <- function(k) {
  if(length(k)!=1||!is.finite(k)||k!=floor(k)||k<2||k>8)stop('MuSSE supports two to eight observed states.')
  c(paste0('lambda',seq_len(k)),paste0('mu',seq_len(k)),unlist(lapply(seq_len(k),function(i)paste0('q',i,setdiff(seq_len(k),i)))))

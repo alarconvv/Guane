@@ -6,17 +6,19 @@ server_mod_div_rates <- function(input,output,session,data) {
  translate<-function(x){if(is.null(x))return(NULL);names(x)<-vapply(names(x),guane_text,character(1),lang=data$lang());x}
  diagnostic_options<-shiny::reactive(list(profiles=isTRUE(value('rates_profiles',TRUE)),level=value('rates_level',.95),points=value('rates_points',61),simulate=isTRUE(value('rates_simulate',TRUE)),nsim=value('rates_nsim',200),seed=value('rates_simseed',999)))
  shiny::observeEvent(diagnostic_options(),{
-  r<-result();if(!is.null(r)){r$profile<-r$adequacy<-r$diagnostic_inputs<-NULL;result(r);status('Diagnostic settings changed. Run uncertainty and diagnostics again.')}
+  diagnose_task$discard();r<-result();if(!is.null(r)){r$profile<-r$adequacy<-r$diagnostic_inputs<-NULL;result(r);status('Diagnostic settings changed. Run uncertainty and diagnostics again.')}
  },ignoreInit=TRUE)
+ diagnose_task<-guane_task(function(r){if(is.null(result()))return();result(r);status('Diagnostics completed. Review profile limits and simulation assumptions.')},status,status)
  shiny::observeEvent(input$rates_diagnose,{
   shiny::req(result())
-  tryCatch({r<-shiny::withProgress(message=guane_text('Running uncertainty and simulation diagnostics',data$lang()),value=.1,do.call(guane_rates_diagnose,c(list(result=result()),diagnostic_options())));result(r);status('Diagnostics completed. Review profile limits and simulation assumptions.')},
-   error=function(e){status(conditionMessage(e))})
+  tryCatch(diagnose_task$run(guane_rates_diagnose,c(list(result=result()),diagnostic_options())),error=function(e){status(conditionMessage(e))})
  })
- shiny::observeEvent(list(data$state$tree,options()),{result(NULL);status('Inputs changed. Run diversification models to update results.')},ignoreNULL=FALSE)
+ shiny::observeEvent(list(data$state$tree,options()),{rates_task$discard();diagnose_task$discard();result(NULL);status('Inputs changed. Run diversification models to update results.')},ignoreNULL=FALSE)
+ rates_fail<-function(msg){status(msg);data$record(paste('Diversification:',msg))}
+ rates_task<-guane_task(function(r){result(r);status(if(any(r$comparison$Converged))'Rate analysis completed. Inspect convergence, bounds and uncertainty.' else 'No valid model fit. Change settings and run again.');data$record('Constant-rate diversification analysis completed.')},rates_fail,status)
  shiny::observeEvent(input$rates_run,{
   result(NULL)
-  tryCatch({r<-shiny::withProgress(message=guane_text('Fitting diversification models',data$lang()),value=.1,do.call(guane_rates_fit,c(list(tree=data$state$tree),options())));result(r);status(if(any(r$comparison$Converged))'Rate analysis completed. Inspect convergence, bounds and uncertainty.' else 'No valid model fit. Change settings and run again.');data$record('Constant-rate diversification analysis completed.')},error=function(e){status(conditionMessage(e));data$record(paste('Diversification:',conditionMessage(e)))})
+  tryCatch(rates_task$run(guane_rates_fit,c(list(tree=data$state$tree),options())),error=function(e)rates_fail(conditionMessage(e)))
  })
  shiny::observeEvent(result(),{r<-result();if(is.null(r))return();shiny::updateSelectInput(session,'rates_plot_model',choices=r$comparison$Model,selected=if(isTRUE(input$rates_plot_model%in%r$comparison$Model))input$rates_plot_model else r$comparison$Model[1])})
  output$rates_status<-shiny::renderText(guane_text(status(),data$lang()))
@@ -38,15 +40,15 @@ server_mod_div_rates <- function(input,output,session,data) {
   translate(d)
  },digits=6)
  output$rates_adequacy_table<-shiny::renderTable({shiny::req(result()$adequacy);translate(result()$adequacy$summary)},digits=6)
- output$rates_profile_csv<-shiny::downloadHandler('guane-profile-intervals.csv',function(file){shiny::req(result()$profile);utils::write.csv(result()$profile$intervals,file,row.names=FALSE)})
- output$rates_profile_curves_csv<-shiny::downloadHandler('guane-profile-curves.csv',function(file){shiny::req(result()$profile);utils::write.csv(result()$profile$curves,file,row.names=FALSE)})
- output$rates_envelope_csv<-shiny::downloadHandler('guane-ltt-envelope.csv',function(file){shiny::req(result()$adequacy);utils::write.csv(result()$adequacy$envelope,file,row.names=FALSE)})
- output$rates_draws_csv<-shiny::downloadHandler('guane-simulated-branching-times.csv',function(file){shiny::req(result()$adequacy);utils::write.csv(result()$adequacy$draws,file,row.names=FALSE)})
+ output$rates_profile_csv<-shiny::downloadHandler('guane-profile-intervals.csv',function(file){shiny::req(result()$profile);guane_write_csv(result()$profile$intervals,file,row.names=FALSE)})
+ output$rates_profile_curves_csv<-shiny::downloadHandler('guane-profile-curves.csv',function(file){shiny::req(result()$profile);guane_write_csv(result()$profile$curves,file,row.names=FALSE)})
+ output$rates_envelope_csv<-shiny::downloadHandler('guane-ltt-envelope.csv',function(file){shiny::req(result()$adequacy);guane_write_csv(result()$adequacy$envelope,file,row.names=FALSE)})
+ output$rates_draws_csv<-shiny::downloadHandler('guane-simulated-branching-times.csv',function(file){shiny::req(result()$adequacy);guane_write_csv(result()$adequacy$draws,file,row.names=FALSE)})
  output$rates_metadata<-shiny::renderText({shiny::req(result());r<-result();paste('diversitree',r$version,'| n =',r$tips,'| sampling.f =',r$inputs$sampling,'| condition.surv =',r$inputs$survival,'| upper =',signif(r$inputs$upper,6))})
- output$rates_csv<-shiny::downloadHandler('guane-rate-estimates.csv',function(file){shiny::req(result());utils::write.csv(result()$estimates,file,row.names=FALSE)})
- output$rates_comparison_csv<-shiny::downloadHandler('guane-rate-comparison.csv',function(file){shiny::req(result());utils::write.csv(result()$comparison,file,row.names=FALSE)})
- output$rates_attempts_csv<-shiny::downloadHandler('guane-rate-optimizer.csv',function(file){shiny::req(result());utils::write.csv(result()$attempts,file,row.names=FALSE)})
- output$rates_slices_csv<-shiny::downloadHandler('guane-rate-slices.csv',function(file){shiny::req(result()$slices);utils::write.csv(result()$slices,file,row.names=FALSE)})
+ output$rates_csv<-shiny::downloadHandler('guane-rate-estimates.csv',function(file){shiny::req(result());guane_write_csv(result()$estimates,file,row.names=FALSE)})
+ output$rates_comparison_csv<-shiny::downloadHandler('guane-rate-comparison.csv',function(file){shiny::req(result());guane_write_csv(result()$comparison,file,row.names=FALSE)})
+ output$rates_attempts_csv<-shiny::downloadHandler('guane-rate-optimizer.csv',function(file){shiny::req(result());guane_write_csv(result()$attempts,file,row.names=FALSE)})
+ output$rates_slices_csv<-shiny::downloadHandler('guane-rate-slices.csv',function(file){shiny::req(result()$slices);guane_write_csv(result()$slices,file,row.names=FALSE)})
  settings<-shiny::reactive(list(type=value('rates_graph','rates'),model=value('rates_plot_model','Yule'),parameter=value('rates_parameter','lambda'),palette=value('rates_palette','Guane'),lang=data$lang()))
  plot_settings<-settings
  draw<-function(){r<-result();shiny::req(r);tryCatch(do.call(guane_rates_plot,c(list(result=r),plot_settings())),error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}

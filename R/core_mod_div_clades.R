@@ -1,4 +1,3 @@
-core_mod_div_clades <- function() list(implemented=TRUE)
 guane_rates_clade_select <- function(tree,nodes,sampling=NULL) {
  catalog<-guane_rates_clade_catalog(tree)
  if(!is.numeric(nodes)||!length(nodes)||length(nodes)>10||anyNA(nodes)||any(!is.finite(nodes))||any(nodes!=floor(nodes))||anyDuplicated(nodes)||any(!nodes%in%catalog$table$Node))stop('Select one to ten internal nodes with at least four descendant tips each.')

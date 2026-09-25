@@ -1,5 +1,3 @@
-core_mod_div_time <- function() list(implemented=TRUE)
-
 guane_rates_tv_fit <- function(tree,models=c('Yule','BD','ExpYule','ExpBD'),sampling=1,survival=TRUE,optimizer='nlminb',maxit=2000,upper=NULL,start_lambda=NULL,start_mu=NULL,beta_start=0,beta_bound=3,tol=1e-8,backend='gslode') {
  original<-tree;tree<-guane_rates_data(tree);age<-max(ape::branching.times(tree))
  if(!length(models)||anyDuplicated(models)||any(!models%in%c('Yule','BD','ExpYule','ExpBD')))stop('Select valid time-comparison models.')

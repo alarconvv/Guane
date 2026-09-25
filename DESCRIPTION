@@ -1,6 +1,6 @@
 Package: guane
 Title: Multilingual Shiny Platform for Phylogenetic Comparative Analyses
-Version: 0.0.0.9000
+Version: 1.0
 Authors@R:
     person(
       given = "Leidy Viviana",
@@ -20,21 +20,30 @@ Imports:
     phylolm,
     gee,
     bslib,
-    phytools,
+    phytools (>= 2.5-2),
     diversitree,
     deSolve,
     coda,
-    cli,
     jsonlite,
-    shiny
+    later,
+    mirai (>= 2.0.0),
+    parallel,
+    promises (>= 1.3.0),
+    shiny (>= 1.8.1)
 Suggests: 
     hisse,
     nloptr,
     data.table,
-    DDD,
+    DDD (>= 5.2.5),
+    callr,
+    chromote,
     devtools,
+    pkgload,
     roxygen2,
+    shinytest2,
     testthat (>= 3.0.0),
-    usethis
+    usethis,
+    V8,
+    withr
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.1.0

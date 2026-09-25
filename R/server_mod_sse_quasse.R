@@ -11,23 +11,26 @@ server_mod_sse_quasse <- function(input,output,session,data) {
  shiny::observeEvent(input$quasse_fill,{
   tryCatch({o<-options();d<-guane_quasse_data(data$state$tree,data$state$traits,data$taxon(),o$trait,o$error,o$error_column);t<-guane_quasse_parameters(d,o$lambda,o$mu);shiny::updateTextAreaInput(session,'quasse_parameters',value=paste(capture.output(utils::write.csv(t,row.names=FALSE,na='')),collapse='\n'))},error=function(e)status(conditionMessage(e)))
  })
- shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),options()),{result(NULL);status('QuaSSE inputs changed. Run again to update results.')},ignoreInit=TRUE)
+ shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),options()),{quasse_task$discard();result(NULL);status('QuaSSE inputs changed. Run again to update results.')},ignoreInit=TRUE)
+ quasse_fail<-function(msg){status(msg);data$record(paste('QuaSSE:',msg))}
+ quasse_task<-guane_task(function(r){result(r);status(if(any(r$comparison$Converged))'QuaSSE completed. Review convergence and grid sensitivity.' else 'No valid QuaSSE fit. Inspect diagnostics.');data$record('QuaSSE analysis completed.');for(w in r$warnings)data$record(paste('QuaSSE:',w))},quasse_fail,status)
  shiny::observeEvent(input$quasse_run,{
   result(NULL)
-  tryCatch({r<-shiny::withProgress(message=guane_text('Fitting QuaSSE models',data$lang()),value=.1,do.call(guane_quasse_fit,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon()),options())));result(r);status(if(any(r$comparison$Converged))'QuaSSE completed. Review convergence and grid sensitivity.' else 'No valid QuaSSE fit. Inspect diagnostics.');data$record('QuaSSE analysis completed.');for(w in r$warnings)data$record(paste('QuaSSE:',w))},error=function(e){status(conditionMessage(e));data$record(paste('QuaSSE:',conditionMessage(e)))})
+  tryCatch(quasse_task$run(guane_quasse_fit,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon()),options())),error=function(e)quasse_fail(conditionMessage(e)))
  })
  shiny::observeEvent(result(),{r<-result();if(is.null(r))return();shiny::updateSelectInput(session,'quasse_plot_model',choices=names(r$fits),selected=if(value('plot_model','Selected')%in%names(r$fits))value('plot_model','Selected') else names(r$fits)[1])})
  shiny::observeEvent(list(result(),input$quasse_plot_model),{r<-result();if(is.null(r))return();f<-r$fits[[value('plot_model','Selected')]];choices<-if(isTRUE(f$valid))f$constraint$free else character();shiny::updateSelectInput(session,'quasse_plot_parameter',choices=choices,selected=if(value('plot_parameter','diffusion')%in%choices)value('plot_parameter','diffusion') else head(choices,1))})
- shiny::observeEvent(input$quasse_robust_run,{
-  tryCatch({shiny::req(result());r<-result();a<-shiny::withProgress(message=guane_text('Grid and domain refits',data$lang()),value=.1,guane_quasse_robustness(r,value('domain_factor',1.5)));r$robustness<-a
+ quasse_robust_task<-guane_task(function(a){r<-result();if(is.null(r))return();r$robustness<-a
    if(!a$passed){r$comparison$Weight<-NA_real_;r$warnings<-unique(c(r$warnings,a$warning));r$robustness_review<-TRUE}
    if(isTRUE(r$robustness_review))r$comparison$Weight<-NA_real_
    result(r);status(a$warning);data$record('QuaSSE grid and domain refits completed.');shiny::updateSelectInput(session,'quasse_graph',selected='robustness')
-  },error=function(e)status(conditionMessage(e)))
+ },status,status)
+ shiny::observeEvent(input$quasse_robust_run,{
+  tryCatch({shiny::req(result());quasse_robust_task$run(guane_quasse_robustness,list(result(),value('domain_factor',1.5)))},error=function(e)status(conditionMessage(e)))
  })
- shiny::observeEvent(input$quasse_domain_factor,{r<-result();if(!is.null(r)&&!is.null(r$robustness)){r$robustness<-NULL;result(r)}},ignoreInit=TRUE)
+ shiny::observeEvent(input$quasse_domain_factor,{quasse_robust_task$discard();r<-result();if(!is.null(r)&&!is.null(r$robustness)){r$robustness<-NULL;result(r)}},ignoreInit=TRUE)
  output$quasse_robustness<-shiny::renderTable({shiny::req(result()$robustness);translate(result()$robustness$table)},digits=6)
- output$quasse_robust_csv<-shiny::downloadHandler('guane-quasse-robustness.csv',function(file){shiny::req(result()$robustness);utils::write.csv(result()$robustness$table,file,row.names=FALSE)})
+ output$quasse_robust_csv<-shiny::downloadHandler('guane-quasse-robustness.csv',function(file){shiny::req(result()$robustness);guane_write_csv(result()$robustness$table,file,row.names=FALSE)})
  translate<-function(x){if(is.null(x))return(NULL);if('Model'%in%names(x))x$Model<-vapply(x$Model,guane_text,character(1),lang=data$lang());names(x)<-vapply(names(x),guane_text,character(1),lang=data$lang());x}
  output$quasse_status<-shiny::renderText(guane_text(status(),data$lang()))
  for(n in c('estimates','comparison','diagnostics','attempts'))local({key<-n;output[[paste0('quasse_',key)]]<-shiny::renderTable({shiny::req(result());translate(result()[[key]])},digits=6)})
@@ -43,7 +46,7 @@ server_mod_sse_quasse <- function(input,output,session,data) {
  output$quasse_script<-shiny::downloadHandler('guane-quasse.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$quasse_pdf<-shiny::downloadHandler('guane-quasse.pdf',function(file){shiny::req(result());s<-settings();grDevices::pdf(file,width=s$width,height=s$height);on.exit(grDevices::dev.off());draw()})
  output$quasse_png<-shiny::downloadHandler('guane-quasse.png',function(file){shiny::req(result());s<-settings();grDevices::png(file,width=s$width*150,height=s$height*150,res=150);on.exit(grDevices::dev.off());draw()})
- for(n in c('estimates','comparison','attempts','slices'))local({key<-n;id<-if(key=='estimates')'quasse_csv' else paste0('quasse_',key,'_csv');output[[id]]<-shiny::downloadHandler(paste0('guane-quasse-',key,'.csv'),function(file){shiny::req(result());utils::write.csv(result()[[key]],file,row.names=FALSE)})})
+ for(n in c('estimates','comparison','attempts','slices'))local({key<-n;id<-if(key=='estimates')'quasse_csv' else paste0('quasse_',key,'_csv');output[[id]]<-shiny::downloadHandler(paste0('guane-quasse-',key,'.csv'),function(file){shiny::req(result());guane_write_csv(result()[[key]],file,row.names=FALSE)})})
  output$quasse_rds<-shiny::downloadHandler('guane-quasse.rds',function(file){shiny::req(result());saveRDS(list(result=result(),settings=settings()),file)})
  list(result=result,code=code)
 }

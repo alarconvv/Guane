@@ -7,26 +7,25 @@ server_mod_signal_PGLS <- function(input, output, session, data) {
   shiny::updateSelectInput(session,'pgls_predictors',choices=cols,selected=intersect(input$pgls_predictors,cols))
  },ignoreNULL=FALSE)
  shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),input$pgls_response,input$pgls_predictors,input$pgls_model,input$pgls_value,input$pgls_fixed,input$pgls_method),{
-  comparison(NULL);result(NULL);status('Inputs changed. Run PGLS to update results.')
+  pgls_task$discard();compare_task$discard();comparison(NULL);result(NULL);status('Inputs changed. Run PGLS to update results.')
  },ignoreInit=TRUE)
+ pgls_fail<-function(msg){status(msg);data$record(paste('PGLS:',msg))}
+ pgls_task<-guane_task(function(fit){
+  result(fit);status('PGLS completed. Review residual diagnostics and fit warnings.');data$record('PGLS completed.')
+  for(w in fit$warnings) data$record(paste('PGLS warning:',w))
+ },pgls_fail,status)
+ compare_task<-guane_task(function(r){comparison(r);status('Comparison finished. Review failed models and warnings.');data$record('PGLS ML covariance comparison completed.')},status,status)
  shiny::observeEvent(input$pgls_run,{
   result(NULL)
-  tryCatch({
-   fit<-guane_pgls(data$state$tree,data$state$traits,data$taxon(),input$pgls_response,input$pgls_predictors,input$pgls_model,input$pgls_value,isTRUE(input$pgls_fixed),input$pgls_method)
-   result(fit);status('PGLS completed. Review residual diagnostics and fit warnings.');data$record('PGLS completed.')
-   for(w in fit$warnings) data$record(paste('PGLS warning:',w))
-  },error=function(e) {status(conditionMessage(e));data$record(paste('PGLS:',conditionMessage(e)))})
+  tryCatch(pgls_task$run(guane_pgls,list(data$state$tree,data$state$traits,data$taxon(),input$pgls_response,input$pgls_predictors,input$pgls_model,input$pgls_value,isTRUE(input$pgls_fixed),input$pgls_method)),error=function(e)pgls_fail(conditionMessage(e)))
  })
  shiny::observeEvent(input$pgls_compare_run,{
   comparison(NULL)
-  tryCatch({
-   r<-guane_pgls_compare(data$state$tree,data$state$traits,data$taxon(),input$pgls_response,input$pgls_predictors,input$pgls_value,isTRUE(input$pgls_fixed))
-   comparison(r);status('Comparison finished. Review failed models and warnings.');data$record('PGLS ML covariance comparison completed.')
-  },error=function(e) status(conditionMessage(e)))
+  tryCatch(compare_task$run(guane_pgls_compare,list(data$state$tree,data$state$traits,data$taxon(),input$pgls_response,input$pgls_predictors,input$pgls_value,isTRUE(input$pgls_fixed))),error=function(e) status(conditionMessage(e)))
  })
  output$pgls_comparison<-shiny::renderTable({shiny::req(comparison());tab<-comparison()$table;names(tab)<-vapply(names(tab),guane_text,character(1),lang=data$lang());tab},digits=4)
  output$pgls_comparison_plot<-shiny::renderPlot({shiny::req(comparison());guane_pgls_compare_plot(comparison(),color(),data$lang())},res=110)
- output$pgls_comparison_csv<-shiny::downloadHandler('guane-pgls-comparison.csv',function(file){shiny::req(comparison());utils::write.csv(comparison()$table,file,row.names=FALSE)})
+ output$pgls_comparison_csv<-shiny::downloadHandler('guane-pgls-comparison.csv',function(file){shiny::req(comparison());guane_write_csv(comparison()$table,file,row.names=FALSE)})
  output$pgls_comparison_script<-shiny::downloadHandler('guane-pgls-comparison.R',function(file){shiny::req(comparison());writeLines(guane_pgls_compare_script(comparison(),color(),data$lang()),file)})
  output$pgls_comparison_pdf<-shiny::downloadHandler('guane-pgls-comparison.pdf',function(file){shiny::req(comparison());grDevices::pdf(file,width=9,height=6);on.exit(grDevices::dev.off());guane_pgls_compare_plot(comparison(),color(),data$lang())})
  output$pgls_comparison_code<-shiny::renderText({shiny::req(comparison());paste(guane_pgls_compare_script(comparison(),color(),data$lang()),collapse='\n')})
@@ -44,6 +43,6 @@ server_mod_signal_PGLS <- function(input, output, session, data) {
  output$pgls_code<-shiny::renderText(paste(code(),collapse='\n'))
  output$pgls_script<-shiny::downloadHandler('guane-pgls-graph.R',function(file) writeLines(code(),file))
  output$pgls_pdf<-shiny::downloadHandler('guane-pgls.pdf',function(file){shiny::req(result());grDevices::pdf(file,width=9,height=6);on.exit(grDevices::dev.off());draw()})
- output$pgls_csv<-shiny::downloadHandler('guane-pgls-coefficients.csv',function(file){shiny::req(result());utils::write.csv(result()$coefficients,file,row.names=FALSE)})
+ output$pgls_csv<-shiny::downloadHandler('guane-pgls-coefficients.csv',function(file){shiny::req(result());guane_write_csv(result()$coefficients,file,row.names=FALSE)})
  list(result=result,code=code,comparison=comparison)
 }

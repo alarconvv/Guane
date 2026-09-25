@@ -1,6 +1,4 @@
 # Stable PagelReg filenames/ID; Pagel (1994) correlated evolution of binary traits.
-core_mod_signal_PagelReg <- function() list(implemented=TRUE,method="Pagel's 1994 Discrete Correlation Test")
-
 guane_pagel <- function(tree, traits, taxon, x_column, y_column, starts=3, max_rate=100) {
  if(!inherits(tree,'phylo') || !ape::is.rooted(tree) || !ape::is.binary(tree)) stop('Pagel requires a rooted, bifurcating tree.')
  if(is.null(tree$edge.length) || any(!is.finite(tree$edge.length)) || any(tree$edge.length<=0)) stop('Pagel requires finite, positive branch lengths.')
@@ -23,6 +21,7 @@ guane_pagel <- function(tree, traits, taxon, x_column, y_column, starts=3, max_r
  for(j in seq_along(initial)) {
   fit<-tryCatch(withCallingHandlers(phytools::fitPagel(tree,x,y,method='fitMk',model='ARD',dep.var='xy',pi='equal',opt.method='nlminb',q.init=initial[j],max.q=max_rate,rand_start=FALSE),warning=function(w) {warnings<<-c(warnings,conditionMessage(w));invokeRestart('muffleWarning')}),error=function(e) e)
   for(model in names(best)) {
+   if(!inherits(fit,'error') && is.null(fit$mk_fits)) stop("Pagel's correlation requires phytools 2.5-2 or newer. Update phytools and run again.")
    mk<-if(inherits(fit,'error')) NULL else fit$mk_fits[[model]]
    convergence<-if(is.null(mk$opt_results$convergence)) NA_integer_ else mk$opt_results$convergence
    ll<-if(is.null(mk)) NA_real_ else as.numeric(mk$logLik)

@@ -43,29 +43,28 @@ server_mod_signal_PGLM <- function(input,output,session,data) {
   shiny::updateSelectInput(session,'pglm_event',choices=states,selected=if(length(input$pglm_event)==1 && input$pglm_event %in% states) input$pglm_event else tail(states,1))
  },ignoreNULL=TRUE)
  shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),input$pglm_response,event(),input$pglm_predictors,method(),count(),grouped(),trials(),categorical(),references()),{
-  result(NULL);status('Inputs changed. Run PGLM to update results.')
+  pglm_task$discard();influence_task$discard();result(NULL);status('Inputs changed. Run PGLM to update results.')
  },ignoreInit=TRUE)
+ pglm_fail<-function(msg){status(msg);data$record(paste('PGLM:',msg))}
+ pglm_task<-guane_task(function(fit){
+  result(fit);status('PGLM completed. Review diagnostics and fitting warnings.');data$record('PGLM completed.')
+  for(w in fit$warnings) data$record(paste('PGLM:',w))
+ },pglm_fail,status)
  shiny::observeEvent(input$pglm_run,{
   result(NULL)
-  tryCatch({
-   fit<-guane_pglm(data$state$tree,data$state$traits,data$taxon(),input$pglm_response,input$pglm_predictors,event(),method(),trials(),categorical(),references())
-   result(fit);status('PGLM completed. Review diagnostics and fitting warnings.');data$record('PGLM completed.')
-   for(w in fit$warnings) data$record(paste('PGLM:',w))
-  },error=function(e){status(conditionMessage(e));data$record(paste('PGLM:',conditionMessage(e)))})
+  tryCatch(pglm_task$run(guane_pglm,list(data$state$tree,data$state$traits,data$taxon(),input$pglm_response,input$pglm_predictors,event(),method(),trials(),categorical(),references())),error=function(e)pglm_fail(conditionMessage(e)))
  })
  shiny::observeEvent(result(),{influence(NULL)},ignoreNULL=FALSE)
+ influence_task<-guane_task(function(r){if(is.null(result()))return();influence(r);status('Analysis completed.');data$record('PGLM leave-one-taxon-out diagnostics completed; prepared data unchanged.')},status,status)
  shiny::observeEvent(input$pglm_influence_run,{
   shiny::req(result());influence(NULL)
-  shiny::withProgress(message='Diagnostic refits',value=0,{
-   influence(guane_pglm_influence(result()))
-  })
-  data$record('PGLM leave-one-taxon-out diagnostics completed; prepared data unchanged.')
+  influence_task$run(guane_pglm_influence,list(result()))
  })
  output$pglm_taxa_screen<-shiny::renderTable({shiny::req(result());tab<-guane_pglm_screen(result())$taxa;names(tab)<-vapply(names(tab),guane_text,character(1),lang=data$lang());tab},digits=4)
  output$pglm_category_screen<-shiny::renderTable({shiny::req(result());tab<-guane_pglm_screen(result())$categories;shiny::req(nrow(tab)>0);names(tab)<-vapply(names(tab),guane_text,character(1),lang=data$lang());tab})
  output$pglm_influence_table<-shiny::renderTable({shiny::req(influence());tab<-influence()$table;names(tab)<-vapply(names(tab),guane_text,character(1),lang=data$lang());tab},digits=4)
  output$pglm_influence_plot<-shiny::renderPlot({shiny::req(influence());guane_pglm_influence_plot(influence(),color(),data$lang())},res=110)
- output$pglm_influence_csv<-shiny::downloadHandler('guane-pglm-influence.csv',function(file){shiny::req(influence());utils::write.csv(influence()$table,file,row.names=FALSE)})
+ output$pglm_influence_csv<-shiny::downloadHandler('guane-pglm-influence.csv',function(file){shiny::req(influence());guane_write_csv(influence()$table,file,row.names=FALSE)})
  output$pglm_influence_script<-shiny::downloadHandler('guane-pglm-influence.R',function(file){shiny::req(influence());writeLines(guane_pglm_influence_script(influence(),color(),data$lang()),file)})
  output$pglm_influence_pdf<-shiny::downloadHandler('guane-pglm-influence.pdf',function(file){shiny::req(influence());grDevices::pdf(file,width=9,height=6);on.exit(grDevices::dev.off());guane_pglm_influence_plot(influence(),color(),data$lang())})
  output$pglm_influence_code<-shiny::renderText({shiny::req(influence());paste(guane_pglm_influence_script(influence(),color(),data$lang()),collapse='\n')})
@@ -102,7 +101,7 @@ server_mod_signal_PGLM <- function(input,output,session,data) {
  output$pglm_code<-shiny::renderText({if(is.null(result())) return('Run PGLM on matched data to display results.');paste(code(),collapse='\n')})
  output$pglm_script<-shiny::downloadHandler('guane-pglm.R',function(file) writeLines(code(),file))
  output$pglm_pdf<-shiny::downloadHandler('guane-pglm.pdf',function(file){shiny::req(result());grDevices::pdf(file,width=9,height=6);on.exit(grDevices::dev.off());draw()})
- output$pglm_csv<-shiny::downloadHandler('guane-pglm-coefficients.csv',function(file){shiny::req(result());utils::write.csv(result()$coefficients,file,row.names=FALSE)})
- output$pglm_predictions<-shiny::downloadHandler('guane-pglm-fitted-values.csv',function(file){shiny::req(result());utils::write.csv(result()$points,file,row.names=FALSE)})
+ output$pglm_csv<-shiny::downloadHandler('guane-pglm-coefficients.csv',function(file){shiny::req(result());guane_write_csv(result()$coefficients,file,row.names=FALSE)})
+ output$pglm_predictions<-shiny::downloadHandler('guane-pglm-fitted-values.csv',function(file){shiny::req(result());guane_write_csv(result()$points,file,row.names=FALSE)})
  list(result=result,code=code,influence=influence)
 }

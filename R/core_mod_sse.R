@@ -1,6 +1,3 @@
-# Independent SSE method cards.
-core_mod_sse <- function() list(cards=c('bisse','musse','quasse','hidden'))
-
 # Numerical optimization shared by BiSSE and MuSSE. Engines provide validated likelihoods.
 guane_sse_constraint_groups <- function(d,engine) {
  groups<-unique(d$Group);free<-character();start<-lower<-upper<-numeric()

@@ -4,7 +4,7 @@
 \alias{run_app}
 \title{Launch the Guane platform.}
 \usage{
-run_app(module = "full", submodule = "full", default_lang = "en", ...)
+run_app(module = "full", default_lang = "en", ...)
 }
 \description{
 Launch the Guane platform.

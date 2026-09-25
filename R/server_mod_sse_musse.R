@@ -16,24 +16,30 @@ server_mod_sse_musse <- function(input,output,session,data) {
  shiny::observeEvent(input$musse_fill,{
   tryCatch({guane_ltt(data$state$tree);tab<-guane_musse_parameters(data$state$tree,nrow(preview()));text<-paste(capture.output(utils::write.csv(tab,row.names=FALSE,na='')),collapse='\n');shiny::updateTextAreaInput(session,'musse_parameters',value=text)},error=function(e)status(conditionMessage(e)))
  })
- shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),options()),{result(NULL);status('MuSSE inputs changed. Run again to update results.')},ignoreInit=TRUE)
+ shiny::observeEvent(list(data$state$tree,data$state$traits,data$taxon(),options()),{musse_task$discard();result(NULL);status('MuSSE inputs changed. Run again to update results.')},ignoreInit=TRUE)
+ musse_fail<-function(msg){status(msg);data$record(paste('MuSSE:',msg))}
+ musse_task<-guane_task(function(r){result(r);status(if(any(r$comparison$Converged))'MuSSE completed. Review convergence, bounds and model assumptions.' else 'No valid MuSSE fit. Inspect diagnostics.');data$record('MuSSE analysis completed.');for(w in r$warnings)data$record(paste('MuSSE:',w))},musse_fail,status)
  shiny::observeEvent(input$musse_run,{
   result(NULL)
-  tryCatch({r<-shiny::withProgress(message=guane_text('Fitting MuSSE models',data$lang()),value=.1,do.call(guane_musse_fit,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon()),options())));result(r);status(if(any(r$comparison$Converged))'MuSSE completed. Review convergence, bounds and model assumptions.' else 'No valid MuSSE fit. Inspect diagnostics.');data$record('MuSSE analysis completed.');for(w in r$warnings)data$record(paste('MuSSE:',w))},error=function(e){status(conditionMessage(e));data$record(paste('MuSSE:',conditionMessage(e)))})
+  tryCatch(musse_task$run(guane_musse_fit,c(list(tree=data$state$tree,traits=data$state$traits,taxon=data$taxon()),options())),error=function(e)musse_fail(conditionMessage(e)))
  })
  shiny::observeEvent(result(),{r<-result();if(is.null(r))return();choices<-r$comparison$Model;valid<-choices[r$comparison$Converged];shiny::updateSelectInput(session,'musse_plot_model',choices=choices,selected=if(length(input$musse_plot_model)==1&&input$musse_plot_model%in%choices)input$musse_plot_model else if(length(valid))valid[1] else choices[1])})
  shiny::observeEvent(list(result(),input$musse_plot_model),{r<-result();if(is.null(r))return();f<-r$fits[[value('musse_plot_model','Equal transitions')]];choices<-if(isTRUE(f$valid))f$constraint$free else character();shiny::updateSelectInput(session,'musse_plot_parameter',choices=choices,selected=if(length(input$musse_plot_parameter)==1&&input$musse_plot_parameter%in%choices)input$musse_plot_parameter else head(choices,1))})
- shiny::observeEvent(input$musse_profile_run,{
-  tryCatch({shiny::req(result());r<-result();p<-shiny::withProgress(message=guane_text('Profile likelihood',data$lang()),value=.1,guane_musse_profile(r,input$musse_plot_model,input$musse_plot_parameter,input$musse_profile_lower,input$musse_profile_upper,input$musse_profile_points,input$musse_profile_level,r$inputs$maxit));p$model<-input$musse_plot_model;r$profile<-p
+ musse_profile_model<-NULL
+ musse_profile_task<-guane_task(function(p){r<-result();if(is.null(r))return();p$model<-musse_profile_model;r$profile<-p
    if(p$better){r$fits[[p$model]]$better_failed<-TRUE;r$comparison$Weight<-NA_real_;r$warnings<-unique(c(r$warnings,'A profile found a better likelihood. Refit before interpretation.'))}
    result(r);status(p$warning);data$record(paste('SSE profile:',p$model,p$settings$parameter));shiny::updateSelectInput(session,'musse_graph',selected='profile')
+ },status,status)
+ shiny::observeEvent(input$musse_profile_run,{
+  tryCatch({shiny::req(result());r<-result();musse_profile_model<<-input$musse_plot_model
+   musse_profile_task$run(guane_musse_profile,list(r,input$musse_plot_model,input$musse_plot_parameter,input$musse_profile_lower,input$musse_profile_upper,input$musse_profile_points,input$musse_profile_level,r$inputs$maxit))
   },error=function(e)status(conditionMessage(e)))
  })
- shiny::observeEvent(list(input$musse_profile_lower,input$musse_profile_upper,input$musse_profile_points,input$musse_profile_level),{r<-result();if(!is.null(r)&&!is.null(r$profile)){r$profile<-NULL;result(r)}},ignoreInit=TRUE)
+ shiny::observeEvent(list(input$musse_profile_lower,input$musse_profile_upper,input$musse_profile_points,input$musse_profile_level),{musse_profile_task$discard();r<-result();if(!is.null(r)&&!is.null(r$profile)){r$profile<-NULL;result(r)}},ignoreInit=TRUE)
  output$musse_profile_interval<-shiny::renderTable({shiny::req(result()$profile);translate(result()$profile$interval)},digits=6)
  output$musse_profile_curve<-shiny::renderTable({shiny::req(result()$profile);translate(result()$profile$curve)},digits=6)
- output$musse_profile_csv<-shiny::downloadHandler('guane-musse-profile.csv',function(file){shiny::req(result()$profile);utils::write.csv(result()$profile$curve,file,row.names=FALSE)})
- output$musse_interval_csv<-shiny::downloadHandler('guane-musse-interval.csv',function(file){shiny::req(result()$profile);utils::write.csv(result()$profile$interval,file,row.names=FALSE)})
+ output$musse_profile_csv<-shiny::downloadHandler('guane-musse-profile.csv',function(file){shiny::req(result()$profile);guane_write_csv(result()$profile$curve,file,row.names=FALSE)})
+ output$musse_interval_csv<-shiny::downloadHandler('guane-musse-interval.csv',function(file){shiny::req(result()$profile);guane_write_csv(result()$profile$interval,file,row.names=FALSE)})
  translate<-function(x){if(is.null(x))return(NULL);for(n in intersect(c('LowerStatus','UpperStatus'),names(x)))x[[n]]<-vapply(x[[n]],guane_text,character(1),lang=data$lang());if('Model'%in%names(x))x$Model<-vapply(x$Model,guane_text,character(1),lang=data$lang());names(x)<-vapply(names(x),guane_text,character(1),lang=data$lang());x}
  output$musse_status<-shiny::renderText(guane_text(status(),data$lang()))
  for(n in c('mapping','estimates','comparison','diagnostics','attempts'))local({key<-n;output[[paste0('musse_',key)]]<-shiny::renderTable({shiny::req(result());translate(result()[[key]])},digits=6)})
@@ -49,7 +55,7 @@ server_mod_sse_musse <- function(input,output,session,data) {
  output$musse_script<-shiny::downloadHandler('guane-musse.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$musse_pdf<-shiny::downloadHandler('guane-musse.pdf',function(file){shiny::req(result());s<-settings();grDevices::pdf(file,width=s$width,height=s$height);on.exit(grDevices::dev.off());draw()})
  output$musse_png<-shiny::downloadHandler('guane-musse.png',function(file){shiny::req(result());s<-settings();grDevices::png(file,width=s$width*150,height=s$height*150,res=150);on.exit(grDevices::dev.off());draw()})
- for(n in c('estimates','comparison','attempts','slices'))local({key<-n;id<-if(key=='estimates')'musse_csv' else paste0('musse_',key,'_csv');output[[id]]<-shiny::downloadHandler(paste0('guane-musse-',key,'.csv'),function(file){shiny::req(result());utils::write.csv(result()[[key]],file,row.names=FALSE)})})
+ for(n in c('estimates','comparison','attempts','slices'))local({key<-n;id<-if(key=='estimates')'musse_csv' else paste0('musse_',key,'_csv');output[[id]]<-shiny::downloadHandler(paste0('guane-musse-',key,'.csv'),function(file){shiny::req(result());guane_write_csv(result()[[key]],file,row.names=FALSE)})})
  output$musse_rds<-shiny::downloadHandler('guane-musse.rds',function(file){shiny::req(result());saveRDS(list(result=result(),settings=settings()),file)})
  list(result=result,code=code)
 }

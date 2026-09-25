@@ -1,6 +1,3 @@
-# Shared metadata for Diversification.
-core_mod_div <- function() list(cards=c('ltt','rates','time','clades','joint','diversity'))
-
 # Validated helpers shared by multiple diversification cards.
 # Crown-tree likelihood; supplied stem is explicitly excluded, never recalibrated.
 guane_rates_data <- function(tree) {

@@ -5,11 +5,29 @@ guane_example <- function() {
        traits=utils::read.csv(file.path(folder,'guane-example-traits.csv'),check.names=FALSE,stringsAsFactors=FALSE))
 }
 
+# Input size limits protect the shared server; override with options() or
+# GUANE_MAX_TIPS / GUANE_MAX_ROWS / GUANE_MAX_COLUMNS for local installations.
+guane_limits <- function() {
+ list(tips = guane_task_setting('guane.max_tips', 'GUANE_MAX_TIPS', 5000, 4, 1e6),
+  rows = guane_task_setting('guane.max_rows', 'GUANE_MAX_ROWS', 50000, 4, 1e7),
+  columns = guane_task_setting('guane.max_columns', 'GUANE_MAX_COLUMNS', 500, 2, 1e5))
+}
+guane_check_tree_size <- function(tree) {
+  limit <- guane_limits()$tips
+  if (inherits(tree, 'phylo') && length(tree$tip.label) > limit) stop('This tree exceeds the maximum number of tips supported on this server. Run the exported R script locally for larger trees.')
+  invisible(tree)
+}
 guane_read_tree <- function(path) {
   first <- readLines(path, n = 1, warn = FALSE)
   tree <- if (grepl('#NEXUS', first, ignore.case = TRUE)) ape::read.nexus(path) else ape::read.tree(path)
   if (!inherits(tree, 'phylo')) stop('Upload exactly one tree for this first workflow.')
-  tree
+  guane_check_tree_size(tree)
+}
+guane_read_traits <- function(path) {
+  limits <- guane_limits()
+  traits <- utils::read.csv(path, check.names = FALSE, nrows = limits$rows + 1)
+  if (nrow(traits) > limits$rows || ncol(traits) > limits$columns) stop('This trait table exceeds the maximum size supported on this server.')
+  traits
 }
 guane_validate <- function(tree, traits, taxon, trait) {
   issues <- data.frame(level = character(), message = character())
@@ -17,6 +35,7 @@ guane_validate <- function(tree, traits, taxon, trait) {
   if (is.null(tree)) add('Required', 'Load a phylogenetic tree.')
   if (is.null(traits)) add('Required', 'Load a CSV trait table.')
   if (!is.null(tree)) {
+    if (length(tree$tip.label) > guane_limits()$tips) add('Error', 'This tree exceeds the maximum number of tips supported on this server. Run the exported R script locally for larger trees.')
     if (anyDuplicated(tree$tip.label)) add('Error', 'Tree tip labels must be unique.')
     if (anyNA(tree$tip.label) || any(!nzchar(trimws(tree$tip.label)))) add('Error', 'Tree contains empty taxon labels.')
     if (is.null(tree$edge.length) || any(!is.finite(tree$edge.length)) || any(tree$edge.length <= 0)) add('Error', 'Signal analysis requires finite, positive branch lengths.')
@@ -95,7 +114,7 @@ guane_plot_distribution <- function(x, type='hist', bins=15, rug=TRUE, label='Tr
 
 # dput preserves types, names, missing values and tree precision in a portable script.
 guane_r_assignment <- function(name, value) {
- paste0(name,' <- ',paste(capture.output(dput(value, control=c("keepNA","keepInteger","showAttributes"))),collapse='\n'))
+ paste0(name,' <- ',paste(capture.output(dput(value, control=c("keepNA","keepInteger","showAttributes","hexNumeric"))),collapse='\n'))
 }
 guane_preparation_script <- function(steps) {
  c('# Guane data preparation: run in a fresh R session.',
@@ -115,4 +134,24 @@ guane_data_plot_script <- function(kind, settings) {
    guane_r_assignment('settings',settings),
    sprintf('do.call(%s, settings)',if(kind=='tree') 'guane_plot_tree' else 'guane_plot_distribution'),
    'sessionInfo()')
+}
+
+# CSV export used by every download. Text cells, names and row names that a
+# spreadsheet would read as a formula (=, +, -, @, tab, carriage return) are
+# prefixed with an apostrophe; numeric columns are written unchanged.
+guane_csv_safe <- function(x) {
+ x <- as.character(x)
+ risky <- !is.na(x) & grepl('^[=+@\t\r-]', x)
+ x[risky] <- paste0("'", x[risky])
+ x
+}
+guane_write_csv <- function(x, file, row.names = TRUE, ...) {
+ x <- as.data.frame(x, check.names = FALSE, stringsAsFactors = FALSE)
+ for (j in seq_along(x)) if (is.character(x[[j]]) || is.factor(x[[j]])) x[[j]] <- guane_csv_safe(x[[j]])
+ names(x) <- guane_csv_safe(names(x))
+ if (isTRUE(row.names)) {
+  rn <- attr(x, 'row.names')
+  if (is.character(rn)) rownames(x) <- make.unique(guane_csv_safe(rn))
+ }
+ utils::write.csv(x, file, row.names = row.names, ...)
 }

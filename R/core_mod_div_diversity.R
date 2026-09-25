@@ -1,5 +1,3 @@
-core_mod_div_diversity <- function() list(implemented=TRUE,backend='DDD::dd_ML',models=c(1,1.3,2,3,4,5))
-
 guane_dd_numbers <- function(x,n=NULL) {
  z<-suppressWarnings(as.numeric(strsplit(gsub(' ','',x,fixed=TRUE),',',fixed=TRUE)[[1]]))
  if(!length(z)||any(!is.finite(z))||(!is.null(n)&&length(z)!=n))stop('Invalid numeric settings.')
@@ -10,11 +8,15 @@ guane_dd_fit <- function(tree,models=c(1,3),missing=0,res=NULL,cond=1,btorph=1,
  starts=c(3,.2,40,1),free=c('lambda','mu','K'),tol=c(.001,.0001,.000001),
  tolint=c(1e-10,1e-8),maxiter=1000,cycles=1,optimizer='simplex',method='analytical',threshold=0,change=FALSE,verbose=FALSE) {
  if(!requireNamespace('DDD',quietly=TRUE))stop('Install DDD to run this analysis.')
+ if(!all(c('tolint','probs_threshold')%in%names(formals(DDD::dd_ML))))stop('Diversity-dependent models require DDD 5.2.5 or newer. Update DDD and run again.')
  tree<-guane_rates_data(tree);brts<-sort(as.numeric(ape::branching.times(tree)),decreasing=TRUE)
- integer_ok<-function(x,lo)length(x)==1&&is.finite(x)&&x==floor(x)&&x>=lo
- if(!integer_ok(missing,0)||!integer_ok(maxiter,1)||!integer_ok(cycles,1))stop('Invalid numeric settings.')
- if(is.null(res))res<-10*(length(brts)+1+missing)
- if(!integer_ok(res,length(brts)+missing+2)||!length(models)||any(!models%in%core_mod_div_diversity()$models)||anyDuplicated(models)||!cond%in%0:3||!btorph%in%0:1)stop('Invalid model or likelihood settings.')
+ # Upper bounds keep a single fit within the server's memory and time budget.
+ integer_ok<-function(x,lo,hi=Inf)length(x)==1&&is.finite(x)&&x==floor(x)&&x>=lo&&x<=hi
+ if(!integer_ok(missing,0,max(1000,10*length(brts)))||!integer_ok(maxiter,1,1e5)||!integer_ok(cycles,1,10))stop('Invalid numeric settings.')
+ # The likelihood uses res-by-res matrices; cap it to bound memory on the server.
+ if(length(brts)+missing+2>5000)stop('Diversity-dependent models on this server support at most 4998 species including missing species.')
+ if(is.null(res))res<-min(5000,10*(length(brts)+1+missing))
+ if(!integer_ok(res,length(brts)+missing+2,5000)||!length(models)||any(!models%in%c(1,1.3,2,3,4,5))||anyDuplicated(models)||!cond%in%0:3||!btorph%in%0:1)stop('Invalid model or likelihood settings.')
  if(length(starts)!=4||any(!is.finite(starts))||any(starts[c(1,3,4)]<=0)||starts[2]<0||!length(free)||any(!free%in%c('lambda','mu','K','r'))||anyDuplicated(free))stop('Use positive lambda, K and r and nonnegative mu starting/fixed values and select estimated parameters.')
  if(length(tol)!=3||length(tolint)!=2||any(!is.finite(c(tol,tolint)))||any(c(tol,tolint)<=0)||!is.finite(threshold)||threshold<0||threshold>1)stop('Invalid numeric settings.')
  if(!optimizer%in%c('simplex','subplex')||!method%in%c('analytical','odeint::runge_kutta_cash_karp54'))stop('Unsupported numerical method.')
@@ -36,10 +38,10 @@ guane_dd_fit <- function(tree,models=c(1,3),missing=0,res=NULL,cond=1,btorph=1,
 }
 
 guane_dd_diagnose <- function(result,factor=2) {
- if(length(factor)!=1||!is.finite(factor)||factor<=1)stop('Invalid numeric settings.')
+ if(length(factor)!=1||!is.finite(factor)||factor<=1||factor>4)stop('Invalid numeric settings.')
  rows<-lapply(names(result$fits),function(k){
   f<-result$fits[[k]];if(is.null(f)||!isTRUE(result$comparison$Converged[result$comparison$Model==k]))return(NULL)
-  a<-result$calls[[k]];p<-as.numeric(f[1,c('lambda','mu','K',if(k=='5')'r')]);r<-ceiling(a$res*factor)
+  a<-result$calls[[k]];p<-as.numeric(f[1,c('lambda','mu','K',if(k=='5')'r')]);r<-min(ceiling(a$res*factor),6000)
   settings<-c(r,a$ddmodel,a$cond,a$btorph,0,a$soc,a$tol,a$maxiter,a$tolint/10,a$probs_threshold)
   value<-tryCatch(DDD::dd_loglik(p,settings,a$brts,a$missnumspec,methode=a$methode),error=function(e)NA_real_)
   data.frame(Model=k,Original=f$loglik,Refined=value,Delta=value-f$loglik,Resolution=r,Stable=is.finite(value)&&abs(value-f$loglik)<=1e-4)
@@ -110,7 +112,7 @@ guane_dd_uncertainty <- function(result,model='1',parameter='lambda',lower=.1,up
  if(!model%in%names(result$fits)||!isTRUE(result$comparison$Converged[result$comparison$Model==model]))stop('Select a converged model.')
  a<-result$calls[[model]];namesp<-c('lambda','mu','K',if(model=='5')'r');p<-as.numeric(result$fits[[model]][1,namesp]);names(p)<-namesp;best<-result$fits[[model]]$loglik
  whole<-function(x,lo,hi)length(x)==1&&is.finite(x)&&x==floor(x)&&x>=lo&&x<=hi
- if(!whole(points,5,101)||!whole(nsim,2,500)||!whole(seed,0,2147483647)||length(level)!=1||!is.finite(level)||level<=0||level>=1||!is.finite(resolution_factor)||resolution_factor<=1||!is.finite(seconds)||seconds<=0||!length(start_factors)||any(!is.finite(start_factors))||any(start_factors<=0))stop('Invalid numeric settings.')
+ if(!whole(points,5,101)||!whole(nsim,2,500)||!whole(seed,0,2147483647)||length(level)!=1||!is.finite(level)||level<=0||level>=1||!is.finite(resolution_factor)||resolution_factor<=1||resolution_factor>4||!is.finite(seconds)||seconds<=0||seconds>600||!length(start_factors)||any(!is.finite(start_factors))||any(start_factors<=0))stop('Invalid numeric settings.')
  if(bootstrap&&(a$missnumspec!=0||a$cond!=1||a$soc!=2))stop('Bootstrap requires complete sampling and crown-survival conditioning (cond = 1).')
  if(any(!is.finite(p)))stop('Finite estimates are required for uncertainty analysis.')
  saved<-as.list(environment())[c('model','parameter','lower','upper','points','level','profiles','robustness','start_factors','resolution_factor','bootstrap','nsim','seed','seconds')]
@@ -138,7 +140,7 @@ guane_dd_uncertainty <- function(result,model='1',parameter='lambda',lower=.1,up
  if(robustness){
   scenarios<-c(paste0('start x ',start_factors),'resolution + tolerance')
   u$robustness<-do.call(rbind,lapply(seq_along(scenarios),function(i){z<-a;z$initparsopt<-p[z$idparsopt]
-   if(i<=length(start_factors))z$initparsopt<-p[z$idparsopt]*start_factors[i] else {z$res<-ceiling(a$res*resolution_factor);z$tolint<-a$tolint/10}
+   if(i<=length(start_factors))z$initparsopt<-p[z$idparsopt]*start_factors[i] else {z$res<-min(ceiling(a$res*resolution_factor),6000);z$tolint<-a$tolint/10}
    f<-guane_dd_refit(z);data.frame(Scenario=scenarios[i],Converged=f$ok,LogLik=if(f$ok)f$fit$loglik else NA_real_,Delta=if(f$ok)f$fit$loglik-best else NA_real_,Resolution=z$res,Message=f$message)
   }))
   if(any(u$robustness$Delta>1e-4,na.rm=TRUE))u$messages<-c(u$messages,'Better likelihood found. Refit before interpreting uncertainty.')

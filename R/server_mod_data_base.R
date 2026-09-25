@@ -22,7 +22,7 @@ server_mod_data_base <- function(input, output, session, lang=function() 'en') {
     observeEvent(list(input$taxon,input$trait),{record(paste('Selected taxon column:',input$taxon,'; trait:',input$trait))},ignoreInit=TRUE)
     observeEvent(state$activity,{record(state$activity)},ignoreInit=FALSE)
     output$history <- renderTable(state$log)
-    output$log_download <- downloadHandler('guane-diagnosis.csv',function(file) write.csv(state$log,file,row.names=FALSE))
+    output$log_download <- downloadHandler('guane-diagnosis.csv',function(file) guane_write_csv(state$log,file,row.names=FALSE))
     output$preparation_script<-downloadHandler('guane-preparation.R',function(file) writeLines(guane_preparation_script(state$steps),file))
     output$checks <- renderPrint({x<-state$checks;if(inherits(x,'htest')) {cat(guane_text('Shapiro-Wilk normality test',lang()),'\n');cat('W =',unname(x$statistic),'; p =',x$p.value,'\n');cat(guane_text('Trait normality does not establish model residual normality.',lang()))} else print(x)})
     observeEvent(input$normality,{attempt({req(state$traits,input$trait);x<-state$traits[[input$trait]]
@@ -55,7 +55,7 @@ server_mod_data_base <- function(input, output, session, lang=function() 'en') {
       state$activity<-'Tree loaded.'
     })})
     observeEvent(input$traits_file,{attempt({
-      traits<-read.csv(input$traits_file$datapath,check.names=FALSE)
+      traits<-guane_read_traits(input$traits_file$datapath)
       state$steps<-append(state$steps,list(guane_r_assignment('traits',traits)));state$original$traits<-traits;state$traits<-traits;state$undo<-list();refresh()
       record(paste('Loaded traits:',input$traits_file$name,'; undo history restarted.'))
       state$activity<-'Trait table loaded.'
@@ -93,7 +93,7 @@ server_mod_data_base <- function(input, output, session, lang=function() 'en') {
     output$dist_export<-downloadHandler('guane-distribution.pdf',function(file){req(state$traits,input$dist_column);pdf(file,width=8,height=6);on.exit(dev.off());draw_distribution()})
     output$traits_table <- renderTable({req(state$traits);head(state$traits,if(is.null(input$rows)) 25 else max(1,min(1000,input$rows)))},rownames=FALSE)
     output$data_tree_export <- downloadHandler('guane-tree.nwk',function(file){req(state$tree);ape::write.tree(state$tree,file)})
-    output$traits_download <- downloadHandler('guane-traits.csv',function(file){req(state$traits);write.csv(state$traits,file,row.names=FALSE)})
+    output$traits_download <- downloadHandler('guane-traits.csv',function(file){req(state$traits);guane_write_csv(state$traits,file,row.names=FALSE)})
     output$plot_download <- downloadHandler('guane-tree.pdf',function(file){req(state$tree);pdf(file,width=10,height=7);on.exit(dev.off());draw()})
   list(lang=lang, state=state, record=record, attempt=attempt,
        taxon=shiny::reactive(input$taxon), trait=shiny::reactive(input$trait), seed=shiny::reactive(input$seed))

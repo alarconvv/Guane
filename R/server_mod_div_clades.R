@@ -24,16 +24,18 @@ server_mod_div_clades <- function(input,output,session,data) {
  shiny::observeEvent(input$clade_preview_run,{
   tryCatch({clade_selection();shiny::updateSelectInput(session,'clade_graph',selected='clade_tree');bslib::nav_select('clades_view','results',session=session);clade_status('Preview only. Run clade models to fit the selected crowns.')},error=function(e)clade_status(conditionMessage(e)))
  })
- shiny::observeEvent(input$clade_run,{
-  clade_result(NULL)
-  tryCatch({
-   selection<-clade_selection()
-   r<-shiny::withProgress(message=guane_text('Fitting selected crown clades',data$lang()),value=.1,do.call(guane_rates_clade_fit,c(list(tree=data$state$tree,nodes=selection$clades$Node,sampling=selection$clades[,c('Node','Sampling')]),clade_options())))
+ clade_task<-guane_task(function(r){
    clade_result(r);shiny::updateSelectInput(session,'clade_plot_node',choices=as.character(r$clades$Node),selected=as.character(r$clades$Node[1]))
    shiny::updateSelectInput(session,'clade_plot_model',choices=options()$models,selected=options()$models[1])
    shiny::updateSelectInput(session,'clade_graph',selected='clade_rates')
    clade_status(if(any(r$audit$Successful_models>0))'Clade analysis completed. Review each clade separately.' else 'No valid clade fits. Inspect the clade audit.')
    data$record(paste('Clade diversification:',paste(r$clades$Node,collapse=', ')))
+ },clade_status,clade_status)
+ shiny::observeEvent(input$clade_run,{
+  clade_result(NULL)
+  tryCatch({
+   selection<-clade_selection()
+   clade_task$run(guane_rates_clade_fit,c(list(tree=data$state$tree,nodes=selection$clades$Node,sampling=selection$clades[,c('Node','Sampling')]),clade_options()))
   },error=function(e)clade_status(conditionMessage(e)))
  })
  clade_settings<-shiny::reactive(list(node=value('clade_plot_node',NULL),labels=isTRUE(value('clade_labels',TRUE)),node_labels=isTRUE(value('clade_node_labels',TRUE)),cex=value('clade_cex',.7)))
@@ -50,11 +52,11 @@ server_mod_div_clades <- function(input,output,session,data) {
  output$clade_audit<-shiny::renderTable({shiny::req(clade_result());d<-clade_result()$audit;d$Message<-vapply(strsplit(d$Message,' | ',fixed=TRUE),function(z)paste(vapply(z,guane_text,character(1),lang=data$lang()),collapse=' | '),character(1));translate(d)})
  output$clade_profile_table<-shiny::renderTable({shiny::req(clade_result());d<-guane_rates_clade_table(clade_result(),'profile');if(!is.null(d))for(n in c('Lower_status','Upper_status'))d[[n]]<-vapply(d[[n]],guane_text,character(1),lang=data$lang());translate(d)},digits=6)
  for(field in c('estimates','comparison','attempts','profiles','profile_curves','slices'))local({
-  key<-field;output[[paste0('clade_',key,'_csv')]]<-shiny::downloadHandler(paste0('guane-clade-',key,'.csv'),function(file){shiny::req(clade_result());d<-guane_rates_clade_table(clade_result(),if(key=='profiles')'profile' else key);shiny::req(d);utils::write.csv(d,file,row.names=FALSE)})
+  key<-field;output[[paste0('clade_',key,'_csv')]]<-shiny::downloadHandler(paste0('guane-clade-',key,'.csv'),function(file){shiny::req(clade_result());d<-guane_rates_clade_table(clade_result(),if(key=='profiles')'profile' else key);shiny::req(d);guane_write_csv(d,file,row.names=FALSE)})
  })
- output$clade_members_csv<-shiny::downloadHandler('guane-clade-membership.csv',function(file){shiny::req(clade_result());utils::write.csv(clade_result()$membership,file,row.names=FALSE)})
- output$clade_manifest_csv<-shiny::downloadHandler('guane-clade-settings.csv',function(file){shiny::req(clade_result());utils::write.csv(clade_result()$clades,file,row.names=FALSE)})
- output$clade_audit_csv<-shiny::downloadHandler('guane-clade-audit.csv',function(file){shiny::req(clade_result());utils::write.csv(clade_result()$audit,file,row.names=FALSE)})
+ output$clade_members_csv<-shiny::downloadHandler('guane-clade-membership.csv',function(file){shiny::req(clade_result());guane_write_csv(clade_result()$membership,file,row.names=FALSE)})
+ output$clade_manifest_csv<-shiny::downloadHandler('guane-clade-settings.csv',function(file){shiny::req(clade_result());guane_write_csv(clade_result()$clades,file,row.names=FALSE)})
+ output$clade_audit_csv<-shiny::downloadHandler('guane-clade-audit.csv',function(file){shiny::req(clade_result());guane_write_csv(clade_result()$audit,file,row.names=FALSE)})
  output$clade_trees<-shiny::downloadHandler('guane-crown-clades.zip',function(file){
   shiny::req(clade_result());r<-clade_result();folder<-tempfile('guane-clades-');dir.create(folder);on.exit(unlink(folder,recursive=TRUE))
   paths<-vapply(r$clades$Node,function(node){z<-r$trees[[as.character(node)]];path<-file.path(folder,paste0('Node_',node,'.nwk'));ape::write.tree(z,file=path,digits=17);path},character(1))

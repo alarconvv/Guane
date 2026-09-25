@@ -4,7 +4,7 @@
 \alias{app_guane}
 \title{Assemble the Guane application.}
 \usage{
-app_guane(module = "full", submodule = "full", default_lang = "en")
+app_guane(module = "full", default_lang = "en")
 }
 \description{
 Assemble the Guane application.
