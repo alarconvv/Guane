@@ -3,7 +3,7 @@ ui_mod_asr_poly <- function(id) {
  ui_mod_analysis_base(id,'poly','Polymorphic traits',
  controls=shiny::tagList(
   shiny::selectInput(ns('poly_trait'),'Trait for reconstruction',NULL),
-  shiny::selectInput(ns('poly_framework'),'Framework',c('Maximum likelihood'='ML','Stochastic mapping (fixed fitted rates)'='simmap','Bayesian Mk (sample rates)'='Bayes','Parsimony — planned'='parsimony')),
+  shiny::selectInput(ns('poly_framework'),'Framework',c('Maximum likelihood'='ML','Stochastic mapping (fixed fitted rates)'='simmap','Bayesian Mk (sample rates)'='Bayes','Parsimony \u2014 planned'='parsimony')),
   shiny::p('Code coexisting states with +, such as A+B. Missing, ambiguous and empty states are not supported.'),
   shiny::p('Use two or three constituent states and at least one polymorphic taxon.'),
   shiny::selectInput(ns('poly_model'),'Model',c('ER','SYM','ARD','transient')),

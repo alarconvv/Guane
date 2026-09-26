@@ -10,6 +10,13 @@ app_ui(
   resource_root = guane_resource_root()
 )
 }
+\arguments{
+\item{modules}{Primary modules to display: signal, asr, div, or sse.}
+
+\item{default_lang}{Initial interface language: en, es, or pt.}
+
+\item{resource_root}{Directory containing the bundled theme, assets, and translations.}
+}
 \description{
 Display the Guane interface.
 }

@@ -4,6 +4,7 @@ server_mod_asr_continuous <- function(input,output,session,data) {
   t<-data$state$traits;cols<-setdiff(names(t)[vapply(t,is.numeric,logical(1))],data$taxon())
   shiny::updateSelectInput(session,'bm_trait',choices=cols,selected=if(length(input$bm_trait)==1 && input$bm_trait %in% cols) input$bm_trait else head(cols,1))
  },ignoreNULL=FALSE)
+ number<-function(z)if(is.null(z) || !nzchar(trimws(z)))NULL else suppressWarnings(as.numeric(z))
  options<-shiny::reactive({
   if(identical(input$bm_framework,'Bayes')) {
    value<-function(name,default)if(is.null(input[[name]]))default else input[[name]]
@@ -12,13 +13,11 @@ server_mod_asr_continuous <- function(input,output,session,data) {
   model<-if(is.null(input$bm_model))'BM' else input$bm_model
   engine<-if(model!='BM')'anc.ML' else if(is.null(input$bm_engine))'fastAnc' else input$bm_engine
   if(isTRUE(input$bm_marginal)) {
-   number<-function(z)if(is.null(z) || !nzchar(trimws(z)))NULL else suppressWarnings(as.numeric(z))
    lower<-number(input$bm_shape_lower);upper<-number(input$bm_shape_upper)
    bounds<-if(is.null(lower) && is.null(upper))NULL else c(if(is.null(lower))NA_real_ else lower,if(is.null(upper))NA_real_ else upper)
    return(list(model=model,engine='Gaussian ML',maxit=if(is.null(input$bm_maxit))2000 else input$bm_maxit,trace=isTRUE(input$bm_trace),intervals=if(is.null(input$bm_intervals))TRUE else isTRUE(input$bm_intervals),start=if(model=='BM')NULL else number(input$bm_start),se_column=if(is.null(input$bm_se) || !nzchar(input$bm_se))NULL else input$bm_se,shape_bounds=if(model=='BM')NULL else bounds,compare=isTRUE(input$bm_compare)))
   }
   if(engine=='fastAnc')return(list(model=model,engine=engine))
-  number<-function(value){if(is.null(value) || !nzchar(trimws(value)))NULL else suppressWarnings(as.numeric(value))}
   list(model=model,engine=engine,maxit=if(is.null(input$bm_maxit))2000 else input$bm_maxit,tol=number(input$bm_tol),trace=isTRUE(input$bm_trace),intervals=if(model=='OU')FALSE else if(is.null(input$bm_intervals))TRUE else isTRUE(input$bm_intervals),start=if(model=='BM')NULL else number(input$bm_start))
  })
  shiny::observeEvent(list(data$state$traits,data$taxon(),input$bm_trait),{

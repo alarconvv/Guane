@@ -72,7 +72,7 @@ guane_ltt_script <- function(tree,logarithmic=FALSE,lang='en',settings=NULL) {
  if(is.null(settings))settings<-guane_ltt_settings(logarithmic=logarithmic,lang=lang)
  c('# Guane LTT: saved curves and editable settings; no calibration or rate inference.',
  '# install.packages("ape")',paste0('# ape ',utils::packageVersion('ape')),
- vapply(c('guane_ltt','guane_ltt_run','guane_ltt_settings','guane_ltt_plot','guane_text'),function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(c('guane_ltt','guane_ltt_run','guane_ltt_settings','guane_ltt_plot','guane_text')),
  guane_r_assignment('result',result),guane_r_assignment('inputs',attr(result,'inputs')),guane_r_assignment('settings',settings),
  '# Optional recalculation: result <- do.call(guane_ltt_run,inputs)',
  'opened <- grDevices::dev.cur() == 1L','if(opened) grDevices::pdf("guane-ltt.pdf",width=settings$width,height=settings$height)',

@@ -115,7 +115,7 @@ guane_bisse_script <- function(result,settings=guane_bisse_settings()) {
  functions<-c('guane_sse_verification_plot','guane_sse_profile','guane_sse_profile_plot','guane_bisse_profile','guane_sse_backend','guane_sse_expand','guane_sse_parameters','guane_sse_constraint_groups','guane_sse_optimize','guane_ltt','guane_bisse_backend','guane_bisse_names','guane_bisse_models','guane_bisse_data','guane_bisse_parameters','guane_bisse_constraint','guane_bisse_expand','guane_bisse_likelihood','guane_bisse_fit','guane_bisse_settings','guane_bisse_plot','guane_text')
  c('# GUane BiSSE: saved results and editable plotting settings. Research data are embedded.',
  '# Required packages: ape and diversitree. No GUane installation required.',paste('# Original diversitree version:',result$version),
- vapply(functions,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(functions),
  guane_r_assignment('result',result),guane_r_assignment('settings',settings),
  '# Optional refit using the complete original settings:', '# result <- do.call(guane_bisse_fit, result$inputs)',
  '# Optional profile replay: result$profile <- do.call(guane_bisse_profile,c(list(result=result,model=result$profile$model),result$profile$settings))','opened <- grDevices::dev.cur() == 1L','if(opened) grDevices::pdf("guane-bisse.pdf", width=settings$width, height=settings$height)',

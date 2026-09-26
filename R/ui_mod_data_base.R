@@ -1,9 +1,8 @@
 ui_mod_data_base <- function(id) {
  ns <- shiny::NS(id)
- library(shiny)
  settings <- bslib::card(bslib::card_header('Setting up'),
    fileInput(ns('tree_file'),'Load single tree',accept=c('.tre','.nwk','.nex','.nexus')),
-   fileInput(ns('traits_file'),'Load traits · CSV',accept='.csv'),
+   fileInput(ns('traits_file'),'Load traits \u00b7 CSV',accept='.csv'),
    actionButton(ns('example'),'Load example data'),
    helpText('Synthetic example: 20 tree tips and 19 trait rows. Sp20 is intentionally absent from the table.'),
    selectInput(ns('taxon'),'Taxon column',character()),selectInput(ns('trait'),'Numeric trait',character()),
@@ -15,7 +14,7 @@ ui_mod_data_base <- function(id) {
    selectInput(ns('layout'),'Tree layout',c('Phylogram'='phylogram','Cladogram'='cladogram','Fan'='fan')),
    selectInput(ns('direction'),'Direction',c('Left to right'='rightwards','Right to left'='leftwards','Top to bottom'='downwards')),
    checkboxInput(ns('lengths'),'Use branch lengths',TRUE),checkboxInput(ns('labels'),'Show tip labels',TRUE),checkboxInput(ns('nodes'),'Show node numbers',FALSE),
-   sliderInput(ns('font'),'Label size',.5,1.8,1,step=.1),sliderInput(ns('edge'),'Edge width',1,5,2),downloadButton(ns('plot_download'),'Export tree · PDF'),downloadButton(ns('tree_script'),'Download graph R code'))
+   sliderInput(ns('font'),'Label size',.5,1.8,1,step=.1),sliderInput(ns('edge'),'Edge width',1,5,2),downloadButton(ns('plot_download'),'Export tree \u00b7 PDF'),downloadButton(ns('tree_script'),'Download graph R code'))
  preview <- bslib::navset_tab(id=ns('view'),
    bslib::nav_panel('Tree preview',value='tree',plotOutput(ns('tree_plot'),height='420px')),
    bslib::nav_panel('Trait preview',value='traits',tableOutput(ns('traits_table'))),
@@ -33,9 +32,9 @@ ui_mod_data_base <- function(id) {
        bslib::card(bslib::card_header('Structure'),uiOutput(ns('structure'))))),
      div(       conditionalPanel(sprintf("input['%s'] == 'checks'",ns('view')),
          bslib::card(bslib::card_header('Checking data'),
-      actionButton(ns('normality'),'Shapiro–Wilk normality test'),
+      actionButton(ns('normality'),'Shapiro\u2013Wilk normality test'),
       selectInput(ns('transformation'),'Transformation',c('Natural log'='log','Exponential'='exp','Quadratic'='quadratic','Reciprocal'='reciprocal')),
-      actionButton(ns('transform'),'Create transformed column'),actionButton(ns('pic'),'Compute independent contrasts · ape'),tags$hr(),selectInput(ns('dist_column'),'Column to display',character()),selectInput(ns('dist_type'),'Distribution plot',c('Histogram'='hist','Density'='density','Normal Q–Q'='qq')),sliderInput(ns('dist_bins'),'Histogram bins',5,50,15),checkboxInput(ns('dist_rug'),'Show individual observations',TRUE),downloadButton(ns('dist_export'),'Export distribution · PDF'),downloadButton(ns('distribution_script'),'Download graph R code'))),
+      actionButton(ns('transform'),'Create transformed column'),actionButton(ns('pic'),'Compute independent contrasts \u00b7 ape'),tags$hr(),selectInput(ns('dist_column'),'Column to display',character()),selectInput(ns('dist_type'),'Distribution plot',c('Histogram'='hist','Density'='density','Normal Q\u2013Q'='qq')),sliderInput(ns('dist_bins'),'Histogram bins',5,50,15),checkboxInput(ns('dist_rug'),'Show individual observations',TRUE),downloadButton(ns('dist_export'),'Export distribution \u00b7 PDF'),downloadButton(ns('distribution_script'),'Download graph R code'))),
 conditionalPanel(sprintf("input['%s'] == 'tree'",ns('view')),graphics),
        conditionalPanel(sprintf("input['%s'] == 'traits'",ns('view')),
          bslib::card(bslib::card_header('Table controls'),numericInput(ns('rows'),'Preview rows',25,min=1,max=1000),downloadButton(ns('traits_download'),'Export traits'))))))

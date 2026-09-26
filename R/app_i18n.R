@@ -24,3 +24,10 @@ guane_text <- function(text, lang="en") {
  entry <- guane_dictionary()[[text]]
  if (is.null(entry)) text else entry[[i]]
 }
+
+# Export the same helpers with an offline dictionary, using base R only.
+guane_script_helpers <- function(names) {
+ c(if ('guane_text' %in% names) paste0('guane_dictionary <- local({\n',
+   guane_r_assignment('dictionary', guane_dictionary()), '\nfunction() dictionary\n})'),
+   vapply(names, function(n) paste0(n, ' <- ', paste(deparse(get(n, mode='function')), collapse='\n')), character(1)))
+}

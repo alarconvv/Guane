@@ -3,4 +3,4 @@
 .RData
 .Ruserdata
 .positai
-docs/*.html
+.DS_Store

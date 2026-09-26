@@ -370,7 +370,7 @@ guane_asr_bayes_rates <- function(d,index,model,nsim=200,burnin=1000,samplefreq=
  d$tip_likelihood<-xx
  p<-guane_mk_bayes_parameters(index,parameters)
  valid<-function(x,lo,hi)length(x)==1 && is.numeric(x) && is.finite(x) && x==floor(x) && x>=lo && x<=hi
- if(!valid(nsim,20,2000)||!valid(burnin,1,1000000)||!valid(samplefreq,1,10000)||!valid(chains,1,4)||!valid(seed,0,2147483646-chains))stop('Choose 20–2000 saved draws per chain, positive burn-in and spacing, 1–4 chains and a valid seed.')
+ if(!valid(nsim,20,2000)||!valid(burnin,1,1000000)||!valid(samplefreq,1,10000)||!valid(chains,1,4)||!valid(seed,0,2147483646-chains))stop('Choose 20\u20132000 saved draws per chain, positive burn-in and spacing, 1\u20134 chains and a valid seed.')
  if(chains*(burnin+nsim*samplefreq)*length(d$x)*length(d$states)^3>2e8 || chains*nsim*length(d$x)*length(d$states)>2e6)stop('Requested Bayesian workload is too large; reduce generations, chains or saved draws.')
  if(!is.logical(empirical)||length(empirical)!=1||is.na(empirical))stop('Invalid empirical-prior setting.')
  pi<-guane_mk_options(d,index,advanced=list(root=root,root_weights=root_weights))$args$pi
@@ -459,7 +459,7 @@ guane_mk_bayes_script <- function(result,type='tree',palette='Guane',labels=TRUE
  '# Node pies average conditional marginals over posterior Q draws; Q is the posterior mean matrix.',
  '# Burn-in and acceptance counts are not returned by make.simmap; traces show retained draws only.',
  paste0('# R ',getRversion(),'; phytools ',utils::packageVersion('phytools')),
- vapply(helpers,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('inputs',result$inputs),paste0('# Optional refit: refitted <- do.call(',if(poly)'guane_asr_poly_bayes' else 'guane_asr_mk_bayes',',inputs)'),
  guane_bayes_saved_assignment(result),
  guane_r_assignment('plot_settings',list(type=type,palette=palette,labels=labels,node_labels=node_labels,label_size=label_size,pie_size=pie_size,lang=lang,history=history,appearance=appearance,parameter=parameter)),

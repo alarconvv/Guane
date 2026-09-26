@@ -85,7 +85,7 @@ guane_pagel_script <- function(result, model='dependent', palette='Guane', scale
  '# Equal root probabilities (1/4 per joint state); ARD; simultaneous changes forbidden.',
  '# The chi-squared likelihood-ratio p-value is asymptotic, not a bootstrap result.',
  paste0('# R ',getRversion(),'; phytools ',utils::packageVersion('phytools')),
- vapply(helpers,function(name) paste0(name,' <- ',paste(deparse(get(name,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('inputs',result[c('tree','traits','taxon','x_column','y_column','starts','max_rate')]),
  'result <- do.call(guane_pagel, inputs)','print(result$mapping)','print(result$comparison)','print(result$test)','print(result$diagnostics)','print(result$warnings)',
  guane_r_assignment('plot_settings',list(model=model,palette=palette,scale_width=scale_width,lang=lang)),

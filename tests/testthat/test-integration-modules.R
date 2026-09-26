@@ -34,6 +34,11 @@ for (mode in c('async', 'sync')) {
    # Validation errors raised inside the worker come back with their exact text.
    expect_identical(guane_click(session, output, 'clade_run', 'clade_status'), 'Select one to ten internal nodes with at least four descendant tips each.')
    expect_identical(guane_click(session, output, 'joint_run', 'joint_status'), 'Choose one to four non-root shift nodes with at least four descendant tips.')
+   d <- guane_test_data(); catalog <- guane_rates_clade_catalog(d$tree)$table
+   node <- catalog$Node[catalog$Node != length(d$tree$tip.label) + 1 & catalog$Tips <= length(d$tree$tip.label) - 2][1]
+   completed(guane_click(session, output, 'clade_run', 'clade_status', list(clade_nodes = node, clade_models = 'Yule', clade_profiles = FALSE)), '^Clade analysis completed')
+   completed(guane_click(session, output, 'joint_run', 'joint_status', list(joint_nodes = node, joint_models = 'SharedYule')), '^Joint fitting completed')
+   expect_true(any(session$returned$analyses$joint$result()$comparison$Converged))
   })
  })
 
@@ -57,8 +62,14 @@ for (mode in c('async', 'sync')) {
   shiny::testServer(server_mod_family, args = list(id = 'sse'), {
    guane_test_prepare(session)
    completed(guane_click(session, output, 'bisse_run', 'bisse_status', list(bisse_trait = 'habitat_binary', bisse_state0 = 'aquatic', bisse_models = 'Full')), '^BiSSE completed')
-   completed(guane_click(session, output, 'musse_run', 'musse_status', list(musse_trait = 'locomotion_3state')), '.')
-   completed(guane_click(session, output, 'hidden_run', 'hidden_status', list(hidden_trait = 'habitat_binary')), '.')
+   completed(guane_click(session, output, 'musse_run', 'musse_status', list(musse_trait = 'locomotion_3state', musse_models = 'Equal diversification and transitions', musse_starts = 1, musse_slices = FALSE)), '^MuSSE completed')
+   expect_true(any(session$returned$analyses$musse$result()$comparison$Converged))
+   completed(guane_click(session, output, 'hidden_run', 'hidden_status', list(hidden_trait = 'habitat_binary', hidden_state0 = 'terrestrial', hidden_models = 'BiSSE (HiSSE backend)', hidden_starts = 1, hidden_verify = FALSE, hidden_maxeval = 20)), '^Hidden-state fitting finished')
+   expect_true(any(session$returned$analyses$hidden$result()$comparison$Finite))
+   st <- session$returned$data$state
+   st$traits$log_mass <- log(st$traits$body_mass)
+   completed(guane_click(session, output, 'quasse_run', 'quasse_status', list(quasse_trait = 'log_mass', quasse_error = .1, quasse_nx = 256, quasse_r = 2, quasse_starts = 1, quasse_maxit = 200, quasse_baseline = FALSE, quasse_verify = FALSE)), '^QuaSSE completed')
+   expect_true(any(session$returned$analyses$quasse$result()$comparison$Converged))
   })
  })
 }

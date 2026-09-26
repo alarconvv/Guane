@@ -12,6 +12,7 @@ server_mod_family <- function(id, lang=function() 'en') {
 }
 
 #' Connect the primary module servers.
+#' @param modules Primary modules to connect: signal, asr, div, or sse.
 #' @export
 app_server <- function(modules=c('signal','asr','div','sse')) {
  function(input,output,session) {

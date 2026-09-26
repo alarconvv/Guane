@@ -93,7 +93,7 @@ guane_dd_plot <- function(result,type='rates',model=names(result$fits)[1],palett
 guane_dd_script <- function(result,settings) {
  c('# Guane diversity-dependent model: saved result and editable plot.', '# Requires DDD and ape. No app is needed.',
  guane_r_assignment('result',result),guane_r_assignment('settings',settings),
- paste('guane_text <-',paste(deparse(guane_text),collapse='\n')),paste('guane_dd_plot <-',paste(deparse(guane_dd_plot),collapse='\n')),
+ guane_script_helpers(c('guane_text','guane_dd_plot')),
  '# Refit explicitly if desired: do.call(DDD::dd_ML, result$calls[[1]])',
  'pdf("guane-diversity.pdf",width=10,height=7)', 'do.call(guane_dd_plot,c(list(result=result),settings))','dev.off()')
 }

@@ -1,4 +1,6 @@
 #' Assemble the Guane application.
+#' @param module Primary module to launch, or full for all modules.
+#' @param default_lang Initial interface language: en, es, or pt.
 #' @export
 app_guane <- function(module='full', default_lang='en') {
   

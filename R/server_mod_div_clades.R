@@ -64,7 +64,7 @@ server_mod_div_clades <- function(input,output,session,data) {
  })
  settings<-shiny::reactive(list(type=value('clade_graph','clade_rates'),model=value('clade_plot_model','Yule'),parameter=value('clade_parameter','lambda'),palette=value('clade_palette','Guane'),lang=data$lang()))
  plot_settings<-shiny::reactive(c(settings(),clade_settings()))
- draw<-function(){r<-clade_view();shiny::req(r);tryCatch(do.call(guane_rates_clade_plot,c(list(result=r),plot_settings())),error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
+ draw<-function(){shiny::req(data$state$tree);tryCatch({r<-clade_view();shiny::req(r);do.call(guane_rates_clade_plot,c(list(result=r),plot_settings()))},error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
  output$clade_plot<-shiny::renderPlot(draw(),width=960,height=672,res=96)
  code<-shiny::reactive({pending<-c('# Proposed settings; run analysis to apply.',guane_r_assignment('analysis_settings',options()),guane_r_assignment('additional_settings',clade_options()));r<-tryCatch(clade_view(),error=function(e)NULL);if(is.null(r))return(pending);c(pending,do.call(guane_rates_clade_script,c(list(result=r),plot_settings())))})
  output$clade_code<-shiny::renderText(paste(code(),collapse='\n'))

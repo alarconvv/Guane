@@ -73,7 +73,7 @@ guane_transform <- function(traits, trait, method) {
  list(traits=traits,column=dest)
 }
 guane_normality <- function(x) {
- if(any(!is.finite(x)) || length(x)<3 || length(x)>5000 || length(unique(x))<2) stop('Shapiro-Wilk requires 3–5000 finite, nonconstant values.')
+ if(any(!is.finite(x)) || length(x)<3 || length(x)>5000 || length(unique(x))<2) stop('Shapiro-Wilk requires 3\u20135000 finite, nonconstant values.')
  stats::shapiro.test(x)
 }
 guane_pic <- function(tree,traits,taxon,trait) {
@@ -130,7 +130,7 @@ guane_data_plot_script <- function(kind, settings) {
  functions<-if(kind=='tree') c('guane_text','guane_plot_tree') else c('guane_text','guane_distribution','guane_plot_distribution')
  c('# Guane editable graph: open in RStudio and Source; edit settings below.',
    if(kind=='tree') '# Install ape if needed: install.packages("ape")',
-   vapply(functions,function(name) paste0(name,' <- ',paste(deparse(get(name,mode='function')),collapse='\n')),character(1)),
+   guane_script_helpers(functions),
    guane_r_assignment('settings',settings),
    sprintf('do.call(%s, settings)',if(kind=='tree') 'guane_plot_tree' else 'guane_plot_distribution'),
    'sessionInfo()')

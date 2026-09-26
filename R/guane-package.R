@@ -6,4 +6,6 @@
 "_PACKAGE"
 
 # Variables evaluated inside mirai workers (see app_tasks.R).
-utils::globalVariables(c("lib", "dev"))
+utils::globalVariables(c("lib", "dev", "eval_task"))
+# Column names evaluated by transform() in presentation tables.
+utils::globalVariables(c("Estimate", "P_value", "P"))

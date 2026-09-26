@@ -3,7 +3,7 @@ ui_mod_asr_discrete <- function(id) {
  ui_mod_analysis_base(id,'discrete','Discrete traits',
  controls=shiny::tagList(
   shiny::selectInput(ns('mk_trait'),'Trait for reconstruction',NULL),
-  shiny::selectInput(ns('mk_framework'),'Framework',c('Maximum likelihood'='ML','Stochastic mapping (fixed fitted rates)'='simmap','Bayesian Mk (sample rates)'='Bayes','Parsimony — planned'='parsimony')),
+  shiny::selectInput(ns('mk_framework'),'Framework',c('Maximum likelihood'='ML','Stochastic mapping (fixed fitted rates)'='simmap','Bayesian Mk (sample rates)'='Bayes','Parsimony \u2014 planned'='parsimony')),
   shiny::selectInput(ns('mk_model'),'Model',c('ER','SYM','ARD','Custom')),
   shiny::p('ER shares all rates; SYM shares reverse rates; ARD estimates each directed rate.'),
   shiny::p('Use 2 to 10 observed states. Numeric states must be integers. Polymorphic characters belong in their own card.'),

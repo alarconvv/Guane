@@ -114,7 +114,7 @@ guane_pgls_compare_script <- function(comparison,color='#34765b',lang='en') {
  helpers<-c('guane_pgls','guane_pgls_compare','guane_pgls_compare_plot','guane_text')
  c('# Guane: same-data ML covariance comparison. No likelihood-ratio tests or model averaging.',
  '# install.packages(c("ape","nlme"))',
- vapply(helpers,function(n) paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('settings',comparison$settings[setdiff(names(comparison$settings),'method')]),
  'comparison <- do.call(guane_pgls_compare,settings)','print(comparison$table)',
  guane_r_assignment('plot_settings',list(color=color,lang=lang)),

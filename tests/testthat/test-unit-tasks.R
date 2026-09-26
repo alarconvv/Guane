@@ -68,12 +68,15 @@ test_that('guane_task_timeout defaults to one hour, accepts only an explicit 0 t
  with_task_env(env = c(GUANE_TASK_TIMEOUT = 'soon'), code = expect_message(expect_equal(guane_task_timeout(), 3600)))
 })
 
-test_that('guane_dev_path points at the source tree under pkgload::load_all', {
+test_that('guane_dev_path distinguishes source and installed packages', {
  path <- guane_dev_path()
- skip_if(is.null(path), 'Guane is installed, not loaded from source')
- expect_true(file.exists(file.path(path, 'DESCRIPTION')))
- expect_equal(unname(read.dcf(file.path(path, 'DESCRIPTION'), 'Package')[1, 1]), 'guane')
- expect_false(file.exists(file.path(path, 'Meta', 'package.rds')))
+ if (file.exists(system.file('Meta', 'package.rds', package = 'guane'))) {
+  expect_null(path)
+ } else {
+  expect_true(file.exists(file.path(path, 'DESCRIPTION')))
+  expect_equal(unname(read.dcf(file.path(path, 'DESCRIPTION'), 'Package')[1, 1]), 'guane')
+  expect_false(file.exists(file.path(path, 'Meta', 'package.rds')))
+ }
 })
 
 test_that('guane_task_setting gives options precedence over environment variables', {
@@ -147,4 +150,21 @@ test_that('guane_task_fit_map chains an Mk fit and stochastic mapping through th
  expect_equal(s$value$value$mapping$nsim, 6)
  bad <- guane_task_eval(guane_task_fit_map, list(fit = guane_asr_mk, fit_args = args, nsim = 1, seed = 9))
  expect_false(bad$ok); expect_identical(bad$message, 'Choose an integer number of histories between 2 and 500.')
+})
+
+test_that('task completion after module teardown does not touch destroyed reactives', {
+ guane_test_mode(FALSE); on.exit(guane_test_mode(FALSE))
+ finish <- task <- NULL; delivered <- FALSE
+ local_mocked_bindings(guane_task_promise = function(...) promises::promise(function(resolve, reject) finish <<- resolve))
+ module <- function(id) shiny::moduleServer(id, function(input, output, session) {
+  task <<- guane_task(function(value) delivered <<- TRUE, function(message) delivered <<- TRUE)
+ })
+ shiny::testServer(module, args = list(id = 'closing'), {
+  task$run(function() 42)
+  expect_true(task$running())
+ })
+ finish(list(ok = TRUE, value = 42))
+ for (i in 1:5) later::run_now(0.01)
+ expect_false(shiny::isolate(task$running()))
+ expect_false(delivered)
 })

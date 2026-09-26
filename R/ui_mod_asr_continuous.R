@@ -3,7 +3,7 @@ ui_mod_asr_continuous <- function(id) {
  ui_mod_analysis_base(id,'continuous','Continuous traits',
  controls=shiny::tagList(
   shiny::selectInput(ns('bm_trait'),'Trait for reconstruction',NULL),
-  shiny::selectInput(ns('bm_framework'),'Framework',c('Maximum likelihood'='ML','Bayesian BM'='Bayes','Parsimony — planned'='parsimony')),
+  shiny::selectInput(ns('bm_framework'),'Framework',c('Maximum likelihood'='ML','Bayesian BM'='Bayes','Parsimony \u2014 planned'='parsimony')),
   shiny::conditionalPanel("input.bm_framework == 'Bayes'",ns=ns,
    shiny::p('Bayesian BM samples diffusion and ancestral states on a fixed tree. Tip observations are treated as exact; measurement-error settings from ML do not apply.'),
    shiny::numericInput(ns('bm_ngen'),'MCMC generations per chain',50000,min=100,max=2000000,step=1000),
@@ -18,7 +18,7 @@ ui_mod_asr_continuous <- function(id) {
    shiny::p('Rows: sig2, then root and internal node numbers. Columns: Parameter, Start, PriorMean, PriorVariance, ProposalVariance. The sig2 prior is exponential: its variance entry must be NA. Node priors are independent normal distributions. Proposal entries are variances, not standard deviations. Blank uses the displayed backend defaults.'),
    shiny::tags$details(shiny::tags$summary('Effective Bayesian controls'),shiny::verbatimTextOutput(ns('bm_bayes_preview')))),
   shiny::conditionalPanel("input.bm_framework != 'Bayes'",ns=ns,
-  shiny::selectInput(ns('bm_model'),'Model',c('Brownian motion (BM)'='BM','Ornstein–Uhlenbeck (OU)'='OU','Early burst (EB)'='EB')),
+  shiny::selectInput(ns('bm_model'),'Model',c('Brownian motion (BM)'='BM','Ornstein\u2013Uhlenbeck (OU)'='OU','Early burst (EB)'='EB')),
   shiny::checkboxInput(ns('bm_marginal'),'Use comparable marginal ML',TRUE),
   shiny::conditionalPanel("input.bm_marginal",ns=ns,
    shiny::selectInput(ns('bm_se'),'Known standard-error column',c('None (zero error)'='')),

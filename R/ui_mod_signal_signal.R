@@ -1,7 +1,7 @@
 ui_mod_signal_signal <- function(id) {
  ns<-shiny::NS(id)
  ui_mod_analysis_base(id,'signal','Phylogenetic signal',
-  controls=shiny::tagList(shiny::h4("Blomberg's K & Pagel's λ"),
+  controls=shiny::tagList(shiny::h4("Blomberg's K & Pagel's \u03bb"),
    shiny::selectInput(ns('signal_trait'),'Trait for signal',NULL),
    shiny::p('Choose an original or transformed numeric column from Data. PICs are node contrasts and are not used as species traits.'),
    shiny::numericInput(ns('nsim'),'K test draws (including observed)',999,min=99,max=9999),

@@ -1,5 +1,13 @@
 # Security regression tests (gate: security). Run: Rscript tests/run_gates.R security
 
+# Inspect loaded functions so these guards also run against an installed package.
+sec_sources <- function(pattern = '^(guane_|server_|ui_|app_)') {
+ ns <- asNamespace('guane')
+ functions <- Filter(is.function, mget(ls(ns, pattern = pattern), envir = ns))
+ stopifnot(length(functions) > 0)
+ unlist(lapply(functions, deparse, width.cutoff = 500), use.names = FALSE)
+}
+
 sec_data <- function() {
  ex <- guane_example(); keep <- intersect(ex$tree$tip.label, ex$traits$species)
  list(tree = ape::keep.tip(ex$tree, keep), traits = ex$traits[ex$traits$species %in% keep, , drop = FALSE])
@@ -38,13 +46,11 @@ test_that('exported scripts embed hostile taxon/column/state labels as data only
 
 # ---- F-GUARD-2 (passes today): no dynamic code evaluation / formula parsing of user strings ----
 test_that('R sources contain no eval/parse/str2lang/as.formula on dynamic strings', {
- root <- if (dir.exists('R')) 'R' else file.path(guane_resource_root(), '..', 'R')
- skip_if_not(dir.exists(root))
- src <- unlist(lapply(list.files(root, '\\.R$', full.names = TRUE), readLines, warn = FALSE))
+ src <- sec_sources()
  expect_false(any(grepl('\\b(parse|str2lang|str2expression|as\\.formula|system2?|readRDS|load)\\s*\\(', src) & !grepl('^\\s*#', src)))
  # reformulate() is only allowed on Guane-generated internal names (.x1, .response).
  refs <- grep('reformulate\\(', src, value = TRUE)
- expect_true(all(grepl("reformulate\\(paste0\\('\\.x'", refs)))
+ expect_true(all(grepl('reformulate\\(paste0\\([\"\']\\.x', refs)))
 })
 
 test_that('hostile column names cannot execute through the PGLS formula', {
@@ -123,9 +129,7 @@ test_that('CSV exports prefix formula-leading cells and are centralised', {
  z <- utils::read.csv(f, stringsAsFactors = FALSE)
  expect_false(any(grepl('^[=+@-]', z$species)))
  expect_equal(z$x, c(1, 2, 3, -4, 5))  # numeric negatives are untouched
- root <- if (dir.exists('R')) 'R' else file.path(guane_resource_root(), '..', 'R')
- skip_if_not(dir.exists(root))
- src <- unlist(lapply(list.files(root, '^server_.*\\.R$', full.names = TRUE), readLines, warn = FALSE))
+ src <- sec_sources('^server_')
  # Every file download goes through guane_write_csv(); write.csv/write.table may
  # only format text for input boxes via capture.output().
  calls <- regmatches(src, gregexpr('(capture\\.output\\((utils::)?)?write\\.(csv|table)\\(', src))
@@ -161,9 +165,7 @@ test_that('the app sets an explicit upload cap and uploads use size-checked read
  expect_identical(getOption('shiny.maxRequestSize'), 5 * 1024^2)
  withr::local_envvar(GUANE_MAX_UPLOAD_MB = '500'); app_guane('signal')
  expect_identical(getOption('shiny.maxRequestSize'), 100 * 1024^2)  # clamped
- root <- if (dir.exists('R')) 'R' else file.path(guane_resource_root(), '..', 'R')
- skip_if_not(dir.exists(root))
- src <- unlist(lapply(list.files(root, '^server_.*\\.R$', full.names = TRUE), readLines, warn = FALSE))
+ src <- sec_sources('^server_')
  expect_false(any(grepl('read\\.(csv|table|tree|nexus)\\(', src)))
 })
 
@@ -177,13 +179,11 @@ test_that('oversized trait tables are rejected while reading', {
 })
 
 test_that('workers receive only functions and data, never session objects', {
- src <- readLines(if (dir.exists('R')) 'R/app_tasks.R' else file.path(guane_resource_root(), '..', 'R', 'app_tasks.R'), warn = FALSE)
+ src <- deparse(guane_task_promise, width.cutoff = 500)
  expect_true(any(grepl('mirai::mirai\\(eval_task\\(fn, args\\), eval_task = guane_task_eval, fn = fn, args = args\\)', src)))
  # Every task$run() call site passes a named package function, not an inline closure.
- root <- if (dir.exists('R')) 'R' else file.path(guane_resource_root(), '..', 'R')
- calls <- unlist(regmatches(unlist(lapply(list.files(root, '^server_.*\\.R$', full.names = TRUE), readLines, warn = FALSE)),
-  gregexpr('_task\\$run\\([^,]+', unlist(lapply(list.files(root, '^server_.*\\.R$', full.names = TRUE), readLines, warn = FALSE)))))
- fns <- sub('.*_task\\$run\\((if\\(.*\\))?', '', calls)
+ src <- sec_sources('^server_')
+ calls <- unlist(regmatches(src, gregexpr('_task\\$run\\([^,]+', src)))
  expect_true(length(calls) >= 25)
  expect_false(any(grepl('function\\s*\\(', calls)))
 })

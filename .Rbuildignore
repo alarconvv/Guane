@@ -2,4 +2,8 @@
 ^\.Rproj\.user$
 ^\.positai$
 ^\.claude$
-^docs/.*\.html$
+^\.impeccable$
+^app\.R$
+^LICENSE\.md$
+^tests/run_gates\.R$
+^Rplots\.pdf$

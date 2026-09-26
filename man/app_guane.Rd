@@ -6,6 +6,11 @@
 \usage{
 app_guane(module = "full", default_lang = "en")
 }
+\arguments{
+\item{module}{Primary module to launch, or full for all modules.}
+
+\item{default_lang}{Initial interface language: en, es, or pt.}
+}
 \description{
 Assemble the Guane application.
 }

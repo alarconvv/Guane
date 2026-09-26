@@ -80,7 +80,7 @@ guane_asr_poly_script <- function(result,type='tree',palette='Guane',labels=TRUE
  c('# Guane polymorphic ML: explicit ordering/settings below; saved root weights over allowed combined states.',
  '# A+B means coexistence, not uncertainty. Rates/tree uncertainty is not integrated.',
  '# install.packages(c("ape", "phytools"))',paste0('# R ',getRversion(),'; phytools ',utils::packageVersion('phytools')),
- vapply(helpers,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('inputs',result[c('tree','traits','taxon','trait','model','compare','max_rate','advanced','ordered','state_order','max_poly')]),
  '# Uncomment to refit: refitted <- do.call(guane_asr_poly, inputs)',
  if(!is.null(result$mapping))paste0('# refitted <- guane_asr_map(refitted, nsim=',result$mapping$nsim,', seed=',result$mapping$seed,')'),

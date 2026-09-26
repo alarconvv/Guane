@@ -70,10 +70,12 @@ test_that('sync mode: diversification, signal and BiSSE complete', {
  expect_equal(nrow(errors), 0, info = paste(errors$message, collapse = '\n'))
 })
 
-test_that('pkgload::load_all() + GUANE_ASYNC=true: workers load the source package and analyses complete', {
+test_that('package entry point + GUANE_ASYNC=true: workers load the package and analyses complete', {
  dir <- withr::local_tempdir()
- writeLines(c(sprintf("pkgload::load_all(%s, quiet = TRUE, export_all = TRUE, helpers = FALSE, attach_testthat = FALSE)", deparse(guane_ft_root())),
-  "app_guane(module = 'full', default_lang = 'en')"), file.path(dir, 'app.R'))
+ entry <- if (dir.exists(file.path(guane_ft_root(), 'R'))) c(
+  sprintf("pkgload::load_all(%s, quiet = TRUE, export_all = TRUE, helpers = FALSE, attach_testthat = FALSE)", deparse(guane_ft_root())),
+  "app_guane(module = 'full', default_lang = 'en')") else 'guane::app_guane()'
+ writeLines(entry, file.path(dir, 'app.R'))
  dev <- guane_ft_app(async = TRUE, name = 'pkgload-async', app_dir = dir)
  withr::defer(guane_ft_stop(dev))
  errors <- guane_ft_browser_errors(dev)

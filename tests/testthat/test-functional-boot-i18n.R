@@ -31,6 +31,12 @@ test_that('each of the four primary modules renders its Data tab and analysis ca
   expect_identical(guane_ft_text(app, paste0(m, '-activity')), 'Load your files or explore the example dataset.')
   pills <- unlist(app$get_js(sprintf("Array.from(document.querySelectorAll('#%s-analysis .nav-link')).map(function(a){return a.getAttribute('data-value');})", m)))
   expect_setequal(pills, cards[[m]])
+  for (card in cards[[m]]) {
+   guane_ft_select(app, m, card)
+   expect_identical(app$get_value(input = paste0(m, '-analysis')), card)
+   expect_true(app$get_js(sprintf("document.querySelector('#%s-analysis .nav-link.active').getAttribute('data-value') === '%s'", m, card)))
+   expect_identical(app$get_js("Array.from(document.querySelectorAll('.shiny-output-error:not(.shiny-output-error-validation)')).filter(function(e){return e.offsetParent!==null;}).map(function(e){return e.textContent;}).join('\\n')"), '')
+  }
  }
  errors <- guane_ft_browser_errors(app)
  expect_equal(nrow(errors), 0, info = paste(errors$message, collapse = '\n'))

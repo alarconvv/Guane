@@ -87,7 +87,7 @@ guane_asr_bm_script <- function(result,type='map',palette='Guane',labels=TRUE,no
  '# Uncertainty and likelihood basis are stored in result$uncertainty and result$likelihood_basis. No AIC ranking across engines.',
  '# Branch colors/phenogram lines interpolate estimates; they are not sampled evolutionary histories.',
  paste0('# R ',getRversion(),'; phytools ',utils::packageVersion('phytools'),'; ape ',utils::packageVersion('ape')),
- vapply(helpers,function(n) paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('inputs',if(is.null(result$inputs))result[c('tree','traits','taxon','trait')] else result$inputs),if(is.null(result$inputs))'# Optional refit: refitted <- do.call(guane_asr_bm,inputs)' else if(!is.null(result$bayes))'# Optional refit: refitted <- do.call(guane_asr_bayes,inputs)' else '# Optional refit: refitted <- do.call(guane_asr_continuous,inputs)',if(is.null(result$bayes))guane_r_assignment('result',result) else guane_bayes_saved_assignment(result),
  'print(result$nodes)','print(c(root=result$root,diffusion_estimate=result$rate,logLik=result$logLik))','print(result$warnings)','print(result$uncertainty)','print(result$likelihood_basis)','print(result$comparison)',
  guane_r_assignment('plot_settings',list(type=type,palette=palette,labels=labels,node_labels=node_labels,lang=lang,appearance=appearance,label_size=label_size,parameter=parameter)),
@@ -264,7 +264,7 @@ guane_asr_bayes <- function(tree,traits,taxon,trait,ngen=50000,sample=100,burnin
  on.exit({do.call(RNGkind,as.list(oldkind));if(hadseed)assign('.Random.seed',oldseed,envir=.GlobalEnv) else if(exists('.Random.seed',envir=.GlobalEnv,inherits=FALSE))rm('.Random.seed',envir=.GlobalEnv)},add=TRUE)
  d<-guane_asr_continuous_data(tree,traits,taxon,trait)
  integer_ok<-function(z,lo,hi)length(z)==1 && is.numeric(z) && is.finite(z) && z==floor(z) && z>=lo && z<=hi
- if(!integer_ok(ngen,100,2000000) || !integer_ok(sample,1,ngen) || ngen%%sample!=0 || !integer_ok(burnin,0,ngen-1) || !integer_ok(chains,1,4) || !integer_ok(seed,0,2147483646-chains))stop('Invalid MCMC settings: generations must be divisible by sampling interval; choose 1–4 chains and a valid seed and burn-in.')
+ if(!integer_ok(ngen,100,2000000) || !integer_ok(sample,1,ngen) || ngen%%sample!=0 || !integer_ok(burnin,0,ngen-1) || !integer_ok(chains,1,4) || !integer_ok(seed,0,2147483646-chains))stop('Invalid MCMC settings: generations must be divisible by sampling interval; choose 1\u20134 chains and a valid seed and burn-in.')
  if(sum(seq(0,ngen,by=sample)>burnin)<20)stop('Retain at least 20 saved draws per chain after burn-in.')
  if(length(spread)!=1 || !is.numeric(spread) || !is.finite(spread) || spread<0 || spread>10)stop('Chain starting spread must be between 0 and 10.')
  if(chains*ngen*(length(d$x)+tree$Nnode-1)^2>8e9 || chains*(ngen/sample+1)*(tree$Nnode+3)>2e6)stop('Requested Bayesian workload is too large; reduce generations, chains or saved draws.')

@@ -14,6 +14,14 @@ expect_parses <- function(code) {
  expect_true(length(code) > 0)
  expr <- tryCatch(parse(text = code, keep.source = FALSE), error = identity)
  expect_false(inherits(expr, 'error'), info = if (inherits(expr, 'error')) conditionMessage(expr) else '')
+ if (any(grepl('^guane_text <-', code))) {
+  # Each export's translations must work with base R and no Guane namespace.
+  offline <- new.env(parent = baseenv())
+  for (x in expr) if (is.call(x) && identical(x[[1]], as.name('<-')) &&
+    as.character(x[[2]]) %in% c('guane_dictionary', 'guane_text')) eval(x, offline)
+  expect_identical(offline$guane_dictionary(), guane_dictionary())
+  for (lang in c('es', 'pt')) expect_identical(offline$guane_text('Frequency', lang), guane_text('Frequency', lang))
+ }
  invisible(expr)
 }
 
@@ -29,7 +37,7 @@ run_exported <- function(code, extra, timeout = 120) {
  if (file.exists(out)) readRDS(out) else NULL
 }
 
-# ---- Parsing: every analysis type produces syntactically valid R ------------------------
+# ---- Every analysis type parses; representative plots replay in fresh R sessions --------
 
 test_that('data preparation, data plots and the Mk call preview parse', {
  d <- script_data()
@@ -41,7 +49,7 @@ test_that('data preparation, data plots and the Mk call preview parse', {
  expect_parses(guane_mk_call_preview(z, guane_mk_matrix(z$states, 'ER'), advanced = list(start_mode = 'backend')))
 })
 
-test_that('ASR scripts parse (Mk, mapped Mk, polymorphic, continuous, Gaussian, Bayesian)', {
+test_that('ASR scripts parse and polymorphic output replays in a fresh session', {
  d <- script_data()
  mk <- cached('mk', guane_asr_mk(d$tree, d$traits, 'species', 'habitat_binary'))
  for (type in c('tree', 'rates', 'probabilities', 'comparison')) expect_parses(guane_asr_mk_script(mk, type = type))
@@ -50,6 +58,7 @@ test_that('ASR scripts parse (Mk, mapped Mk, polymorphic, continuous, Gaussian, 
  expect_error(guane_asr_mk_script(mapped, type = 'history', history = 9), 'within the simulated range')
  poly <- guane_asr_poly(d$tree, d$traits, 'species', 'resource_use_polymorphic', compare = FALSE)
  expect_parses(guane_asr_poly_script(poly))
+ expect_equal(run_exported(guane_asr_poly_script(poly), 'saveRDS(result$probabilities, "%s")'), poly$probabilities)
  ct <- cached('bm', guane_asr_continuous(d$tree, d$traits, 'species', 'body_mass'))
  expect_parses(guane_asr_bm_script(ct))
  expect_parses(guane_asr_bm_script(guane_asr_continuous(d$tree, d$traits, 'species', 'body_mass', engine = 'Gaussian ML', compare = TRUE), type = 'comparison'))
@@ -61,24 +70,32 @@ test_that('ASR scripts parse (Mk, mapped Mk, polymorphic, continuous, Gaussian, 
  expect_true(any(grepl('unserialize(memDecompress', code, fixed = TRUE)))
 })
 
-test_that('diversification scripts parse (LTT, rates, time, clades, joint, diversity)', {
+test_that('diversification scripts parse and replay in fresh sessions', {
  d <- script_data()
  expect_parses(guane_ltt_script(d$tree))
+ expect_equal(run_exported(guane_ltt_script(d$tree), 'saveRDS(result, "%s")'), guane_ltt_run(d$tree))
  expect_parses(guane_ltt_script(guane_ltt_run(list(A = d$tree, B = d$tree)), settings = guane_ltt_settings(backward = TRUE)))
  r <- cached('rates', guane_rates_fit(d$tree))
  expect_parses(guane_rates_script(r))
  expect_parses(guane_rates_script(guane_rates_diagnose(r, points = 21, nsim = 20), type = 'profile'))
- expect_parses(guane_rates_tv_script(guane_rates_tv_fit(d$tree, models = c('Yule', 'ExpYule'))))
+ tv <- guane_rates_tv_fit(d$tree, models = c('Yule', 'ExpYule'))
+ expect_parses(guane_rates_tv_script(tv))
+ expect_equal(run_exported(guane_rates_tv_script(tv), 'saveRDS(result$comparison, "%s")'), tv$comparison)
  cat <- guane_rates_clade_catalog(d$tree)$table
- expect_parses(guane_rates_clade_script(guane_rates_clade_fit(d$tree, cat$Node[2], models = 'Yule', profiles = FALSE)))
+ clade <- guane_rates_clade_fit(d$tree, cat$Node[2], models = 'Yule', profiles = FALSE)
+ expect_parses(guane_rates_clade_script(clade))
+ expect_equal(run_exported(guane_rates_clade_script(clade), 'saveRDS(guane_rates_clade_table(result, "comparison"), "%s")'), guane_rates_clade_table(clade, 'comparison'))
  node <- cat$Node[cat$Node != length(d$tree$tip.label) + 1 & cat$Tips <= length(d$tree$tip.label) - 2][1]
- expect_parses(guane_rates_joint_script(guane_rates_joint_fit(d$tree, node, models = c('SharedYule', 'SharedBD'))))
+ joint <- guane_rates_joint_fit(d$tree, node, models = c('SharedYule', 'SharedBD'))
+ expect_parses(guane_rates_joint_script(joint))
+ expect_equal(run_exported(guane_rates_joint_script(joint), 'saveRDS(result$comparison, "%s")'), joint$comparison)
  skip_if_not_installed('DDD')
  dd <- guane_dd_fit(d$tree, models = 1, res = 40, maxiter = 100, free = c('lambda', 'K'), starts = c(3, 0, 40, 1))
  expect_parses(guane_dd_script(dd, list(type = 'rates')))
+ expect_equal(run_exported(guane_dd_script(dd, list(type = 'rates')), 'saveRDS(result$comparison, "%s")'), dd$comparison)
 })
 
-test_that('signal scripts parse (signal, PGLS, PGLS comparison, PGLM, PGLM influence)', {
+test_that('signal scripts parse and PGLM coefficients reproduce in a fresh session', {
  d <- script_data()
  s <- cached('signal', guane_signal(d$tree, d$traits, 'species', 'body_mass', seed = 3, nsim = 99))
  for (type in c('tree', 'null')) expect_parses(guane_signal_script(s, type = type, lang = 'es'))
@@ -87,30 +104,36 @@ test_that('signal scripts parse (signal, PGLS, PGLS comparison, PGLM, PGLM influ
  expect_parses(guane_pgls_compare_script(guane_pgls_compare(d$tree, d$traits, 'species', 'body_mass', 'body_length')))
  m <- guane_pglm(d$tree, d$traits, 'species', 'habitat_binary', 'body_mass', event = 'aquatic')
  expect_parses(guane_pglm_script(m))
+ expect_equal(run_exported(guane_pglm_script(m), 'saveRDS(result$coefficients, "%s")'), m$coefficients, tolerance = 1e-8)
  expect_parses(guane_pglm_script(guane_pglm(d$tree, d$traits, 'species', 'success_count', 'body_mass', method = 'binomial_GEE', trials = 'trial_count')))
  expect_parses(guane_pglm_influence_script(guane_pglm_influence(m)))
 })
 
-test_that('Pagel script parses', {
+test_that('Pagel script parses and replays in a fresh session', {
  skip_if_not_installed('phytools', minimum_version = '2.5-2')
  d <- script_data(); k <- d$tree$tip.label[1:12]
  r <- guane_pagel(ape::keep.tip(d$tree, k), d$traits[d$traits$species %in% k, ], 'species', 'habitat_binary', 'parental_care_binary', starts = 1)
  for (m in c('independent', 'dependent')) expect_parses(guane_pagel_script(r, model = m, lang = 'es'))
+ expect_equal(run_exported(guane_pagel_script(r), 'saveRDS(result$comparison, "%s")'), r$comparison)
 })
 
-test_that('SSE scripts parse (BiSSE, MuSSE, QuaSSE, hidden-state)', {
+test_that('SSE scripts parse and replay in fresh sessions, including BiSSE and MuSSE refits', {
  d <- script_data()
  b <- guane_bisse_fit(d$tree, d$traits, 'species', 'habitat_binary', 'terrestrial', models = 'Trait-independent diversification', starts = 1, slices = FALSE)
  expect_parses(guane_bisse_script(b))
+ expect_equal(run_exported(guane_bisse_script(b, guane_bisse_settings(model = b$comparison$Model[1])), 'refitted <- do.call(guane_bisse_fit, result$inputs); saveRDS(refitted$comparison, "%s")'), b$comparison, tolerance = 1e-6)
  expect_parses(guane_bisse_script(b, guane_bisse_settings(type = 'tree', lang = 'es')))
  m <- guane_musse_fit(d$tree, d$traits, 'species', 'locomotion_3state', models = 'Equal diversification and transitions', starts = 1, slices = FALSE)
  expect_parses(guane_musse_script(m))
+ expect_equal(run_exported(guane_musse_script(m, guane_musse_settings(model = m$comparison$Model[1])), 'refitted <- do.call(guane_musse_fit, result$inputs); saveRDS(refitted$comparison, "%s")'), m$comparison, tolerance = 1e-6)
  tx <- d$traits; tx$log_mass <- log(tx$body_mass)
- q <- guane_quasse_fit(d$tree, tx, 'species', 'log_mass', error = .1, nx = 128, r = 1, starts = 1, maxit = 20, baseline = FALSE, verify = FALSE)
+ q <- guane_quasse_fit(d$tree, tx, 'species', 'log_mass', error = .1, nx = 256, r = 2, starts = 1, maxit = 200, baseline = FALSE, verify = FALSE)
  expect_parses(guane_quasse_script(q))
+ expect_equal(run_exported(guane_quasse_script(q), 'saveRDS(result$comparison, "%s")'), q$comparison)
  skip_if_not_installed('hisse')
  h <- guane_hidden_fit(d$tree, d$traits, 'species', 'habitat_binary', 'terrestrial', models = 'BiSSE (HiSSE backend)', starts = 1, verify = FALSE, maxeval = 20)
  expect_parses(guane_hidden_script(h))
+ expect_equal(run_exported(guane_hidden_script(h, guane_hidden_settings(model = h$comparison$Model[1])), 'saveRDS(result$comparison, "%s")'), h$comparison)
 })
 
 # ---- Execution: exported scripts run in a fresh R session and reproduce the estimate -----
@@ -163,4 +186,24 @@ test_that('exported PGLS script runs in a fresh session and reproduces coefficie
  p <- cached('pgls', guane_pgls(d$tree, d$traits, 'species', 'body_mass', c('body_length', 'temperature')))
  out <- run_exported(guane_pgls_script(p), 'saveRDS(result$coefficients, "%s")')
  expect_equal(out, p$coefficients, tolerance = 1e-8)
+})
+
+test_that('Spanish and Portuguese signal plots run offline with dictionary translations', {
+ d <- script_data()
+ s <- cached('signal', guane_signal(d$tree, d$traits, 'species', 'body_mass', seed = 3, nsim = 99))
+ for (lang in c('es', 'pt')) {
+  out <- run_exported(guane_signal_script(s, type = 'null', lang = lang),
+   'saveRDS(list(result = result$Estimate, text = guane_text("Frequency", plot_settings$lang), loaded = is.element("guane", loadedNamespaces())), "%s")')
+  expect_equal(out$result, s$Estimate)
+  expect_identical(out$text, guane_text('Frequency', lang))
+  expect_false(out$loaded)
+ }
+})
+
+test_that('exported dictionaries treat quotes and code-like labels as data', {
+ hostile <- '"; stop("dictionary injection"); #'
+ dictionary <- stats::setNames(list(c(hostile, paste0(hostile, "'\\\n"))), hostile)
+ testthat::local_mocked_bindings(guane_dictionary = function() dictionary)
+ out <- run_exported(guane_script_helpers('guane_text'), 'saveRDS(guane_dictionary(), "%s")')
+ expect_identical(out, dictionary)
 })

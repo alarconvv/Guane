@@ -14,7 +14,7 @@ server_mod_signal_signal <- function(input, output, session, data) {
     }),function(msg){state$activity<-msg;shiny::showNotification(msg,type='error')},function(msg)state$activity<-msg)
     observeEvent(input$run,{result(NULL);attempt({
       req(data$seed(),input$nsim)
-      if(input$nsim<99 || input$nsim>9999 || input$nsim != floor(input$nsim)) stop('Choose 99–9999 integer randomizations.')
+      if(input$nsim<99 || input$nsim>9999 || input$nsim != floor(input$nsim)) stop('Choose 99\u20139999 integer randomizations.')
       if(data$seed()<0 || data$seed()>2147483647 || data$seed() != floor(data$seed())) stop('Choose a nonnegative integer seed up to 2147483647.')
       signal_task$run(guane_signal,list(state$tree,state$traits,data$taxon(),selected_trait(),data$seed(),input$nsim))
     })})

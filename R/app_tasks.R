@@ -231,7 +231,8 @@ guane_task <- function(on_success, on_error, status = NULL) {
  generation <- 0L
  started <- 0L
  handle <- NULL
- task <- shiny::ExtendedTask$new(function(fn, args) guane_task_promise(fn, args, on_start = function(m) handle <<- m))
+ # Cancellation settles after session teardown; keep task internals alive until then.
+ task <- shiny::withReactiveDomain(NULL, shiny::ExtendedTask$new(function(fn, args) guane_task_promise(fn, args, on_start = function(m) handle <<- m)))
  session <- shiny::getDefaultReactiveDomain()
  if (!is.null(session)) session$onSessionEnded(function() guane_task_cancel(handle))
  shiny::observeEvent(task$status(), {

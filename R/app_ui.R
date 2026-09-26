@@ -1,11 +1,12 @@
 #' Display the Guane interface.
+#' @param modules Primary modules to display: signal, asr, div, or sse.
+#' @param default_lang Initial interface language: en, es, or pt.
+#' @param resource_root Directory containing the bundled theme, assets, and translations.
 #' @export
 #' 
 app_ui <- function(modules=c('signal','asr','div','sse'), default_lang='en', resource_root=guane_resource_root()) {
   
  titles<-c(signal='Phylo traits',asr='Ancestral state reconstruction',div='Diversification',sse='SSE models')
- 
- library(shiny)
  
  # Evaluate the user's original theme without modifying its source.
  theme_env<-new.env(parent=asNamespace('bslib'))
@@ -28,7 +29,7 @@ app_ui <- function(modules=c('signal','asr','div','sse'), default_lang='en', res
                        
                        div(class='guane-topbar',
                            h3(tags$img(src='guane-assets/guane.png',alt='Guane logo'), 'Phylogenetic Comparative Methods'),
-                           selectInput('lang',NULL,c('English'='en','Español'='es','Português'='pt'), selected=default_lang,selectize=FALSE,width='150px')),
+                           selectInput('lang',NULL,c('English'='en','Espa\u00f1ol'='es','Portugu\u00eas'='pt'), selected=default_lang,selectize=FALSE,width='150px')),
                        do.call(bslib::navset_pill,c(list(id='module'),lapply(modules,function(m) bslib::nav_panel(titles[[m]],value=m,ui_mod_family(m)))) )
  )
  ui

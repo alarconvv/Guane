@@ -138,7 +138,7 @@ guane_rates_joint_script <- function(result,type='joint_tree',model='SharedBD',p
  c('# Guane joint whole-tree split likelihood. Branch-base shifts only; a priori regions.',
  '# install.packages(c("ape", "diversitree"))',paste('# diversitree',result$version),
  '# AIC is conditional on fixed shifts/sampling/tree. No calibrated likelihood-ratio p-values.',
- vapply(helpers,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('result',result),guane_r_assignment('settings',list(type=type,model=model,parameter=parameter,palette=palette,lang=lang,labels=labels,node_labels=node_labels,cex=cex)),
  '# Optional refit: refitted <- do.call(guane_rates_joint_fit,result$inputs)',
  'opened <- grDevices::dev.cur()==1L','if(opened) grDevices::pdf("guane-joint-rates.pdf",width=10,height=7)',

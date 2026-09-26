@@ -104,7 +104,7 @@ guane_rates_tv_script <- function(result,type='time_rates',model=NULL,parameter=
  c('# Guane time-varying crown-tree ML. Time measured backward from the present.',
  '# lambda(t)=lambda0*exp(-beta*t); positive beta means increasing toward present.',
  '# install.packages(c("ape","diversitree","deSolve"))',paste('# diversitree',result$version),
- vapply(helpers,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('result',result),guane_r_assignment('settings',list(type=type,model=model,parameter=parameter,palette=palette,lang=lang)),
  '# Optional refit: refitted <- do.call(guane_rates_tv_fit,result$inputs)',
  '# Optional uncertainty replay: replay <- do.call(guane_rates_tv_uncertainty,c(list(result=refitted),result$uncertainty_inputs))',

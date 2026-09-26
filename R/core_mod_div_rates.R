@@ -4,7 +4,7 @@ guane_rates_script <- function(result,type='rates',model='Yule',parameter='lambd
  '# install.packages(c("ape","diversitree"))',paste0('# diversitree ',result$version),
  '# Intervals: approximate normal curvature intervals; unavailable at boundaries/unstable curvature.',
  '# Likelihood slices hold the other rate fixed; they are not profile likelihood intervals.',
- vapply(helpers,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('result',result),guane_r_assignment('settings',list(type=type,model=model,parameter=parameter,palette=palette,lang=lang)),
  '# Optional refit: refitted <- do.call(guane_rates_fit,result$inputs)',
  '# Optional diagnostic replay: replay <- do.call(guane_rates_diagnose,c(list(result=refitted),result$diagnostic_inputs))',

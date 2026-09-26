@@ -1,5 +1,5 @@
 guane_signal <- function(tree, traits, taxon, trait, seed = 999, nsim = 999) {
-  if(length(nsim)!=1 || !is.finite(nsim) || nsim<99 || nsim>9999 || nsim!=floor(nsim)) stop('Choose 99–9999 integer randomizations.')
+  if(length(nsim)!=1 || !is.finite(nsim) || nsim<99 || nsim>9999 || nsim!=floor(nsim)) stop('Choose 99\u20139999 integer randomizations.')
   if(length(seed)!=1 || !is.finite(seed) || seed<0 || seed>2147483647 || seed!=floor(seed)) stop('Choose a nonnegative integer seed up to 2147483647.')
   issues <- guane_validate(tree, traits, taxon, trait)
   if (any(issues$level %in% c('Error', 'Required'))) stop('Resolve data issues before running.')
@@ -56,7 +56,7 @@ guane_signal_script <- function(result, type='tree', palette='Guane', font=.8, l
    '# Prepared inputs and plotting functions are embedded. Edit plot_settings below.',
    '# Install once if needed: install.packages(c("ape", "phytools"))',
    paste0('# R ',getRversion(),'; ape ',utils::packageVersion('ape'),'; phytools ',utils::packageVersion('phytools')),
-   vapply(helpers,function(name) paste0(name,' <- ',paste(deparse(get(name,mode='function')),collapse='\n')),character(1)),
+   guane_script_helpers(helpers),
    guane_r_assignment('inputs',s[c('tree','traits','taxon','trait','seed','nsim')]),
    'result <- do.call(guane_signal, inputs)','print(result)',
    guane_r_assignment('plot_settings',list(type=type,palette=palette,font=font,lang=lang)),

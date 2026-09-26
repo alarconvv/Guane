@@ -6,6 +6,9 @@
 \usage{
 app_server(modules = c("signal", "asr", "div", "sse"))
 }
+\arguments{
+\item{modules}{Primary modules to connect: signal, asr, div, or sse.}
+}
 \description{
 Connect the primary module servers.
 }

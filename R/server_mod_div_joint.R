@@ -33,7 +33,7 @@ server_mod_div_joint <- function(input,output,session,data) {
  })
  settings<-shiny::reactive(list(type=value('joint_graph','joint_rates'),model=value('joint_plot_model','SharedBD'),parameter=value('joint_parameter','lambda'),palette=value('joint_palette','Guane'),lang=data$lang()))
  plot_settings<-shiny::reactive(c(settings(),list(labels=isTRUE(value('joint_labels',TRUE)),node_labels=isTRUE(value('joint_node_labels',TRUE)),cex=value('joint_cex',.7))))
- draw<-function(){r<-joint_view();shiny::req(r);tryCatch(do.call(guane_rates_joint_plot,c(list(result=r),plot_settings())),error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
+ draw<-function(){shiny::req(data$state$tree);tryCatch({r<-joint_view();shiny::req(r);do.call(guane_rates_joint_plot,c(list(result=r),plot_settings()))},error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
  output$joint_plot<-shiny::renderPlot(draw(),width=960,height=672,res=96)
  code<-shiny::reactive({pending<-c('# Proposed settings; run analysis to apply.',guane_r_assignment('analysis_settings',options()),guane_r_assignment('additional_settings',joint_options()));r<-tryCatch(joint_view(),error=function(e)NULL);if(is.null(r))return(pending);c(pending,do.call(guane_rates_joint_script,c(list(result=r),plot_settings())))})
  output$joint_code<-shiny::renderText(paste(code(),collapse='\n'))

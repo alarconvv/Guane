@@ -88,7 +88,7 @@ guane_asr_mk_script <- function(result,type='tree',palette='Guane',labels=TRUE,n
  c('# Guane discrete Mk ML reconstruction. Saved root weights and analytical settings; global marginals and optional joint assignments.',
  '# install.packages(c("ape", "phytools"))',
  paste0('# R ',getRversion(),'; phytools ',utils::packageVersion('phytools')),
- vapply(helpers,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('inputs',c(result[c('tree','traits','taxon','trait','model','compare','max_rate','advanced')],list(custom=result$index))),
  '# Uncomment to refit the model from the embedded inputs:', '# refitted <- do.call(guane_asr_mk, inputs)',
  if(!is.null(result$mapping))paste0('# refitted <- guane_asr_map(refitted, nsim=',result$mapping$nsim,', seed=',result$mapping$seed,')'),

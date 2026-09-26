@@ -99,7 +99,7 @@ guane_rates_clade_script <- function(result,type='clade_tree',model='Yule',param
  c('# Guane: separate crown-clade fits, not a joint shift test. AIC weights are within-clade only.',
  '# install.packages(c("ape", "diversitree"))',
  '# Sampling fractions and tree are fixed; intervals do not include selection or tree uncertainty.',
- vapply(helpers,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),
+ guane_script_helpers(helpers),
  guane_r_assignment('result',result),guane_r_assignment('settings',list(type=type,model=model,parameter=parameter,palette=palette,lang=lang,node=node,labels=labels,node_labels=node_labels,cex=cex)),
  '# Optional refit (after analysis): refitted <- do.call(guane_rates_clade_fit, result$inputs)',
  'opened <- grDevices::dev.cur()==1L','if(opened) grDevices::pdf("guane-clades.pdf",width=10,height=7)',

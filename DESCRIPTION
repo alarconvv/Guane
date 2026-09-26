@@ -38,6 +38,7 @@ Suggests:
     callr,
     chromote,
     devtools,
+    htmltools,
     pkgload,
     roxygen2,
     shinytest2,

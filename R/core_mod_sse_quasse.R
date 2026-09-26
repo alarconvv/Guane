@@ -134,7 +134,7 @@ guane_quasse_plot <- function(result,settings=guane_quasse_settings()) {
 guane_quasse_script <- function(result,settings=guane_quasse_settings()) {
  functions<-c('guane_sse_verification_plot','guane_quasse_robustness','guane_quasse_robustness_plot','guane_ltt','guane_sse_expand','guane_sse_constraint_groups','guane_sse_optimize','guane_bisse_settings','guane_bisse_plot','guane_quasse_function','guane_quasse_data','guane_quasse_control','guane_quasse_parameters','guane_quasse_likelihood','guane_quasse_fit','guane_quasse_settings','guane_quasse_plot','guane_text')
  c('# GUane QuaSSE: original data, saved fit and editable plotting settings.', '# Requires ape and diversitree; no GUane installation required.',paste('# Original diversitree version:',result$version),
- vapply(functions,function(n)paste0(n,' <- ',paste(deparse(get(n,mode='function')),collapse='\n')),character(1)),guane_r_assignment('result',result),guane_r_assignment('settings',settings),
+ guane_script_helpers(functions),guane_r_assignment('result',result),guane_r_assignment('settings',settings),
  '# Optional refit: result <- do.call(guane_quasse_fit,result$inputs)',
  '# Optional robustness replay: result$robustness <- do.call(guane_quasse_robustness,c(list(result=result),result$robustness$settings))','opened <- grDevices::dev.cur() == 1L','if(opened) grDevices::pdf("guane-quasse.pdf",width=settings$width,height=settings$height)','guane_quasse_plot(result,settings)','if(opened) grDevices::dev.off()','print(result$comparison)','print(result$diagnostics)','print(result$warnings)','sessionInfo()')
 }
