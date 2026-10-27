@@ -40,7 +40,7 @@ server_mod_signal_PagelReg <- function(input, output, session, data) {
  output$pagel_attempts<-shiny::renderTable({shiny::req(result());result()$diagnostics},digits=4)
  output$pagel_warnings<-shiny::renderUI({shiny::req(result());messages<-if(length(result()$warnings)) result()$warnings else 'No fitting warnings reported. Inspect diagnostics before interpretation.';shiny::tagList(lapply(messages,shiny::p))})
  code<-shiny::reactive({shiny::req(result());guane_pagel_script(result(),model(),palette(),isTRUE(input$pagel_width),data$lang())})
- output$pagel_code<-shiny::renderText({if(is.null(result())) return('Run the correlation test on matched data to display results.');paste(code(),collapse='\n')})
+ output$pagel_code<-shiny::renderText(guane_code_mirror({if(is.null(result())) return('Run the correlation test on matched data to display results.');paste(code(),collapse='\n')}))
  output$pagel_script<-shiny::downloadHandler('guane-pagel-correlation.R',function(file) writeLines(code(),file))
  output$pagel_pdf<-shiny::downloadHandler('guane-pagel.pdf',function(file){shiny::req(result());grDevices::pdf(file,width=8,height=7);on.exit(grDevices::dev.off());draw()})
  output$pagel_csv<-shiny::downloadHandler('guane-pagel-rates.csv',function(file){shiny::req(result());guane_write_csv(result()$rates,file,row.names=FALSE)})

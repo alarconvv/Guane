@@ -35,3 +35,33 @@ test_that('app_ui embeds the dictionary for the browser without closing its scri
  json <- sub('(?s).*<script type="application/json" id="guane-translations">(.*?)</script>.*', '\\1', html, perl = TRUE)
  expect_identical(jsonlite::fromJSON(json), guane_text_dictionary())
 })
+
+test_that('live code hides only the dictionary and exports retain offline translations', {
+ helpers <- guane_script_helpers('guane_text')
+ script <- c('# Analysis', helpers, 'plot_settings <- list(lang="es")', 'sessionInfo()')
+ expected <- paste(c(script[1], helpers[-1], tail(script, 2)), collapse='\n')
+ expect_identical(guane_code_mirror(script), expected)
+ expect_identical(guane_code_mirror(paste(script, collapse='\n')), expected)
+ expect_identical(guane_code_mirror(c('# Preview', 'x <- 1')), '# Preview\nx <- 1')
+ offline <- new.env(parent=baseenv())
+ eval(parse(text=helpers), offline)
+ for (lang in c('es', 'pt'))
+  expect_identical(offline$guane_text('Frequency', lang), guane_text('Frequency', lang))
+})
+
+test_that('signal mirror omits the dictionary while its download retains it', {
+ withr::local_options(guane.async=FALSE)
+ guane_workers_stop(); on.exit(guane_workers_stop())
+ shiny::testServer(server_mod_family, args=list(id='signal'), {
+  guane_test_prepare(session)
+  session$setInputs(signal_trait='body_mass', nsim=99)
+  d <- guane_test_data()
+  session$returned$analyses$signal$result(guane_signal(d$tree, d$traits, 'species', 'body_mass', nsim=99))
+  session$flushReact()
+  full <- session$returned$analyses$signal$code()
+  expect_match(full, 'guane_dictionary <- local', fixed=TRUE)
+  expect_identical(output$code, guane_code_mirror(full))
+  expect_false(grepl('guane_dictionary <- local', output$code, fixed=TRUE))
+  expect_identical(paste(readLines(output$script, warn=FALSE), collapse='\n'), full)
+ })
+})

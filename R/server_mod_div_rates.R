@@ -54,7 +54,7 @@ server_mod_div_rates <- function(input,output,session,data) {
  draw<-function(){r<-result();shiny::req(r);tryCatch(do.call(guane_rates_plot,c(list(result=r),plot_settings())),error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
  output$rates_plot<-shiny::renderPlot(draw(),width=960,height=672,res=96)
  code<-shiny::reactive({pending<-c('# Proposed settings; run analysis to apply.',guane_r_assignment('analysis_settings',options()),guane_r_assignment('additional_settings',diagnostic_options()));r<-tryCatch(result(),error=function(e)NULL);if(is.null(r))return(pending);c(pending,do.call(guane_rates_script,c(list(result=r),plot_settings())))})
- output$rates_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$rates_code<-shiny::renderText(guane_code_mirror(paste(code(),collapse='\n')))
  output$rates_script<-shiny::downloadHandler('guane-rates.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$rates_pdf<-shiny::downloadHandler('guane-rates.pdf',function(file){shiny::req(result());grDevices::pdf(file,width=10,height=7);on.exit(grDevices::dev.off());draw()})
  output$rates_png<-shiny::downloadHandler('guane-rates.png',function(file){shiny::req(result());grDevices::png(file,width=1500,height=1050,res=150);on.exit(grDevices::dev.off());draw()})

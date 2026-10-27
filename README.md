@@ -26,3 +26,7 @@ The trait preview shows 25 rows by default (change **Preview rows** to see more)
 The documentation and tutorials are published at <https://alarconvv.github.io/guane-site/>. The site source lives in its own repository, [alarconvv/guane-site](https://github.com/alarconvv/guane-site).
 
 It covers installation, an interface tour, one tutorial per module using the bundled example, custom input formats, exports and scientific limitations.
+
+## Project status and manuscript plan
+
+See the [current project status and December 31 draft plan](docs/PROJECT_STATUS.md), [probes and evidence register](docs/EVIDENCE_REGISTER.md), and [pending work](docs/PENDING_WORK.md). These distinguish the original Guane application, the existing manuscript and the later Guaneverse ecosystem.

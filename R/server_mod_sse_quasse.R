@@ -42,7 +42,7 @@ server_mod_sse_quasse <- function(input,output,session,data) {
  draw<-function(){shiny::req(result());tryCatch(guane_quasse_plot(result(),settings()),error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
  output$quasse_plot<-shiny::renderPlot(draw(),width=function()settings()$width*96,height=function()settings()$height*96,res=96)
  code<-shiny::reactive({if(is.null(result()))return(c('# Proposed QuaSSE settings; no fit performed.',guane_r_assignment('analysis_settings',options())));guane_quasse_script(result(),settings())})
- output$quasse_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$quasse_code<-shiny::renderText(guane_code_mirror(paste(code(),collapse='\n')))
  output$quasse_script<-shiny::downloadHandler('guane-quasse.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$quasse_pdf<-shiny::downloadHandler('guane-quasse.pdf',function(file){shiny::req(result());s<-settings();grDevices::pdf(file,width=s$width,height=s$height);on.exit(grDevices::dev.off());draw()})
  output$quasse_png<-shiny::downloadHandler('guane-quasse.png',function(file){shiny::req(result());s<-settings();grDevices::png(file,width=s$width*150,height=s$height*150,res=150);on.exit(grDevices::dev.off());draw()})

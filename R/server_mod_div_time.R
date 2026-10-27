@@ -67,7 +67,7 @@ server_mod_div_time <- function(input,output,session,data) {
  output$time_plot<-shiny::renderPlot(draw(),width=960,height=672,res=96)
  output$time_status<-shiny::renderText(guane_text(status(),data$lang()))
  code<-shiny::reactive({pending<-c('# Proposed settings; run analysis to apply.',guane_r_assignment('analysis_settings',options()),guane_r_assignment('time_settings',time_options()),guane_r_assignment('additional_settings',time_unc_options()));r<-tryCatch(time_result(),error=function(e)NULL);if(is.null(r))return(pending);c(pending,do.call(guane_rates_tv_script,c(list(result=r),plot_settings())))})
- output$time_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$time_code<-shiny::renderText(guane_code_mirror(paste(code(),collapse='\n')))
  output$time_script<-shiny::downloadHandler('guane-time.R',function(file){shiny::req(time_result());writeLines(code(),file)})
  output$time_pdf<-shiny::downloadHandler('guane-time.pdf',function(file){shiny::req(time_result());grDevices::pdf(file,width=10,height=7);on.exit(grDevices::dev.off());draw()})
  output$time_png<-shiny::downloadHandler('guane-time.png',function(file){shiny::req(time_result());grDevices::png(file,width=1500,height=1050,res=150);on.exit(grDevices::dev.off());draw()})

@@ -50,7 +50,7 @@ server_mod_sse_bisse <- function(input,output,session,data) {
  draw<-function(){shiny::req(result());tryCatch(guane_bisse_plot(result(),settings()),error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
  output$bisse_plot<-shiny::renderPlot(draw(),width=function()settings()$width*96,height=function()settings()$height*96,res=96)
  code<-shiny::reactive({if(is.null(result()))return(c('# Proposed BiSSE settings. No fit has been performed.',guane_r_assignment('analysis_settings',options()),'# result <- do.call(guane_bisse_fit, c(list(tree=tree, traits=traits, taxon=taxon), analysis_settings))'));guane_bisse_script(result(),settings())})
- output$bisse_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$bisse_code<-shiny::renderText(guane_code_mirror(paste(code(),collapse='\n')))
  output$bisse_script<-shiny::downloadHandler('guane-bisse.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$bisse_pdf<-shiny::downloadHandler('guane-bisse.pdf',function(file){shiny::req(result());s<-settings();grDevices::pdf(file,width=s$width,height=s$height);on.exit(grDevices::dev.off());draw()})
  output$bisse_png<-shiny::downloadHandler('guane-bisse.png',function(file){shiny::req(result());s<-settings();grDevices::png(file,width=s$width*150,height=s$height*150,res=150);on.exit(grDevices::dev.off());draw()})

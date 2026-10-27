@@ -29,7 +29,7 @@ server_mod_div_diversity <- function(input,output,session,data) {
  output$dd_diagnostics<-shiny::renderTable({shiny::req(result());translate(result()$diagnostics)},digits=6)
  output$dd_log<-shiny::renderText({shiny::req(result());paste(unlist(result()$logs),collapse='\n')})
  code<-shiny::reactive({if(is.null(result()))return(c('# Proposed DDD settings',tryCatch(guane_r_assignment('settings',options()),error=function(e)paste('#',conditionMessage(e)))));c(tryCatch(guane_r_assignment('proposed_uncertainty_settings',uncertainty_options()),error=function(e)paste('#',conditionMessage(e))),guane_dd_script(result(),settings()))})
- output$dd_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$dd_code<-shiny::renderText(guane_code_mirror(paste(code(),collapse='\n')))
  output$dd_script<-shiny::downloadHandler('guane-diversity.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$dd_pdf<-shiny::downloadHandler('guane-diversity.pdf',function(file){grDevices::pdf(file,width=10,height=7);on.exit(grDevices::dev.off());draw()})
  output$dd_png<-shiny::downloadHandler('guane-diversity.png',function(file){grDevices::png(file,width=1500,height=1050,res=150);on.exit(grDevices::dev.off());draw()})

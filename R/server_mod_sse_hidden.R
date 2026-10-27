@@ -32,7 +32,7 @@ server_mod_sse_hidden <- function(input,output,session,data) {
  draw<-function(){shiny::req(result());tryCatch(guane_hidden_plot(result(),settings()),error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
  output$hidden_plot<-shiny::renderPlot(draw(),width=function()settings()$width*96,height=function()settings()$height*96,res=96)
  code<-shiny::reactive({if(is.null(result()))return(c('# Proposed Hidden-state settings; no fit performed.',guane_r_assignment('analysis_settings',options())));guane_hidden_script(result(),settings())})
- output$hidden_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$hidden_code<-shiny::renderText(guane_code_mirror(paste(code(),collapse='\n')))
  output$hidden_script<-shiny::downloadHandler('guane-hidden.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$hidden_pdf<-shiny::downloadHandler('guane-hidden.pdf',function(file){shiny::req(result());s<-settings();grDevices::pdf(file,width=s$width,height=s$height);on.exit(grDevices::dev.off());draw()})
  output$hidden_png<-shiny::downloadHandler('guane-hidden.png',function(file){shiny::req(result());s<-settings();grDevices::png(file,width=s$width*150,height=s$height*150,res=150);on.exit(grDevices::dev.off());draw()})

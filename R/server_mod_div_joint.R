@@ -36,7 +36,7 @@ server_mod_div_joint <- function(input,output,session,data) {
  draw<-function(){shiny::req(data$state$tree);tryCatch({r<-joint_view();shiny::req(r);do.call(guane_rates_joint_plot,c(list(result=r),plot_settings()))},error=function(e)shiny::validate(shiny::need(FALSE,guane_text(conditionMessage(e),data$lang()))))}
  output$joint_plot<-shiny::renderPlot(draw(),width=960,height=672,res=96)
  code<-shiny::reactive({pending<-c('# Proposed settings; run analysis to apply.',guane_r_assignment('analysis_settings',options()),guane_r_assignment('additional_settings',joint_options()));r<-tryCatch(joint_view(),error=function(e)NULL);if(is.null(r))return(pending);c(pending,do.call(guane_rates_joint_script,c(list(result=r),plot_settings())))})
- output$joint_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$joint_code<-shiny::renderText(guane_code_mirror(paste(code(),collapse='\n')))
  output$joint_script<-shiny::downloadHandler('guane-joint.R',function(file){shiny::req(joint_view());writeLines(code(),file)})
  output$joint_pdf<-shiny::downloadHandler('guane-joint.pdf',function(file){shiny::req(joint_view());grDevices::pdf(file,width=10,height=7);on.exit(grDevices::dev.off());draw()})
  output$joint_png<-shiny::downloadHandler('guane-joint.png',function(file){shiny::req(joint_view());grDevices::png(file,width=1500,height=1050,res=150);on.exit(grDevices::dev.off());draw()})

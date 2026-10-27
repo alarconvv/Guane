@@ -72,7 +72,7 @@ server_mod_asr_continuous <- function(input,output,session,data) {
    paste0('result <- do.call(',if(identical(input$bm_framework,'Bayes'))'guane_asr_bayes' else 'guane_asr_continuous',', c(list(tree=tree, traits=traits, taxon=taxon, trait=trait), settings))')))
   do.call(guane_asr_bm_script,c(list(result=result()),settings()))
  })
- output$bm_code<-shiny::renderText(paste(code(),collapse='\n'))
+ output$bm_code<-shiny::renderText(guane_code_mirror(paste(code(),collapse='\n')))
  output$bm_script<-shiny::downloadHandler('guane-continuous.R',function(file){shiny::req(result());writeLines(code(),file)})
  output$bm_png<-shiny::downloadHandler('guane-continuous.png',function(file){shiny::req(result());g<-appearance();grDevices::png(file,width=g$width,height=g$height,units='in',res=g$dpi);on.exit(grDevices::dev.off());draw()})
  output$bm_view_rds<-shiny::downloadHandler('guane-continuous-view.rds',function(file){shiny::req(result());saveRDS(list(result=result(),plot_settings=settings()),file)})

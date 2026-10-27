@@ -31,7 +31,7 @@ server_mod_signal_signal <- function(input, output, session, data) {
     output$signal_pdf<-downloadHandler('guane-signal.pdf',function(file){req(result());pdf(file,width=9,height=height());on.exit(dev.off());draw()})
     output$signal_csv<-downloadHandler('guane-signal.csv',function(file){req(result());guane_write_csv(result(),file,row.names=FALSE)})
     code <- reactive({req(result());paste(guane_signal_script(result(),plot_type(),palette(),font(),data$lang(),height()),collapse='\n')})
-    output$code <- renderText(code())
+    output$code <- renderText(guane_code_mirror(code()))
     output$script <- downloadHandler('guane-analysis.R',function(file) writeLines(code(),file))
     output$tree_download <- downloadHandler('guane-tree.nwk',function(file){req(state$tree);ape::write.tree(state$tree,file)})
   list(result=result, code=code)

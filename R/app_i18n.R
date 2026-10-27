@@ -31,3 +31,9 @@ guane_script_helpers <- function(names) {
    guane_r_assignment('dictionary', guane_dictionary()), '\nfunction() dictionary\n})'),
    vapply(names, function(n) paste0(n, ' <- ', paste(deparse(get(n, mode='function')), collapse='\n')), character(1)))
 }
+
+# Hide only the bundled dictionary in the display; downloads keep the full script.
+guane_code_mirror <- function(code) {
+ sub('(?ms)^guane_dictionary <- local\\(\\{\n.*?\nfunction\\(\\) dictionary\n\\}\\)\n?',
+     '', paste(code, collapse='\n'), perl=TRUE)
+}
