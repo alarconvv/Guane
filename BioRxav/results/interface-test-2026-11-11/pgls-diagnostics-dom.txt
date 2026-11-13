@@ -1,0 +1,242 @@
+- heading "Guane logo Phylogenetic Comparative Methods" [level=3]:
+  - img "Guane logo"
+  - text: Phylogenetic Comparative Methods
+- combobox:
+  - option "English" [selected]
+  - option "Español"
+  - option "Português"
+- tablist:
+  - tab "Phylo traits" [selected]
+  - tab "Ancestral state reconstruction"
+  - tab "Diversification"
+  - tab "SSE models"
+- tabpanel:
+  - tablist:
+    - tab "Data"
+    - tab "Phylogenetic signal"
+    - tab "PGLS" [selected]
+    - tab "Pagel's correlation"
+    - tab "PGLM"
+  - text:            
+  - tabpanel:
+    - generic: Analysis controls
+    - generic: Response
+    - generic: beakD
+    - combobox "Response"
+    - generic: Predictors
+    - generic: wingL
+    - combobox "Predictors"
+    - generic: Correlation structure
+    - generic: BM
+    - combobox "Correlation structure"
+    - generic: Initial or fixed parameter (rho / lambda / g)
+    - spinbutton "Initial or fixed parameter (rho / lambda / g)": "0.5"
+    - checkbox "Keep correlation parameter fixed"
+    - text: Keep correlation parameter fixed
+    - generic: Estimation method
+    - generic: REML
+    - combobox "Estimation method"
+    - paragraph: Uses prepared species data. Do not supply PIC values. This version requires an ultrametric tree.
+    - paragraph: Grafen replaces branch lengths using topology; the uploaded tree remains unchanged.
+    - button "Run PGLS"
+    - generic: PGLS completed. Review residual diagnostics and fit warnings.
+    - button "Compare covariance models (ML)"
+    - paragraph: Comparison uses the same data and predictors for all four structures, with ML and the current fixed or initial parameter setting.
+    - tablist:
+      - tab "Results"
+      - tab "Diagnostics" [active] [selected]
+      - tab "Live Code Mirror"
+    - text:      
+    - tabpanel:
+      - img "Plot object"
+      - paragraph: Inspect normalized residuals for patterns and Q-Q departures. Trait normality is not residual normality.
+      - generic: No fitting warnings reported. Inspect diagnostics before interpretation.
+      - generic: "Generalized least squares fit by REML Model: formula Data: frame AIC BIC logLik -3.61385 -2.420164 4.806925 Correlation Structure: corBrownian Formula: ~.taxon Parameter estimate(s): numeric(0) Coefficients: Value Std.Error t-value p-value (Intercept) -10.953012 1.5009663 -7.297307 0 .x1 3.038481 0.3554547 8.548152 0 Correlation: (Intr) .x1 -0.996 Standardized residuals: Min Q1 Med Q3 Max -0.8710883 0.2504742 0.6386551 1.2116997 1.6167543 Residual standard error: 0.259985 Degrees of freedom: 13 total; 11 residual"
+  - text:           
+- text:                                                                                                                                                                                             
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- generic: Common standard error
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log:
+  - generic: beakD
+- log:
+  - generic: tarsusL
+- log
+- log
+- log
+- log:
+  - generic: beakD
+- log
+- log
+- log

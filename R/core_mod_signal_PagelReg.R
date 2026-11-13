@@ -80,7 +80,7 @@ guane_pagel_plot <- function(result, model='dependent', palette='Guane', scale_w
 
 guane_pagel_script <- function(result, model='dependent', palette='Guane', scale_width=TRUE, lang='en') {
  helpers<-c('guane_pagel','guane_pagel_plot','guane_text')
- c('# Guane: Pagel (1994) discrete correlation test and editable graph.',
+ c(guane_citation_comments('PagelReg',result,lang),'# Guane: Pagel (1994) discrete correlation test and editable graph.',
  '# Open in RStudio and Source. Install ape and phytools if needed.',
  '# Equal root probabilities (1/4 per joint state); ARD; simultaneous changes forbidden.',
  '# The chi-squared likelihood-ratio p-value is asymptotic, not a bootstrap result.',

@@ -1,0 +1,11 @@
+# Mammal data units and source
+
+Source package: phytools 2.5-2 (packageVersion 2.5.2), objects mammal.data and mammal.tree. The package contains 49 matching species-level observations. The original 49-species table is Garland, Dickerman, Janis and Jones (1993), Systematic Biology 42:265–292, DOI https://doi.org/10.1093/sysbio/42.3.265. Table 1 on printed page 273 labels body mass in kg and home-range area in km². A copy of the article is publicly available from the author's site: https://biology.ucr.edu/people/faculty/Garland/GarlEA93.pdf. It is cited rather than redistributed as a full publisher PDF in this package.
+
+Every raw measurement was checked against an independent transcription of that table. The 98 values agree at printed precision (mass to two decimal places, area to three). Tiny numerical representation differences in the package were preserved, not corrected. The table includes references for the underlying heterogeneous studies. The package help mentions Garland et al. 1992; that paper contains a smaller 43-species illustration, so it is not used as the sole source for all 49 measurements here.
+
+body_mass_kg and home_range_km2 are raw. ln_body_mass_kg = log(body_mass_kg) and ln_home_range_km2 = log(home_range_km2), with R's natural logarithm. Equivalently the dimensionless quantities are ln(mass/1 kg) and ln(area/1 km²). The raw values are never overwritten. The original 1993 paper's displayed analyses used base-10 logs; the present explicit natural-log analysis is a separate illustration. The phyl.RMA package help also applies log() to the raw stored values.
+
+The historical tree is rooted, binary, ultrametric and has strictly positive edge lengths. Its height is 70, consistent with the million-year scale described in Figure 1 of the original paper. All 49 abbreviated identifiers match the supplied table. The topology and all branch dates were not independently re-estimated, and the original taxonomy is not presented as a modern species inventory.
+
+GUANE source is GPL >=3 and phytools is GPL >=2. Preserve the corresponding notices and the original data citations. No separate CC0 license is asserted for the original observations, and the author should review data redistribution terms before any public archive. The current package is for local author checking; no public deposit has been authorized.

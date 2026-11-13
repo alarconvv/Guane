@@ -1,0 +1,16 @@
+null device 
+          1 
+  Model Parameters    LogLik      AIC Finite Boundary StartSpread Converged
+1 HiSSE         13 -6619.671 13265.34   TRUE     TRUE   2.6089419      TRUE
+2 CID-2          7 -6625.298 13264.60   TRUE     TRUE   0.1655247      TRUE
+3 CID-4         11 -6594.605 13211.21   TRUE     TRUE  10.7088183      TRUE
+  Verified Weight DeltaAIC
+1    FALSE     NA 54.13168
+2     TRUE     NA 53.38479
+3     TRUE     NA  0.00000
+[1] "Optimizer status is retained. Weights require converged repeatable interior fits and agreement with an independent optimizer."                           
+[2] "Compare only models refitted in this card with the same data and likelihood settings. Do not combine AIC values from other cards."                       
+[3] "Hidden classes are latent rate categories, not identified biological traits. No uncertainty intervals or calibrated likelihood-ratio tests are provided."
+[4] "A hidden-state parameter reached a bound. Inspect identifiability and bounds."                                                                           
+[5] "Hidden-state starts disagree. Increase search effort before interpreting model differences."                                                             
+[6] "Model weights withheld: inspect termination, verification, starts, boundaries and duplicate constraints."                                                

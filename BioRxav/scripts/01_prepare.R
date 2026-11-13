@@ -1,0 +1,21 @@
+# Run from BioRxav. Preserve distributed values without a second log transform.
+stopifnot(as.character(packageVersion("geiger")) == "2.0.12")
+e <- new.env(); data("geospiza", package="geiger", envir=e)
+g <- e$geospiza
+saveRDS(g, "data/raw/geospiza-geiger-2.0.12.rds")
+capture.output(packageDescription("geiger"), file="evidence/geiger-DESCRIPTION.txt")
+capture.output(tools::Rd2txt(utils:::.getHelpFile(help("geospiza",package="geiger"))),file="evidence/geospiza-help.txt")
+file.copy(file.path(R.home("share"),"licenses","GPL-2"),"data/raw/GPL-2.txt",overwrite=TRUE)
+traits <- data.frame(taxon=rownames(g$dat),g$dat,check.names=FALSE)
+write.csv(traits,"data/raw/geospiza-traits-distributed.csv",row.names=FALSE)
+ape::write.tree(g$phy,"data/raw/geospiza-tree-14tips.nwk")
+excluded <- setdiff(g$phy$tip.label, traits$taxon)
+stopifnot(length(excluded)==1,excluded=="olivacea")
+write.csv(data.frame(taxon=excluded,reason="Absent from distributed trait matrix"),"data/exclusions.csv",row.names=FALSE)
+tree <- ape::keep.tip(g$phy,traits$taxon)
+traits <- traits[match(tree$tip.label,traits$taxon),]
+stopifnot(nrow(traits)==13,identical(tree$tip.label,traits$taxon),!anyDuplicated(traits$taxon),all(is.finite(as.matrix(traits[-1]))),ape::is.rooted(tree),ape::is.binary(tree),ape::is.ultrametric(tree),all(tree$edge.length>0))
+write.csv(traits,"data/finches-13-traits.csv",row.names=FALSE)
+ape::write.tree(tree,"data/finches-13-tree.nwk",digits=17)
+saveRDS(list(tree=tree,traits=traits),"data/prepared.rds")
+writeLines(c("Prepared 13 matched taxa and five finite continuous traits.","Excluded olivacea: no distributed trait row.","Tree rooted, binary, ultrametric, positive branch lengths.","Traits retained on distributed scale; branch lengths not converted to years."),"results/input-validation.txt")

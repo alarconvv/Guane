@@ -1,0 +1,10 @@
+Maximum absolute change in node probability: 5.461922e-05 
+  Model Parameters    LogLik     AIC    Status
+1   ARD         12 -297.7375 619.475 Converged
+                                                                              Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.
+  Weight Delta_AIC
+1     NA        NA
+  Model Start   Initial Convergence    LogLik Valid                  Message
+1   ARD     1 0.0357526           0 -297.7375  TRUE relative convergence (4)
+[1] "A rate is near an optimization bound. Estimates and model rankings may be unstable."

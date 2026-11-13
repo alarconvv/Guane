@@ -1,0 +1,109 @@
+_P_h_y_l_o_g_e_n_e_t_i_c _r_e_d_u_c_e_d _m_a_j_o_r _a_x_i_s (_R_M_A) _r_e_g_r_e_s_s_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Phylogenetic reduced major axis (RMA) regression.
+
+_U_s_a_g_e:
+
+     phyl.RMA(x, y, tree, method="BM", lambda=NULL, fixed=FALSE, h0=1.0)
+     ## S3 method for class 'phyl.RMA'
+     coef(object, ...)
+     ## S3 method for class 'phyl.RMA'
+     plot(x, ...)
+     
+_A_r_g_u_m_e_n_t_s:
+
+       x: vector with names. In the case of the S3 ‘plot’ method ‘x’ is
+          an object of class ‘"phyl.RMA"’.
+
+       y: vector with names.
+
+    tree: a phylogenetic tree in ‘"phylo"’ format.
+
+  method: method to obtain the correlation structure: can be ‘"BM"’ or
+          ‘"lambda"’.
+
+  lambda: value of ‘lambda’ for fixed lambda.
+
+   fixed: logical value indicating whether or not lambda should be
+          optimized using likelihood.
+
+      h0: null hypothesis for beta. Defaults to 1.0. Note that a null
+          hypothesis of 0.0 is not allowed.
+
+  object: for ‘coef’ method, an object of class ‘"phyl.RMA"’.
+
+     ...: optional arguments for S3 methods.
+
+_D_e_t_a_i_l_s:
+
+     Optionally jointly estimates lambda if ‘method="lambda"’.
+     Likelihood optimization of lambda is performed using ‘optimize’ on
+     the interval (0,1).
+
+     The statistical hypothesis testing is based on Clarke (1980;
+     reviewed in McArdle 1988), which differs from some other
+     implementations of non-phylogenetic major axis regression in R.
+
+     Note that some statistician think there is _never_ a condition in
+     which a reduced-major-axis regression is appropriate.
+
+_V_a_l_u_e:
+
+     An object of class ‘"phyl.RMA"’ consisting of a list with the
+     following elements:
+
+RMA.beta: a vector of RMA regression coefficients.
+
+       V: a VCV matrix for the traits.
+
+  lambda: fitted value of lambda (‘method="lambda"’ only).
+
+    logL: log-likelihood (‘method="lambda"’ only).
+
+    test: a vector containing results for hypothesis tests on beta.
+
+   resid: a vector of residuals for ‘y’ given ‘x’.
+
+_A_u_t_h_o_r(_s):
+
+     Liam Revell <mailto:liam.revell@umb.edu>
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Clarke, M. R. B. (1980) The reduced major axis of a bivariate
+     sample. _Biometrika_, *67*, 441-446.
+
+     McArdle, B. H. (1988) The structural relationship: Regression in
+     biology. _Can. J. Zool._, *66*, 2329-2339.
+
+     Revell, L. J. (2024) phytools 2.0: an updated R ecosystem for
+     phylogenetic comparative methods (and other things). _PeerJ_,
+     *12*, e16505.
+
+_S_e_e _A_l_s_o:
+
+     ‘phyl.cca’, ‘phyl.pca’, ‘phyl.resid’
+
+_E_x_a_m_p_l_e_s:
+
+     ## load data from Garland et al. (1992)
+     data(mammal.data)
+     data(mammal.tree)
+     
+     ## pull out & log transform variables
+     lnBodyMass<-setNames(log(mammal.data$bodyMass),
+         rownames(mammal.data))
+     lnHomeRange<-setNames(log(mammal.data$homeRange),
+         rownames(mammal.data))
+     
+     ## fit RMA regression & print results
+     fitted.rma<-phyl.RMA(lnBodyMass,lnHomeRange,
+         mammal.tree)
+     print(fitted.rma)
+     
+     ## plot fitted RMA
+     par(las=1,bty="n")
+     plot(fitted.rma,las=1,bty="n")
+     

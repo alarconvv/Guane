@@ -1,0 +1,7 @@
+"Upper","Start","LogLik","Convergence","MaxRate","Message"
+100,1,-294.844544748071,0,100,"A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa."
+100,2,-294.844542759224,0,100,"A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa."
+1000,1,-294.770587308241,0,1000,"A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa."
+1000,2,-294.77058706858,0,1000,"A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa."
+10000,1,-294.749598074228,0,10000,"A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa."
+10000,2,-294.749611729628,0,10000,"A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa."

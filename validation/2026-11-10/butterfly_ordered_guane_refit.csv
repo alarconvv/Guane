@@ -1,0 +1,2 @@
+"Model","Parameters","LogLik","AIC","Status","Message","Weight","Delta_AIC"
+"ARD",12,-297.737484759202,619.474969518404,"Converged","A rate is near an optimization bound. Estimates and model rankings may be unstable.",NA,NA

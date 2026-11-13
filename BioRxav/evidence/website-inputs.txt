@@ -1,0 +1,1130 @@
+Custom input formats – Guane
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}
+Guane
+Get started
+Tutorials
+Reference
+FAQ
+Custom input formats
+Custom input formats
+Exports and reproducibility
+Scientific limitations
+On this page
+Uploaded data files
+Tree file
+Trait CSV
+Ancestral state reconstruction
+Custom rate constraints
+Root weights
+Fixed Q
+Starting rates
+Bayesian Mk rate priors
+Bayesian BM parameters
+Constituent order
+State colors
+Gradient colors
+Diversification
+Clade sampling fractions
+Joint region sampling
+Custom joint constraints
+Joint parameter controls
+Diversity-dependent starts
+SSE models
+SSE parameter tables
+MuSSE state table
+Hidden-state custom indices
+Troubleshooting pasted inputs
+Skip to main content
+Custom input formats
+Exact headers, matrix rules and pasteable examples for every text-box input.
+These are the formats that Guane’s text boxes accept. Paste them into the named box in the card, not into the main trait CSV upload. Commas separate values, and each row ends with a new line. Keep exact column names and state spelling.
+Before you paste:
+Use the fill button first.
+When a card offers
+Fill parameter table
+,
+Fill custom matrix
+or
+Fill custom constraints
+, click it and edit the template. The number and order of rows can depend on your tree and model.
+Use the displayed order and IDs.
+Names in the examples below are illustrative. Use the states and node IDs that Guane displays for your data.
+Leave a box blank for defaults.
+An empty optional table uses the card’s defaults.
+Uploaded data files
+Tree file
+Upload with
+Load single tree
+in the Data card: one
+.nwk
+/
+.tre
+Newick or
+.nex
+/
+.nexus
+Nexus tree, with unique tip labels. A minimal Newick example is
+(Sp01:1,(Sp02:0.5,Sp03:0.5):0.5);
+. Method-specific requirements (rooting, positive branch lengths, ultrametricity) are checked when you run an analysis. LTT may instead accept multiple Newick tree files in its own upload control.
+Trait CSV
+Upload with
+Load traits · CSV
+in the Data card: one header row, one taxon per row, and a unique taxon identifier column. A small format example is:
+species,body_mass,habitat_binary,resource_use_polymorphic
+Sp01,12.5,forest,fruit+seed
+Sp02,18.2,open,seed
+Sp03,14.7,forest,fruit
+Tip labels must match the taxon identifiers exactly; extra whitespace and different capitalization are different names. Continuous columns need numeric values. Count PGLM responses need nonnegative integers. Grouped-binomial PGLM needs integer successes and trials, with
+0 <= successes <= trials
+for each taxon. A polymorphic cell joins
+coexisting
+constituent states with
++
+, e.g.
+fruit+seed
+; it does not mean uncertainty or a missing value. The bundled
+19-row trait CSV
+and
+20-tip tree
+deliberately have one unmatched tip. Inspect
+Checking data
+and explicitly choose
+Use matched taxa
+before a trait analysis.
+Ancestral state reconstruction
+Custom rate constraints
+In
+Discrete traits
+, set
+Model
+to
+Custom
+. The
+Custom rate constraints
+box appears below it, with
+Fill custom matrix
+. The
+Polymorphic traits
+card has no custom matrix box; choose one of its
+Model
+options instead.
+Format: paste a square comma-separated matrix
+without row/column headers
+. Row = source state, column = destination state, both in the
+displayed state order
+. The diagonal and forbidden transitions are
+0
+. Repeated positive integers tie rates; distinct consecutive integers
+1,2,...
+estimate separate rates. For two displayed states, this allows different forward/backward rates:
+0,1
+2,0
+Do not paste trait names into the matrix. The model’s allowed transitions and connectivity constraints still apply.
+Root weights
+In
+Advanced analysis controls
+, set
+Root probabilities (pi)
+to
+Named custom weights
+. The
+Root weights: state,weight
+box appears. The Bayesian Mk controls have a box with the same label.
+Format: one
+state,weight
+row per allowed state,
+no header
+. Nonnegative finite weights with a positive total are normalized internally. For example, if the displayed states are
+forest
+and
+open
+:
+forest,0.7
+open,0.3
+Fixed Q
+In
+Advanced analysis controls
+, set
+Transition rates
+to
+Supply fixed Q
+. The
+Fixed Q: named CSV matrix
+box appears, with
+Fill Q template from constraints
+.
+Format: a named numeric square CSV. The first cell of the header row can be empty; row and column names must each contain every allowed state exactly once. Off-diagonal entries are nonnegative transition rates; each diagonal is minus its row’s off-diagonal sum. Rates must respect forbidden and shared transitions in the selected model. Example for
+forest
+,
+open
+:
+,forest,open
+forest,-0.2,0.2
+open,0.1,-0.1
+Starting rates
+In
+Advanced analysis controls
+, set
+Optimization settings
+to
+Custom starting rates
+. Use the
+Starting rates (q.init)
+box.
+Format: one numeric value, or one value per positive transition index, ordered
+1,2,...
+; separate values with commas or spaces. Example:
+0.1, 0.2
+. Each value must lie within the selected rate bounds. A fixed Q is not optimized, so starting rates and fitted-model comparison do not apply to it.
+Bayesian Mk rate priors
+Set
+Framework
+to
+Bayesian Mk (sample rates)
+. Use the
+Gamma priors and proposals (CSV)
+box.
+Format: exact CSV headers
+Parameter,Shape,Rate,ProposalVariance
+; one row per fitted rate index (
+q1
+,
+q2
+, etc.). All numeric values must be positive.
+Shape
+and
+Rate
+specify each gamma prior;
+ProposalVariance
+tunes the MCMC proposal. Click
+Fill rate-prior table
+to get the correct number of rows. A two-rate format example is:
+Parameter,Shape,Rate,ProposalVariance
+q1,1,1,0.1
+q2,1,1,0.1
+Bayesian BM parameters
+In
+Continuous traits
+, set
+Framework
+to
+Bayesian BM
+. Use the
+Priors, starts and proposals (CSV)
+box.
+Format: exact headers
+Parameter,Start,PriorMean,PriorVariance,ProposalVariance
+. Include one
+sig2
+row followed by
+every internal node
+in the tree, using the node IDs in the filled template. The
+sig2
+prior uses its positive
+PriorMean
+as the exponential-prior mean and must have
+NA
+in
+PriorVariance
+; node rows have normal priors with positive variance. Start and proposal variances must be valid;
+sig2
+Start must be positive. Use
+Fill Bayesian parameter table
+rather than guessing node IDs:
+Parameter,Start,PriorMean,PriorVariance,ProposalVariance
+sig2,0.5,1000,NA,0.01
+21,12.0,0,1000,0.01
+The example above shows the format only; a real 20-tip tree requires a row for every internal node.
+Constituent order
+In
+Polymorphic traits
+, tick
+Ordered polymorphism
+. Use the
+Constituent order (one state per line)
+box and set
+Maximum polymorphism
+.
+Format: one constituent state per line, each exactly once, in the desired order. Specify the maximum polymorphism size separately. For example:
+fruit
+seed
+insect
+Only contiguous combinations in that order are permitted. The bundled polymorphic example contains all three pairwise combinations, so
+no linear order of its three constituents can make every pair contiguous
+. Use it for unordered models. An ordered analysis needs a suitable custom dataset or an explicitly justified recoding; Guane does not silently change observed states.
+State colors
+In
+Graph controls
+of a discrete or polymorphic card, open
+Custom colors
+. Use the
+State colors: state,#RRGGBB
+box, or click
+Fill colors from palette
+.
+Format: no-header
+state,#RRGGBB
+, with every allowed state exactly once. Example:
+forest,#2277AA
+open,#CC7733
+Gradient colors
+In
+Graph controls
+of the
+Continuous traits
+card, open
+Custom colors
+. Use the
+Gradient colors (hex, separated by commas)
+box.
+Format: two to eight six-digit hex colors separated by commas or spaces, e.g.
+#E4F1CF, #54A37A, #0D5368
+. These change graphs, not estimates.
+Diversification
+Clade sampling fractions
+In
+Clade-specific models
+, under
+Model and data settings
+, use the
+Clade sampling fractions (CSV)
+box, or click
+Fill sampling table
+.
+Format: exact headers
+Node,Sampling
+; one row for each selected crown node, using the numeric IDs shown by
+Preview selected clades
+. Fractions must be in
+(0,1]
+:
+Node,Sampling
+24,1
+31,0.8
+These node IDs are illustrative; use the IDs for your tree. Selected crown clades must be eligible and non-overlapping.
+Joint region sampling
+In
+Joint clade-dependent models
+, under
+Model and data settings
+, use the
+Joint region sampling (CSV)
+box, or click
+Fill joint region tables
+.
+Format: exact headers
+Region,Sampling
+. Include background region
+0
+and each chosen shift-node ID once, with fractions in
+(0,1]
+. Get the actual region IDs from
+Preview joint regions
+:
+Region,Sampling
+0,1
+24,0.8
+Custom joint constraints
+In
+Joint clade-dependent models
+, under
+Advanced fitting controls
+, use the
+Custom joint constraints (CSV)
+box.
+Format: exact headers
+Region,Lambda,Mu
+, one row per displayed region. In each rate cell, a nonnegative number fixes that rate or a name estimates it. Fixed
+Lambda
+must be positive. Reuse a name within the same rate type to tie regions; never reuse one name between
+Lambda
+and
+Mu
+. For example:
+Region,Lambda,Mu
+0,lambda_shared,0
+24,lambda_shift,0
+Joint parameter controls
+In
+Joint clade-dependent models
+, under
+Advanced fitting controls
+, use the
+Joint parameter controls (CSV)
+box.
+Format: exact headers
+Parameter,Start,Lower,Upper
+, one row per free name you want to override. Starts must be strictly inside bounds; free speciation lower bounds must be positive. For the preceding custom constraints:
+Parameter,Start,Lower,Upper
+lambda_shared,0.5,0.001,10
+lambda_shift,0.7,0.001,10
+Diversity-dependent starts
+In
+Diversity-dependent models
+, under
+Advanced fitting controls
+, fields such as
+lambda, mu, K, r
+use a
+comma-separated numeric vector
+in the displayed parameter order, rather than a CSV table. The number/order of start values depends on the selected DDD model. Use the control’s displayed parameter labels and its default values as the template; keep all tolerance values positive.
+SSE models
+SSE parameter tables
+In
+BiSSE
+,
+MuSSE
+or
+QuaSSE
+, open
+Advanced fitting controls
+. Use the
+BiSSE parameter table (CSV)
+,
+MuSSE parameter table (CSV)
+or
+QuaSSE parameter table (CSV)
+box, after
+Fill parameter table
+.
+Format: the shared exact headers are
+Parameter,Group,Fixed,Start,Lower,Upper
+.
+Parameter
+must match the generated template for that model.
+Group
+ties free parameters with the same name;
+Fixed
+sets a numeric value instead of estimating it. Keep a valid
+Group
+name in every row; leave
+Fixed
+blank for a free rate. For non-Custom presets, Guane replaces Group/Fixed with that preset’s constraints. The columns
+Start
+,
+Lower
+, and
+Upper
+control optimization. The available rows vary with the card, number of MuSSE states, and QuaSSE rate functions, so use
+Fill parameter table
+after choosing the model/functions and edit the result. A BiSSE format example is:
+Parameter,Group,Fixed,Start,Lower,Upper
+lambda0,lambda,,0.5,0,100
+lambda1,lambda,,0.5,0,100
+mu0,mu,0,0,0,100
+mu1,mu,0,0,0,100
+q01,q01,0.2,0.2,0,100
+q10,q10,0.2,0.2,0,100
+The
+Group
+/
+Fixed
+columns are used only by a
+Custom
+model where the card exposes one. A fixed rate must fit its bounds; check the effective constraints in Diagnostics. For QuaSSE, after changing Constant/Exponential/Sigmoid rate functions, fill the table again to refresh parameter names. Signed slopes, midpoints, and drift have different admissible ranges from positive diffusion/rate parameters.
+MuSSE state table
+In
+MuSSE
+, under
+Model and data settings
+, use the
+MuSSE state table (CSV)
+box, or click
+Fill state table
+.
+Format: exact headers
+State,Sampling,RootWeight
+, one row per observed state. The row order defines MuSSE numeric codes
+1,2,...
+; use the displayed mapping.
+Sampling
+is in
+(0,1]
+. Nonnegative root weights must sum to
+1
+when
+Root treatment
+is
+Given (ROOT.GIVEN)
+. Example:
+State,Sampling,RootWeight
+walking,1,0.4
+swimming,1,0.3
+flying,1,0.3
+Hidden-state custom indices
+In
+Hidden-state and null models
+, open
+Custom model constraints
+. Set
+Hidden classes in Custom
+, then use
+Turnover indices (comma-separated)
+,
+Extinction-fraction indices (comma-separated)
+and
+Transition indices (CSV, no header)
+.
+Format: choose two or four hidden classes first. The order is
+0A,1A,0B,1B
+and, with four classes,
+0C,1C,0D,1D
+. Turnover indices are a comma-separated vector with one positive integer per state; repeated indices tie parameters, and distinct indices must be consecutive from
+1
+. Extinction-fraction indices have the same length but may use
+0
+for a fixed zero. A two-class example is turnover
+1,2,3,4
+and extinction fraction
+1,1,1,1
+.
+The hidden-state transition indices are a
+square CSV matrix without headers
+in that same state order.
+0
+forbids a transition, repeated positive integers tie transition rates, and positive indices must be consecutive. Changes in observed state and hidden class at the same step are forbidden. Click
+Fill custom constraints
+for a valid matrix, then edit only allowed cells. Do not confuse these index matrices with actual numeric Q rates. Inspect
+Effective parameter constraints
+in
+Diagnostics
+before interpreting the fit.
+Troubleshooting pasted inputs
+If a table is rejected, check its exact header spelling, commas, row count, duplicate names, whether you used the current tree’s node IDs and state order, and whether a model change made a filled template stale. Regenerate a template after changing states, hidden classes, rate functions or selected regions. A valid input format does not guarantee a converged model. Inspect optimization and posterior diagnostics separately. Never change data solely to make an example fit unless that recoding is scientifically justified and recorded.
+// Quarto 1.6 accessibility gaps (see scratchpad REVIEW_A11Y.md).
+document.addEventListener("DOMContentLoaded", () => {
+  // Quarto puts include-before-body inside <main>; move the skip link to the first tab stop.
+  // Quarto rewrites in-page hrefs to absolute URLs before this runs, so match the suffix and restore it.
+  const s = document.querySelector('a.visually-hidden-focusable[href$="#quarto-document-content"]');
+  if (s) { s.setAttribute("href", "#quarto-document-content"); document.body.prepend(s); }
+  document.getElementById("quarto-document-content")?.setAttribute("tabindex", "-1");
+});
+window.addEventListener("load", () => {
+  // Name the search button and combobox; drop the invalid role on the mobile menu toggler.
+  document.querySelectorAll(".aa-DetachedSearchButton, .aa-Autocomplete[role=combobox]")
+    .forEach(e => e.setAttribute("aria-label", "Search"));
+  document.querySelectorAll(".navbar-toggler[role=menu]").forEach(e => e.removeAttribute("role"));
+
+  // Screenshot links say they open an enlarged view.
+  document.querySelectorAll("a.lightbox").forEach(a => {
+    const alt = a.querySelector("img")?.alt;
+    if (alt) a.setAttribute("aria-label", alt + " (opens enlarged view)");
+  });
+
+  // GLightbox: move focus into the dialog on open, return it to the thumbnail on close.
+  const lb = window.lightboxQuarto;
+  if (lb) {
+    let opener = null;
+    lb.on("open", () => {
+      opener = document.activeElement;
+      const c = document.querySelector(".glightbox-container");
+      c.setAttribute("aria-modal", "true");
+      c.setAttribute("aria-label", "Enlarged screenshot");
+      const x = c.querySelector(".gclose");
+      if (x) { x.classList.add("focused"); x.focus(); }  // "focused" keeps GLightbox's own Tab trap in charge
+    });
+    lb.on("slide_after_load", ({ slideNode, trigger }) => {
+      const big = slideNode?.querySelector("img"), small = trigger?.querySelector("img");
+      if (big && small) big.alt = small.alt;
+    });
+    lb.on("close", () => opener?.focus());
+  }
+});
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/alarconvv\.github\.io\/guane-site\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+Exports and reproducibility
+Documents Guane version 1.0.

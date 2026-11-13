@@ -7,6 +7,14 @@ server_mod_family <- function(id, lang=function() 'en') {
  shiny::moduleServer(id,function(input,output,session) {
   data<-server_mod_data_base(input,output,session,lang)
   analyses<-sapply(guane_cards[[id]],function(card) get(paste0('server_mod_',id,'_',card),mode='function')(input,output,session,data),simplify=FALSE)
+  for(card in names(analyses)) local({
+   key <- card
+   output[[paste0(key,'_citation')]] <- shiny::renderUI({
+    result <- analyses[[key]]$result()
+    shiny::req(result)
+    guane_citation_ui(key,result,lang())
+   })
+  })
   list(data=data,analyses=analyses)
  })
 }

@@ -1,0 +1,21 @@
+    user   system  elapsed 
+4441.358    9.063 6019.546 
+  Model Parameters    LogLik      AIC Finite Boundary StartSpread Converged
+1 HiSSE         13 -6619.671 13265.34   TRUE     TRUE    2.608942      TRUE
+  Verified Weight DeltaAIC
+1    FALSE     NA        0
+  Model Start    LogLik Finite Convergence Converged Verified
+1 HiSSE     1 -6619.671   TRUE           3      TRUE    FALSE
+2 HiSSE     2 -6617.062   TRUE           5     FALSE    FALSE
+  VerificationLogLik VerificationStatus NativeIterations
+1          -6619.670                  0              984
+2          -6617.007                  0             3000
+                                                                            OptimizerMessage
+1 NLOPT_FTOL_REACHED: Optimization stopped because ftol_rel or ftol_abs (above) was reached.
+2           NLOPT_MAXEVAL_REACHED: Optimization stopped because maxeval (above) was reached.
+       VerificationMessage Message                              Initial
+1 relative convergence (4)                              0.05, 0.5, 0.01
+2 relative convergence (4)         0.17636874, 0.17511748, 0.0067885201
+      Seed
+1 20261110
+2 20261111

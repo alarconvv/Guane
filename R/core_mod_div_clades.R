@@ -96,7 +96,7 @@ guane_rates_clade_plot <- function(result,type='clade_tree',model='Yule',paramet
 
 guane_rates_clade_script <- function(result,type='clade_tree',model='Yule',parameter='lambda',palette='Guane',lang='en',node=NULL,labels=TRUE,node_labels=TRUE,cex=.7) {
  helpers<-c('guane_ltt','guane_rates_data','guane_rates_fit','guane_rates_profile','guane_rates_plot','guane_rates_clade_catalog','guane_rates_clade_select','guane_rates_clade_fit','guane_rates_clade_table','guane_rates_clade_plot','guane_text')
- c('# Guane: separate crown-clade fits, not a joint shift test. AIC weights are within-clade only.',
+ c(guane_citation_comments('clades',result,lang),'# Guane: separate crown-clade fits, not a joint shift test. AIC weights are within-clade only.',
  '# install.packages(c("ape", "diversitree"))',
  '# Sampling fractions and tree are fixed; intervals do not include selection or tree uncertainty.',
  guane_script_helpers(helpers),

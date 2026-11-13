@@ -1687,5 +1687,20 @@
  "This trait table exceeds the maximum size supported on this server.": ["Esta tabla de rasgos supera el tamaño máximo admitido en este servidor.","Esta tabela de características excede o tamanho máximo suportado neste servidor."],
  "Choose integer mapping settings within the allowed range.": ["Elija valores enteros de mapeo dentro del intervalo permitido.","Escolha valores inteiros de mapeamento dentro do intervalo permitido."],
  "Diversity-dependent models require DDD 5.2.5 or newer. Update DDD and run again.": ["Los modelos dependientes de la diversidad requieren DDD 5.2.5 o posterior. Actualice DDD y ejecute de nuevo.","Os modelos dependentes da diversidade exigem DDD 5.2.5 ou posterior. Atualize o DDD e execute novamente."],
- "Pagel's correlation requires phytools 2.5-2 or newer. Update phytools and run again.": ["La correlación de Pagel requiere phytools 2.5-2 o posterior. Actualice phytools y ejecute de nuevo.","A correlação de Pagel exige phytools 2.5-2 ou posterior. Atualize o phytools e execute novamente."]
+ "Pagel's correlation requires phytools 2.5-2 or newer. Update phytools and run again.": ["La correlación de Pagel requiere phytools 2.5-2 o posterior. Actualice phytools y ejecute de nuevo.","A correlação de Pagel exige phytools 2.5-2 ou posterior. Atualize o phytools e execute novamente."],
+ "How to cite this analysis": ["Cómo citar este análisis", "Como citar esta análise"],
+ "We performed %s in Guane, using the following R packages for analysis and visualization: %s.": ["Realizamos %s en Guane, utilizando los siguientes paquetes de R para el análisis y la visualización: %s.", "Realizamos %s no Guane, utilizando os seguintes pacotes do R para análise e visualização: %s."],
+ "Cite Guane and the packages below; adapt this wording to describe your model and settings.": ["Cite Guane y los paquetes indicados; adapte este texto para describir su modelo y configuración.", "Cite o Guane e os pacotes abaixo; adapte este texto para descrever seu modelo e suas configurações."],
+ "Model fitting used the Guane Gaussian ML implementation; phytools supported visualization.": ["El ajuste del modelo utilizó la implementación Gaussian ML de Guane; phytools se utilizó para la visualización.", "O ajuste do modelo utilizou a implementação Gaussian ML do Guane; phytools foi utilizado para visualização."],
+ "phylogenetic signal analysis": ["un análisis de señal filogenética", "uma análise de sinal filogenético"],
+ "ancestral reconstruction of continuous traits": ["una reconstrucción ancestral de rasgos continuos", "uma reconstrução ancestral de características contínuas"],
+ "ancestral reconstruction of discrete traits": ["una reconstrucción ancestral de rasgos discretos", "uma reconstrução ancestral de características discretas"],
+ "ancestral reconstruction of polymorphic traits": ["una reconstrucción ancestral de rasgos polimórficos", "uma reconstrução ancestral de características polimórficas"],
+ "lineage-through-time analysis": ["un análisis de linajes a través del tiempo", "uma análise de linhagens ao longo do tempo"],
+ "constant-rate diversification analysis": ["un análisis de diversificación con tasas constantes", "uma análise de diversificação com taxas constantes"],
+ "time-varying diversification analysis": ["un análisis de diversificación con tasas variables en el tiempo", "uma análise de diversificação com taxas variáveis no tempo"],
+ "clade-specific diversification analysis": ["un análisis de diversificación por clado", "uma análise de diversificação por clado"],
+ "joint clade-dependent diversification analysis": ["un análisis conjunto de diversificación dependiente del clado", "uma análise conjunta de diversificação dependente do clado"],
+ "diversity-dependent diversification analysis": ["un análisis de diversificación dependiente de la diversidad", "uma análise de diversificação dependente da diversidade"],
+ "hidden-state and null-model diversification analysis": ["un análisis de diversificación con modelos de estados ocultos y modelos nulos", "uma análise de diversificação com modelos de estados ocultos e modelos nulos"]
 }

@@ -52,7 +52,7 @@ guane_signal_plot <- function(result, type='tree', palette='Guane', font=.8, lan
 guane_signal_script <- function(result, type='tree', palette='Guane', font=.8, lang='en', height=7) {
  s<-attr(result,'snapshot')
  helpers<-c('guane_task_setting','guane_limits','guane_validate','guane_signal','guane_text','guane_signal_plot')
- c('# Guane phylogenetic signal: open in RStudio and Source.',
+ c(guane_citation_comments('signal',result,lang),'# Guane phylogenetic signal: open in RStudio and Source.',
    '# Prepared inputs and plotting functions are embedded. Edit plot_settings below.',
    '# Install once if needed: install.packages(c("ape", "phytools"))',
    paste0('# R ',getRversion(),'; ape ',utils::packageVersion('ape'),'; phytools ',utils::packageVersion('phytools')),

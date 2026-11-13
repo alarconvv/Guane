@@ -1,0 +1,8 @@
+Repository: https://github.com/liamrevell/Revell.phytools-v2
+Commit: ec5143f86bb31e4898849b588e961369caaf5aba
+Path: peerj/revision/revision.2/butterfly.fitted_models.rda
+Git blob SHA1 (verified): 7e07a5cf7da050adde727304b528b7d88c8bcc33
+SHA256: 482d0cd7ed5022e0200b38403ad0656d95422b4b647dffe9bfe8d66a8f4f2ddd
+License: CC-BY-4.0
+Retrieved: 2026-11-10
+Original fitted results; never represent these as newly optimized results.

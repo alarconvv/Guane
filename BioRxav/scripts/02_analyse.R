@@ -1,0 +1,18 @@
+# Executes frozen original GUANE core functions, not the Shiny interface.
+for(f in c("app_tasks.R","core_mod_data_base.R","core_mod_signal_signal.R","core_mod_signal_PGLS.R")) source(file.path("source",f))
+d <- readRDS("data/prepared.rds");tree<-d$tree;traits<-d$traits
+stopifnot(!any(guane_validate(tree,traits,"taxon","beakD")$level %in% c("Error","Required")))
+signal <- guane_signal(tree,traits,"taxon","beakD",seed=20261201,nsim=999)
+pgls <- guane_pgls(tree,traits,"taxon","beakD","wingL",model="BM",method="REML")
+write.csv(signal,"results/signal.csv",row.names=FALSE)
+write.csv(pgls$coefficients,"results/pgls-coefficients.csv",row.names=FALSE)
+write.csv(pgls$points,"results/pgls-diagnostics.csv",row.names=FALSE)
+writeLines(if(length(pgls$warnings))pgls$warnings else "No warnings returned by guane_pgls", "results/pgls-warnings.txt")
+saveRDS(list(signal=signal,pgls=pgls),"results/guane-fits.rds")
+x <- setNames(traits$beakD,traits$taxon)
+k <- phytools::phylosig(tree,x,method="K",test=FALSE)
+l <- phytools::phylosig(tree,x,method="lambda",test=TRUE)
+f <- nlme::gls(beakD~wingL,data=traits,correlation=ape::corBrownian(phy=tree,form=~taxon),method="REML")
+stopifnot(isTRUE(all.equal(signal$Estimate[1],as.numeric(k),tolerance=1e-10)),isTRUE(all.equal(signal$Estimate[2],l$lambda,tolerance=1e-10)),isTRUE(all.equal(unname(coef(f)),pgls$coefficients$Estimate,tolerance=1e-10)))
+writeLines("PASS: GUANE estimates agree with direct backend calls within 1e-10; this checks implementation agreement, not model adequacy.","results/backend-agreement.txt")
+capture.output(sessionInfo(),file="results/sessionInfo.txt")

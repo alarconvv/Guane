@@ -1,0 +1,3 @@
+"Model","Start","LogLik","Finite","Convergence","Converged","Verified","VerificationLogLik","VerificationStatus","NativeIterations","OptimizerMessage","VerificationMessage","Message","Initial","Seed"
+"CID4",1,-6597.46350896458,TRUE,3,TRUE,FALSE,-6597.46350886523,1,1715,"NLOPT_FTOL_REACHED: Optimization stopped because ftol_rel or ftol_abs (above) was reached.","false convergence (8)","","0.05, 0.5, 0.01",20261111
+"CID4",2,-6584.44852202048,TRUE,3,TRUE,FALSE,-6584.44554909375,0,2091,"NLOPT_FTOL_REACHED: Optimization stopped because ftol_rel or ftol_abs (above) was reached.","relative convergence (4)","","0.17636874, 0.17511748, 0.0067885201",20261112

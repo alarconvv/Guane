@@ -1,0 +1,582 @@
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2024_Spring/Biol609/project/Kernels/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2024_Fall/AdvanceEcology/Supplementary_Mareial_Advance_Ecology/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_DanLevesque/homework_02/data/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2023_Fall/Biol607/Week2/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/G7P2_PanPleurodira/Bibliography/1-s2.0-S1055790323000738-main.pdf
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/G7P2_PanPleurodira/Bibliography/1-s2.0-S1055790314003819-main.pdf
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/G7P2_PanPleurodira/Bibliography/Complete/1-s2.0-S1055790323000738-main.pdf
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/G7P2_PanPleurodira/Bibliography/Complete/1-s2.0-S1055790314003819-main (1).pdf
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/G7P2_PanPleurodira/Bibliography/Complete/1-s2.0-S1055790316304316-main.pdf
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Newapproach/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2024_Spring/Biol609/project/Kernels/FinalDocument/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_MadisonShaw/Homework_2/.Rproj.user/ACF891D3/viewer-cache/FACE595F.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G2_BodySize/TerrorBirds/Paper3_PaleoSize/PaleoSize-master/DinosSize/BiblioAnalysis/Introduction/s10336-012-0856-9.pdf
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_MadisonShaw/Homework_2/Data/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_MadisonShaw/Homework_2/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2024_Spring/CS607AI/project/PhaseII/Data_google/Blue_budgies/images105.jpg
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2024_Spring/CS607AI/project/PhaseII/Data_google/Blue_budgies/images10.jpg
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2023_Fall/Biol607/Project 2/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G3_AncestralStateReconstruction/GNN_Ancestral_states/simullation/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_JoshuaDuddy/02_Duddy_Joshua_2025/.Rproj.user/7DF060C5/viewer-cache/85052AE5.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G2_BodySize/TerrorBirds/Paper3_PaleoSize/PaleoSize-master/pilot/BiblioAnalysis/Introduction/s10336-012-0856-9.pdf
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_RegmiShubhechya/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_JoshuaDuddy/02_Duddy_Joshua_2025/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_HunterLeaning/homework_02/.Rproj.user/5F721195/viewer-cache/D9FD820E.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_NepaliJayasinghe/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G3_AncestralStateReconstruction/G3P1_ASR_tree_vs_noTree/RidgeASR_Class/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/R35.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ODC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PER.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ABCE1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/u17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB29.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/GSPT1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB53.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/RPL7A.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/UBE2K.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ADNP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/Rag1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB89.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/BDNF.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB59.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/COII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/OAZ1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/Spingen.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TGFB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/KIAA0398.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ATP8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB02.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/RPS14.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/EIF3M.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB73.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TARDBP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB82.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ATP6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/RPL4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/Rag2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PSMA6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SDHB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/NFIA005.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB01.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/GHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/CytB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/OAT.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ZFHX1B.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/12S.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/sod2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PSMC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ZEB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/BMP2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SNCAIP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB81.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/RPL11.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/FSHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/COI.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TMPPE.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB07.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/CBX3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SRP54.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB69.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/HSPA8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/18s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/reln.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PDCD10.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/HMGB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/HNFAL.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/VDAC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/AHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/UBE2N.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/Cmos.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ZFP36.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/NGFB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND5.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/WTAP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/anonymousLocusVIM.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND4L.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SNX6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TRAF6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/COIII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SMU1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB49.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/POMC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Con Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/VimVimetin.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_2/HW_Week2_HunterLeaning/homework_02/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Escrito/Tesis_Maestría/Escrito/Filogenia_Torugas/Doc_TurtlePhylogeny/Figures/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/R35.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ODC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/PER.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ABCE1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/u17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB29.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/GSPT1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB53.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/RPL7A.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/16s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/UBE2K.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ADNP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/Rag1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB89.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ND1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/BDNF.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB59.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/COII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/OAZ1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/Spingen.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TGFB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/KIAA0398.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ATP8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB02.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/RPS14.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/EIF3M.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB73.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TARDBP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB82.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ATP6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ND2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/RPL4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/Rag2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/PSMA6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/SDHB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/NFIA005.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/GHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/CytB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/SGK1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/OAT.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ZFHX1B.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/PLXNA2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/12S.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/sod2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/PSMC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ZEB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/BMP2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/SNCAIP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ND4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB81.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/RPL11.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/FSHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/COI.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TMPPE.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB07.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/CBX3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/SRP54.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB69.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ND3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/HSPA8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/18s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/reln.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/PDCD10.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/HMGB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/HNFAL.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/VDAC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/AHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/UBE2N.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/Cmos.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ZFP36.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/NGFB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ND5.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/WTAP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/anonymousLocusVIM.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/ND4L.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/SNX6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TRAF6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/COIII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/SMU1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/TB49.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/POMC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Data/Molecular/7_SustitutionModelByGen/VimVimetin.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Escrito/Tesis_Maestría/Escrito/Filogenia_Torugas/Biblio Filo sin arreglar/1-s2.0-S1055790320300956-main.pdf
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Escrito/Tesis_Maestría/Escrito/Filogenia_Torugas/Biblio Filo sin arreglar/1-s2.0-S1055790315003504-main.pdf
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/Escrito/Tesis_Maestría/Escrito/Filogenia_Torugas/Biblio Filo sin arreglar/1-s2.0-S1055790314001250-main.pdf
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2023_Fall/Biol607/Project 3/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G2_BodySize/TerrorBirds/Paper3_PaleoSize/PaleoSize-master/Draft/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2023_Fall/Biol607/Project/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_HaifleyPeyton/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_4/submissions/HW4_vermavishal/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_KoolhaasCandice/.Rproj.user/5CA26919/viewer-cache/A1F6D40E.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_VermaVishal/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_JoshuaDuddy/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_ZlevoreEmily/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/cuttree/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ODC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ABCE1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TB29.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/GSPT1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TB53.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/16s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ADNP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TB89.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ND1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/BDNF.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/COII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/OAZ1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ATP8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TB02.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/RPS14.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/EIF3M.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TARDBP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TB82.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P4_PhyloChatBot/phyloChat/._.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P4_PhyloChatBot/phyloChat/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ATP6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/Rag2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/GHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ZFHX1B.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/12S.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/PSMC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ZEB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ND4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TB81.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TMPPE.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/TB07.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/CBX3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/18s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/PDCD10.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/HMGB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/AHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/UBE2N.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/NGFB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ND5.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/WTAP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/ND4L.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/SNX6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Definitivo/1_Datos_Moleculares/7_Calculo_de_Modelo/VimVimetin.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_7/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_7/Clade_7_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_6/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_6/Clade_6_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_1/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_1/Clade_1_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_8/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_8/Clade_8_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_4/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_3/Clade_3_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_3/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_2/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_2/Clade_2_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_5/Clade_5_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_5/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_MorinGena/.Rproj.user/70865D6D/viewer-cache/F842DB49.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_7/Clade_7_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_7/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_7/Clade_7_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_7/Clade_7_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_6/Clade_6_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_6/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_6/Clade_6_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_6/Clade_6_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_1/Clade_1_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_1/Clade_1_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_1/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_1/Clade_1_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_8/Clade_8_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_8/Clade_8_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_8/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_8/Clade_8_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Testudines/Testudines_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Testudines/Testudines_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_4/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_3/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_3/Clade_3_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_3/Clade_3_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_3/Clade_3_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_2/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_2/Clade_2_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_2/Clade_2_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_2/Clade_2_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_5/Clade_5_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_5/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_5/Clade_5_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_5/Clade_5_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Papers/Doc_TurtlePhylogeny/Figures/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Papers/Doc_TurtlePhylogeny/Figures/Figuras finales/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_MorinGena/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/Example/Psychotria_DEC_M0_unconstrained_v1.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/Example/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_7/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_6/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_1/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_LevesqueDan/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_8/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_4/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_3/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_2/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_5/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Papers/Doc_TurtlesBiogeo/Figures/100milloesfinal/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_4/submissions/HW4_kulaktyler/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_MAc/Escrito/Filogenia_Torugas/Doc_TurtlePhylogeny/Figures/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_KulakTyler/.Rproj.user/3B3C7042/viewer-cache/1C759A3C.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_KulakTyler/.Rproj.user/3B3C7042/viewer-cache/AC7E0F8C.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_KulakTyler/.Rproj.user/3B3C7042/viewer-cache/22B4FAA2.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_KulakTyler/.Rproj.user/3B3C7042/viewer-cache/19DFBBB4.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_MAc/Escrito/Filogenia_Torugas/Biblio Filo sin arreglar/1-s2.0-S1055790320300956-main.pdf
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_MAc/Escrito/Filogenia_Torugas/Biblio Filo sin arreglar/1-s2.0-S105579031000117X-main.pdf
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_MAc/Escrito/Filogenia_Torugas/Biblio Filo sin arreglar/1-s2.0-S1055790315003504-main.pdf
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_MAc/Escrito/Filogenia_Torugas/Biblio Filo sin arreglar/1-s2.0-S1055790314001250-main.pdf
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_MAc/Escrito/Biogeografía_Tortugas/Bibliografía/Biogeo/1-s2.0-S1055790314003625-main.pdf
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/R35.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ODC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PER.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ABCE1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/u17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB29.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/GSPT1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB53.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/RPL7A.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/16s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/UBE2K.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/Rag1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB89.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/BDNF.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB59.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/COII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/OAZ1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/Spingen.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TGFB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/KIAA0398.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ATP8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB02.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/RPS14.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/EIF3M.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB73.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TARDBP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB82.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ATP6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/RPL4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/Rag2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PSMA6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SDHB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/NFIA005.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB01.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/GHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/CytB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SGK1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/OAT.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ZFHX1B.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PLXNA2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/12S.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/sod2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PSMC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ZEB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/BMP2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SNCAIP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB81.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/RPL11.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/FSHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/COI.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TMPPE.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB07.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/CBX3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SRP54.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB69.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/HSPA8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/18s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/reln.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/PDCD10.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/HMGB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/HNFAL.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/VDAC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/AHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/UBE2N.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/Cmos.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ZFP36.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/NGFB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND5.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/WTAP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/anonymousLocusVIM.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/ND4L.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SNX6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/COIII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/SMU1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB49.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/POMC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/VimVimetin.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_5/submissions/HW5_KulakTyler/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P2_phyloSophR/ReproducibilityPhylo/.Rproj.user/9CC55B80/viewer-cache/D9D40E91.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P2_phyloSophR/ReproducibilityPhylo/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_4/submissions/HW4_shawmaddy/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P2_phyloSophR/phylosophr-demo/._.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P2_phyloSophR/phylosophr-demo/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_4/submissions/HW_levesquedan/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_4/submissions/HW4_DuddyJoshua/04_week_duddy_joshua_2025/.RData
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/R35.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ODC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/PER.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ABCE1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/u17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB29.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/GSPT1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB53.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/RPL7A.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/16s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/UBE2K.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ADNP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/Rag1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB89.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ND1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/BDNF.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB59.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/COII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/OAZ1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/Spingen.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TGFB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/KIAA0398.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ATP8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB02.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/RPS14.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/EIF3M.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB73.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TARDBP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB82.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ATP6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ND2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/RPL4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/Rag2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/PSMA6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/SDHB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/NFIA005.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/GHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/CytB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/SGK1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/OAT.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ZFHX1B.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/PLXNA2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/12S.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/sod2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/PSMC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ZEB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/BMP2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/SNCAIP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ND4.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB81.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/RPL11.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/FSHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/COI.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TMPPE.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB07.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/CBX3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/SRP54.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB69.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ND3.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/HSPA8.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/18s.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/reln.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/PDCD10.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/HMGB2.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/HNFAL.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/VDAC1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/AHR.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/UBE2N.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/Cmos.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ZFP36.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/NGFB.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ND5.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/WTAP.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/anonymousLocusVIM.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/ND4L.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/SNX6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TRAF6.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/COIII.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/SMU1.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/TB49.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/POMC.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/Thesis/Tesis_Maestria/Tesis_Maestria_linux/FinalProject/FinalProject/Data/1_MolecularData/7_SustitutionModelByGen/VimVimetin.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_4/submissions/HW4_zlevoremily/.Rproj.user/6BECCA0C/viewer-cache/88A8C418.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_6/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_6/Clade_6_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_4/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_4/submissions/HW4_zlevoremily/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_3/Clade_3_allowed01.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/PrimeraCorrida/Clade_3/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_6/Clade_6_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_6/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_6/Clade_6_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_6/Clade_6_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_1/Clade_1_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_1/Clade_1_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_1/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_1/Clade_1_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Testudines/Testudines_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Testudines/Testudines_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_4/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_3/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_3/Clade_3_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_3/Clade_3_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_3/Clade_3_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_2/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_2/Clade_2_0.001.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_2/Clade_2_NONSTRATIFIED.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/TeceraCorrida/Clade_2/Clade_2_0.01.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/Example/Psychotria_DEC_M0_unconstrained_v1.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/Example/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_6/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/FinalProject/Process/8_Biogeography/SegundaCorrida/Clade_8/.RData
+/Volumes/dataMac2026/Mac10:20/LIFE/Congresos & Cursos/CongresoZoologiaGio/Nueva corrida/Estado ancestral+/estado/.RData
+/Volumes/dataMac2026/Mac10:20/LIFE/Congresos & Cursos/CongresoZoologiaGio/Nueva corrida/Estado ancestral+/estado/corridaaaaaaaa.RData
+/Volumes/dataMac2026/Mac10:20/LIFE/Congresos & Cursos/EvolutionMetting2024/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/Papers/Doc_TurtlePhylogeny/Figures/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/Papers/Doc_TurtlesBiogeo/Figures/100milloesfinal/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB17.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB53.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB73.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G7_Testudinata/Datación Testudinata/FinalProject/Piloto/Datos/Sin_Toxochelys/1_Datos_Moleculares/7_Calculo_de_Modelo/TB49.fas.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-manuscript/data/._Moen_S4_original.R
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-manuscript/data/Moen_S4_original.R
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-manuscript/data/._Moen_S2_tree.tre
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-manuscript/data/Moen_S2_tree.tre
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-manuscript/data/._Moen_S1_traits.csv
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-manuscript/data/Moen_S1_traits.csv
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_Shaw_Madison/Homework 3/.Rproj.user/ACF891D3/viewer-cache/833926E6.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_shavitz_aaron/homework_3/.Rproj.user/B334390/viewer-cache/64E31F62.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_shavitz_aaron/homework_3/.Rproj.user/B334390/viewer-cache/58BDE085.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_Shaw_Madison/Homework 3/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/._macroperforateForam.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/macroperforateForam.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/._kanto.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/kanto.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/._RaiaCopesRule.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/RaiaCopesRule.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/._graptDisparity.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/graptDisparity.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/._SongZhangDicrano.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/SongZhangDicrano.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/._graptPBDB.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/graptPBDB.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/._retiolitinae.rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/paleotree/data/retiolitinae.rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_VishalVerma/Assignment_Week3_VishalVerma(02.21.2025)/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_shavitz_aaron/homework_3/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/dataRetrieval/extdata/._temperatureAndFlow.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-codex-full/.guane-library/dataRetrieval/extdata/temperatureAndFlow.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_Leaning_Hunter/03_Leaning_Hunter_2025/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-Oldversions/GUANE/Guane260523/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_zlevoremily/Zlevor_HW3/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-Oldversions/GUANE/Guane_Old/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_kulak_tyler/data/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_kulak_tyler/.Rproj.user/3B3C7042/viewer-cache/AAF42FA6.Rdata
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework3/HM_Week3_kulak_tyler/.Rproj.user/3B3C7042/viewer-cache/B97F1DAE.Rdata
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-Oldversions/GUANE/Guane_Old/Guane_Old/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-Oldversions/GUANE/GuanePosters/LibroLiam/Data-Example Book/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-Oldversions/GUANE/Guane_Evolution2023/guane_Congreso/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_1/HW_Week1_TylerKulak/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_1/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-Oldversions/GUANE/Guane_Evolution2023/Guane/.RData
+/Volumes/dataMac2026/Mac10:20/PROJECTS/G4_PlatformsAndReproducibility/G4P3_Guane/Guane-Oldversions/GUANE/Guane.dev/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_1/HW_Week1_HunterLeaning/homework_01/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_1/HW_Week1_GenaMorin/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_1/HW_Week1_JoshuaDuddy/Week1_Duddy_Joshua_2025/.RData
+/Volumes/dataMac2026/Mac10:20/UmassClasses/2025_Spring/BIOL607/Homeworks/Homework_1/HW_Week1_KaitlynWilliams/.RData

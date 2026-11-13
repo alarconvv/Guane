@@ -70,7 +70,7 @@ guane_ltt_plot <- function(result,settings=guane_ltt_settings()) {
 guane_ltt_script <- function(tree,logarithmic=FALSE,lang='en',settings=NULL) {
  result<-if(is.data.frame(tree))tree else guane_ltt_run(tree)
  if(is.null(settings))settings<-guane_ltt_settings(logarithmic=logarithmic,lang=lang)
- c('# Guane LTT: saved curves and editable settings; no calibration or rate inference.',
+ c(guane_citation_comments('ltt',result,settings$lang),'# Guane LTT: saved curves and editable settings; no calibration or rate inference.',
  '# install.packages("ape")',paste0('# ape ',utils::packageVersion('ape')),
  guane_script_helpers(c('guane_ltt','guane_ltt_run','guane_ltt_settings','guane_ltt_plot','guane_text')),
  guane_r_assignment('result',result),guane_r_assignment('inputs',attr(result,'inputs')),guane_r_assignment('settings',settings),

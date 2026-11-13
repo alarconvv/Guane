@@ -1,0 +1,7 @@
+Original GUANE application: https://github.com/alarconvv/Guane
+Recorded HEAD: a9a2675ca3644e8a3c43a9ef020758c7b39ab81f
+Source copies in source/ are the evaluated numerical functions.
+Data: phytools 2.5-2, mammal.data and mammal.tree.
+Measurement units/values: Garland et al. 1993 Table 1, p.273, doi:10.1093/sysbio/42.3.265.
+All GUI and terminal execution evidence: 11 November 2026.
+No external archive or submission created.

@@ -1,0 +1,1379 @@
+{
+  "sha": "ec5143f86bb31e4898849b588e961369caaf5aba",
+  "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/ec5143f86bb31e4898849b588e961369caaf5aba",
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfe0770424b2a19faf507a501ebfc23be8f54e7b",
+      "size": 66,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/dfe0770424b2a19faf507a501ebfc23be8f54e7b"
+    },
+    {
+      "path": "LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ef2e0e9784e0785ca7df9d7a15c7b195579b520",
+      "size": 17067,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4ef2e0e9784e0785ca7df9d7a15c7b195579b520"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da01b83ddc8c43a82214abcb45bc4f08c6b583e1",
+      "size": 435,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/da01b83ddc8c43a82214abcb45bc4f08c6b583e1"
+    },
+    {
+      "path": "Revell.phytools-v2.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e5f234952bac4b34016ffc76c69bd10569bf079",
+      "size": 99385,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/9e5f234952bac4b34016ffc76c69bd10569bf079"
+    },
+    {
+      "path": "Revell.phytools-v2.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1e3ef450c8e9a858903c789bb256750b5de5864",
+      "size": 2921945,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/a1e3ef450c8e9a858903c789bb256750b5de5864"
+    },
+    {
+      "path": "butterfly.fitted_models.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e07a5cf7da050adde727304b528b7d88c8bcc33",
+      "size": 214107,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7e07a5cf7da050adde727304b528b7d88c8bcc33"
+    },
+    {
+      "path": "butterfly.simmap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8212b38e15749df2296012a3fff9a365c9a39917",
+      "size": 2092032,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/8212b38e15749df2296012a3fff9a365c9a39917"
+    },
+    {
+      "path": "evolution.csl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2353f6278fe9781c84dcba624980355da1f70b4c",
+      "size": 4967,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/2353f6278fe9781c84dcba624980355da1f70b4c"
+    },
+    {
+      "path": "liolaemid.mccr.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa6f8f96e81e0df1d0dd7e9389f8ec5e634e708",
+      "size": 7888,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4aa6f8f96e81e0df1d0dd7e9389f8ec5e634e708"
+    },
+    {
+      "path": "other-figs.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cadbbea6eb9b7bd553d4fbb7e825cd152327b535",
+      "size": 1628,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/cadbbea6eb9b7bd553d4fbb7e825cd152327b535"
+    },
+    {
+      "path": "pdfs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3c0b1e8a84ce2c69aacb712431165dd49123db7",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/c3c0b1e8a84ce2c69aacb712431165dd49123db7"
+    },
+    {
+      "path": "pdfs/Carballo.paper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7712eafc365fe8ee2d889d077707e03e3bb60c0",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/e7712eafc365fe8ee2d889d077707e03e3bb60c0"
+    },
+    {
+      "path": "pdfs/Carballo.paper/Accessions.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "504189d807fb4308a434db6bdb66617ab51a0d8d",
+      "size": 19120,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/504189d807fb4308a434db6bdb66617ab51a0d8d"
+    },
+    {
+      "path": "pdfs/Carballo.paper/Bats.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d969c3883e4e4218855a41aef363a06aa2bff6d",
+      "size": 1104,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/8d969c3883e4e4218855a41aef363a06aa2bff6d"
+    },
+    {
+      "path": "pdfs/Carballo.paper/Supplementary Table 1.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59443e2e7ee295d2e4df2f457058987642d24fdd",
+      "size": 19017,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/59443e2e7ee295d2e4df2f457058987642d24fdd"
+    },
+    {
+      "path": "pdfs/Carballo.paper/Supplementary Table 1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45c39ae74fb558380a24a2b8adbcfe63b452a64c",
+      "size": 693542,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/45c39ae74fb558380a24a2b8adbcfe63b452a64c"
+    },
+    {
+      "path": "pdfs/Carballo.paper/Supplementary Table 2.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "592f7a56be133afa637583a72c35049d02f1a5b0",
+      "size": 8057,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/592f7a56be133afa637583a72c35049d02f1a5b0"
+    },
+    {
+      "path": "pdfs/Carballo.paper/Supplementary Table 2.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b877a9401efea7629d013c2c678f6f22b397de49",
+      "size": 530224,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/b877a9401efea7629d013c2c678f6f22b397de49"
+    },
+    {
+      "path": "pdfs/Carballo.paper/bat-analysis.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "665c2f3f5fa4063cc601a66c854561cbccfe3098",
+      "size": 4576,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/665c2f3f5fa4063cc601a66c854561cbccfe3098"
+    },
+    {
+      "path": "pdfs/Carballo.paper/bat-analysis.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af565a55a594da7d12f7062b4f8c7719b03e47e1",
+      "size": 768874,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/af565a55a594da7d12f7062b4f8c7719b03e47e1"
+    },
+    {
+      "path": "pdfs/Carballo.paper/bat-analysis.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c46fe2748ee877b49ad51b2c06f7084d04aaac4",
+      "size": 217457,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4c46fe2748ee877b49ad51b2c06f7084d04aaac4"
+    },
+    {
+      "path": "pdfs/Carballo.paper/bat-betaCov-cophylo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1025b82111c19557d37588ef0a734178adacebc5",
+      "size": 64327,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/1025b82111c19557d37588ef0a734178adacebc5"
+    },
+    {
+      "path": "pdfs/Carballo.paper/betaCovs.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2dbe8766dd19dba9ca5023e5679af2b5f6d528d",
+      "size": 1247,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/b2dbe8766dd19dba9ca5023e5679af2b5f6d528d"
+    },
+    {
+      "path": "pdfs/Carballo.paper/spectrum.01411-22.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1884247638de6c5cfb4d58b75e09b1e71af9d53d",
+      "size": 1291697,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/1884247638de6c5cfb4d58b75e09b1e71af9d53d"
+    },
+    {
+      "path": "pdfs/fmicb-10-01139.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc4455ba7fb9a0f316304449632e05bc0a90befb",
+      "size": 3406259,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/dc4455ba7fb9a0f316304449632e05bc0a90befb"
+    },
+    {
+      "path": "pdfs/mammal.geog.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e42f18ec6596cb4090e9fd43d84d41a2e62bfcef",
+      "size": 2208,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/e42f18ec6596cb4090e9fd43d84d41a2e62bfcef"
+    },
+    {
+      "path": "pdfs/preprint_Shcherbakova_et_al_manuscript_combined_SM.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be1df6707878e2ce6b0cd39a4c5806f78fead64c",
+      "size": 1655364,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/be1df6707878e2ce6b0cd39a4c5806f78fead64c"
+    },
+    {
+      "path": "pdfs/s41564-019-0501-y.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b7f3adbf7a97d79179494333d1587cf5a5c8303",
+      "size": 3135107,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/5b7f3adbf7a97d79179494333d1587cf5a5c8303"
+    },
+    {
+      "path": "pdfs/s42523-022-00223-7.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7487e66238455fe1ef5e19abd67fb266db7f3eb0",
+      "size": 10440262,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7487e66238455fe1ef5e19abd67fb266db7f3eb0"
+    },
+    {
+      "path": "peerj",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76a9f44bf767c61a72f7ed06294b971b4f30c02b",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/76a9f44bf767c61a72f7ed06294b971b4f30c02b"
+    },
+    {
+      "path": "peerj/.Rhistory",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7123cdb09c91d8143cece652389cb3c582237178",
+      "size": 104670,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7123cdb09c91d8143cece652389cb3c582237178"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20427e5f714ca1bd3e50cce698cffa9302f2a6db",
+      "size": 2815095,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/20427e5f714ca1bd3e50cce698cffa9302f2a6db"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb4b1cee09fc125119cdf4b91bf82f27f6fc17f8",
+      "size": 191265,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/fb4b1cee09fc125119cdf4b91bf82f27f6fc17f8"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "787c566c54937e143d8578e5b2c61245be2f4f36",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/787c566c54937e143d8578e5b2c61245be2f4f36"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be837886746e2b7167c2454abceab7ab6bf0914b",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/be837886746e2b7167c2454abceab7ab6bf0914b"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/anc-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f15b8ad3c380ca806379dddc47ed3f8bd9fd5f6",
+      "size": 279403,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/1f15b8ad3c380ca806379dddc47ed3f8bd9fd5f6"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/anole-heatmap-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "feb08caed2588f534ac472a4315ccc9d1adbb250",
+      "size": 13542,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/feb08caed2588f534ac472a4315ccc9d1adbb250"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/bat-cophylo-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4691416f27b58cfc8509e2f30b998a0552419a32",
+      "size": 13210,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4691416f27b58cfc8509e2f30b998a0552419a32"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/cordylid-ace-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bbd023128545c311749ae7bc96d366b56d4d3d4",
+      "size": 27846,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/5bbd023128545c311749ae7bc96d366b56d4d3d4"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/cordylid-pd-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcaff03d77ad6222bce3dbc16d3d2a18eded15cf",
+      "size": 7274,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/bcaff03d77ad6222bce3dbc16d3d2a18eded15cf"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/densityMap-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92c0e5bb51b5a376b8f62f3a7d7a94cf1403b222",
+      "size": 81888,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/92c0e5bb51b5a376b8f62f3a7d7a94cf1403b222"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/liol-bd-3d-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa8bfe68c76a040e402427af642d59b50d6e975",
+      "size": 32437,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4aa8bfe68c76a040e402427af642d59b50d6e975"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/liol-ltt-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48e1a9c64be527e8142bf1da052c574bef0bcd3e",
+      "size": 12778,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/48e1a9c64be527e8142bf1da052c574bef0bcd3e"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/liol-mccr-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b573ecc08445eb8b9424010c92d456c5db772d6",
+      "size": 4731,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7b573ecc08445eb8b9424010c92d456c5db772d6"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/ltt-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f20dfa4608639945da3870c73267effecc8c145",
+      "size": 999081,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/8f20dfa4608639945da3870c73267effecc8c145"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/mammal-geog-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0501904b269e0001ff07e52fcf04143f806f27a",
+      "size": 461786,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/d0501904b269e0001ff07e52fcf04143f806f27a"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/multirateBM-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "307d93bf55283f7cd1ecb01afdeffae80f363159",
+      "size": 39584,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/307d93bf55283f7cd1ecb01afdeffae80f363159"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/num-changes-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00b21ca2bc2b50e13551d83648b090348b0ac20e",
+      "size": 5183,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/00b21ca2bc2b50e13551d83648b090348b0ac20e"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/ordered-ard-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2fbfe0db79a26e83b63ac21b8d3267ddb941753",
+      "size": 4730,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/b2fbfe0db79a26e83b63ac21b8d3267ddb941753"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/phylosig-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "823cb5d39d94dcb6c840b601ccba569d974c820c",
+      "size": 6059,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/823cb5d39d94dcb6c840b601ccba569d974c820c"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/posterior-probs-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "980da0b6ffdf7ccd8478f53f4e127bf2ac769ac6",
+      "size": 29453,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/980da0b6ffdf7ccd8478f53f4e127bf2ac769ac6"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/primate-edgewidth-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0550ec9e1e67fa488d472f59e66c2e29d1dc8469",
+      "size": 18427,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/0550ec9e1e67fa488d472f59e66c2e29d1dc8469"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/simmap-trees-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b429b3602f86b3da5c333100bf5c5369a668f336",
+      "size": 9372,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/b429b3602f86b3da5c333100bf5c5369a668f336"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/structure-polyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6ece8f5d734f34c5611e3dd298af1fc4858e587",
+      "size": 6252,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/a6ece8f5d734f34c5611e3dd298af1fc4858e587"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/trop-tree-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6af604c27156ae7fbeb73ba21b256639323d268",
+      "size": 380008,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/a6af604c27156ae7fbeb73ba21b256639323d268"
+    },
+    {
+      "path": "peerj/Revell.phytools-v2_peerj_files/figure-latex/vert-phylomorphospace-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e107a839b47b597893ea53f600a2a3ede978795b",
+      "size": 6247,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/e107a839b47b597893ea53f600a2a3ede978795b"
+    },
+    {
+      "path": "peerj/butterfly.fitted_models.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e07a5cf7da050adde727304b528b7d88c8bcc33",
+      "size": 214107,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7e07a5cf7da050adde727304b528b7d88c8bcc33"
+    },
+    {
+      "path": "peerj/butterfly.simmap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8212b38e15749df2296012a3fff9a365c9a39917",
+      "size": 2092032,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/8212b38e15749df2296012a3fff9a365c9a39917"
+    },
+    {
+      "path": "peerj/cordylid.ace.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad5fc28413d9fdefc8a11d64cbb667f3c89a0fad",
+      "size": 406,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ad5fc28413d9fdefc8a11d64cbb667f3c89a0fad"
+    },
+    {
+      "path": "peerj/cordylid.mcmc.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec1e82fb4ea1a39854753d688e85a69ba60c5a05",
+      "size": 1115787,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ec1e82fb4ea1a39854753d688e85a69ba60c5a05"
+    },
+    {
+      "path": "peerj/evolution.csl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2353f6278fe9781c84dcba624980355da1f70b4c",
+      "size": 4967,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/2353f6278fe9781c84dcba624980355da1f70b4c"
+    },
+    {
+      "path": "peerj/liolaemid.mccr.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa6f8f96e81e0df1d0dd7e9389f8ec5e634e708",
+      "size": 7888,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4aa6f8f96e81e0df1d0dd7e9389f8ec5e634e708"
+    },
+    {
+      "path": "peerj/peerj-reviewing-83297-v0.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c560a1e06884cd64c2a21783dbca52bd20cfa69",
+      "size": 3223824,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/8c560a1e06884cd64c2a21783dbca52bd20cfa69"
+    },
+    {
+      "path": "peerj/phytools-v2.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5daac82672153f2210753f24588200e32addb543",
+      "size": 186637,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/5daac82672153f2210753f24588200e32addb543"
+    },
+    {
+      "path": "peerj/primate.multirateBM.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee23e2079d6867dde7f9780eda991c88aa441c8",
+      "size": 442647,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/fee23e2079d6867dde7f9780eda991c88aa441c8"
+    },
+    {
+      "path": "peerj/revision",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a761cc334bccdb09ffd32f748e8ddf66a9bd87f",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/4a761cc334bccdb09ffd32f748e8ddf66a9bd87f"
+    },
+    {
+      "path": "peerj/revision/.Rhistory",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a2be88d23df587d44d29a777bf54ddcab824577",
+      "size": 17398,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7a2be88d23df587d44d29a777bf54ddcab824577"
+    },
+    {
+      "path": "peerj/revision/COLORSPACES.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d029eccbd3665cc415b23db100e92091a60ebcb",
+      "size": 876,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/3d029eccbd3665cc415b23db100e92091a60ebcb"
+    },
+    {
+      "path": "peerj/revision/CORRECTIONS.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94de24d2736934c2cdd622e7e98a3822649af799",
+      "size": 17456,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/94de24d2736934c2cdd622e7e98a3822649af799"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj-tracked.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5081e63756a6421d60182bee83eb517c0f07bcd",
+      "size": 3325756,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/f5081e63756a6421d60182bee83eb517c0f07bcd"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj-tracked.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1832c0b6ac1e0c250a0d96204d830cfce23b9413",
+      "size": 287269,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/1832c0b6ac1e0c250a0d96204d830cfce23b9413"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "779cd4c86261da0f618de0dcf9c3c20e0857ebd6",
+      "size": 129425,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/779cd4c86261da0f618de0dcf9c3c20e0857ebd6"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9d2bfa2cea5a9795b52aa18c91bba74b3ca659d",
+      "size": 2997872,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/d9d2bfa2cea5a9795b52aa18c91bba74b3ca659d"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb56c1d05492aa7332753b916f287c1baad394ad",
+      "size": 233935,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/cb56c1d05492aa7332753b916f287c1baad394ad"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f03c5f0a6c9168931a2f50c65216d9da51e76abe",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/f03c5f0a6c9168931a2f50c65216d9da51e76abe"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7fab2ec61a6699c20e9358837ddd19c23838f3dc",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/7fab2ec61a6699c20e9358837ddd19c23838f3dc"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig01-simmap-trees-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb9655f4c11d6f382553e546ae4b4c82a2986434",
+      "size": 9421,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/eb9655f4c11d6f382553e546ae4b4c82a2986434"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig02-posterior-probs-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f72f9d95fe61a59df1299664208cf830a63f763",
+      "size": 29453,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/0f72f9d95fe61a59df1299664208cf830a63f763"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig03-num-changes-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9169f783f106a34d6d960f28b1794d5e86bffdec",
+      "size": 5183,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/9169f783f106a34d6d960f28b1794d5e86bffdec"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig04-densityMap-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2dc27d32be6814ee04767c05a7b58f9dcda1488",
+      "size": 82614,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/a2dc27d32be6814ee04767c05a7b58f9dcda1488"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig05-structure-polyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9688cea94d7b715be32227618486cd0e4ec030ea",
+      "size": 6252,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/9688cea94d7b715be32227618486cd0e4ec030ea"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig06-ordered-ard-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d571ecb6a1193b5c35523850fb5357b3b92a3024",
+      "size": 4730,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/d571ecb6a1193b5c35523850fb5357b3b92a3024"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig07-anc-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfc6446aa587f42c6367184d268dbf820293022a",
+      "size": 278341,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/bfc6446aa587f42c6367184d268dbf820293022a"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig08-ltt-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a7a518c7e7cc9d51a8263186a3f0d0c333ac550",
+      "size": 1035503,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4a7a518c7e7cc9d51a8263186a3f0d0c333ac550"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig09-anc-fitHRM-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e98be67f7380fd5c2d4c8ee219eb0ebde6f1eefb",
+      "size": 497176,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/e98be67f7380fd5c2d4c8ee219eb0ebde6f1eefb"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig10-phylosig-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49197681d4e9f031b6c2563334e1f4c79c5afb74",
+      "size": 5983,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/49197681d4e9f031b6c2563334e1f4c79c5afb74"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig11-cordylid-ace-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78afcf98e7cb9a3099dd8ecd8fa5d1b9ae13896d",
+      "size": 27845,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/78afcf98e7cb9a3099dd8ecd8fa5d1b9ae13896d"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig12-cordylid-pd-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "504f771dc65831c29dfb26ab90ed29e2dac703d9",
+      "size": 7268,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/504f771dc65831c29dfb26ab90ed29e2dac703d9"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig13-trop-tree-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5173d92a9314463bc05caba6a37b95265ed6642",
+      "size": 380008,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/b5173d92a9314463bc05caba6a37b95265ed6642"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig14-primate-edgewidth-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9c1daa9e3994d8325ff326133bc8d6abefce8ee",
+      "size": 18437,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/d9c1daa9e3994d8325ff326133bc8d6abefce8ee"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig15-multirateBM-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45aac8bf452e5e9ad74971c67082524269d5e0ca",
+      "size": 39584,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/45aac8bf452e5e9ad74971c67082524269d5e0ca"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig16-elap-ltt-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5055546b975200ea1013883994e62251f831e5a5",
+      "size": 10522,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/5055546b975200ea1013883994e62251f831e5a5"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig17-elap-mccr-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed3d650d6a4a1755ff01c2f517b664964667e72b",
+      "size": 4746,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ed3d650d6a4a1755ff01c2f517b664964667e72b"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig18-liol-bd-3d-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c88f81f7e1d024ea026879c21abd50453bd04d0",
+      "size": 32461,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/6c88f81f7e1d024ea026879c21abd50453bd04d0"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig19-bat-cophylo-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e85107281a86015967d5388813f29cdfb86e8644",
+      "size": 13341,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/e85107281a86015967d5388813f29cdfb86e8644"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig20-tortoise-geog-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf46d9810f6c1613f8a636d78e845e6d6e4b4d54",
+      "size": 46669,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/cf46d9810f6c1613f8a636d78e845e6d6e4b4d54"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig21-vert-phylomorphospace-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eaf611fba6f6da193360f6652554f9dc986c685",
+      "size": 6247,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/5eaf611fba6f6da193360f6652554f9dc986c685"
+    },
+    {
+      "path": "peerj/revision/Revell.phytools-v2_peerj_files/figure-latex/fig22-anole-heatmap-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64934c0e3a742da1f20ed3445532c418e874b7f4",
+      "size": 13526,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/64934c0e3a742da1f20ed3445532c418e874b7f4"
+    },
+    {
+      "path": "peerj/revision/biorxiv.preprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a24c2d78e10b9af9a797641eb4df2adcf92bdae5",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/a24c2d78e10b9af9a797641eb4df2adcf92bdae5"
+    },
+    {
+      "path": "peerj/revision/biorxiv.preprint/2023.03.08.531791.full.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77a2e8bade664562d1a6f83af4021b85ad93fa5f",
+      "size": 3072021,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/77a2e8bade664562d1a6f83af4021b85ad93fa5f"
+    },
+    {
+      "path": "peerj/revision/butterfly.fitted_models.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e07a5cf7da050adde727304b528b7d88c8bcc33",
+      "size": 214107,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7e07a5cf7da050adde727304b528b7d88c8bcc33"
+    },
+    {
+      "path": "peerj/revision/butterfly.simmap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8212b38e15749df2296012a3fff9a365c9a39917",
+      "size": 2092032,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/8212b38e15749df2296012a3fff9a365c9a39917"
+    },
+    {
+      "path": "peerj/revision/cordylid.ace.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad5fc28413d9fdefc8a11d64cbb667f3c89a0fad",
+      "size": 406,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ad5fc28413d9fdefc8a11d64cbb667f3c89a0fad"
+    },
+    {
+      "path": "peerj/revision/cordylid.mcmc.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec1e82fb4ea1a39854753d688e85a69ba60c5a05",
+      "size": 1115787,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ec1e82fb4ea1a39854753d688e85a69ba60c5a05"
+    },
+    {
+      "path": "peerj/revision/elapidae.mccr.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b00bdef04321829f4862bfa0d03fa7b57885e09",
+      "size": 7806,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4b00bdef04321829f4862bfa0d03fa7b57885e09"
+    },
+    {
+      "path": "peerj/revision/elapidae.tre",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea44a2663ace4d655adb6c0e2181b4be3d399313",
+      "size": 6949,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ea44a2663ace4d655adb6c0e2181b4be3d399313"
+    },
+    {
+      "path": "peerj/revision/evolution.csl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2353f6278fe9781c84dcba624980355da1f70b4c",
+      "size": 4967,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/2353f6278fe9781c84dcba624980355da1f70b4c"
+    },
+    {
+      "path": "peerj/revision/liolaemid.hrm.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2e7fc4fcefa49d61a40b032520c6b235e7017ac",
+      "size": 642512,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/b2e7fc4fcefa49d61a40b032520c6b235e7017ac"
+    },
+    {
+      "path": "peerj/revision/liolaemid.mccr.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa6f8f96e81e0df1d0dd7e9389f8ec5e634e708",
+      "size": 7888,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4aa6f8f96e81e0df1d0dd7e9389f8ec5e634e708"
+    },
+    {
+      "path": "peerj/revision/mixColors.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c24a8be14790b8772ae64213c32c1e0228bb1918",
+      "size": 183,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/c24a8be14790b8772ae64213c32c1e0228bb1918"
+    },
+    {
+      "path": "peerj/revision/parity-mode.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b596c240be05f656e9c9c965738b9485b84fe983",
+      "size": 971340,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/b596c240be05f656e9c9c965738b9485b84fe983"
+    },
+    {
+      "path": "peerj/revision/peerj-reviewing-83297-v1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6374fe99ba64ce5dfa89bbcea295e25a621425af",
+      "size": 3323950,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/6374fe99ba64ce5dfa89bbcea295e25a621425af"
+    },
+    {
+      "path": "peerj/revision/phytools-v2.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0b2e6308f2b0b91233d01da4cfedb549e0811b6",
+      "size": 202181,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/f0b2e6308f2b0b91233d01da4cfedb549e0811b6"
+    },
+    {
+      "path": "peerj/revision/primate.multirateBM.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee23e2079d6867dde7f9780eda991c88aa441c8",
+      "size": 442647,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/fee23e2079d6867dde7f9780eda991c88aa441c8"
+    },
+    {
+      "path": "peerj/revision/response-to-managing-editor-comments.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3abc5178c020ce84fb2628695dd8037451cc2dbd",
+      "size": 19868,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/3abc5178c020ce84fb2628695dd8037451cc2dbd"
+    },
+    {
+      "path": "peerj/revision/response-to-managing-editor-comments.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0c3f3145658d8bb2a323570ec82240388e76f30",
+      "size": 188012,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/f0c3f3145658d8bb2a323570ec82240388e76f30"
+    },
+    {
+      "path": "peerj/revision/response-to-reviewer-comments.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57166a9016c6418617f84fd5d9252f75821ae61f",
+      "size": 48016,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/57166a9016c6418617f84fd5d9252f75821ae61f"
+    },
+    {
+      "path": "peerj/revision/response-to-reviewer-comments.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccfc3efd922c120180c6fa76df9100f24ee96e7d",
+      "size": 377723,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ccfc3efd922c120180c6fa76df9100f24ee96e7d"
+    },
+    {
+      "path": "peerj/revision/revision.2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6cf3dc28dee6505ae65db897fb772f309617ee8b",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/6cf3dc28dee6505ae65db897fb772f309617ee8b"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3d118c8ba22f1c6d7cd805f77e8a27ef7eb1ca1",
+      "size": 129851,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/a3d118c8ba22f1c6d7cd805f77e8a27ef7eb1ca1"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2edd1512670390557b4ea47fa16d1691116b61c8",
+      "size": 2964555,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/2edd1512670390557b4ea47fa16d1691116b61c8"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5df2a655379b6a11bf2537d48c48275fc0d5364",
+      "size": 235564,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/d5df2a655379b6a11bf2537d48c48275fc0d5364"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84284a23c380cf4f5f66413c5d393ead250775df",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/84284a23c380cf4f5f66413c5d393ead250775df"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6fa3a5fe5652b316d878d53c579e402760c5b4f1",
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/trees/6fa3a5fe5652b316d878d53c579e402760c5b4f1"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig01-simmap-trees-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dfb249ccfc94a0dbc54357dd44fb86af2955d7c",
+      "size": 9421,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/6dfb249ccfc94a0dbc54357dd44fb86af2955d7c"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig02-posterior-probs-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10f6aea66610db2a9b0809e9501e932841f16461",
+      "size": 29453,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/10f6aea66610db2a9b0809e9501e932841f16461"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig03-num-changes-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "838155b37570082e912a2235153cf2a3f234a942",
+      "size": 5183,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/838155b37570082e912a2235153cf2a3f234a942"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig04-densityMap-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "090e4c8cd6d10ff68b641fbcc16e2fc9c034df23",
+      "size": 82614,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/090e4c8cd6d10ff68b641fbcc16e2fc9c034df23"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig05-structure-polyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5df3eb79de01830cbd856f43bb7462a03ab8770d",
+      "size": 6252,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/5df3eb79de01830cbd856f43bb7462a03ab8770d"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig06-ordered-ard-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4a9a69b1d9d38cfdae9f1237670a326da10181b",
+      "size": 4730,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/e4a9a69b1d9d38cfdae9f1237670a326da10181b"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig07-anc-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18e78e518e373e7baf278b55427c036b9f5823a0",
+      "size": 278341,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/18e78e518e373e7baf278b55427c036b9f5823a0"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig08-ltt-fitpolyMk-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45798b8d82cea61a387d48f5ca9178b0159edebd",
+      "size": 1031843,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/45798b8d82cea61a387d48f5ca9178b0159edebd"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig09-anc-fitHRM-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ccad3c32ff8f6738b58ee2204346cb25f1c8f5c",
+      "size": 497176,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/8ccad3c32ff8f6738b58ee2204346cb25f1c8f5c"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig10-phylosig-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "422fa2e80becd8522e4ab74ac861b78ada6359ce",
+      "size": 5983,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/422fa2e80becd8522e4ab74ac861b78ada6359ce"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig11-cordylid-ace-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b554a50f6e51087b7194546452d102f16d34e9d",
+      "size": 27845,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/9b554a50f6e51087b7194546452d102f16d34e9d"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig12-cordylid-pd-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51aa7d6b237a80f648c7a8cdc01c2b9330092301",
+      "size": 7268,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/51aa7d6b237a80f648c7a8cdc01c2b9330092301"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig13-trop-tree-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2abcd37b258fb35dd9e2998839db782099c689a9",
+      "size": 380008,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/2abcd37b258fb35dd9e2998839db782099c689a9"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig14-primate-edgewidth-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2d649226e3884af592ff8df6bd5255a804d6e5c",
+      "size": 18437,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/e2d649226e3884af592ff8df6bd5255a804d6e5c"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig15-multirateBM-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d1c55475b28b45d1b8f85ef25341bd1dc658696",
+      "size": 39584,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/9d1c55475b28b45d1b8f85ef25341bd1dc658696"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig16-elap-ltt-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffdf94717baba85282432718f009f33c04e3f93f",
+      "size": 10522,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ffdf94717baba85282432718f009f33c04e3f93f"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig17-elap-mccr-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fd6b388eb12520fcdf54d5b1740b1523180230c",
+      "size": 4746,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/1fd6b388eb12520fcdf54d5b1740b1523180230c"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig18-liol-bd-3d-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d949ef407905f014066208679969a4d3265a621",
+      "size": 32461,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/2d949ef407905f014066208679969a4d3265a621"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig19-bat-cophylo-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "771e6e999bc0726d097b92508e32874f0d38e014",
+      "size": 13341,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/771e6e999bc0726d097b92508e32874f0d38e014"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig20-tortoise-geog-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8dd27156a14331d8909b9677d93f9e8ff9538ba",
+      "size": 15536,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/d8dd27156a14331d8909b9677d93f9e8ff9538ba"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig21-vert-phylomorphospace-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63eb6382cd87ec3e209700a5efafe33d0801b2b3",
+      "size": 6247,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/63eb6382cd87ec3e209700a5efafe33d0801b2b3"
+    },
+    {
+      "path": "peerj/revision/revision.2/Revell.phytools-v2_peerj_files/figure-latex/fig22-anole-heatmap-1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89c7b79c758e36f77753eb3e0c1b77438d3a1bd8",
+      "size": 13526,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/89c7b79c758e36f77753eb3e0c1b77438d3a1bd8"
+    },
+    {
+      "path": "peerj/revision/revision.2/butterfly.fitted_models.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e07a5cf7da050adde727304b528b7d88c8bcc33",
+      "size": 214107,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7e07a5cf7da050adde727304b528b7d88c8bcc33"
+    },
+    {
+      "path": "peerj/revision/revision.2/butterfly.simmap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8212b38e15749df2296012a3fff9a365c9a39917",
+      "size": 2092032,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/8212b38e15749df2296012a3fff9a365c9a39917"
+    },
+    {
+      "path": "peerj/revision/revision.2/cordylid.ace.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad5fc28413d9fdefc8a11d64cbb667f3c89a0fad",
+      "size": 406,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ad5fc28413d9fdefc8a11d64cbb667f3c89a0fad"
+    },
+    {
+      "path": "peerj/revision/revision.2/cordylid.mcmc.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec1e82fb4ea1a39854753d688e85a69ba60c5a05",
+      "size": 1115787,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/ec1e82fb4ea1a39854753d688e85a69ba60c5a05"
+    },
+    {
+      "path": "peerj/revision/revision.2/elapidae.mccr.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b00bdef04321829f4862bfa0d03fa7b57885e09",
+      "size": 7806,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4b00bdef04321829f4862bfa0d03fa7b57885e09"
+    },
+    {
+      "path": "peerj/revision/revision.2/evolution.csl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2353f6278fe9781c84dcba624980355da1f70b4c",
+      "size": 4967,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/2353f6278fe9781c84dcba624980355da1f70b4c"
+    },
+    {
+      "path": "peerj/revision/revision.2/liolaemid.hrm.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2e7fc4fcefa49d61a40b032520c6b235e7017ac",
+      "size": 642512,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/b2e7fc4fcefa49d61a40b032520c6b235e7017ac"
+    },
+    {
+      "path": "peerj/revision/revision.2/liolaemid.mccr.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa6f8f96e81e0df1d0dd7e9389f8ec5e634e708",
+      "size": 7888,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4aa6f8f96e81e0df1d0dd7e9389f8ec5e634e708"
+    },
+    {
+      "path": "peerj/revision/revision.2/phytools-v2.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0b2e6308f2b0b91233d01da4cfedb549e0811b6",
+      "size": 202181,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/f0b2e6308f2b0b91233d01da4cfedb549e0811b6"
+    },
+    {
+      "path": "peerj/revision/revision.2/primate.multirateBM.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee23e2079d6867dde7f9780eda991c88aa441c8",
+      "size": 442647,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/fee23e2079d6867dde7f9780eda991c88aa441c8"
+    },
+    {
+      "path": "peerj/revision/revision.2/sunfish.densityMap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af46ea125654fea538860a91106223cc8fa3668f",
+      "size": 28057,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/af46ea125654fea538860a91106223cc8fa3668f"
+    },
+    {
+      "path": "peerj/revision/revision.2/sunfish.simmap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7266d1a733a7cd92bd340ccd87eaa3db053646d8",
+      "size": 273692,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7266d1a733a7cd92bd340ccd87eaa3db053646d8"
+    },
+    {
+      "path": "peerj/revision/revision.2/wlpeerj.cls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3648ffd13609c2ba0965653e19a8013c9187afcd",
+      "size": 6200,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/3648ffd13609c2ba0965653e19a8013c9187afcd"
+    },
+    {
+      "path": "peerj/revision/sunfish.densityMap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af46ea125654fea538860a91106223cc8fa3668f",
+      "size": 28057,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/af46ea125654fea538860a91106223cc8fa3668f"
+    },
+    {
+      "path": "peerj/revision/sunfish.simmap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7266d1a733a7cd92bd340ccd87eaa3db053646d8",
+      "size": 273692,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7266d1a733a7cd92bd340ccd87eaa3db053646d8"
+    },
+    {
+      "path": "peerj/revision/wlpeerj.cls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3648ffd13609c2ba0965653e19a8013c9187afcd",
+      "size": 6200,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/3648ffd13609c2ba0965653e19a8013c9187afcd"
+    },
+    {
+      "path": "peerj/sunfish.densityMap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af46ea125654fea538860a91106223cc8fa3668f",
+      "size": 28057,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/af46ea125654fea538860a91106223cc8fa3668f"
+    },
+    {
+      "path": "peerj/sunfish.simmap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7266d1a733a7cd92bd340ccd87eaa3db053646d8",
+      "size": 273692,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7266d1a733a7cd92bd340ccd87eaa3db053646d8"
+    },
+    {
+      "path": "peerj/wlpeerj.cls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3648ffd13609c2ba0965653e19a8013c9187afcd",
+      "size": 6200,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/3648ffd13609c2ba0965653e19a8013c9187afcd"
+    },
+    {
+      "path": "phytools-v2.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f6c525f79ec7d4b847ba8c93a66634a8858f276",
+      "size": 186061,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/4f6c525f79ec7d4b847ba8c93a66634a8858f276"
+    },
+    {
+      "path": "primate.multirateBM.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee23e2079d6867dde7f9780eda991c88aa441c8",
+      "size": 442647,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/fee23e2079d6867dde7f9780eda991c88aa441c8"
+    },
+    {
+      "path": "rbook.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "370c7b21229f2bfc4c3fd2c952a9a564889460c0",
+      "size": 251792,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/370c7b21229f2bfc4c3fd2c952a9a564889460c0"
+    },
+    {
+      "path": "sunfish.densityMap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af46ea125654fea538860a91106223cc8fa3668f",
+      "size": 28057,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/af46ea125654fea538860a91106223cc8fa3668f"
+    },
+    {
+      "path": "sunfish.simmap.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7266d1a733a7cd92bd340ccd87eaa3db053646d8",
+      "size": 273692,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/7266d1a733a7cd92bd340ccd87eaa3db053646d8"
+    },
+    {
+      "path": "testing-citation.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "730e87117aaf85e25483013eca1d1003bbc9a8c0",
+      "size": 2404,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/730e87117aaf85e25483013eca1d1003bbc9a8c0"
+    },
+    {
+      "path": "testing-citation.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70266458ef0744d7eed8e948925a64fadfe82db5",
+      "size": 131572,
+      "url": "https://api.github.com/repos/liamrevell/Revell.phytools-v2/git/blobs/70266458ef0744d7eed8e948925a64fadfe82db5"
+    }
+  ],
+  "truncated": false
+}

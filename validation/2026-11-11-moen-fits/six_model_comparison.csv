@@ -1,0 +1,7 @@
+"Model","Parameters","LogLik","AIC","Finite","Boundary","StartSpread","Converged","Verified","Weight","DeltaAIC","AllStartsConverged","AllStartsVerified","BetterUnconverged","ElapsedSeconds","Interpretation"
+"full2",16,-6591.52084526561,13215.0416905312,TRUE,TRUE,3.13263092798479,TRUE,FALSE,NA,23.6599674356639,TRUE,FALSE,FALSE,25922.407,"Provisional optimization results; model weights withheld"
+"full3",14,-6589.12316071469,13206.2463214294,TRUE,TRUE,8.56097063331799,TRUE,FALSE,NA,14.864598333832,TRUE,FALSE,FALSE,25586.731,"Provisional optimization results; model weights withheld"
+"suicide4",14,-6581.69086154778,13191.3817230956,TRUE,TRUE,13.0817284430432,TRUE,FALSE,NA,0,TRUE,FALSE,FALSE,24380.545,"Provisional optimization results; model weights withheld"
+"suicide6",13,-6591.23230226903,13208.4646045381,TRUE,TRUE,18.6863565328404,TRUE,FALSE,NA,17.0828814424985,TRUE,FALSE,FALSE,12602.616,"Provisional optimization results; model weights withheld"
+"CID2",12,-6603.95284445752,13231.905688915,TRUE,TRUE,0.154273426687723,TRUE,FALSE,NA,40.523965819475,TRUE,FALSE,FALSE,8819.002,"Provisional optimization results; model weights withheld"
+"CID4",16,-6584.44852202048,13200.897044041,TRUE,TRUE,13.0149869440938,TRUE,FALSE,NA,9.51532094541108,TRUE,FALSE,FALSE,2984.19,"Provisional optimization results; model weights withheld"

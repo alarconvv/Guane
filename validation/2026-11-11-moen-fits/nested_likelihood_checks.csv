@@ -1,0 +1,10 @@
+"Parent","Submodel","LogLikDifference","Passed"
+"full2","full3",-2.39768455091598,FALSE
+"full2","suicide4",-9.82998371783196,FALSE
+"full2","suicide6",-0.288542996582692,FALSE
+"full2","CID2",12.4319991919056,TRUE
+"full3","suicide6",2.10914155433329,TRUE
+"full3","CID2",14.8296837428215,TRUE
+"suicide4","suicide6",9.54144072124927,TRUE
+"suicide4","CID2",22.2619829097375,TRUE
+"suicide6","CID2",12.7205421884883,TRUE

@@ -113,7 +113,7 @@ guane_musse_plot <- function(result,settings=guane_musse_settings()) {
 }
 guane_musse_script <- function(result,settings=guane_musse_settings()) {
  functions<-c('guane_sse_verification_plot','guane_sse_profile','guane_sse_profile_plot','guane_musse_profile','guane_ltt','guane_sse_backend','guane_sse_expand','guane_bisse_settings','guane_bisse_plot','guane_sse_parameters','guane_sse_constraint_groups','guane_sse_optimize','guane_musse_names','guane_musse_models','guane_musse_state_table','guane_musse_data','guane_musse_parameters','guane_musse_constraint','guane_musse_likelihood','guane_musse_fit','guane_musse_settings','guane_musse_plot','guane_text')
- c('# GUane MuSSE: saved results, original data, state coding and editable plotting settings.',
+ c(guane_citation_comments('musse',result,settings$lang),'# GUane MuSSE: saved results, original data, state coding and editable plotting settings.',
  '# Required packages: ape and diversitree. No GUane installation required.',paste('# Original diversitree version:',result$version),
  guane_script_helpers(functions),
  guane_r_assignment('result',result),guane_r_assignment('settings',settings),

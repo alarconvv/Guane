@@ -1,6 +1,6 @@
 guane_rates_script <- function(result,type='rates',model='Yule',parameter='lambda',palette='Guane',lang='en') {
  helpers<-c('guane_ltt','guane_rates_data','guane_rates_fit','guane_rates_profile','guane_rates_time','guane_rates_adequacy','guane_rates_diagnose','guane_rates_plot','guane_text')
- c('# Guane constant-rate crown-tree ML. Independent random extant-taxon sampling.',
+ c(guane_citation_comments('rates',result,lang),'# Guane constant-rate crown-tree ML. Independent random extant-taxon sampling.',
  '# install.packages(c("ape","diversitree"))',paste0('# diversitree ',result$version),
  '# Intervals: approximate normal curvature intervals; unavailable at boundaries/unstable curvature.',
  '# Likelihood slices hold the other rate fixed; they are not profile likelihood intervals.',

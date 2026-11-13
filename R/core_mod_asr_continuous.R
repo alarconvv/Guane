@@ -82,7 +82,7 @@ guane_asr_bm_plot <- function(result,type='map',palette='Guane',labels=TRUE,node
 
 guane_asr_bm_script <- function(result,type='map',palette='Guane',labels=TRUE,node_labels=FALSE,lang='en',appearance=list(),label_size=.7,parameter='sig2') {
  helpers<-c('guane_bayes_parameters','guane_bayes_controls','guane_bayes_diagnostics','guane_asr_bayes','guane_asr_graphics','guane_asr_colors','guane_asr_gradient','guane_asr_node_table','guane_asr_highlight','guane_asr_legend','guane_asr_density','guane_asr_covariance','guane_asr_gaussian','guane_asr_gaussian_compare','guane_asr_continuous_data','guane_asr_continuous','guane_asr_bm','guane_asr_bm_plot','guane_text')
- c('# Guane continuous ancestral reconstruction; engine and uncertainty are saved in result.',
+ c(guane_citation_comments('continuous',result,lang),'# Guane continuous ancestral reconstruction; engine and uncertainty are saved in result.',
  '# install.packages(c("ape","phytools","coda","jsonlite"))',
  '# Uncertainty and likelihood basis are stored in result$uncertainty and result$likelihood_basis. No AIC ranking across engines.',
  '# Branch colors/phenogram lines interpolate estimates; they are not sampled evolutionary histories.',

@@ -1,0 +1,1205 @@
+{
+  "sha": "b87f19474d950f3e935bc279b6e16b54d098be7f",
+  "url": "https://api.github.com/repos/cran/hisse/git/trees/b87f19474d950f3e935bc279b6e16b54d098be7f",
+  "tree": [
+    {
+      "path": "DESCRIPTION",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "444fc5f460a662592e173df7c5fb80713b2c908c",
+      "size": 1100,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/444fc5f460a662592e173df7c5fb80713b2c908c"
+    },
+    {
+      "path": "MD5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61bf733fb6f7e651deb5735fbb47998b810b14c0",
+      "size": 8307,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/61bf733fb6f7e651deb5735fbb47998b810b14c0"
+    },
+    {
+      "path": "NAMESPACE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83fa8c9d3bf07b6e00d8a96d680cd3311b423644",
+      "size": 2078,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/83fa8c9d3bf07b6e00d8a96d680cd3311b423644"
+    },
+    {
+      "path": "R",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8eeb487c1dd48475e858ba8591d7a014137346a",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/a8eeb487c1dd48475e858ba8591d7a014137346a"
+    },
+    {
+      "path": "R/FindGenerations.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ad5e7be77a5625679ad9dc4d48e2f91fc9efaa1",
+      "size": 738,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/1ad5e7be77a5625679ad9dc4d48e2f91fc9efaa1"
+    },
+    {
+      "path": "R/GenerateValues.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd80753b64db5c82b015185bfb4f5af415094bd2",
+      "size": 1092,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/dd80753b64db5c82b015185bfb4f5af415094bd2"
+    },
+    {
+      "path": "R/GetModelWeight.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c74903f1eb0b8bced0919f8172374ec15de6d185",
+      "size": 1537,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/c74903f1eb0b8bced0919f8172374ec15de6d185"
+    },
+    {
+      "path": "R/bisse2hisse.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72075e2730a426fc0c4ac64b7c56327269e7553a",
+      "size": 327,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/72075e2730a426fc0c4ac64b7c56327269e7553a"
+    },
+    {
+      "path": "R/fgeohisse.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5b150ebb2b0df02a8b56a1d4ebdb10a2ab261f6d",
+      "size": 109960,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/5b150ebb2b0df02a8b56a1d4ebdb10a2ab261f6d"
+    },
+    {
+      "path": "R/fhisse.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "45c249dba5c7cf8ac240774b51bd334cba4c5247",
+      "size": 39631,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/45c249dba5c7cf8ac240774b51bd334cba4c5247"
+    },
+    {
+      "path": "R/geohisse.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d1978026b1cd46ceb3f80717ee6c4583bd8d8f2",
+      "size": 86937,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/9d1978026b1cd46ceb3f80717ee6c4583bd8d8f2"
+    },
+    {
+      "path": "R/geohisseLikelihood.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d6e9b6ee0d3d358f55b3a1e5c9e3645c084e790",
+      "size": 11427,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/1d6e9b6ee0d3d358f55b3a1e5c9e3645c084e790"
+    },
+    {
+      "path": "R/getModelAveEqFreqs.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "84e9a9f1337ee62cbfd0cb4786a8f8f7d6e37645",
+      "size": 62586,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/84e9a9f1337ee62cbfd0cb4786a8f8f7d6e37645"
+    },
+    {
+      "path": "R/getModelAveTipRates.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94f516fe428098b032b4224927e7b077c6c06c1d",
+      "size": 9186,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/94f516fe428098b032b4224927e7b077c6c06c1d"
+    },
+    {
+      "path": "R/hisse.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a463f1a1baac6f45062b153b1cfcb6b2162ba987",
+      "size": 47545,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/a463f1a1baac6f45062b153b1cfcb6b2162ba987"
+    },
+    {
+      "path": "R/hisseLikelihood.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4658feb854d2eb35e7d2696fa6a6f97b94e7e0d8",
+      "size": 8737,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/4658feb854d2eb35e7d2696fa6a6f97b94e7e0d8"
+    },
+    {
+      "path": "R/hisseNull4.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f9d2ae0cfe5ccd54adc1d51368ab4d26a8ba957f",
+      "size": 37948,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/f9d2ae0cfe5ccd54adc1d51368ab4d26a8ba957f"
+    },
+    {
+      "path": "R/marginRecon.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63177794d69673c4b3d9939835591d2a209de279",
+      "size": 52843,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/63177794d69673c4b3d9939835591d2a209de279"
+    },
+    {
+      "path": "R/misse.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f66467c6c23f673dbb222cc3d866a5af090ba64",
+      "size": 47126,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/9f66467c6c23f673dbb222cc3d866a5af090ba64"
+    },
+    {
+      "path": "R/muhisse.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "218f9cdda84e011a439ddc3fec8c1c22a9040913",
+      "size": 99870,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/218f9cdda84e011a439ddc3fec8c1c22a9040913"
+    },
+    {
+      "path": "R/plotContMapHiSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e56f9c738e4ea8af7d694aa0827954f868cdb04",
+      "size": 20889,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/3e56f9c738e4ea8af7d694aa0827954f868cdb04"
+    },
+    {
+      "path": "R/plotHisse.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7f267809b32fba318976d60600db26cadb53031",
+      "size": 55842,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/e7f267809b32fba318976d60600db26cadb53031"
+    },
+    {
+      "path": "R/simulateGeoHiSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ffee88fb790031bccc54bf3cc8a57954742cb60",
+      "size": 15024,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/3ffee88fb790031bccc54bf3cc8a57954742cb60"
+    },
+    {
+      "path": "R/simulateHisse.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b90f1448ea6ab2ba8425fc04576ad5f8fd687275",
+      "size": 11348,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/b90f1448ea6ab2ba8425fc04576ad5f8fd687275"
+    },
+    {
+      "path": "R/singleModels.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "239849903b8de2b3100b3611842ea0c8e51805fe",
+      "size": 604,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/239849903b8de2b3100b3611842ea0c8e51805fe"
+    },
+    {
+      "path": "R/summarizeHisse.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f533f567280e053f8ee0f866934ee6980b27bd6",
+      "size": 561,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/6f533f567280e053f8ee0f866934ee6980b27bd6"
+    },
+    {
+      "path": "R/supportRegion.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7f20789b8529bc7db35326ed4ca49f3b4bc3022c",
+      "size": 25521,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/7f20789b8529bc7db35326ed4ca49f3b4bc3022c"
+    },
+    {
+      "path": "R/supportRegionGeoSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4cf139e5d21e6d5d818a81286b2c2cc358f195d",
+      "size": 11756,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/f4cf139e5d21e6d5d818a81286b2c2cc358f195d"
+    },
+    {
+      "path": "R/supportRegionMiSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5522ddad4defe5475aac743b2e4233300973ef97",
+      "size": 7920,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/5522ddad4defe5475aac743b2e4233300973ef97"
+    },
+    {
+      "path": "R/supportRegionMuHiSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f77452ff94dcd4ee61e1b04df88a3676535b220d",
+      "size": 11727,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/f77452ff94dcd4ee61e1b04df88a3676535b220d"
+    },
+    {
+      "path": "R/supportRegionfHiSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "992150e7cd3a21cf5f5735d39305b675783a4ded",
+      "size": 7886,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/992150e7cd3a21cf5f5735d39305b675783a4ded"
+    },
+    {
+      "path": "R/transMat.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb118346d86356486994845d6bfee2b4d875872",
+      "size": 4572,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/edb118346d86356486994845d6bfee2b4d875872"
+    },
+    {
+      "path": "R/transMatGeoHiSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0144bc76af5669a3faf980f875a6d625605c4d88",
+      "size": 15090,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/0144bc76af5669a3faf980f875a6d625605c4d88"
+    },
+    {
+      "path": "R/transMatMuHiSSE.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2639631ef3e10c27ffbbcb782ba1e22149110ee5",
+      "size": 71287,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/2639631ef3e10c27ffbbcb782ba1e22149110ee5"
+    },
+    {
+      "path": "R/transMatfGeoHiSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac5eeb7f9d4c9bd89d2470cc42af83624fcf202d",
+      "size": 27803,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/ac5eeb7f9d4c9bd89d2470cc42af83624fcf202d"
+    },
+    {
+      "path": "R/transMatfHiSSE.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99571e0d7a8923dbb45a1e0e0e8c2d498aff13fe",
+      "size": 8175,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/99571e0d7a8923dbb45a1e0e0e8c2d498aff13fe"
+    },
+    {
+      "path": "build",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ddf247dd15d3d11853e8d62763d4b805ef91239",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/7ddf247dd15d3d11853e8d62763d4b805ef91239"
+    },
+    {
+      "path": "build/vignette.rds",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28b4ce28f2f8620ed59983972b4573d5632ba732",
+      "size": 386,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/28b4ce28f2f8620ed59983972b4573d5632ba732"
+    },
+    {
+      "path": "inst",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a330a68c14e3ecaa9792c3b1a1696ee269eb13b",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/9a330a68c14e3ecaa9792c3b1a1696ee269eb13b"
+    },
+    {
+      "path": "inst/CITATION",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d01bfc318458b45cb4618c43c09ddcb847be7e",
+      "size": 817,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/42d01bfc318458b45cb4618c43c09ddcb847be7e"
+    },
+    {
+      "path": "inst/doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6dbad317e508623b5307989e084a597fea4da162",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/6dbad317e508623b5307989e084a597fea4da162"
+    },
+    {
+      "path": "inst/doc/Clade-specific-sampling.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbb7687fe6f0ea3d0bf3711cd1c5d49a6179fa8d",
+      "size": 2272,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/fbb7687fe6f0ea3d0bf3711cd1c5d49a6179fa8d"
+    },
+    {
+      "path": "inst/doc/Clade-specific-sampling.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfd46e62854a91a9bb0d1128060bd244028b276f",
+      "size": 7159,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/cfd46e62854a91a9bb0d1128060bd244028b276f"
+    },
+    {
+      "path": "inst/doc/Clade-specific-sampling.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0ffb1f5fea808b843632f902a037f6f9f75d666",
+      "size": 189089,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/d0ffb1f5fea808b843632f902a037f6f9f75d666"
+    },
+    {
+      "path": "inst/doc/GeoHiSSE-vignette.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "743f683a85f8e63690e9014ddd98119190880d7a",
+      "size": 5989,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/743f683a85f8e63690e9014ddd98119190880d7a"
+    },
+    {
+      "path": "inst/doc/GeoHiSSE-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65efd555c71f0166538a4df3b9f37bd91c2abaa0",
+      "size": 14898,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/65efd555c71f0166538a4df3b9f37bd91c2abaa0"
+    },
+    {
+      "path": "inst/doc/GeoHiSSE-vignette.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24b0fff0884efdd9d12c33ecd7c68fbbfd60a5cd",
+      "size": 335059,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/24b0fff0884efdd9d12c33ecd7c68fbbfd60a5cd"
+    },
+    {
+      "path": "inst/doc/MiSSE-vignette.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcc682b9bf4ff92b911f29357bd25b4755e7888e",
+      "size": 6323,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/dcc682b9bf4ff92b911f29357bd25b4755e7888e"
+    },
+    {
+      "path": "inst/doc/MiSSE-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261f3a9a167dbc92bd8489ce866b6b26bb3553e3",
+      "size": 22571,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/261f3a9a167dbc92bd8489ce866b6b26bb3553e3"
+    },
+    {
+      "path": "inst/doc/MiSSE-vignette.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9a7669a9d36234c3b22a4c562813231040e5aad",
+      "size": 319239,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/b9a7669a9d36234c3b22a4c562813231040e5aad"
+    },
+    {
+      "path": "inst/doc/MuHiSSE-vignette.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea7b290f718727dbaafc6c7639f275a156490ae5",
+      "size": 11614,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/ea7b290f718727dbaafc6c7639f275a156490ae5"
+    },
+    {
+      "path": "inst/doc/MuHiSSE-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a62545a25c76f6c607a134a20e0bd5363f140dac",
+      "size": 21750,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/a62545a25c76f6c607a134a20e0bd5363f140dac"
+    },
+    {
+      "path": "inst/doc/MuHiSSE-vignette.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0068d3dce78848965d0841d6bc9740b174a58563",
+      "size": 223201,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/0068d3dce78848965d0841d6bc9740b174a58563"
+    },
+    {
+      "path": "inst/doc/hisse-fisse-type1-vignette.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1bf41840fd8cd727ab3e411696bc16f3ceb24c2",
+      "size": 13405,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/f1bf41840fd8cd727ab3e411696bc16f3ceb24c2"
+    },
+    {
+      "path": "inst/doc/hisse-fisse-type1-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "906ece9eb27792398a92bdb4d54de632509b4318",
+      "size": 37221,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/906ece9eb27792398a92bdb4d54de632509b4318"
+    },
+    {
+      "path": "inst/doc/hisse-fisse-type1-vignette.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6ddbb0f8342206e709bb70deac6708872b79e82",
+      "size": 281003,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/c6ddbb0f8342206e709bb70deac6708872b79e82"
+    },
+    {
+      "path": "inst/doc/hisse-vignette.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91d98b773e4748c6e2137c3f420b63ef5af23e38",
+      "size": 6888,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/91d98b773e4748c6e2137c3f420b63ef5af23e38"
+    },
+    {
+      "path": "inst/doc/hisse-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "786e858cdddc0ce26f9fd2ed14ba4e27e703f389",
+      "size": 20245,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/786e858cdddc0ce26f9fd2ed14ba4e27e703f389"
+    },
+    {
+      "path": "inst/doc/hisse-vignette.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9be65955d2e5b4d2a00be76d0500f0f6124fd621",
+      "size": 382906,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/9be65955d2e5b4d2a00be76d0500f0f6124fd621"
+    },
+    {
+      "path": "inst/extdata",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a5caf0ecd59cd6c75868e2613fa1621c8688bcc",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/1a5caf0ecd59cd6c75868e2613fa1621c8688bcc"
+    },
+    {
+      "path": "inst/extdata/conifers_reconlist.rda",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ccdce17bfac0ef5ea2b39ac1e4d4cdd8227dc87",
+      "size": 1241552,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/5ccdce17bfac0ef5ea2b39ac1e4d4cdd8227dc87"
+    },
+    {
+      "path": "man",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb9cdcbce71b0457f6942fcee8d7346fd70add97",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/eb9cdcbce71b0457f6942fcee8d7346fd70add97"
+    },
+    {
+      "path": "man/GeoHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "026e6e5b4c64775ac627f42682aebc5dc322a05b",
+      "size": 11305,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/026e6e5b4c64775ac627f42682aebc5dc322a05b"
+    },
+    {
+      "path": "man/GetAICWeights.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5387dfcb45116ab08ac080761c6990a61480f8ba",
+      "size": 738,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/5387dfcb45116ab08ac080761c6990a61480f8ba"
+    },
+    {
+      "path": "man/MiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91f6b6eee10461e05917f2acdd8ee97e7c96f866",
+      "size": 9429,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/91f6b6eee10461e05917f2acdd8ee97e7c96f866"
+    },
+    {
+      "path": "man/MiSSEGreedy.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fbb41dacc7bc4abd46e14ae4d7d06111d1af242",
+      "size": 9712,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/6fbb41dacc7bc4abd46e14ae4d7d06111d1af242"
+    },
+    {
+      "path": "man/MuHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a9067b6119a2bb5aa9e82cc1e048689e56af75a",
+      "size": 11848,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/3a9067b6119a2bb5aa9e82cc1e048689e56af75a"
+    },
+    {
+      "path": "man/SimulateGeoHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4da00faac4f7445b374ff366acac5a251c7aafc",
+      "size": 3525,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/d4da00faac4f7445b374ff366acac5a251c7aafc"
+    },
+    {
+      "path": "man/TranslateParsMakerGeoHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "296aff490dc28f1e616140ee60adc048deaf17b9",
+      "size": 1176,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/296aff490dc28f1e616140ee60adc048deaf17b9"
+    },
+    {
+      "path": "man/bisse2hisse.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed72243e212cd4252d5b336269980aa293e34a9f",
+      "size": 1009,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/ed72243e212cd4252d5b336269980aa293e34a9f"
+    },
+    {
+      "path": "man/fGeoHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2cc54f307a0781bbf8396b5611021d89710b432",
+      "size": 11743,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/b2cc54f307a0781bbf8396b5611021d89710b432"
+    },
+    {
+      "path": "man/generateMiSSEGreedyCombinations.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecbeee3d3c0c538a178eb64c55980bf513c70c62",
+      "size": 5830,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/ecbeee3d3c0c538a178eb64c55980bf513c70c62"
+    },
+    {
+      "path": "man/hisse.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "715ad32e99bd9b62092dbb0d736a7654590a45a9",
+      "size": 12435,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/715ad32e99bd9b62092dbb0d736a7654590a45a9"
+    },
+    {
+      "path": "man/hisse.new.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbb33e94fe98aa5821f1018628027418c4e153cc",
+      "size": 7328,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/bbb33e94fe98aa5821f1018628027418c4e153cc"
+    },
+    {
+      "path": "man/hisseNull4.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f22d8ae03be0cdff7ba05d2b164ac2f1c713c713",
+      "size": 8510,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/f22d8ae03be0cdff7ba05d2b164ac2f1c713c713"
+    },
+    {
+      "path": "man/makeGeoHiSSELikelihood.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "335fa3776a06c375013a7c2c0a120c7bdb200131",
+      "size": 4832,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/335fa3776a06c375013a7c2c0a120c7bdb200131"
+    },
+    {
+      "path": "man/makeHiSSELikelihood.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b8272f129f1fc22cf21ddb5aa46f4d5c8efe5d",
+      "size": 4889,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/e3b8272f129f1fc22cf21ddb5aa46f4d5c8efe5d"
+    },
+    {
+      "path": "man/marginRecon.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c01426599693e35e10e3600d64ba94c254dbc896",
+      "size": 5264,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/c01426599693e35e10e3600d64ba94c254dbc896"
+    },
+    {
+      "path": "man/marginReconGeoSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b00314b589b3ef317517512883432a67da93d64c",
+      "size": 5154,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/b00314b589b3ef317517512883432a67da93d64c"
+    },
+    {
+      "path": "man/marginReconMiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcae23ba7c98925d96a4888ffc47572c04514c72",
+      "size": 3975,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/dcae23ba7c98925d96a4888ffc47572c04514c72"
+    },
+    {
+      "path": "man/marginReconMuHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ba4d7d494d7b260edfd2f555418366c9a8a605c",
+      "size": 5560,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/3ba4d7d494d7b260edfd2f555418366c9a8a605c"
+    },
+    {
+      "path": "man/marginReconfGeoSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "618a69a2dd0b661e4fa4f818eac8e3a0c59d8a8b",
+      "size": 5455,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/618a69a2dd0b661e4fa4f818eac8e3a0c59d8a8b"
+    },
+    {
+      "path": "man/marginReconfHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdcff9ea64951e3cbf1510ca006ea0408fc367d6",
+      "size": 4203,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/cdcff9ea64951e3cbf1510ca006ea0408fc367d6"
+    },
+    {
+      "path": "man/modelAveEqFreqs.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9840ea878cf39a1f7d0c9e461d04c3c94c12021c",
+      "size": 2175,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/9840ea878cf39a1f7d0c9e461d04c3c94c12021c"
+    },
+    {
+      "path": "man/modelAveRates.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2786d36d69aa16a75dcfdede2ce26832d25882fc",
+      "size": 2460,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/2786d36d69aa16a75dcfdede2ce26832d25882fc"
+    },
+    {
+      "path": "man/plotGeoHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df36b3c6ca25bc95a24deab4d05d344110d3e3df",
+      "size": 3418,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/df36b3c6ca25bc95a24deab4d05d344110d3e3df"
+    },
+    {
+      "path": "man/plotHisse.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80c01c50ca14ff2b27d2283c4aa6a589f6b49d4c",
+      "size": 5420,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/80c01c50ca14ff2b27d2283c4aa6a589f6b49d4c"
+    },
+    {
+      "path": "man/plotMiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fce2e4bf0c20073fde3379b57d6d93ebef2aecee",
+      "size": 3337,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/fce2e4bf0c20073fde3379b57d6d93ebef2aecee"
+    },
+    {
+      "path": "man/plotMuHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "134fdb6100cd6b1fe469861cf58d06152c19550f",
+      "size": 3342,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/134fdb6100cd6b1fe469861cf58d06152c19550f"
+    },
+    {
+      "path": "man/simToPhylo.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b40b9e0a48bc909bf9881c53e838b77dec2f10a",
+      "size": 1737,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/2b40b9e0a48bc909bf9881c53e838b77dec2f10a"
+    },
+    {
+      "path": "man/simulateHisse.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a474e0e5d6d0b325e0f943c61626a4c17171d0",
+      "size": 5657,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/e0a474e0e5d6d0b325e0f943c61626a4c17171d0"
+    },
+    {
+      "path": "man/supportRegion.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb3da43fc82a636a8ae07c2ccfdbb7a9d905a0a1",
+      "size": 4274,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/eb3da43fc82a636a8ae07c2ccfdbb7a9d905a0a1"
+    },
+    {
+      "path": "man/supportRegionGeoSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c6990e5867121acc27f0b55cc98f73794a3eb56",
+      "size": 3324,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/4c6990e5867121acc27f0b55cc98f73794a3eb56"
+    },
+    {
+      "path": "man/supportRegionMiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8779801bcba01ce9e514f46d540e817195f43f62",
+      "size": 3309,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/8779801bcba01ce9e514f46d540e817195f43f62"
+    },
+    {
+      "path": "man/supportRegionMuHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12796ca76c68234b761e4dc26004fd9aa4f4d5ae",
+      "size": 3508,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/12796ca76c68234b761e4dc26004fd9aa4f4d5ae"
+    },
+    {
+      "path": "man/supportRegionfHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6958611b68075e49502c70ce102a5c8520e3a1ca",
+      "size": 2438,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/6958611b68075e49502c70ce102a5c8520e3a1ca"
+    },
+    {
+      "path": "man/transMat.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "800351fc4c69f52a6ea1d9dfcce70f0d12c2f0fb",
+      "size": 1072,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/800351fc4c69f52a6ea1d9dfcce70f0d12c2f0fb"
+    },
+    {
+      "path": "man/transMatMakerGeoHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3e54f0bda6943f809686be48fb9174f7f1294e6",
+      "size": 1381,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/e3e54f0bda6943f809686be48fb9174f7f1294e6"
+    },
+    {
+      "path": "man/transMatMakerMuHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f30278d275b340963efda69d1d2d0d5f824aa02",
+      "size": 1314,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/8f30278d275b340963efda69d1d2d0d5f824aa02"
+    },
+    {
+      "path": "man/transMatMakerfHiSSE.Rd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d7056bc01fe02b3c4cb3ee975cf735f7e4082c9",
+      "size": 1191,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/9d7056bc01fe02b3c4cb3ee975cf735f7e4082c9"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89ee7c93ae392943fdaba0f40dabe45cb8bfecdc",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/89ee7c93ae392943fdaba0f40dabe45cb8bfecdc"
+    },
+    {
+      "path": "src/Makevars",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4615b619cc139be473f47e20b3a41ba50296b3d7",
+      "size": 47,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/4615b619cc139be473f47e20b3a41ba50296b3d7"
+    },
+    {
+      "path": "src/bisse-ext-derivs.c",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2094d39954335895131279e1bab4cce11684b4ec",
+      "size": 16299,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/2094d39954335895131279e1bab4cce11684b4ec"
+    },
+    {
+      "path": "src/canonical-musse-ext-derivs.c",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9a74c8c5f1b4e098ffcb72bf24577ffc26f0e904",
+      "size": 2703,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/9a74c8c5f1b4e098ffcb72bf24577ffc26f0e904"
+    },
+    {
+      "path": "src/canonical_geosse-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08a1c889a364483e8a7a5eea74ddcc2ff12194bd",
+      "size": 3949,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/08a1c889a364483e8a7a5eea74ddcc2ff12194bd"
+    },
+    {
+      "path": "src/fbisse-ext-derivs.c",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8c624aab29e25b3a5f7f085cfe83abe03455c421",
+      "size": 1097,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/8c624aab29e25b3a5f7f085cfe83abe03455c421"
+    },
+    {
+      "path": "src/fcanonical_geosse-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8614da499a4511901b37f5b61e07c1a29d4fd82",
+      "size": 3964,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/a8614da499a4511901b37f5b61e07c1a29d4fd82"
+    },
+    {
+      "path": "src/fgeohisse-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e5f4b9a54934c21411c3fafd4a50f55f00ae187",
+      "size": 39094,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/3e5f4b9a54934c21411c3fafd4a50f55f00ae187"
+    },
+    {
+      "path": "src/fhisse-ext-derivs.c",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b20f9ecaff840f0ad544c784d7c3fc360009af3e",
+      "size": 4694,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/b20f9ecaff840f0ad544c784d7c3fc360009af3e"
+    },
+    {
+      "path": "src/fnotclasse-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db61bdf10a76a200f1e4af648c97f504afcb56a3",
+      "size": 2146,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/db61bdf10a76a200f1e4af648c97f504afcb56a3"
+    },
+    {
+      "path": "src/fnotclasse-more-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7448a368fedc89d564b1f2220f1ca5015e32a740",
+      "size": 38200,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/7448a368fedc89d564b1f2220f1ca5015e32a740"
+    },
+    {
+      "path": "src/geohisse-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb9c93fdfcf70efe8a960bfbdd6da964ec99d04a",
+      "size": 13909,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/eb9c93fdfcf70efe8a960bfbdd6da964ec99d04a"
+    },
+    {
+      "path": "src/hisse-ext-derivs.c",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "32c21f7d35d6190e79392ffd7622cb4aa9fc84bc",
+      "size": 38155,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/32c21f7d35d6190e79392ffd7622cb4aa9fc84bc"
+    },
+    {
+      "path": "src/hissenull-ext-derivs.c",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0aaeb005900b7ccf8882f38f346eba1e61a83998",
+      "size": 21205,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/0aaeb005900b7ccf8882f38f346eba1e61a83998"
+    },
+    {
+      "path": "src/misse-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23888278bdaac966cb8eb04583ec46ada3d75a85",
+      "size": 38555,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/23888278bdaac966cb8eb04583ec46ada3d75a85"
+    },
+    {
+      "path": "src/muhisse-ext-derivs.c",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5400c4f146bbebee039992ce64ff52902a695edd",
+      "size": 38015,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/5400c4f146bbebee039992ce64ff52902a695edd"
+    },
+    {
+      "path": "src/notclasse-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9651ce137da7888abde8e5d149ca6863e16a614d",
+      "size": 2129,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/9651ce137da7888abde8e5d149ca6863e16a614d"
+    },
+    {
+      "path": "src/notclasse-more-ext-derivs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "794d4cd5c372720625bd04dddd10c06c63602c64",
+      "size": 13624,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/794d4cd5c372720625bd04dddd10c06c63602c64"
+    },
+    {
+      "path": "src/registerDynamicSymbol.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "411a553841edd051f5cc679d6ee3a63009aa0c9d",
+      "size": 6428,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/411a553841edd051f5cc679d6ee3a63009aa0c9d"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46300c87ce58b07f967262e87a663c3f806c55e1",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/46300c87ce58b07f967262e87a663c3f806c55e1"
+    },
+    {
+      "path": "tests/testthat.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1aec2b9d3c6325ef21cdfb4b57e97dc238c8750b",
+      "size": 38,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/1aec2b9d3c6325ef21cdfb4b57e97dc238c8750b"
+    },
+    {
+      "path": "tests/testthat",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94d35fa50b04c024fd3c9bd97636cc3934366a3b",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/94d35fa50b04c024fd3c9bd97636cc3934366a3b"
+    },
+    {
+      "path": "tests/testthat/test_likelihood.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "052c83b0f7f501496e0f5a2b7b72884f401ecff4",
+      "size": 22841,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/052c83b0f7f501496e0f5a2b7b72884f401ecff4"
+    },
+    {
+      "path": "tests/testthat/test_simulator.R",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ba007a95c827b3958a61410928505da3d69c9a2e",
+      "size": 598,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/ba007a95c827b3958a61410928505da3d69c9a2e"
+    },
+    {
+      "path": "tests/testthat/whales_Steemanetal2009.tre",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a026210011719e1a2eb1edb93e4b9dc1b247057c",
+      "size": 3870,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/a026210011719e1a2eb1edb93e4b9dc1b247057c"
+    },
+    {
+      "path": "vignettes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c7d21eb08a00ebabffabc56fb41757c6750fe2d",
+      "url": "https://api.github.com/repos/cran/hisse/git/trees/2c7d21eb08a00ebabffabc56fb41757c6750fe2d"
+    },
+    {
+      "path": "vignettes/Clade-specific-sampling.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfd46e62854a91a9bb0d1128060bd244028b276f",
+      "size": 7159,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/cfd46e62854a91a9bb0d1128060bd244028b276f"
+    },
+    {
+      "path": "vignettes/Clade-specific-sampling.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e76bbd6e80604df7480c49d95eb2423f34d2be05",
+      "size": 20666,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/e76bbd6e80604df7480c49d95eb2423f34d2be05"
+    },
+    {
+      "path": "vignettes/GeoHiSSE-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65efd555c71f0166538a4df3b9f37bd91c2abaa0",
+      "size": 14898,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/65efd555c71f0166538a4df3b9f37bd91c2abaa0"
+    },
+    {
+      "path": "vignettes/GeoHiSSE-vignette.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20c74b8feae90ac819b6ea8926fef6d5937ea1b5",
+      "size": 268882,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/20c74b8feae90ac819b6ea8926fef6d5937ea1b5"
+    },
+    {
+      "path": "vignettes/May2017_CID4_added_setsummaries.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bdf64f16cce58a217d2b7b1b48a7c2effaff58a",
+      "size": 12694,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/5bdf64f16cce58a217d2b7b1b48a7c2effaff58a"
+    },
+    {
+      "path": "vignettes/MiSSE-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261f3a9a167dbc92bd8489ce866b6b26bb3553e3",
+      "size": 22571,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/261f3a9a167dbc92bd8489ce866b6b26bb3553e3"
+    },
+    {
+      "path": "vignettes/MiSSE-vignette.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d314df9a92053793543565179d5a4a2d2fdf837f",
+      "size": 246916,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/d314df9a92053793543565179d5a4a2d2fdf837f"
+    },
+    {
+      "path": "vignettes/MuHiSSE-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a62545a25c76f6c607a134a20e0bd5363f140dac",
+      "size": 21750,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/a62545a25c76f6c607a134a20e0bd5363f140dac"
+    },
+    {
+      "path": "vignettes/MuHiSSE-vignette.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "549787b2075f779a828c299da585b5c704befbdb",
+      "size": 38289,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/549787b2075f779a828c299da585b5c704befbdb"
+    },
+    {
+      "path": "vignettes/cladeSamplingVariables.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0835b9f7977d258bbd96020140d5d3317a9da5ed",
+      "size": 118,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/0835b9f7977d258bbd96020140d5d3317a9da5ed"
+    },
+    {
+      "path": "vignettes/geohisse_recons_vignette.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1894ac4fc906b9285cc808a7efaeeb5b122f1d45",
+      "size": 119225,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/1894ac4fc906b9285cc808a7efaeeb5b122f1d45"
+    },
+    {
+      "path": "vignettes/geohisse_vignette.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46bd161e43e83cd0619a50ab1ddb6f22ab7c8188",
+      "size": 82257,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/46bd161e43e83cd0619a50ab1ddb6f22ab7c8188"
+    },
+    {
+      "path": "vignettes/hisse-fisse-type1-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "906ece9eb27792398a92bdb4d54de632509b4318",
+      "size": 37221,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/906ece9eb27792398a92bdb4d54de632509b4318"
+    },
+    {
+      "path": "vignettes/hisse-fisse-type1-vignette.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2c4a10c172781f272d462cc7d7c65bab0f7cef6",
+      "size": 260386,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/e2c4a10c172781f272d462cc7d7c65bab0f7cef6"
+    },
+    {
+      "path": "vignettes/hisse-vignette.Rmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "786e858cdddc0ce26f9fd2ed14ba4e27e703f389",
+      "size": 20245,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/786e858cdddc0ce26f9fd2ed14ba4e27e703f389"
+    },
+    {
+      "path": "vignettes/hisse-vignette.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dfff363e78f08b5bb55f3b36331b6de84e31b00",
+      "size": 341145,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/7dfff363e78f08b5bb55f3b36331b6de84e31b00"
+    },
+    {
+      "path": "vignettes/misse.support.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4fc322850053aa4bf41bc1debfa8db31e727ff3",
+      "size": 103424,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/d4fc322850053aa4bf41bc1debfa8db31e727ff3"
+    },
+    {
+      "path": "vignettes/misse.vignette.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60731a15b1b89b3fb0ebeb603c1f862d4eb553a0",
+      "size": 40691,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/60731a15b1b89b3fb0ebeb603c1f862d4eb553a0"
+    },
+    {
+      "path": "vignettes/setCAQTipRatios.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaad1850ad217c77e2566aba535511918d1124e1",
+      "size": 2087,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/aaad1850ad217c77e2566aba535511918d1124e1"
+    },
+    {
+      "path": "vignettes/setKXHTipRatios.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3008d80948e4d656b7e15e98e6cd446d82c3d10e",
+      "size": 2067,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/3008d80948e4d656b7e15e98e6cd446d82c3d10e"
+    },
+    {
+      "path": "vignettes/setMEVTipRatios.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddbf0dbd393ae0528ff5a4927ac56b3b79b1a7e0",
+      "size": 2068,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/ddbf0dbd393ae0528ff5a4927ac56b3b79b1a7e0"
+    },
+    {
+      "path": "vignettes/testrecon1.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d5d0b2a620f370a0e4b2b52c5de4d9543679d86",
+      "size": 4080,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/7d5d0b2a620f370a0e4b2b52c5de4d9543679d86"
+    },
+    {
+      "path": "vignettes/testrecon2.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bbed6e108ea9e9ba4b7f955e0cfb8b8e6425f5a",
+      "size": 4236,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/6bbed6e108ea9e9ba4b7f955e0cfb8b8e6425f5a"
+    },
+    {
+      "path": "vignettes/testrecon3.Rsave",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d745aee5064fe8430fa27118eb6f70110f2f3ee",
+      "size": 3862,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/6d745aee5064fe8430fa27118eb6f70110f2f3ee"
+    },
+    {
+      "path": "vignettes/whales_Steemanetal2009.tre",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a026210011719e1a2eb1edb93e4b9dc1b247057c",
+      "size": 3870,
+      "url": "https://api.github.com/repos/cran/hisse/git/blobs/a026210011719e1a2eb1edb93e4b9dc1b247057c"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,228 @@
+- heading "Guane logo Phylogenetic Comparative Methods" [level=3]:
+  - img "Guane logo"
+  - text: Phylogenetic Comparative Methods
+- combobox:
+  - option "English" [selected]
+  - option "Español"
+  - option "Português"
+- tablist:
+  - tab "Phylo traits" [selected]
+  - tab "Ancestral state reconstruction"
+  - tab "Diversification"
+  - tab "SSE models"
+- tabpanel:
+  - tablist:
+    - tab "Data"
+    - tab "Phylogenetic signal" [selected]
+    - tab "PGLS"
+    - tab "Pagel's correlation"
+    - tab "PGLM"
+  - text:        
+  - tabpanel:
+    - generic: Analysis controls
+    - heading "Blomberg's K & Pagel's λ" [level=4]
+    - generic: Trait for signal
+    - generic: ln_home_range_km2
+    - combobox "Trait for signal"
+    - paragraph: Choose an original or transformed numeric column from Data. PICs are node contrasts and are not used as species traits.
+    - generic: K test draws (including observed)
+    - spinbutton "K test draws (including observed)": "999"
+    - paragraph: The K test uses one observed draw and the remaining randomized draws.
+    - button "Run signal analysis"
+    - tablist:
+      - tab "Results"
+      - tab "Diagnostics" [active] [selected]
+      - tab "Live Code Mirror"
+    - text:   
+    - tabpanel:
+      - img "Plot object"
+      - paragraph: The histogram excludes the observed draw. The dashed line marks observed K. P-values retain the package test convention, which includes the observed draw.
+      - paragraph: No measurement-error model is fitted. Inspect trait quality and tree assumptions before interpreting the tests.
+      - paragraph: Inputs come from the Data card. Changing data or analytical settings clears previous results.
+    - text: 
+  - text:                 
+- text:                                                                                                                                                                                             
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- generic: Common standard error
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log:
+  - generic: ln_home_range_km2
+- log
+- log
+- log
+- log
+- log

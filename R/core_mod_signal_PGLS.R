@@ -67,7 +67,7 @@ guane_pgls_plot_text <- function(lang='en') {
 }
 
 guane_pgls_script <- function(result, type='fit', color='#34765b', labels=FALSE, lang='en') {
- c('# Guane PGLS: self-contained analysis and editable base R graphics.',
+ c(guane_citation_comments('PGLS',result,lang),'# Guane PGLS: self-contained analysis and editable base R graphics.',
    '# Open in RStudio and Source. Edit plot_type, plot_color, show_taxa and plot_text below.',
    '# These are prepared species-level inputs; no PIC or additional covariance correction is applied.',
    '# Install once if needed: install.packages(c("ape", "nlme"))',
@@ -112,7 +112,7 @@ guane_pgls_compare_plot <- function(comparison,color='#34765b',lang='en') {
 }
 guane_pgls_compare_script <- function(comparison,color='#34765b',lang='en') {
  helpers<-c('guane_pgls','guane_pgls_compare','guane_pgls_compare_plot','guane_text')
- c('# Guane: same-data ML covariance comparison. No likelihood-ratio tests or model averaging.',
+ c(guane_citation_comments('PGLS',comparison,lang),'# Guane: same-data ML covariance comparison. No likelihood-ratio tests or model averaging.',
  '# install.packages(c("ape","nlme"))',
  guane_script_helpers(helpers),
  guane_r_assignment('settings',comparison$settings[setdiff(names(comparison$settings),'method')]),

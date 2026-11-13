@@ -85,7 +85,7 @@ guane_asr_mk_script <- function(result,type='tree',palette='Guane',labels=TRUE,n
   result$mapping$maps<-result$mapping$maps[i];result$mapping$map_indices<-history
  }
  helpers<-c('guane_asr_graphics','guane_asr_colors','guane_asr_gradient','guane_asr_node_table','guane_asr_highlight','guane_asr_legend','guane_asr_density','guane_mk_options','guane_mk_joint','guane_asr_state_plot','guane_mk_matrix','guane_mk_data','guane_mk_fit','guane_asr_mk','guane_asr_mk_plot','guane_asr_map','guane_asr_map_summary','guane_asr_map_plot','guane_mk_bayes_plot','guane_text')
- c('# Guane discrete Mk ML reconstruction. Saved root weights and analytical settings; global marginals and optional joint assignments.',
+ c(guane_citation_comments('discrete',result,lang),'# Guane discrete Mk ML reconstruction. Saved root weights and analytical settings; global marginals and optional joint assignments.',
  '# install.packages(c("ape", "phytools"))',
  paste0('# R ',getRversion(),'; phytools ',utils::packageVersion('phytools')),
  guane_script_helpers(helpers),

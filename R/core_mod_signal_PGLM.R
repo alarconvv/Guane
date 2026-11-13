@@ -153,7 +153,7 @@ guane_pglm_plot <- function(result,type='fit',color='#34765b',labels=FALSE,lang=
 
 guane_pglm_script <- function(result,type='fit',color='#34765b',labels=FALSE,lang='en') {
  helpers<-c('guane_pglm','guane_pglm_grouped_fit','guane_pglm_screen','guane_text','guane_pglm_plot')
- c('# Guane PGLM: self-contained model and editable graph for RStudio.',
+ c(guane_citation_comments('PGLM',result,lang),'# Guane PGLM: self-contained model and editable graph for RStudio.',
    '# install.packages(c("ape","phylolm","gee"))',
    if(result$method=='binomial_GEE') '# Grouped-binomial GEE: fixed tree working correlation and binomial scale=1; model-based Wald intervals, no one-cluster sandwich inference.' else if(result$method=='poisson_GEE') '# Poisson GEE/log link: scale-adjusted model-based Wald intervals, not sandwich or bootstrap intervals. No likelihood/AIC or exposure offset.' else '# Wald intervals are conditional on fitted alpha; no bootstrap is used.',
    paste0('# R ',getRversion(),'; phylolm ',utils::packageVersion('phylolm'),'; gee ',utils::packageVersion('gee')),
@@ -210,7 +210,7 @@ guane_pglm_influence_plot <- function(influence,color='#34765b',lang='en') {
 }
 guane_pglm_influence_script <- function(influence,color='#34765b',lang='en') {
  helpers<-c('guane_pglm','guane_pglm_grouped_fit','guane_pglm_influence','guane_pglm_influence_plot','guane_text')
- c('# Guane: leave-one-taxon-out sensitivity. Temporary pruning only; no automatic data exclusions.',
+ c(guane_citation_comments('PGLM',influence$settings,lang),'# Guane: leave-one-taxon-out sensitivity. Temporary pruning only; no automatic data exclusions.',
  '# Descriptive coefficient shifts, not Cook distance, p-values or cross-validation.',
  '# install.packages(c("ape","phylolm","gee"))',
  guane_script_helpers(helpers),

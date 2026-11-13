@@ -135,7 +135,7 @@ guane_rates_joint_plot <- function(result,type='joint_tree',model='SharedBD',par
 
 guane_rates_joint_script <- function(result,type='joint_tree',model='SharedBD',parameter='lambda',palette='Guane',lang='en',labels=TRUE,node_labels=TRUE,cex=.7) {
  helpers<-c('guane_ltt','guane_rates_data','guane_rates_clade_catalog','guane_rates_joint_data','guane_rates_joint_map','guane_rates_joint_likelihood','guane_rates_joint_fit','guane_rates_joint_plot','guane_text')
- c('# Guane joint whole-tree split likelihood. Branch-base shifts only; a priori regions.',
+ c(guane_citation_comments('joint',result,lang),'# Guane joint whole-tree split likelihood. Branch-base shifts only; a priori regions.',
  '# install.packages(c("ape", "diversitree"))',paste('# diversitree',result$version),
  '# AIC is conditional on fixed shifts/sampling/tree. No calibrated likelihood-ratio p-values.',
  guane_script_helpers(helpers),

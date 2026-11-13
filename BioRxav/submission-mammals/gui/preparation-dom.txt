@@ -1,0 +1,304 @@
+- heading "Guane logo Phylogenetic Comparative Methods" [level=3]:
+  - img "Guane logo"
+  - text: Phylogenetic Comparative Methods
+- combobox:
+  - option "English" [selected]
+  - option "Español"
+  - option "Português"
+- tablist:
+  - tab "Phylo traits" [selected]
+  - tab "Ancestral state reconstruction"
+  - tab "Diversification"
+  - tab "SSE models"
+- tabpanel:
+  - tablist:
+    - tab "Data" [selected]
+    - tab "Phylogenetic signal"
+    - tab "PGLS"
+    - tab "Pagel's correlation"
+    - tab "PGLM"
+  - tabpanel:
+    - generic: Setting up
+    - generic: Load single tree
+    - text: Browse...
+    - button "Load single tree Browse..."
+    - textbox "No file selected": mammals-49-tree.nwk
+    - generic: Upload complete
+    - generic: Load traits · CSV
+    - text: Browse...
+    - button "Load traits · CSV Browse..."
+    - textbox "No file selected": mammals-49-traits.csv
+    - generic: Upload complete
+    - button "Load example data"
+    - generic: "Synthetic example: 20 tree tips and 19 trait rows. Sp20 is intentionally absent from the table."
+    - generic: Taxon column
+    - generic: taxon
+    - combobox "Taxon column"
+    - generic: Numeric trait
+    - generic: body_mass_kg
+    - combobox "Numeric trait"
+    - generic: Seed
+    - spinbutton "Seed": "20261201"
+    - button "Use matched taxa"
+    - generic: Review mismatches before pruning. Changes are recorded in Diagnosis log.
+    - button "Reset controls"
+    - button "Undo data change"
+    - button "Restore original inputs"
+    - generic: Diagnosis log
+    - link "download icon Export diagnosis log":
+      - /url: session/f3195787f94bd63b5f87a8b1cf1c8ad2/download/signal-log_download?w=
+      - generic "download icon": 
+      - text: Export diagnosis log
+    - link "download icon Export preparation script":
+      - /url: session/f3195787f94bd63b5f87a8b1cf1c8ad2/download/signal-preparation_script?w=
+      - generic "download icon": 
+      - text: Export preparation script
+    - tablist:
+      - tab "Tree preview"
+      - tab "Trait preview"
+      - tab "Checking data"
+      - tab "Diagnosis log" [active] [selected]
+    - tabpanel:
+      - table:
+        - rowgroup:
+          - row "Time Action":
+            - columnheader "Time"
+            - columnheader "Action"
+        - rowgroup:
+          - row "2026-11-11 14:57:44 Load your files or explore the example dataset.":
+            - cell "2026-11-11 14:57:44"
+            - cell "Load your files or explore the example dataset."
+          - 'row "2026-11-11 14:59:40 Loaded tree: mammals-49-tree.nwk ; undo history restarted."':
+            - cell "2026-11-11 14:59:40"
+            - 'cell "Loaded tree: mammals-49-tree.nwk ; undo history restarted."'
+          - row "2026-11-11 14:59:40 Tree loaded.":
+            - cell "2026-11-11 14:59:40"
+            - cell "Tree loaded."
+          - 'row "2026-11-11 15:07:14 Loaded traits: mammals-49-traits.csv ; undo history restarted."':
+            - cell "2026-11-11 15:07:14"
+            - 'cell "Loaded traits: mammals-49-traits.csv ; undo history restarted."'
+          - row "2026-11-11 15:07:14 Trait table loaded.":
+            - cell "2026-11-11 15:07:14"
+            - cell "Trait table loaded."
+          - 'row "2026-11-11 15:07:16 Selected taxon column: taxon ; trait: body_mass_kg"':
+            - cell "2026-11-11 15:07:16"
+            - 'cell "Selected taxon column: taxon ; trait: body_mass_kg"'
+          - 'row "2026-11-11 15:08:32 Match taxa; tree exclusions: ; table exclusions:"':
+            - cell "2026-11-11 15:08:32"
+            - 'cell "Match taxa; tree exclusions: ; table exclusions:"'
+          - row "2026-11-11 15:08:32 User requested matching; 0 unmatched entries removed. Export the standardized inputs with your script.":
+            - cell "2026-11-11 15:08:32"
+            - cell "User requested matching; 0 unmatched entries removed. Export the standardized inputs with your script."
+          - row "2026-11-11 15:08:43 Analysis running in the background. You can keep exploring other results.":
+            - cell "2026-11-11 15:08:43"
+            - cell "Analysis running in the background. You can keep exploring other results."
+          - row "2026-11-11 15:08:44 Signal analysis completed. Results correspond to the current inputs.":
+            - cell "2026-11-11 15:08:44"
+            - cell "Signal analysis completed. Results correspond to the current inputs."
+          - row "2026-11-11 15:21:43 PGLS completed.":
+            - cell "2026-11-11 15:21:43"
+            - cell "PGLS completed."
+    - generic: Description / Messages
+    - generic: Signal analysis completed. Results correspond to the current inputs.
+    - generic: Structure
+    - strong: "49"
+    - text: TREE TIPS
+    - strong: "49"
+    - text: TRAIT ROWS
+    - paragraph: Rooted tree
+    - paragraph: "Internal nodes: 48"
+    - paragraph: Bifurcating tree
+    - paragraph: Ultrametric tree
+    - link "download icon Export tree":
+      - /url: session/f3195787f94bd63b5f87a8b1cf1c8ad2/download/signal-data_tree_export?w=
+      - generic "download icon": 
+      - text: Export tree
+    - generic:     
+  - text:                     
+- text:                                                                                                                                                                                             
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- generic: Common standard error
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log:
+  - generic: ln_home_range_km2
+- log:
+  - generic: ln_home_range_km2
+- log
+- log:
+  - generic: ln_home_range_km2
+- log
+- log
+- log
+- log
+- log

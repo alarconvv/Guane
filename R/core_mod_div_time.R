@@ -101,7 +101,7 @@ guane_rates_tv_plot <- function(result,type='time_rates',model=NULL,parameter='l
 
 guane_rates_tv_script <- function(result,type='time_rates',model=NULL,parameter='lambda',palette='Guane',lang='en'){
  helpers<-c('guane_ltt','guane_rates_data','guane_rates_fit','guane_rates_tv_fit','guane_rates_tv_profile','guane_rates_tv_cdf','guane_rates_tree_from_ages','guane_rates_tv_bootstrap','guane_rates_tv_robustness','guane_rates_tv_uncertainty','guane_rates_tv_plot','guane_text')
- c('# Guane time-varying crown-tree ML. Time measured backward from the present.',
+ c(guane_citation_comments('time',result,lang),'# Guane time-varying crown-tree ML. Time measured backward from the present.',
  '# lambda(t)=lambda0*exp(-beta*t); positive beta means increasing toward present.',
  '# install.packages(c("ape","diversitree","deSolve"))',paste('# diversitree',result$version),
  guane_script_helpers(helpers),

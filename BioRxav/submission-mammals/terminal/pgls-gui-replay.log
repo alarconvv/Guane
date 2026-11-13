@@ -1,0 +1,7 @@
+             Term  Estimate        SE      Lower      Upper            P
+1     (Intercept) -3.278525 1.4261387 -6.1475457 -0.4095036 2.600385e-02
+2 ln_body_mass_kg  1.261576 0.1767717  0.9059574  1.6171950 5.071620e-09
+character(0)
+null device 
+          1 
+PASS: GUI script reproduced terminal result without loading GUANE.

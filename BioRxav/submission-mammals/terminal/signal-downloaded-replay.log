@@ -1,0 +1,6 @@
+          Metric  Estimate     P_value                                Test
+1   Blomberg's K 0.2568045 0.002002002 999 test draws (including observed)
+2 Pagel's lambda 0.4159822 0.376016711        Likelihood ratio: lambda = 0
+null device 
+          1 
+PASS: GUI script reproduced terminal result without loading GUANE.

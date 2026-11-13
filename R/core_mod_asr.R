@@ -453,7 +453,7 @@ guane_mk_bayes_plot <- function(result,type='trace',parameter='q1',palette='Guan
 guane_mk_bayes_script <- function(result,type='tree',palette='Guane',labels=TRUE,node_labels=FALSE,label_size=.7,pie_size=.6,lang='en',history=1,appearance=list(),parameter='q1') {
  poly<-isTRUE(result$polymorphic)
  helpers<-c('guane_mk_bayes_parameters','guane_asr_bayes_rates','guane_mk_bayes_plot','guane_bayes_diagnostics','guane_mk_options','guane_asr_graphics','guane_asr_colors','guane_asr_gradient','guane_asr_node_table','guane_asr_highlight','guane_asr_legend','guane_asr_density','guane_asr_state_plot','guane_asr_map_summary','guane_asr_map_plot','guane_text',if(poly)c('guane_poly_data','guane_poly_matrix','guane_asr_poly_bayes','guane_asr_poly_plot') else c('guane_mk_matrix','guane_mk_data','guane_asr_mk_bayes','guane_asr_mk_plot'))
- c('# Guane Bayesian Mk: gamma priors, fixed tree, sampled rates and histories.',
+ c(guane_citation_comments(if(poly) 'poly' else 'discrete',result,lang),'# Guane Bayesian Mk: gamma priors, fixed tree, sampled rates and histories.',
  if(poly)'# Polymorphic coexistence states and ordering are saved in inputs and result$coding.',
  '# install.packages(c("ape","phytools","coda","jsonlite"))',
  '# Node pies average conditional marginals over posterior Q draws; Q is the posterior mean matrix.',

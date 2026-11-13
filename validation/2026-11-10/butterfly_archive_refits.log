@@ -1,0 +1,42 @@
+Reusing completed Guane refit 100 1 2026-11-10 21:10:07 
+[[1]]
+  Upper Start    LogLik Convergence MaxRate
+1   100     1 -294.8445           0     100
+                                                                                                                                Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+
+Reusing completed Guane refit 100 2 2026-11-10 21:10:07 
+[[1]]
+  Upper Start    LogLik Convergence MaxRate
+1   100     2 -294.8445           0     100
+                                                                                                                                Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+
+Reusing completed Guane refit 1000 1 2026-11-10 21:10:07 
+[[1]]
+  Upper Start    LogLik Convergence MaxRate
+1  1000     1 -294.7706           0    1000
+                                                                                                                                Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+
+Reusing completed Guane refit 1000 2 2026-11-10 21:10:07 
+[[1]]
+  Upper Start    LogLik Convergence MaxRate
+1  1000     2 -294.7706           0    1000
+                                                                                                                                Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+
+Reusing completed Guane refit 10000 1 2026-11-10 21:10:07 
+[[1]]
+  Upper Start    LogLik Convergence MaxRate
+1 10000     1 -294.7496           0   10000
+                                                                                                                                Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+
+Reusing completed Guane refit 10000 2 2026-11-10 21:10:07 
+[[1]]
+  Upper Start    LogLik Convergence MaxRate
+1 10000     2 -294.7496           0   10000
+                                                                                                                                Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+

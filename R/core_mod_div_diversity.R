@@ -91,7 +91,7 @@ guane_dd_plot <- function(result,type='rates',model=names(result$fits)[1],palett
 }
 
 guane_dd_script <- function(result,settings) {
- c('# Guane diversity-dependent model: saved result and editable plot.', '# Requires DDD and ape. No app is needed.',
+ c(guane_citation_comments('diversity',result,settings$lang),'# Guane diversity-dependent model: saved result and editable plot.', '# Requires DDD and ape. No app is needed.',
  guane_r_assignment('result',result),guane_r_assignment('settings',settings),
  guane_script_helpers(c('guane_text','guane_dd_plot')),
  '# Refit explicitly if desired: do.call(DDD::dd_ML, result$calls[[1]])',

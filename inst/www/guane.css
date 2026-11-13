@@ -51,3 +51,10 @@
   text-align: center;
 }
 .guane-asr-figure img { width: 100% !important; height: auto !important; }
+
+.guane-citation { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #d9e3dc; overflow-wrap: anywhere; }
+.guane-citation summary { color: var(--guane-deep); font-weight: 600; cursor: pointer; }
+.guane-citation summary:focus-visible { outline: 2px solid var(--guane-green); outline-offset: 4px; }
+.guane-citation p { margin-top: .75rem; }
+.guane-citation-sentence { user-select: text; }
+.guane-citation li + li { margin-top: .75rem; }

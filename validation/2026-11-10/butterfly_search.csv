@@ -1,0 +1,4 @@
+"Ordering","Run","LogLik","Message"
+"unordered",1,NA,"No converged finite fit. Inspect optimizer messages. function evaluation limit reached without convergence (9)"
+"unordered",2,NA,"No converged finite fit. Inspect optimizer messages. NEW_X"
+"unordered",3,-299.143372676949,"A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa."

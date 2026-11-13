@@ -1,0 +1,30 @@
+{
+  "../Guane-manuscript/data/Moen_S4_original.R": {
+    "md5": "88bb92d4feb0af2ed8b8c4cc77610e6d",
+    "sha256": "c083f46ef4f22293b8da586c6bbecb956a5116157d9722e22ff84c9a656e05ba"
+  },
+  "validation/2026-11-11-specification/hisse_1.9.8.tar.gz": {
+    "md5": "08ff4ec9e75b2e402dc0304c64177478",
+    "sha256": "10702656904768de45c46a0a47c10c2143f8c1b5d30a91d3d37a3b19654a611d"
+  },
+  "validation/2026-11-11-specification/historical_transMat.R": {
+    "md5": "b4429827c0a94daa3832de3bc4fd8696",
+    "sha256": "c19307764246ed422fe27d4eeb288831da16dafc97554410ff3cc1f91859600f"
+  },
+  "validation/2026-11-11-specification/historical_transMatfHiSSE.R": {
+    "md5": "91042ac94a7c1f2d0eae2313315fb637",
+    "sha256": "79f9f12bca73c06447300cefeba1bdf45bbe0e3a363206735b2112b725d95922"
+  },
+  "validation/2026-11-11-specification/historical_fhisse.R": {
+    "md5": "71da49eb36b67a0f03a5793d048ee384",
+    "sha256": "14fac13ec8f1e32f1039805b944d18b5cb4a66cbe45c45a0e90a879dd15a5324"
+  },
+  "validation/2026-11-11-specification/moen_models.R": {
+    "md5": "959bcec67560ac0966c06b72be64e434",
+    "sha256": "a335c05049363d178a7c0ff6cbb88eee744bfc9f5d0268e2adcf4ddfe4b55c9e"
+  },
+  "validation/2026-11-11-specification/check_native_indices.R": {
+    "md5": "1cc841e186fdd34dba3466138a504515",
+    "sha256": "1806b131d092958ff79b8fb4b9d3c17995e772875fa1d167620a790a542ddd11"
+  }
+}

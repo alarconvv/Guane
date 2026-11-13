@@ -1,0 +1,30 @@
+Completed independent searches: 68 
+Converged independent searches: 63 
+Largest independent/Guane likelihood discrepancy: 6.381583e-09 
+Ordered Guane logLik: -297.7374847592 
+Largest node probability change: 5.461922e-05 
+Best converged unordered independent logLik: -297.0976 
+  Upper Start    LogLik Convergence MaxRate
+1   100     1 -294.8445           0     100
+2   100     2 -294.8445           0     100
+3  1000     1 -294.7706           0    1000
+4  1000     2 -294.7706           0    1000
+5 10000     1 -294.7496           0   10000
+6 10000     2 -294.7496           0   10000
+                                                                                                                                Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+2 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+3 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+4 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+5 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+6 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+  Model Parameters    LogLik      AIC Finite Boundary StartSpread Converged
+1 HiSSE         13 -6619.671 13265.34   TRUE     TRUE   2.6089419      TRUE
+2 CID-2          7 -6625.298 13264.60   TRUE     TRUE   0.1655247      TRUE
+3 CID-4         11 -6594.605 13211.21   TRUE     TRUE  10.7088183      TRUE
+  Verified Weight DeltaAIC
+1    FALSE     NA 54.13168
+2     TRUE     NA 53.38479
+3     TRUE     NA  0.00000
+null device 
+          1 

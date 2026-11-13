@@ -1,0 +1,206 @@
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate   Difference
+1   100     1 -297.0976           0         67     100 1.001808e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate   Difference
+1   100     2 -299.0848           0        153     100 3.213358e-10
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations  MaxRate    Difference
+1   100     3 -299.8792           0         86 0.213197 -1.420915e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate  Difference
+1   100     4 -297.2045           0         75 0.8359077 1.35185e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate   Difference
+1   100     5 -297.3085           0         88 0.6825603 1.426997e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate    Difference
+1   100     6 -299.8792           0        105 0.2131925 -1.420858e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate   Difference
+1   100     7 -299.0852           0        223     100 1.362878e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate  Difference
+1   100     8 -297.2045           0         93 0.8359108 1.35168e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate   Difference
+1   100     9 -297.2045           0        211 0.8359108 1.351907e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate    Difference
+1   100    10 -299.1094           0        238     100 -8.662937e-11
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate   Difference
+1   100    11 -303.7071           0        331     100 1.003286e-10
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate  Difference
+1   100    12 -297.2045           0        216 0.8359105 1.35185e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate    Difference
+1  1000     1 -297.0976           1         24     100 -6.381583e-09
+                Message
+1 false convergence (8)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate    Difference
+1  1000     2 -299.0417           0        136    1000 -5.286438e-12
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations  MaxRate    Difference
+1  1000     3 -299.8792           0         86 0.213197 -1.420915e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate  Difference
+1  1000     4 -297.2045           0         75 0.8359077 1.35185e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate   Difference
+1  1000     5 -297.3085           0         88 0.6825603 1.426997e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate    Difference
+1  1000     6 -299.8792           0        105 0.2131925 -1.420858e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate    Difference
+1  1000     7 -299.0459           0        237    1000 -1.693934e-11
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate  Difference
+1  1000     8 -297.2045           0         93 0.8359108 1.35168e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate   Difference
+1  1000     9 -297.2045           0        211 0.8359108 1.351907e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate   Difference
+1  1000    10 -299.1025           0        308    1000 5.502443e-11
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations  MaxRate   Difference
+1  1000    11 -303.7584           0        210 999.9987 1.056719e-10
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate  Difference
+1  1000    12 -297.2045           0        216 0.8359105 1.35185e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate    Difference
+1 10000     1 -297.0976           1         24     100 -6.381583e-09
+                Message
+1 false convergence (8)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate    Difference
+1 10000     2 -299.0338           0        142   10000 -2.972911e-11
+            Message
+1 X-convergence (3)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations  MaxRate    Difference
+1 10000     3 -299.8792           0         86 0.213197 -1.420915e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate  Difference
+1 10000     4 -297.2045           0         75 0.8359077 1.35185e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate   Difference
+1 10000     5 -297.3085           0         88 0.6825603 1.426997e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate    Difference
+1 10000     6 -299.8792           0        105 0.2131925 -1.420858e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations MaxRate   Difference
+1 10000     7 -299.0408           0        238   10000 5.508127e-11
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate  Difference
+1 10000     8 -297.2045           0         93 0.8359108 1.35168e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations   MaxRate   Difference
+1 10000     9 -297.2045           0        211 0.8359108 1.351907e-09
+                   Message
+1 relative convergence (4)
+
+[[1]]
+  Upper Start    LogLik Convergence Iterations  MaxRate    Difference
+1 10000    10 -299.1021           0        325 1957.919 -1.136868e-13
+                   Message
+1 relative convergence (4)
+
+
+Execution halted

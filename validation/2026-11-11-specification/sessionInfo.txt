@@ -1,0 +1,55 @@
+R version 4.6.0 (2026-04-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS 27.0.1
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] guane_1.0      testthat_3.3.2
+
+loaded via a namespace (and not attached):
+  [1] tidyselect_1.2.1        subplex_1.9             viridisLite_0.4.3      
+  [4] Rmpfr_1.1-3             dplyr_1.2.1             farver_2.1.2           
+  [7] S7_0.2.2                phytools_2.5-2          viridis_0.6.5          
+ [10] bitops_1.1-0            optimParallel_1.0-3     fastmap_1.2.0          
+ [13] RCurl_1.98-1.20         combinat_0.0-9          hisse_2.1.11           
+ [16] promises_1.5.0          digest_0.6.39           mime_0.13              
+ [19] lifecycle_1.0.5         magrittr_2.0.5          compiler_4.6.0         
+ [22] rlang_1.3.0             sass_0.4.10             tools_4.6.0            
+ [25] igraph_2.3.3            plotrix_3.8-14          data.table_1.18.6.1    
+ [28] phangorn_2.12.1         clusterGeneration_1.3.8 pkgbuild_1.4.8         
+ [31] mnormt_2.1.2            scatterplot3d_0.3-45    RColorBrewer_1.1-3     
+ [34] pkgload_1.5.3           expm_1.0-1              gee_4.13-30            
+ [37] withr_3.0.3             numDeriv_2016.8-1.1     desc_1.4.3             
+ [40] nnet_7.3-21             grid_4.6.0              xtable_1.8-8           
+ [43] future_1.75.0           ggplot2_4.0.3           scales_1.4.0           
+ [46] globals_0.19.1          iterators_1.0.14        MASS_7.3-66            
+ [49] diversitree_0.10-1      cli_3.6.6               mvtnorm_1.4-2          
+ [52] generics_0.1.4          otel_0.2.0              future.apply_1.20.2    
+ [55] ape_5.8-1               cachem_1.1.0            maps_3.4.3             
+ [58] parallel_4.6.0          geiger_2.0.12           vctrs_0.7.3            
+ [61] Matrix_1.7-6            jsonlite_2.0.0          phylolm_2.6.5          
+ [64] GenSA_1.1.15            corHMM_2.8              listenv_1.0.0          
+ [67] foreach_1.5.2           jquerylib_0.1.4         glue_1.8.1             
+ [70] parallelly_1.48.0       nloptr_2.2.1            codetools_0.2-20       
+ [73] paleotree_3.4.7         DEoptim_2.2-8           gtable_0.3.6           
+ [76] later_1.4.8             quadprog_1.5-8          gmp_0.7-5.1            
+ [79] tibble_3.3.1            pillar_1.11.1           htmltools_0.5.9        
+ [82] brio_1.1.5              deSolve_1.42            R6_2.6.1               
+ [85] doParallel_1.0.17       rprojroot_2.1.1         shiny_1.14.0           
+ [88] lattice_0.23-1          png_0.1-9               nanonext_1.10.2        
+ [91] mirai_2.7.2             corpcor_1.6.10          httpuv_1.6.17          
+ [94] bslib_0.12.0            Rcpp_1.1.2              fastmatch_1.1-8        
+ [97] gridExtra_2.3.1         coda_0.19-4.1           TreeSim_2.4            
+[100] nlme_3.1-171            pkgconfig_2.0.3        

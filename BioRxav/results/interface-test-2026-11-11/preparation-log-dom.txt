@@ -1,0 +1,304 @@
+- heading "Guane logo Phylogenetic Comparative Methods" [level=3]:
+  - img "Guane logo"
+  - text: Phylogenetic Comparative Methods
+- combobox:
+  - option "English" [selected]
+  - option "Español"
+  - option "Português"
+- tablist:
+  - tab "Phylo traits" [selected]
+  - tab "Ancestral state reconstruction"
+  - tab "Diversification"
+  - tab "SSE models"
+- tabpanel:
+  - tablist:
+    - tab "Data" [selected]
+    - tab "Phylogenetic signal"
+    - tab "PGLS"
+    - tab "Pagel's correlation"
+    - tab "PGLM"
+  - tabpanel:
+    - generic: Setting up
+    - generic: Load single tree
+    - text: Browse...
+    - button "Load single tree Browse..."
+    - textbox "No file selected": geospiza-tree-14tips.nwk
+    - generic: Upload complete
+    - generic: Load traits · CSV
+    - text: Browse...
+    - button "Load traits · CSV Browse..."
+    - textbox "No file selected": traits.csv
+    - generic: Upload complete
+    - button "Load example data"
+    - generic: "Synthetic example: 20 tree tips and 19 trait rows. Sp20 is intentionally absent from the table."
+    - generic: Taxon column
+    - generic: taxon
+    - combobox "Taxon column"
+    - generic: Numeric trait
+    - generic: wingL
+    - combobox "Numeric trait"
+    - generic: Seed
+    - spinbutton "Seed": "20261201"
+    - button "Use matched taxa"
+    - generic: Review mismatches before pruning. Changes are recorded in Diagnosis log.
+    - button "Reset controls"
+    - button "Undo data change"
+    - button "Restore original inputs"
+    - generic: Diagnosis log
+    - link "download icon Export diagnosis log":
+      - /url: session/57958f24663a3d13194f85d62b8965f0/download/signal-log_download?w=
+      - generic "download icon": 
+      - text: Export diagnosis log
+    - link "download icon Export preparation script":
+      - /url: session/57958f24663a3d13194f85d62b8965f0/download/signal-preparation_script?w=
+      - generic "download icon": 
+      - text: Export preparation script
+    - tablist:
+      - tab "Tree preview"
+      - tab "Trait preview"
+      - tab "Checking data"
+      - tab "Diagnosis log" [active] [selected]
+    - tabpanel:
+      - table:
+        - rowgroup:
+          - row "Time Action":
+            - columnheader "Time"
+            - columnheader "Action"
+        - rowgroup:
+          - row "2026-11-11 07:49:36 Load your files or explore the example dataset.":
+            - cell "2026-11-11 07:49:36"
+            - cell "Load your files or explore the example dataset."
+          - 'row "2026-11-11 07:57:02 Loaded tree: geospiza-tree-14tips.nwk ; undo history restarted."':
+            - cell "2026-11-11 07:57:02"
+            - 'cell "Loaded tree: geospiza-tree-14tips.nwk ; undo history restarted."'
+          - row "2026-11-11 07:57:02 Tree loaded.":
+            - cell "2026-11-11 07:57:02"
+            - cell "Tree loaded."
+          - 'row "2026-11-11 07:59:52 Loaded traits: traits.csv ; undo history restarted."':
+            - cell "2026-11-11 07:59:52"
+            - 'cell "Loaded traits: traits.csv ; undo history restarted."'
+          - row "2026-11-11 07:59:52 Trait table loaded.":
+            - cell "2026-11-11 07:59:52"
+            - cell "Trait table loaded."
+          - 'row "2026-11-11 07:59:53 Selected taxon column: taxon ; trait: wingL"':
+            - cell "2026-11-11 07:59:53"
+            - 'cell "Selected taxon column: taxon ; trait: wingL"'
+          - 'row "2026-11-11 08:00:02 Match taxa; tree exclusions: olivacea ; table exclusions:"':
+            - cell "2026-11-11 08:00:02"
+            - 'cell "Match taxa; tree exclusions: olivacea ; table exclusions:"'
+          - row "2026-11-11 08:00:02 User requested matching; 1 unmatched entries removed. Export the standardized inputs with your script.":
+            - cell "2026-11-11 08:00:02"
+            - cell "User requested matching; 1 unmatched entries removed. Export the standardized inputs with your script."
+          - row "2026-11-11 08:00:23 Analysis running in the background. You can keep exploring other results.":
+            - cell "2026-11-11 08:00:23"
+            - cell "Analysis running in the background. You can keep exploring other results."
+          - row "2026-11-11 08:00:23 Signal analysis completed. Results correspond to the current inputs.":
+            - cell "2026-11-11 08:00:23"
+            - cell "Signal analysis completed. Results correspond to the current inputs."
+          - row "2026-11-11 08:12:44 PGLS completed.":
+            - cell "2026-11-11 08:12:44"
+            - cell "PGLS completed."
+    - generic: Description / Messages
+    - generic: Signal analysis completed. Results correspond to the current inputs.
+    - generic: Structure
+    - strong: "13"
+    - text: TREE TIPS
+    - strong: "13"
+    - text: TRAIT ROWS
+    - paragraph: Rooted tree
+    - paragraph: "Internal nodes: 12"
+    - paragraph: Bifurcating tree
+    - paragraph: Ultrametric tree
+    - link "download icon Export tree":
+      - /url: session/57958f24663a3d13194f85d62b8965f0/download/signal-data_tree_export?w=
+      - generic "download icon": 
+      - text: Export tree
+    - generic:     
+  - text:                     
+- text:                                                                                                                                                                                             
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- generic: Common standard error
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log
+- log:
+  - generic: beakD
+- log:
+  - generic: tarsusL
+- log
+- log
+- log
+- log:
+  - generic: beakD
+- log
+- log
+- log

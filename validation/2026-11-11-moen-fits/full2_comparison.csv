@@ -1,0 +1,2 @@
+"Model","Parameters","LogLik","AIC","Finite","Boundary","StartSpread","Converged","Verified","Weight","DeltaAIC"
+"full2",16,-6591.52084526561,13215.0416905312,TRUE,TRUE,3.13263092798479,TRUE,FALSE,NA,0

@@ -1,0 +1,13 @@
+Draft inquiry only — not sent
+
+Subject: Original provenance and measurement definitions for geiger geospiza
+
+We are checking a small GUANE software example using the geospiza object distributed with geiger 2.0.12, credited to Dolph Schluter via Luke Harmon. Could you help identify:
+
+1. The original source publication or collection record and how the species summaries were calculated, including sexes, populations and sample sizes.
+2. Original units and transformation for wingL, tarsusL, culmenL, beakD and gonysW: log base and whether averages were calculated before or after transformation.
+3. The source and calibration of the distributed 14-tip tree and the intended mapping of trait records to tips.
+4. Whether the five measurements labelled fusca in geiger refer to Certhidea fusca: identical values occur under Certhidea olivacea in the BEAST ContinuousTraits example. We have not reassigned either label.
+5. Dataset-specific reuse terms for the original observations and permission to redistribute a documented derivative, distinct from the geiger package license.
+
+We can supply the exact versioned object and a 13-row cross-distribution comparison. The example will remain a historical software demonstration until these points are resolved.

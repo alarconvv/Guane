@@ -1,0 +1,24 @@
+unordered 1 2026-11-10 19:52:39 
+[[1]]
+   Ordering Run LogLik
+1 unordered   1     NA
+                                                                                                         Message
+1 No converged finite fit. Inspect optimizer messages. function evaluation limit reached without convergence (9)
+
+unordered 2 2026-11-10 19:56:03 
+[[1]]
+   Ordering Run LogLik
+1 unordered   2     NA
+                                                     Message
+1 No converged finite fit. Inspect optimizer messages. NEW_X
+
+unordered 3 2026-11-10 20:01:32 
+[[1]]
+   Ordering Run    LogLik
+1 unordered   3 -299.1434
+                                                                                                                                Message
+1 A rate is near an optimization bound. Estimates and model rankings may be unstable.; Some states have fewer than three observed taxa.
+
+unordered 4 2026-11-10 20:04:37 
+
+Execution halted

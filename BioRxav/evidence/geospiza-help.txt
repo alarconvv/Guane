@@ -1,0 +1,135 @@
+_e_x_a_m_p_l_e _d_a_t_a_s_e_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     providing access to comparative datasets
+
+_U_s_a_g_e:
+
+     data(amphibia)
+     data(caniformia)
+     data(carnivores)
+     data(caudata)
+     data(chelonia)
+     data(geospiza)
+     data(primates)
+     data(whales)
+     
+_D_e_t_a_i_l_s:
+
+     The objects ‘caudata’, ‘chelonia’, ‘carnivores’, ‘geospiza’, and
+     ‘primates’ each have at least two items, a ‘phy’ object and a
+     ‘dat’ object. The ‘phy’ object is a phylogenetic tree of class
+     'phylo' (see ‘read.tree’).  The ‘dat’ object (e.g., ‘caudata$dat’)
+     is a named vector of (natural log-transformed) body sizes for each
+     group. The salamander data (object ‘caudata’) also includes the
+     systematics for all recognized taxa (object ‘caudata$tax’) as well
+     as a time-calibrated family-level phylogeny (‘caudata$fam’) from
+     Zhang and Wake (2009). The object ‘caudata$phy’ is an unpublished
+     glomogram of mostly family level phylogenies from the literature.
+     The backbone for that tree is from Zhang and Wake (2009).
+
+     The ‘amphibia’ object is a set of three trees, the last of which
+     is a time-scaled estimate of the Pyron and Wiens (2011) tree (see
+     ‘congruify.phylo’).
+
+     The ‘whales’ object is a dataset including a tree and a taxon
+     richness matrix (see ‘medusa’).
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Data are from the following sources:
+
+     ‘AMPHIBIANS (amphibia)’
+
+        • Roelants K, DJ Gower, M Wilkinson, SP Loader, SD Biju, K
+          Guillaume, L Moriau, and F Bossuyt. 2007. Global patterns of
+          diversification in the history of modern amphibians. _PNAS_
+          104:887-892.
+
+        • Pyron RA and JJ Wiens. 2011. A large-scale phylogeny of
+          Amphibia including over 2800 species, and a revised
+          classification of extant frogs, salamanders, and caecilians.
+          _MPE_ 61:543-583.
+
+     ‘SALAMANDERS (caudata)’
+
+        • Adams DC, CM Berns, KH Kozak, and JJ Wiens. 2009. Are rates
+          of species diversification correlated with rates of
+          morphological evolution? _PRSB_ 276:2729-2738.
+
+        • Bonett RM, PT Chippindale, PE Moler, RW van Devender, and DB
+          Wake. 2009. Evolution of gigantism in amphiumid salamanders.
+          _PLoSONE_ 4(5):e5615.
+
+        • Kozak KH, RW Mendyk, and JJ Wiens. 2009. Can Parallel
+          Diversification Occur in Sympatry? Repeated Patterns of
+          Body-Size Evolution in Coexisting Clades of North American
+          Salamanders. _Evolution_ 63:1769-1784.
+
+        • Weisrock DW, TJ Papenfuss, JR Macey, SN Litvinchuk, R
+          Polymeni, IH Ugurtas, E Zhao, H Jowkar, and A Larson. 2006. A
+          molecular assessment of phylogenetic relationships and
+          lineage accumulation rates within the family Salamandridae
+          (Amphibia, Caudata). _MPE_ 41:368-383.
+
+        • Wiens JJ and JT Hoverman. 2008. Digit reduction, body size,
+          and paedomorphosis in salamanders. _Evolution and
+          Development_ 10:449-463.
+
+        • Zhang P, Y-Q Chen, H Zhou, X-L Wang, TJ Papenfuss, DB Wake
+          and L-H Qu. 2006. Phylogeny, evolution, and biogeography of
+          Asiatic salamanders (Hynobiidae). _PNAS_ 103:7360-7365.
+
+        • Zhang P and DB Wake. 2009. Higher-level salamander
+          relationships and divergence dates inferred from complete
+          mitochondrial genomes. _MPE_ 53:492-508.
+
+     ‘PRIMATES (primates)’
+
+        • Redding DW, C DeWolff, and AO Mooers. 2010. Evolutionary
+          distinctiveness, threat status and ecological oddity in
+          primates. _Conservation Biology_ 24:1052-1058.
+
+        • Vos RA and AO Mooers. 2006. A new dated supertree of the
+          Primates. Chapter 5. In: VOS RA (Ed.) _Inferring large
+          phylogenies: the big tree problem_. [Ph.D. thesis]. Burnaby
+          BC, Canada: Simon Fraser University.
+
+     ‘CARNIVORES (carnivores)’
+
+        • Eizirik E, WJ Murphy, K-P Koepfli, WE Johnson, JW Dragoo, RK
+          Wayne, and SJ O'Brien. 2010. Pattern and timing of
+          diversification of the mammalian order Carnivora inferred
+          from multiple nuclear gene sequences. _Molecular Phylogenetic
+          and Evolution_ 56:49-63.
+
+        • Wozencraft WC. 2005. Order Carnivora in Wilson DE and DM
+          Reeder (Eds.) _Mammal Species of the World_. Johns Hopkins
+          University Press.
+
+        • Jones KE, J Bielby, M Cardillo, et al. 2009. _Ecological
+          Archives_ E090-184.
+
+     ‘CANIFORMS (caniformia)’
+
+        • Slater GJ, LJ Harmon, and ME Alfaro. 2012. Integrating
+          fossils with molecular phylogenies improves inference of
+          trait evolution. _Evolution_ 66:3931-3944.
+
+     ‘TURTLES (chelonia)’
+
+        • Jaffe AL, GJ Slater, and ME Alfaro. 2011. Ecological habitat
+          and body size evolution in turtles. _Biology Letters_
+          7:558-561.
+
+     ‘DARWINS FINCHES (geospiza)’
+
+        • Schluter D
+
+     ‘WHALES (whales)’
+
+        • data compiled by GJ Slater
+
+        • Paleobiology Database. 2011. <https://paleobiodb.org/>.
+

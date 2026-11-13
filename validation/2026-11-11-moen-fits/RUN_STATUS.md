@@ -1,0 +1,1 @@
+Completed all six models and 12 starts on 11 November 2026 at 18:30 America/New_York. All results are saved. Numerical validation failed; weights are withheld. See FIT_REPORT.md for results, settings, failures and next refinement.

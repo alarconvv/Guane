@@ -77,7 +77,7 @@ guane_asr_poly_script <- function(result,type='tree',palette='Guane',labels=TRUE
   result$mapping$maps<-result$mapping$maps[i];result$mapping$map_indices<-history
  }
  helpers<-c('guane_asr_graphics','guane_asr_colors','guane_asr_gradient','guane_asr_node_table','guane_asr_highlight','guane_asr_legend','guane_asr_density','guane_mk_options','guane_mk_joint','guane_asr_map','guane_asr_map_summary','guane_asr_map_plot','guane_poly_data','guane_poly_matrix','guane_mk_fit','guane_asr_poly','guane_asr_state_plot','guane_asr_poly_plot','guane_mk_bayes_plot','guane_text')
- c('# Guane polymorphic ML: explicit ordering/settings below; saved root weights over allowed combined states.',
+ c(guane_citation_comments('poly',result,lang),'# Guane polymorphic ML: explicit ordering/settings below; saved root weights over allowed combined states.',
  '# A+B means coexistence, not uncertainty. Rates/tree uncertainty is not integrated.',
  '# install.packages(c("ape", "phytools"))',paste0('# R ',getRversion(),'; phytools ',utils::packageVersion('phytools')),
  guane_script_helpers(helpers),

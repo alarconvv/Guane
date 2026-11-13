@@ -1,0 +1,7 @@
+{
+  "../Guane-manuscript/data/Moen_S1_traits.csv": "4d769f4e4239a8c23c45dc5e9894db5fc8e8c049633e50e0844d40770e656c55",
+  "../Guane-manuscript/data/Moen_S2_tree.tre": "2ca2196c2be06dd4de2018d0212879804877002e0fc22ead1e01e2e6f069d880",
+  "R/core_mod_sse_hidden.R": "900069bd36a42a7278376179c81f01392d6d41930d73612739812782b9ff5872",
+  "validation/2026-11-11-specification/moen_custom_settings.rds": "d0deef2d24704f6fcf5e1dce2cb477c97410b1874a3c700868152e53319c796b",
+  "validation/2026-11-11-moen-fits/fit_six_models.R": "3ae1b61f6b8a0707e268eac41afef40d6f1a83b9c503aec8d0fead3a2937fbcd"
+}

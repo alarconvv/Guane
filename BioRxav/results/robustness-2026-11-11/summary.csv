@@ -1,0 +1,2 @@
+"N","Full_slope","LOO_min","LOO_max","All_slopes_positive","All_lower_intervals_positive","Largest_change_taxon","Largest_absolute_change","K_P_min","K_P_max","Lambda_P_min","Lambda_P_max","Residual_Shapiro_W","Residual_Shapiro_P","Independence_slope"
+13,3.03848118293088,2.81102430321207,3.14200420859863,TRUE,TRUE,"psittacula",0.227456879718809,0.012012012012012,0.212212212212213,0.0508991427348305,1,0.901708885118402,0.141148752684897,3.08240013986193

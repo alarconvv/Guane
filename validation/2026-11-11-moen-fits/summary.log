@@ -1,0 +1,39 @@
+     Model Parameters    LogLik      AIC Finite Boundary StartSpread Converged
+1    full2         16 -6591.521 13215.04   TRUE     TRUE   3.1326309      TRUE
+2    full3         14 -6589.123 13206.25   TRUE     TRUE   8.5609706      TRUE
+3 suicide4         14 -6581.691 13191.38   TRUE     TRUE  13.0817284      TRUE
+4 suicide6         13 -6591.232 13208.46   TRUE     TRUE  18.6863565      TRUE
+5     CID2         12 -6603.953 13231.91   TRUE     TRUE   0.1542734      TRUE
+6     CID4         16 -6584.449 13200.90   TRUE     TRUE  13.0149869      TRUE
+  Verified Weight  DeltaAIC AllStartsConverged AllStartsVerified
+1    FALSE     NA 23.659967               TRUE             FALSE
+2    FALSE     NA 14.864598               TRUE             FALSE
+3    FALSE     NA  0.000000               TRUE             FALSE
+4    FALSE     NA 17.082881               TRUE             FALSE
+5    FALSE     NA 40.523966               TRUE             FALSE
+6    FALSE     NA  9.515321               TRUE             FALSE
+  BetterUnconverged ElapsedSeconds
+1             FALSE      25922.407
+2             FALSE      25586.731
+3             FALSE      24380.545
+4             FALSE      12602.616
+5             FALSE       8819.002
+6             FALSE       2984.190
+                                            Interpretation
+1 Provisional optimization results; model weights withheld
+2 Provisional optimization results; model weights withheld
+3 Provisional optimization results; model weights withheld
+4 Provisional optimization results; model weights withheld
+5 Provisional optimization results; model weights withheld
+6 Provisional optimization results; model weights withheld
+    Parent Submodel LogLikDifference Passed
+1    full2    full3        -2.397685  FALSE
+2    full2 suicide4        -9.829984  FALSE
+3    full2 suicide6        -0.288543  FALSE
+4    full2     CID2        12.431999   TRUE
+5    full3 suicide6         2.109142   TRUE
+6    full3     CID2        14.829684   TRUE
+7 suicide4 suicide6         9.541441   TRUE
+8 suicide4     CID2        22.261983   TRUE
+9 suicide6     CID2        12.720542   TRUE
+Completed: 6 of 6 models. Weight eligibility: FALSE 

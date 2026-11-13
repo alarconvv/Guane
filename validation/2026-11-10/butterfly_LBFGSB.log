@@ -1,0 +1,22 @@
+  Start   LogLik Convergence  MaxRate    Difference
+1     1 -303.595           0 582.7934 -1.250555e-12
+                                          Message
+1 CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH
+  Start    LogLik Convergence  MaxRate   Difference
+1     2 -299.2389           0 2535.152 4.433787e-12
+                                          Message
+1 CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH
+  Start    LogLik Convergence  MaxRate    Difference
+1     3 -306.0036           0 2535.152 -5.627498e-12
+                                          Message
+1 CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH
+  Start    LogLik Convergence  MaxRate    Difference
+1     4 -306.0087           0 2535.152 -1.136868e-13
+                                          Message
+1 CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH
+  Start    LogLik Convergence  MaxRate    Difference
+1     5 -297.8917           0 2535.152 -2.103206e-11
+                                          Message
+1 CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH
+
+Execution halted

@@ -1,0 +1,4 @@
+Prepared 13 matched taxa and five finite continuous traits.
+Excluded olivacea: no distributed trait row.
+Tree rooted, binary, ultrametric, positive branch lengths.
+Traits retained on distributed scale; branch lengths not converted to years.
