@@ -1,1 +1,0 @@
-PASS: GUANE estimates agree with direct backend calls within 1e-10; this checks implementation agreement, not model adequacy.

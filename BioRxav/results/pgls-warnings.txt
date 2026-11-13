@@ -1,1 +1,0 @@
-No warnings returned by guane_pgls

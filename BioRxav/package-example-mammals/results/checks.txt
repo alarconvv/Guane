@@ -1,5 +1,0 @@
-PASS: all 98 raw values agree with Table 1 at its printed precision (mass 2 decimal places; area 3).
-PASS: 49 unique matched taxa; no pruning or imputation.
-PASS: kg and km^2 retained; natural logs created once in separate columns.
-PASS: GUANE core signal and BM/REML regression completed.
-Mammal GUI replay not yet performed.
